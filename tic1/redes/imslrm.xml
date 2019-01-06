@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lom xmlns="http://ltsc.ieee.org/xsd/LOM"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM lomCustom.xsd">
+    <general uniqueElementName="general">
+        <identifier>
+            <catalog uniqueElementName="catalog">Plataforma Agrega</catalog>
+            <entry uniqueElementName="entry">ODE-6d6fffc5-3fd0-3008-9f7d-ecd83c7402f9</entry>
+        </identifier>
+        <identifier>
+            <catalog uniqueElementName="catalog">Mi catálogo</catalog>
+            <entry uniqueElementName="entry">1af9ddac-5915-49d0-b124-8dc7dfb0524a</entry>
+        </identifier>
+        <identifier>
+            <catalog uniqueElementName="catalog">Catálogo unificado mec-red.es-ccaa de identificación de ODE</catalog>
+            <entry uniqueElementName="entry">es-an_2018100412_9100136</entry>
+        </identifier>
+        <title uniqueElementName="title">
+            <string language="es">TC1 - Tema 5.1: Redes de ordenadores: Modelo OSI y protocolos</string>
+        </title>
+        <language>es</language>
+        <description>
+            <string language="es">Curso 1º - Enseñanza Bachillerato Nombre asignatura/materia: Tecnologías de la Información y Comunicación</string>
+        </description>
+        <keyword>
+            <string language="es">mda, elegir 3 de la lista del departamento</string>
+        </keyword>
+        <aggregationLevel uniqueElementName="aggregationLevel">
+            <source uniqueElementName="source">LOM-ESv1.0</source>
+            <value uniqueElementName="value">2</value>
+        </aggregationLevel>
+    </general>
+    <lifeCycle uniqueElementName="lifeCycle">
+        <contribute>
+            <role uniqueElementName="role">
+                <source uniqueElementName="source">LOM-ESv1.0</source>
+                <value uniqueElementName="value">publisher</value>
+            </role>
+            <entity>BEGIN:VCARD VERSION:3.0 FN: aechcar EMAIL;TYPE=INTERNET:  ORG: Plataforma Agrega</entity>
+            <date uniqueElementName="date">
+                <dateTime uniqueElementName="dateTime">2018-10-04T10:01:38.784Z</dateTime>
+                <description>
+                    <string>Fecha de publicación en Agrega</string>
+                </description>
+            </date>
+        </contribute>
+        <contribute>
+            <role uniqueElementName="role">
+                <source uniqueElementName="source">LOM-ESv1.0</source>
+                <value uniqueElementName="value">author</value>
+            </role>
+            <entity>BEGIN:VCARD VERSION:3.0 FN:IEDA EMAIL;TYPE=INTERNET: ORG: END:VCARD</entity>
+            <date uniqueElementName="date">
+                <dateTime uniqueElementName="dateTime">2015-07-16T00:00:00.00+02:00</dateTime>
+                <description>
+                    <string language="es">Fecha de creación de los metadatos</string>
+                </description>
+            </date>
+        </contribute>
+    </lifeCycle>
+    <metaMetadata uniqueElementName="metaMetadata">
+        <identifier>
+            <catalog uniqueElementName="catalog">Plataforma Agrega</catalog>
+            <entry uniqueElementName="entry">ODE-6d6fffc5-3fd0-3008-9f7d-ecd83c7402f9-meta</entry>
+        </identifier>
+        <contribute>
+            <role uniqueElementName="role">
+                <source uniqueElementName="source">LOM-ESv1.0</source>
+                <value uniqueElementName="value">creator</value>
+            </role>
+            <entity>BEGIN:VCARD VERSION:3.0 FN:IEDA EMAIL;TYPE=INTERNET: ORG: END:VCARD</entity>
+            <date uniqueElementName="date">
+                <dateTime uniqueElementName="dateTime">2015-07-16T00:00:00.00+02:00</dateTime>
+                <description>
+                    <string language="es">Fecha de creación de los metadatos</string>
+                </description>
+            </date>
+        </contribute>
+        <metadataSchema>LOM-ESv1.0</metadataSchema>
+        <language>es</language>
+    </metaMetadata>
+    <technical uniqueElementName="technical">
+        <location>http://agrega.juntadeandalucia.es/ODE/es/es-an_2018100412_9100136</location>
+    </technical>
+    <educational>
+        <interactivityType uniqueElementName="interactivityType">
+            <source uniqueElementName="source">LOM-ESv1.0</source>
+            <value uniqueElementName="value">active</value>
+        </interactivityType>
+        <learningResourceType>
+            <source uniqueElementName="source">LOM-ESv1.0</source>
+            <value uniqueElementName="value">guided reading</value>
+        </learningResourceType>
+        <intendedEndUserRole>
+            <source uniqueElementName="source">LOM-ESv1.0</source>
+            <value uniqueElementName="value">learner</value>
+        </intendedEndUserRole>
+        <context>
+            <source uniqueElementName="source">LOM-ESv1.0</source>
+            <value uniqueElementName="value">distance</value>
+        </context>
+        <context>
+            <source uniqueElementName="source">LOM-ESv1.0</source>
+            <value uniqueElementName="value">classroom</value>
+        </context>
+        <language>es</language>
+        <cognitiveProcess uniqueElementName="cognitiveProcess">
+            <source uniqueElementName="source">LOM-ESv1.0</source>
+            <value uniqueElementName="value">understand</value>
+        </cognitiveProcess>
+    </educational>
+    <rights uniqueElementName="rights">
+        <copyrightAndOtherRestrictions uniqueElementName="copyrightAndOtherRestrictions">
+            <source uniqueElementName="source">LOM-ESv1.0</source>
+            <value uniqueElementName="value">creative commons: attribution - non commercial - share alike</value>
+        </copyrightAndOtherRestrictions>
+        <description>
+            <string language="es">Aviso legal.</string>
+        </description>
+        <access uniqueElementName="access">
+            <accessType uniqueElementName="accessType">
+                <source uniqueElementName="source">LOM-ESv1.0</source>
+                <value uniqueElementName="value">universal</value>
+            </accessType>
+            <description>
+                <string>es_cnice_20080623,es_{nodo}_20080923,es_clm_20091103121523455,es_castillayleon_201002241811,es_baleares_200907131205,es_na_90348943,es_canarias_20090114,es_aragon_20080930,es_larioja_20081107,es_cantabria_20081215,es_valencia_201101241416,galicia20091006,es_euskadi_20100423,es_extremadura_20111222,es_andalucia_20090324</string>
+            </description>
+        </access>
+    </rights>
+    <classification>
+        <purpose uniqueElementName="purpose">
+            <source uniqueElementName="source">LOM-ESv1.0</source>
+            <value uniqueElementName="value">discipline</value>
+        </purpose>
+        <taxonPath>
+            <source uniqueElementName="source">
+                <string language="es">Árbol curricular LOE 2006</string>
+            </source>
+            <taxon>
+                <id uniqueElementName="id">4</id>
+                <entry>
+                    <string language="es">Bachillerato</string>
+                </entry>
+            </taxon>
+        </taxonPath>
+        <description>
+            <string language="es">Materia: Tecnologías de la Información y Comunicación I</string>
+        </description>
+    </classification>
+    <classification>
+        <purpose uniqueElementName="purpose">
+            <source uniqueElementName="source">LOM-ESv1.0</source>
+            <value uniqueElementName="value">educational level</value>
+        </purpose>
+        <taxonPath>
+            <source uniqueElementName="source">
+                <string language="es">nivel_educativo_</string>
+            </source>
+            <taxon>
+                <id uniqueElementName="id">9</id>
+                <entry>
+                    <string language="es">Educación de Personas Adultas</string>
+                </entry>
+            </taxon>
+            <taxon>
+                <id uniqueElementName="id">9.11</id>
+                <entry>
+                    <string language="es">Bachillerato adultos y distancia</string>
+                </entry>
+            </taxon>
+        </taxonPath>
+        <description>
+            <string language="es">Materia: Tecnologías de la Información y Comunicación I</string>
+        </description>
+    </classification>
+</lom>

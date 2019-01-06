@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>2.2. Arquitectura TCP/IP | TC1 - Tema 5.1: Redes de ordenadores: Modelo OSI y protocolos </title>
+<meta http-equiv="content-language" content="es" />
+<meta name="author" content="IEDA" />
+<meta name="generator" content="eXeLearning 2.0.4 - exelearning.net" />
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Show",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menu"}</script>
+<script type="text/javascript" src="common.js"></script>
+<script type="text/javascript" src="SCORM_API_wrapper.js"></script>
+<script type="text/javascript" src="SCOFunctions.js"></script>
+</head>
+<body class="exe-scorm" onload="loadPage()" onunload="unloadPage()"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><h1 id="nodeTitle">2.2. Arquitectura TCP/IP</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id85">
+<div class="iDevice emphasis0">
+<div id="ta85_239" class="block iDevice_content">
+<p>La arquitectura TCP/IP, comparándola con el modelo OSI, se puede considerar como un <span style="text-decoration: underline;">modelo simplificado</span> de la misma. Debe su nombre a los protocolos más importantes de este modelo: IP y TCP.</p>
+<p>Tanto TCP/IP como el modelo OSI compitieron al principio. TCP/IP era más simple y se desarrolló antes frente a OSI, cuyas primeras implementaciones no tuvieron un resultado satisfactorio. Todo ello llevó a que TCP/IP se utilizara más, tuvieran lugar las primeras versiones con las consiguientes mejoras en detrimento del modelo OSI.</p>
+<p>En la arquitectura TCP/IP se especifica muy poco en las capas inferiores (física y enlace) dejando unos <span style="text-decoration: underline;">interfaces muy abiertos</span> que pueden <span style="text-decoration: underline;">variar mucho dependiendo del medio de transmisión que se utilice</span>. Algo parecido ocurre en las capas superiores. No existe nivel de presentación y las funciones de esta capa han sido asumidas por la propia aplicación de usuario. La función de control del diálogo de la capa de sesión se ha trasladado a la capa de transporte.</p>
+<p><img src="TCP_IP_y_OSI.png" width="450" height="272" alt="Comparación entre el modelo OSI y TCP/IP" title="Comparación entre el modelo OSI y TCP/IP" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p align="center"><span style="font-size: x-small;"><em>Comparativa gráfica entre el modelo de referencia OSI y TCP/IP</em></span></p>
+<p align="center"><span style="font-size: xx-small;">Fuente: Tanenbaum, A. S. Redes de computadoras. Editorial Pearson Educación. 2003</span></p>
+<p>Comparando TCP/IP con el modelo OSI, hay algunas <span style="text-decoration: underline;">desventajas</span> en aquel. Una de las características muy positivas de OSI es su modularidad. Es decir, dado que se distingue perfectamente en conceptos como primitivas de acceso al servicio (con las que una capa superior puede solicitar un servicio a la capa inferior), protocolos (lenguaje que utilizan dos capas iguales de diferentes ordenadores para entenderse) e interfaz (límite que distingue el medio de transmisión y la capa de nivel físico), es fácil realizar un cambio de tecnología en este modelo sin que el resto de las capas se vean afectadas. Esto mismo no ocurre en TCP/IP debido a esa libertad o <span style="text-decoration: underline;">falta de especificación en algunas capas</span>.</p>
+<p>Una de las claves del éxito de TCP/IP se debe al <strong>protocolo IP</strong> (<em>Internet Protocol</em>). Este protocolo asegura el envío de paquetes de un origen a un destino pudiendo pasar por distintos elementos de red intermedios. Esto implica que cada paquete puede seguir un camino diferente y sufrir distintos retardos. Esta característica puede ser importante para el servicio que se esté llevando a cabo y puede ser necesario que se ordenen en el destino. Esta función la hace el protocolo TCP (<em>Transmission Control Protocol</em>).</p>
+<p>En la <strong>capa de transporte</strong>, existen dos protocolos:</p>
+<p>- <strong>TCP</strong> (<em>Transmission Control Protocol</em>) o protocolo de control de la transmisión. Es un protocolo orientado a la conexión y asegura una entrega de datos fiables. Este tipo de protocolos es necesario cuando se necesita, por ejemplo, que los paquetes se entreguen al destinatario ordenados.</p>
+<p>- <strong>UDP</strong> (<em>User Datagram Protocol</em>) o protocolo de datagramas de usuario. Es un protocolo que ofrece una entrega de datos no fiable entre un origen y un destino. Este tipo de protocolos se utiliza cuando es necesario hacer una entrega puntual de un origen a un destino.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper activityIdevice em_iDevice" id="id86">
+<div class="iDevice emphasis1" >
+<img alt="" class="iDevice_icon" src="icon_activity.gif" /><h2 class="iDeviceTitle">Importante</h2><div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta86_42_2" class="block iDevice_content">
+<p>La arquitectura TCP/IP tiene las siguientes características:</p>
+<p></p>
+<ul>
+<li>Es parecida al modelo OSI pero simplificado.</li>
+<li>Se especifica muy poco en las capas inferiores del modelo dejando interfaces muy abiertos que pueden variar mucho dependiendo del medio de transmisión elegido.</li>
+<li>Se aligeran las capas superiores: no hay capa de presentación y algunas funciones de la capa de sesión se deja para la capa de transporte.</li>
+<li>TCP/IP tiene algunas desventajas como la falta de modularidad o independencia entre capas.</li>
+<li>La clave del éxito de TCP/IP radica en sus protocolos más importantes:</li>
+</ul>
+<p style="margin-left: 60px;">- IP (<em>Internet Protocol</em>) asegura una entrega de paquetes de origen a destino incluso pasando por elementos de red intermedios.<br />- TCP (<em>Transmission Control Protocol</em>) es un protocolo orientado a la conexión y asegura una entrega de datos fiables.<br />- UDP (<em>User Datagram Protocol</em>) es un protocolo que ofrece una entrega de datos no fiable entre un origen y un destino.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>3.2. Topología de redes | TC1 - Tema 5.1: Redes de ordenadores: Modelo OSI y protocolos </title>
+<meta http-equiv="content-language" content="es" />
+<meta name="author" content="IEDA" />
+<meta name="generator" content="eXeLearning 2.0.4 - exelearning.net" />
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Show",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menu"}</script>
+<script type="text/javascript" src="common.js"></script>
+<script type="text/javascript" src="SCORM_API_wrapper.js"></script>
+<script type="text/javascript" src="SCOFunctions.js"></script>
+</head>
+<body class="exe-scorm" onload="loadPage()" onunload="unloadPage()"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><h1 id="nodeTitle">3.2. Topología de redes</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id70">
+<div class="iDevice emphasis0">
+<div id="ta70_239" class="block iDevice_content">
+
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id71">
+<div class="iDevice emphasis0">
+<div id="ta71_239" class="block iDevice_content">
+<p>La topología de una red es una de las primeras decisiones que se toman a la hora de responder a la pregunta ¿cómo vamos a conectar los ordenadores?</p>
+<p>Distintos factores nos harán decantarnos por unas u otras topologías. Por ejemplo seguridad, control ante posibles fallos, coste o velocidad. Estos son algunos tipos de topología:</p>
+<table align="center" border="0">
+<tbody>
+<tr>
+<td><img src="35353570782d546f706f6c6f67c3ad615f64655f726564.png" height="324" width="300" alt="Topología de red" title="Topología de red" /></td>
+</tr>
+<tr>
+<td><span size="1" style="font-size: xx-small;">Imagen en <a href="http://es.wikipedia.org/wiki/Archivo:Topolog%C3%ADa_de_red.png" target="_blank">Wikipedia de Yearofthedragon</a> con licencia CC</span></td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Existen tres tipos considerados básicos para montar una red.</p>
+<table border="0" cellspacing="10">
+<tbody>
+<tr>
+<td style="border: 1px solid #ff9966;" valign="top">
+<p><b>Bus</b></p>
+<p> </p>
+<p align="justify">Los nodos están conectados por un único canal de comunicaciones llamado bus, al cual se conectan también los diferentes dispositivos. De esta forma, todos los dispositivos comparten el mismo canal para comunicarse entre sí de forma que todos los nodos ven los mensajes, pero no todos los aceptan.</p>
+<p>Su principal ventaja es la facilidad de implementación, pero tiene desventajas como la limitación por longitud y las pérdida en la transmisión.</p>
+</td>
+<td style="border: 1px solid #ff9966;" valign="top">
+<div style="text-align: center;"><img src="redbus.gif" alt="red en bus" title="red en bus" height="55" width="120" /></div>
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ff9966;" valign="top">
+<p><b>Anillo</b></p>
+<p> </p>
+<p align="justify">Los nodos están unidos unos con otros formando un círculo por medio de un cable común, estando unidos el último nodo con el primero para cerrar el anillo. Las señales circulan en un sólo sentido alrededor del anillo de modo que cada nodo tiene un receptor que examina la información y un transmisor que la envía.</p>
+<p align="justify">La desventaja del anillo es que si se rompe una conexión, la red deja de funcionar. Esto se soluciona haciendo redes de doble anillo, en las cuales si uno falla, la información pasa al otro.</p>
+</td>
+<td style="border: 1px solid #ff9966;" valign="top">
+<div style="text-align: center;"><img src="redanillo.jpg" alt="red en anillo" title="red en anillo" height="90" width="90" /></div>
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ff9966;" valign="top">
+<p><b>Estrella</b></p>
+<p> </p>
+<p align="justify">Los nodos están conectados a un ordenador central o hub de modo que lo mensajes de cada nodo pasan directamente al servidor y éste decide hacia dónde enviarlos. La ventaja principal es que aunque falle algún nodo, el resto no se verá afectado. Sin embargo, es más costosa ya que el cable es único de nodo a servidor.</p>
+</td>
+<td style="border: 1px solid #ff9966;" valign="top">
+<div style="text-align: center;"><img src="redestrella.jpg" alt="red en estrella" title="red en estrella" height="92" width="92" /></div>
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ff9966; background-color: #ffffff;" valign="top"> </td>
+<td style="border: 1px solid #ff9966;" valign="top">
+<div align="center"></div>
+<div align="center"><span size="1" style="font-size: xx-small;">Img 16, 17 y 18. Topologías básicas</span></div>
+<div align="center"><span size="1" style="font-size: xx-small;">Imágenes de producción propia</span></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper activityIdevice em_iDevice" id="id72">
+<div class="iDevice emphasis1" >
+<img alt="" class="iDevice_icon" src="icon_activity.gif" /><h2 class="iDeviceTitle">Importante</h2><div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta72_89_2" class="block iDevice_content">
+<p>La <b>topología </b>de una red define su estructura. Pueden establecerse la topología física, que es la forma en que se conectan los terminales, dispositivos y recursos de la red, y la topología lógica, que es la forma de acceso a la información de la red. La elección de una topología u otra influye en gran medida en el funcionamiento y configuración de la red.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper TrueFalseIdevice em_iDevice" id="id73">
+<div class="iDevice emphasis1" >
+<img alt="" class="iDevice_icon" src="icon_question.gif" /><h2 class="iDeviceTitle">Pregunta Verdadero-Falso</h2><div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta73_254" class="block iDevice_content">
+<p>Acabas de ver las distintas topologías de redes que se pueden dar. Contesta a las siguientes preguntas fijándote en los contenidos de este punto.</p>
+</div>
+<div class="question">
+<form name="true-false-form-0b73" action="#" class="activity-form">
+<h3 class="js-sr-av">Pregunta 1</h3>
+<div id="taquestion0b73" class="block iDevice_content">
+<p>1. La topología de una red determina la forma de conexión de la red pero no la forma de acceso a la información.</p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b73"><input type="radio" name="option0b73" id="true0b73" onclick="getFeedback(0,2,'0b73','truefalse')" /> Verdadero</label> 
+<label for="false0b73"><input type="radio" name="option0b73" id="false0b73" onclick="getFeedback(1,2,'0b73','truefalse')" /> Falso</label>
+</p>
+</form>
+<div id="s0b73" class="feedback js-feedback js-hidden">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<p><strong id="s0b73-result" class="wrong">Falso</strong></p>
+<p>La topología define la estructura de la red desde el punto de vista físico, estableciendo la forma de conexión de los equipos, como desde el lógico, estableciendo la forma de acceso a la información.</p>
+</div>
+</div>
+<div class="question">
+<form name="true-false-form-1b73" action="#" class="activity-form">
+<h3 class="js-sr-av">Pregunta 2</h3>
+<div id="taquestion1b73" class="block iDevice_content">
+<p>2. Cuando los nodos de la red y los dispositivos que la forman se conectan a través de un único canal, se llama topología de bus.</p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true1b73"><input type="radio" name="option1b73" id="true1b73" onclick="getFeedback(0,2,'1b73','truefalse')" /> Verdadero</label> 
+<label for="false1b73"><input type="radio" name="option1b73" id="false1b73" onclick="getFeedback(1,2,'1b73','truefalse')" /> Falso</label>
+</p>
+</form>
+<div id="s1b73" class="feedback js-feedback js-hidden">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<p><strong id="s1b73-result" class="right">Verdadero</strong></p>
+<p>La topología de bus se basa en el uso de un canal único.</p>
+</div>
+</div>
+<div class="question">
+<form name="true-false-form-2b73" action="#" class="activity-form">
+<h3 class="js-sr-av">Pregunta 3</h3>
+<div id="taquestion2b73" class="block iDevice_content">
+<p>3. En una red en anillo, si un nodo se rompe, la red deja de funcionar. Una posible solución es utilizar la red en doble anillo.</p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true2b73"><input type="radio" name="option2b73" id="true2b73" onclick="getFeedback(0,2,'2b73','truefalse')" /> Verdadero</label> 
+<label for="false2b73"><input type="radio" name="option2b73" id="false2b73" onclick="getFeedback(1,2,'2b73','truefalse')" /> Falso</label>
+</p>
+</form>
+<div id="s2b73" class="feedback js-feedback js-hidden">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<p><strong id="s2b73-result" class="right">Verdadero</strong></p>
+<p>La red en anillo doble permite que, si un nodo falla, la información pase al otro anillo evitando así la ruptura de la red.</p>
+</div>
+</div>
+<div class="question">
+<form name="true-false-form-3b73" action="#" class="activity-form">
+<h3 class="js-sr-av">Pregunta 4</h3>
+<div id="taquestion3b73" class="block iDevice_content">
+<p>4. Una red en la cual los nodos están unidos a un ordenador central o hub mediante un cable único es una red en bus.</p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true3b73"><input type="radio" name="option3b73" id="true3b73" onclick="getFeedback(0,2,'3b73','truefalse')" /> Verdadero</label> 
+<label for="false3b73"><input type="radio" name="option3b73" id="false3b73" onclick="getFeedback(1,2,'3b73','truefalse')" /> Falso</label>
+</p>
+</form>
+<div id="s3b73" class="feedback js-feedback js-hidden">
+<h4 class="js-sr-av">Retroalimentación</h4>
+<p><strong id="s3b73-result" class="wrong">Falso</strong></p>
+<p>Este tipo de red tiene una topología de estrella.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ReflectionIdevice em_iDevice" id="id74">
+<div class="iDevice emphasis1" >
+<img alt="" class="iDevice_icon" src="icon_reflection.gif" /><h2 class="iDeviceTitle">Reflexión</h2><div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta74_246" class="block iDevice_content">
+<p>Las típicas redes caseras ¿a qué tipo se asemeja más?</p>
+</div>
+<form name="feedback-form-74" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><input type="button" name="toggle-feedback-74" value="Mostrar retroalimentación" class="feedbackbutton" onclick="$exe.toggleFeedback(this,true);return false" /></p>
+</div>
+<div id="feedback-74" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<div id="ta74_247" class="block iDevice_content">
+<p>A una red en estrella. Todo los ordenadores se conectan, por cable o por wi, al modem-router.</p>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

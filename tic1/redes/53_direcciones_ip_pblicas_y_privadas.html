@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>5.3. Direcciones IP públicas y privadas | TC1 - Tema 5.1: Redes de ordenadores: Modelo OSI y protocolos </title>
+<meta http-equiv="content-language" content="es" />
+<meta name="author" content="IEDA" />
+<meta name="generator" content="eXeLearning 2.0.4 - exelearning.net" />
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Show",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menu"}</script>
+<script type="text/javascript" src="common.js"></script>
+<script type="text/javascript" src="SCORM_API_wrapper.js"></script>
+<script type="text/javascript" src="SCOFunctions.js"></script>
+</head>
+<body class="exe-scorm" onload="loadPage()" onunload="unloadPage()"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><h1 id="nodeTitle">5.3. Direcciones IP públicas y privadas</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id58">
+<div class="iDevice emphasis0">
+<div id="ta58_1" class="block iDevice_content">
+<table align="center" border="0">
+<tbody>
+<tr>
+<td><img src="freeplayer_schema-reseau.jpg" height="293" width="413" alt="Componentes conectados en red" title="Componentes conectados en red" /></td>
+</tr>
+<tr align="center">
+<td><span size="1" style="font-size: xx-small;">Fuente propia a partir de la imagen de <a href="http://smefr.free.fr/images/freebox/freeplayer_schema-reseau.jpg" target="_blank">Antoine en JURA-NUX</a> con licencia CC</span></td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Seguro que te has preguntado cómo sabe el ordenador llegar hasta una página web determinada. O como en casa, con una sola línea telefónica, podemos tener varios ordenadores sin que se mezcle la información.</p>
+<p> </p>
+<p>A estas alturas ya sabes que usamos una tarjeta de red para conectarnos. Estos dispositivos tienen un identificador, dirección MAC, grabado de fábrica (igual que los números de bastidor de coches). La MAC es un identificador de 48 bits (6 bloques hexadecimales). Un ejemplo de <em>MAC Address</em> es la siguiente: 0A:12:AF:1A:00:22</p>
+<p>Partiendo de ese número único necesitamos tener una <a href="http://es.wikipedia.org/wiki/Direcci%C3%B3n_IP">dirección IP</a> (IP es acrónimo de <em>Internet Protocol</em>, el conjunto de normas que permiten enviar datos a través de la red).</p>
+<p>Esta dirección depende de cada red a la que estemos conectados. Lo más habitual es que permitamos que esto sea automático y si nos vamos con el portátil a una cafetería no haya que configurar nada. Las direcciones IP son cuatro grupos de números, cada grupo entre 0 y 255 y separadas por un punto (ejemplo, 85.120.66.212).</p>
+<p>DIRECCIONES IP PÚBLICAS Y PRIVADAS</p>
+<p>Las direcciones IP pueden ser públicas o privadas. Las direcciones públicas son únicas y un equipo conectado a Internet, solo puede tener una dirección única en la red. En cambio, las direcciones IP privadas se usan en las redes locales, para identificar a los equipos dentro de la red local. Dos equipos de distintas redes privadas pueden tener la misma dirección privada ya que no es posible que haya una comunicación entre ambos. Un equipo no puede enviar datos en Internet con paquetes IP en los que aparezca la dirección IP privada como dirección de origen.</p>
+<p>Podemos verlo de la siguiente forma: cuando vamos a un hotel tenemos un número de teléfono interno, por ejemplo para hablar con la habitación 103 marcamos #103. Esto nos identifica dentro del hotel. Pues cuando te conectas a la red de tu casa, oficina, escuela, es decir, a una red privada, tu equipo usa una dirección IP que lo identifica dentro de la red y que es privada.</p>
+<p>Además el hotel tiene su número de teléfono público. Cuando llamas desde tu casa a la habitación de un hotel marcas el número público y pides en recepción que te pasen con la habitación 103 o incluso, puede que la habitación 103 tenga un número de teléfono público asignado. Ese número es único en todo el mundo.</p>
+<p>El rango de direcciones que se han reservado para su uso en una red de área local, es decir, para tráfico interno dentro de la red es:</p>
+<p>10.0.0.0 - 10.255.255.255<br />172.16.0.0 - 172.31.255.255<br />192.168.0.0 - 192.168.255.255<br />169.254.0.0 - 169.254.255.255</p>
+<p>Otro ejemplo que te ayudará: cuando tú quieres leer el periódico tecleas su URL (aunque comúnmente llamamos <i>dirección</i>).</p>
+<p>Ahí entra en juego el servidor DNS que te dice que la dirección IP de la página que quieres ver.</p>
+<p>Le dices al <em>router</em> que quieres conectarte a esa dirección IP. El <em>router</em> sabe que eres tú y que en el paquete aparece una dirección IP privada que debe cambiar y pone su dirección IP pública marcando el paquete para poder devolver la respuesta al PC adecuado de la red privada.  La petición va pasando, gracias al protocolo IP, través de otros <em>router</em> que componen Internet hasta llegar al servidor donde reside la página web del periódico. Este devuelve a la dirección IP pública (la dirección del <em>router</em>) la respuesta enviando la página web, las fotos, los titulares, etc.</p>
+<p>El <em>router</em> reconoce la respuesta y la dirige a tu equipo en concreto usando para ello la dirección IP privada .</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ClozeIdevice em_iDevice" id="id59">
+<div class="iDevice emphasis1" >
+<img alt="" class="iDevice_icon" src="icon_question.gif" /><h2 class="iDeviceTitle">AV - Actividad de Espacios en Blanco</h2><div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta59_21" class="block instructions iDevice_content">
+<p>Veamos de nuevo la imagen del encabezamiento. Es un esquema de red en la que hay un router, un switch al que conectamos un servidor y un pc.</p>
+<table align="center" border="0">
+<tbody>
+<tr>
+<td><img src="freeplayer_schema-reseau.jpg" height="293" width="413" alt="Componentes conectados en red" title="Componentes conectados en red" /></td>
+</tr>
+<tr align="center">
+<td><span size="1" style="font-size: xx-small;">Fuente propia a partir de la imagen de <a href="http://smefr.free.fr/images/freebox/freeplayer_schema-reseau.jpg" target="_blank">Antoine en JURA-NUX</a> con licencia CC</span></td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>¿Repondemos a unas preguntas sencillas?</p>
+</div>
+
+    <div class="activity" id="activity-59_22">
+<form name="cloze-form-59_22" action="#" onsubmit="clozeSubmit('59_22');return false" class="activity-form">
+<div id="cloze59_22">
+<script type="text/javascript">var YOUR_SCORE_IS="Su puntuación es "</script>
+<input type="hidden" name="clozeFlag59_22.strictMarking" id="clozeFlag59_22.strictMarking" value="false"/>
+
+<input type="hidden" name="clozeFlag59_22.checkCaps" id="clozeFlag59_22.checkCaps" value="false"/>
+
+<input type="hidden" name="clozeFlag59_22.instantMarking" id="clozeFlag59_22.instantMarking" value="false"/>
+
+<p>
+La dirección pública con la que nos conectamos a internet es     
+<label for="clozeBlank59_22.0" class="sr-av">Rellenar huecos (1):</label>
+<input class="autocomplete-off" type="text" value="" id="clozeBlank59_22.0" style="width:12em" />
+<span style="display:none" id="clozeAnswer59_22.0">JXUwMDYwJXUwMDBhJXUwMDFjJXUwMDFjJXUwMDA2JXUwMDAzJXUwMDE5JXUwMDFjJXUwMDA2JXUw
+MDFhJXUwMDFiJXUwMDAz
+</span>
+   
+</p>
+<p>
+La dirección privada del router es    
+<label for="clozeBlank59_22.1" class="sr-av">Rellenar huecos (2):</label>
+<input class="autocomplete-off" type="text" value="" id="clozeBlank59_22.1" style="width:11em" />
+<span style="display:none" id="clozeAnswer59_22.1">JXUwMDY5JXUwMDA4JXUwMDBiJXUwMDFjJXUwMDFmJXUwMDA3JXUwMDBlJXUwMDE2JXUwMDFlJXUw
+MDFlJXUwMDFm
+</span>
+   
+</p>
+<p>
+La dirección IP del servidor es    
+<label for="clozeBlank59_22.2" class="sr-av">Rellenar huecos (3):</label>
+<input class="autocomplete-off" type="text" value="" id="clozeBlank59_22.2" style="width:11em" />
+<span style="display:none" id="clozeAnswer59_22.2">JXUwMDY5JXUwMDA4JXUwMDBiJXUwMDFjJXUwMDFmJXUwMDA3JXUwMDBlJXUwMDE2JXUwMDFlJXUw
+MDFlJXUwMDFk
+</span>
+   
+</p>
+<p>
+La dirección IP del PC es    
+<label for="clozeBlank59_22.3" class="sr-av">Rellenar huecos (4):</label>
+<input class="autocomplete-off" type="text" value="" id="clozeBlank59_22.3" style="width:11em" />
+<span style="display:none" id="clozeAnswer59_22.3">JXUwMDY5JXUwMDA4JXUwMDBiJXUwMDFjJXUwMDFmJXUwMDA3JXUwMDBlJXUwMDE2JXUwMDFlJXUw
+MDFlJXUwMDFi
+</span>
+    
+</p>
+
+<div class="block iDevice_buttons">
+<p>
+<input class="button" type="submit" name="submit59_22" value="Enviar"  id="submit59_22" />
+
+<input type="button" name="restart59_22" value="Reiniciar" style="display:none" id="restart59_22" onclick="clozeRestart('59_22')" />
+
+ 
+<input type="button" name="59_22showAnswersButton" value="Mostrar las respuestas" style="display:none" id="showAnswersButton59_22" onclick="fillClozeInputs('59_22')" />
+
+<span class="js-hidden js-warning">Enable JavaScript</span>
+</p>
+</div>
+<div id="clozeScore59_22"></div>
+</div>
+</form>
+</div></div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper activityIdevice em_iDevice" id="id132">
+<div class="iDevice emphasis1" >
+<img alt="" class="iDevice_icon" src="icon_activity.gif" /><h2 class="iDeviceTitle">Importante</h2><div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta132_43_2" class="block iDevice_content">
+<p>Las <strong>direcciones IP</strong> pueden ser <span style="text-decoration: underline;">públicas o privadas</span>. Las direcciones públicas son únicas y un equipo conectado a Internet, solo puede tener una dirección única en la red. En cambio, las direcciones IP privadas se usan en las redes locales, para identificar a los equipos dentro de la red local. Dos equipos de distintas redes privadas pueden tener la misma dirección privada ya que no es posible que haya una comunicación entre ambos. Un equipo no puede enviar datos en Internet con paquetes IP en los que aparezca la dirección IP privada como dirección de origen.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

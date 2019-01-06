@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>5.5. Protocolo de Transferencia de Hipertexto (HTTP) | TC1 - Tema 5.1: Redes de ordenadores: Modelo OSI y protocolos </title>
+<meta http-equiv="content-language" content="es" />
+<meta name="author" content="IEDA" />
+<meta name="generator" content="eXeLearning 2.0.4 - exelearning.net" />
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Show",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menu"}</script>
+<script type="text/javascript" src="common.js"></script>
+<script type="text/javascript" src="SCORM_API_wrapper.js"></script>
+<script type="text/javascript" src="SCOFunctions.js"></script>
+</head>
+<body class="exe-scorm" onload="loadPage()" onunload="unloadPage()"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><h1 id="nodeTitle">5.5. Protocolo de Transferencia de Hipertexto (HTTP)</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id123">
+<div class="iDevice emphasis0">
+<div id="ta123_239" class="block iDevice_content">
+<p>HTTP es el protocolo que se utiliza en la red para navegar y que un usuario pueda ver una página web, escrita en HTML, en su navegador. Para ello, mediante HTTP un cliente puede solicitar a un servidor web una determinada página web así como todos los elementos de la misma como pueden ser imágenes u otros elementos multimedia.</p>
+<p>El protocolo HTTP es un protocolo de aplicación (recuerda las capas de OSI en la comunicación entre dos ordenadores que se vio en el punto 2.1 de este tema). Esto quiere decir que está montado sobre TCP/IP, que son las capas de transporte y red, respectivamente. Utiliza el puerto 80 de TCP para la creación de conexiones HTTP.</p>
+<p>Es muy frecuente confundir HTTP con HTML:</p>
+<p>- HTTP es el protocolo para el intercambio de páginas web. Es decir, mediante HTTP se especifica cómo son los mensajes que un cliente y un servidor web pueden intercambiarse para que el servidor le envíe al cliente la página web que este ha solicitado. </p>
+<p>- HTML es el lenguaje mediante el cuál se elaboran las páginas web. De hecho, si se abre una página web con el editor de texto, se verá que una página está hecha mediante texto. También aparecen unas marcas que indican cómo presentar ese texto en el navegador.</p>
+<p style="text-align: center;"><img src="cliente_sevidor_http.PNG" width="363" height="272" alt="Diálogo cliente servidor mediante HTTP" title="Diálogo cliente servidor mediante HTTP" /></p>
+<p style="text-align: center;"><em><span style="font-size: x-small;">Diálogo entre cliente y servidor web usando HTTP</span></em></p>
+<p style="text-align: center;"><span style="font-size: xx-small;">Imagen de elaboración propia</span></p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id124">
+<div class="iDevice emphasis0">
+<div id="ta124_239" class="block iDevice_content">
+<p>Las primeras versiones de HTTP aparecieron en los noventa. No fue hasta 1999, año en el que apareció HTTP/1.1 y que ha supuesto la versión de este protocolo más utilizada hasta el momento. Esta versión, como es normal, mejoraba a las versiones predecesoras pero presenta alguna desventaja:</p>
+<ul>
+<li>Los mensajes del protocolo están creados en texto plano y esto puede traer algún problema con las mayúsculas, minúsculas, espacios en blanco, etc.</li>
+<li>No hacía un uso eficiente del año de banda. Aunque HTTP/1.1 permitía hacer uso de una conexión TCP y a través de ella enviar todos los objetos de una página web, los navegadores usaban un método alternativo para conseguir que las páginas web se cargarán más rápido. Para ello, habrían varias conexiones TCP en paralelo para mejorar la experiencia del usuario a pesar de malgastar recursos.</li>
+<li>Cada mensaje que se envía en este protocolo contiene información repetida. Es información redundante cuya única consecuencia es desaprovechar el ancho de banda.</li>
+</ul>
+<p>El protocolo HTTP/2.0 se empezó a utilizar en 2015 y mejoraba diferentes aspectos de su versión anterior:</p>
+<ul>
+<li>Es un protocolo binario para el intercambio de mensajes evitando los problemas del texto plano.</li>
+<li>Mejora el uso del ancho de banda evitando las conexiones en paralelo de HTTP/1.1. Ahora se hace uso de una conexión TCP y sobre ella se pueden enviar varios flujos (el concepto de flujo es nuevo en esta versión del protocolo).</li>
+<li>Mejora el uso del ancho de banda con la compresión de la cabecera de los mensajes, esto quiere decir que se evita enviar en cada mensaje información redundante.</li>
+<li>Mediante este protocolo, el servidor se adelanta a las necesidades del cliente. A esta funcionalidad se le conoce como "<em>server-push</em>". Cuando un cliente solicita el establecimiento de una conexión, mientras esta se establece, el servidor se adelanta y empieza a enviar pequeños mensajes con datos que seguramente solicitará más adelante y que se almacenarán en la caché del cliente. De esta forma, cuando el cliente solicite los contenidos de la página web, gran parte de estos ya estarán en su caché por lo que se mejora el rendimiento de la comunicación.</li>
+</ul>
+<p></p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id125">
+<div class="iDevice emphasis0">
+<div id="ta125_239" class="block iDevice_content">
+<p>La mejor forma de entender el funcionamiento de HTTP, es analizando una petición de un cliente de una página web o de un objeto de la misma. Por ejemplo, si abrimos un navegador y escribes el siguiente enlace:</p>
+<p><a href="http://www.juntadeandalucia.es/educacion/portals/web/ieda/">http://www.juntadeandalucia.es/educacion/portals/web/ieda/</a><a href="https://cdn.pixabay.com/photo/2012/10/29/15/36/ball-63527_960_720.jpg"></a></p>
+<p></p>
+<p>Esta dirección se divide en las siguientes partes:</p>
+<p></p>
+<p style="text-align: left;"><img src="URL.PNG" width="887" height="141" alt="URL" title="URL" /></p>
+<p style="text-align: left;">En la primera parte de la URL, se indica al navegador el protocolo que se va a utilizar. A continuación, se especifica el servidor el cuál contiene la página web. En último lugar, se indica el <em>path</em> o camino donde se encuentra ubicada la página web en el servidor. </p>
+<p style="text-align: left;">En este caso, no se ha indicado la página web (como puede ser index.html) dentro del <em>path</em> o camino. Esto se puede configurar en el servidor web, de forma que se envíe el contenido de una página web aunque en la petición no se indique ninguna.</p>
+<p style="text-align: left;">Un servidor debe tener una dirección IP que lo identifique de forma inequívoca en Internet. Como se acaba de comprobar, en la URL no aparece dirección IP alguna. Esto se hace porque para el usuario es mucho más cómodo recordar nombres que números. Pero entonces, ¿cómo sabe el ordenador del usuario dónde tiene que enviar la petición HTTP? Es aquí donde entra en juego el servidor de nombres o DNS (<em>Domain Name System</em>). El cliente lanza una petición al DNS solicitando la dirección IP de www.juntadeandalucia.es. El DNS responde con la dirección IP que es la que utiliza el ordenador del usuario para poder enviar los datos. Cuando esta petición le llega al servidor, este responderá con el contenido de la página web y que el navegador pueda mostrar la página web al usuario. </p>
+<p style="text-align: left;">Este camino se resume en la siguiente imagen:</p>
+<p style="text-align: center;"><img src="Peticion_pagina_web.PNG" width="685" height="333" alt="Petición de una página web" title="Petición de una página web" /></p>
+<p style="text-align: center;"><span style="font-size: x-small;"><em>Petición de una página web por parte de un cliente a un servidor web</em></span></p>
+<p style="text-align: center;"><span style="font-size: xx-small;">Imagen de elaboración propia</span></p>
+<p style="text-align: center;"></p>
+<p style="text-align: left;">Como se puede comprobar, en los pasos 1 y 2, el ordenador del usuario lanza la petición al DNS para obtener la dirección IP del servidor web. Con esta dirección, puede iniciar el diálogo con el servidor para que este le pueda enviar la página web así como todos los objetos que la contienen y poder representarla correctamente.</p>
+<p style="text-align: left;"></p>
+<p></p>
+<p></p>
+<p></p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper objectivesIdevice em_iDevice" id="id126">
+<div class="iDevice emphasis1" >
+<img alt="" class="iDevice_icon" src="icon_objectives.gif" /><h2 class="iDeviceTitle">Para saber más</h2><div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta126_44_2" class="block iDevice_content">
+<p><strong>¿Qué diferencia hay entre HTTP y HTTPS?</strong></p>
+<p>Seguro que has visto en muchas ocasiones que una URL empieza por HTTPS en lugar de HTTP. Es más, es probable que no veas nada, que no se indique el protocolo que estás utilizando pero el navegador. Por ejemplo, en Google Chrome, si escribes una URL empezando por "http://", justo al lado de la misma verás que hay una etiqueta que indica "no seguro". Esto desaparece si la URL empieza por "https://". Haz la prueba con la siguiente dirección:</p>
+<p><a href="http://www.etsi.us.es" target="_blank">http://www.etsi.us.es</a></p>
+<p><a href="https://www.etsi.us.es" target="_blank">https://www.esi.us.es</a></p>
+<p>Comprobarás que en el primer caso, el navegador Chrome muestra la siguiente información:</p>
+<p style="text-align: center;"><img src="http_esi.PNG" width="254" height="38" alt="HTTP de una página web" title="HTTP de una página web" /></p>
+<p style="text-align: center;"><em><span style="font-size: x-small;">URL que empieza por "http://"</span></em></p>
+<p style="text-align: center;"><span style="font-size: xx-small;">Imagen de elaboración propia</span></p>
+<p>Mientras que en el segundo caso, se muestra lo siguiente:</p>
+<p style="text-align: center;"><img src="https_esi.PNG" width="186" height="39" alt="HTTPS de una página web" title="HTTPS de una página web" /></p>
+<p style="text-align: center;"><em><span style="font-size: x-small;">URL que empieza por "https://"</span></em></p>
+<p style="text-align: center;"><span style="font-size: xx-small;">Imagen de elaboración propia</span></p>
+<p style="text-align: justify;">HTTPS es un protocolo seguro y se utiliza en Internet cuando los datos que viajan por la red son sensibles o personales, como puede ser un usuario y contraseña o información bancaria. Esta información viaja encriptada en la red por lo que si alguien intercepta los paquetes no va a poder hacer nada con ellos. Solo el origen y del destino de la información serán capaces de descifrar los datos.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper activityIdevice em_iDevice" id="id128">
+<div class="iDevice emphasis1" >
+<img alt="" class="iDevice_icon" src="icon_activity.gif" /><h2 class="iDeviceTitle">Importante</h2><div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta128_42_2" class="block iDevice_content">
+<p><strong>HTTP</strong> es el protocolo que se utiliza en la red para navegar y que un usuario pueda ver una página web, escrita en HTML, en su navegador. Mediante HTTP un cliente puede solicitar a un servidor web una determinada página web así como todos los elementos de la misma como pueden ser imágenes u otros elementos multimedia.</p>
+<p>La versión actual de este protocolo es <span style="text-decoration: underline;">HTTP/2.0</span> que mejora a sus predecesoras sobre todo optimizando el ancho de banda.</p>
+<p>Una dirección de una página web está compuesta:</p>
+<p>- Protocolo (puede ser http o https).<br />- Servidor (normalmente es una etiqueta de texto que identifica al servidor como puede ser "www.juntadeandalucia.es").<br />- <em>Path</em> o camino donde se localiza la página web dentro del servidor.</p>
+<p>Cada vez con más frecuencia, es más normal ver el protocolo HTTPS que HTTP. <strong>HTTPS es un protocolo seguro</strong> y se utiliza en Internet cuando los datos que viajan por la red son sensibles o personales, como puede ser un usuario y contraseña o información bancaria. Esta información viaja encriptada por lo que si alguien intercepta los paquetes no va a poder hacer nada con ellos. Solo el origen y el destino de la información serán capaces de descifrar los datos.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

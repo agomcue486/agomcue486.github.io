@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>5.4. Protocolo de Control de la Transmisión (TCP) | TC1 - Tema 5.1: Redes de ordenadores: Modelo OSI y protocolos </title>
+<meta http-equiv="content-language" content="es" />
+<meta name="author" content="IEDA" />
+<meta name="generator" content="eXeLearning 2.0.4 - exelearning.net" />
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Show",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menu"}</script>
+<script type="text/javascript" src="common.js"></script>
+<script type="text/javascript" src="SCORM_API_wrapper.js"></script>
+<script type="text/javascript" src="SCOFunctions.js"></script>
+</head>
+<body class="exe-scorm" onload="loadPage()" onunload="unloadPage()"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><h1 id="nodeTitle">5.4. Protocolo de Control de la Transmisión (TCP)</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id121">
+<div class="iDevice emphasis0">
+<div id="ta121_239" class="block iDevice_content">
+<p><img src="Pila_tcp_ip.png" width="207" height="377" alt="Pila TCP / IP" title="Pila TCP / IP" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: center;"><span style="font-size: x-small;"><em>Pila TCP IP</em></span></p>
+<p style="text-align: center;"><span style="font-size: xx-small;">Imagen de wikimedia.org (Autor: Telematicauc3m). Recuperado de <a href="https://es.m.wikipedia.org/wiki/Archivo:Pila_tcp_ip.png">https://es.m.wikipedia.org/wiki/Archivo:Pila_tcp_ip.png</a> </span></p>
+<p style="text-align: center;"><span style="font-size: xx-small;">Licencia <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.es" target="_blank">Creative Commons Genérica de Atribución/Compartir-Igual 3.0 </a></span></p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id119">
+<div class="iDevice emphasis0">
+<div id="ta119_239" class="block iDevice_content">
+<p><span style="font-size: medium;"><strong>CAPA DE TRANSPORTE</strong></span></p>
+<p>De forma general, la capa de transporte ofrece la fiabilidad necesaria para el intercambio de datos entre un origen y un destino. Es la capa superior a la de transporte la que determina el grado de fiabilidad que se necesita, liberando a la capa superior de aspectos como el camino que deben recorrer los datos para alcanzar el otro extremo o si hay que hacer una recuperación porque se ha producido una caída de la conexión.</p>
+<p>En la arquitectura TCP/IP hay dos protocolos de transporte:</p>
+<p>- Protocolo UDP (Protocolo de Datagrama de Usuario)<br />- Protocolo TCP (Protocolo de Control de Transmisión)</p>
+<p><span style="text-decoration: underline;">PROTOCOLO UDP</span></p>
+<p>Mediante este protocolo es posible el intercambio de datos entre un origen y un destino sin que se haya establecido una conexión previamente. Es decir, cuando se usa este protocolo es porque no es necesario que exista un control de flujo en la comunicación o no es necesario que se confirme que se han recibido unos datos, por tanto, es un intercambio de datos no fiable.</p>
+<p>Este tipo de protocolos se utiliza cuando son pocos los datos a enviar frente la información de control necesaria que se requiere para una transmisión fiable. Otro caso en el que se puede encontrar es para el envío de audio y vídeo a través de la red, donde existen estrictos requisitos de retardo y no es posible hacer retransmisiones. </p>
+<p><span style="text-decoration: underline;">PROTOCOLO TCP</span></p>
+<p>Este protocolo posibilidad el intercambio de datos entre un origen y un destino de forma fiable, esto quiere decir que los datos se entregarán a la capa superior sin errores y en el mismo orden en el que se recibieron. Además, hay que tener en cuenta que la red se puede comportar de diferente manera según la carga que tenga, por tanto, el protocolo debe tener distintos mecanismos que se adapten a distintas situaciones.</p>
+<p>En un ordenador, hay aplicaciones por encima de la capa de transporte que hacen uso de ella para poder enviar datos a un equipo remoto. Las aplicaciones acceder a los servicios de TCP mediante los puertos. Por tanto, un ordenador se mantiene constantemente a la espera de recibir datos de aplicaciones remotas por un puerto o recibirlos de aplicaciones del propio ordenador. Son muchas las aplicaciones a las que da soporte TCP como los navegadores o el intercambio de ficheros mediante ftp y protocolos de aplicación HTTP, SMTP, SSH y FTP.<br />Para especificar el puerto TCP se tienen 16 bits por lo que hay un total de 65536 puertos posibles. De todos ellos, los puertos menores de 1024 son puertos muy conocidos como es el caso del puerto 21 para ftp o el puerto 80 de “http”.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper activityIdevice em_iDevice" id="id122">
+<div class="iDevice emphasis1" >
+<img alt="" class="iDevice_icon" src="icon_activity.gif" /><h2 class="iDeviceTitle">Importante</h2><div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta122_44_2" class="block iDevice_content">
+<p>Dos ordenadores que siguen una arquitectura TCP/IP para comunicarse, pueden utilizar TCP como protocolo de transporte.</p>
+<p>La capa de transporte ofrece la fiabilidad necesaria para el intercambio de datos entre un origen y un destino.</p>
+<p>Los protocolos de la capa de transporte son:</p>
+<ul>
+<li>Protocolo UDP (Protocolo de Datagrama de Usuario) para el intercambio de datos no fiable entre un origen y un destino.</li>
+<li>Protocolo TCP (Protocolo de Control de Transmisión) para el intercambio de datos fiable entre un origen y un destino.</li>
+</ul>
+<p>Para poder acceder a las aplicaciones que usan los servicios de la capa de transporte se tienen los puertos. Los que son menores de 1024 son puertos muy conocidos como es el caso del puerto 21 para ftp o el puerto 80 de “http”.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

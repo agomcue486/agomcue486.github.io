@@ -1,0 +1,385 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>3.3. Componentes de una red | TC1 - Tema 5.1: Redes de ordenadores: Modelo OSI y protocolos </title>
+<meta http-equiv="content-language" content="es" />
+<meta name="author" content="IEDA" />
+<meta name="generator" content="eXeLearning 2.0.4 - exelearning.net" />
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Show",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menu"}</script>
+<script type="text/javascript" src="common.js"></script>
+<script type="text/javascript" src="SCORM_API_wrapper.js"></script>
+<script type="text/javascript" src="SCOFunctions.js"></script>
+</head>
+<body class="exe-scorm" onload="loadPage()" onunload="unloadPage()"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><h1 id="nodeTitle">3.3. Componentes de una red</h1></div>
+<div class="iDevice_wrapper activityIdevice em_iDevice" id="id42">
+<div class="iDevice emphasis1" >
+<img alt="" class="iDevice_icon" src="icon_activity.gif" /><h2 class="iDeviceTitle">Actividad</h2><div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta42_22_2" class="block iDevice_content">
+Los componentes fundamentales de una red son los dispositivos de red, el medio de comunicación, los terminales y los servidores. 
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id43">
+<div class="iDevice emphasis0">
+<div id="ta43_1" class="block iDevice_content">
+<p>Vamos a tratar ahora los componentes de una red.</p>
+<p>Empecemos por tu ordenador. Necesitamos tener un dispositivo que convierta la información en señales, bien sea corriente eléctrica o por medio de ondas electromagnéticas.</p>
+<p>Los dos medios más habituales son:</p>
+<ul>
+<li>Una tarjeta de red para cable. Es la habitual en los equipos de sobremesa. La gran mayoría son internas, se colocan en la placa base, en las ranuras de expansión. Convierten la información en corriente eléctrica.</li>
+</ul>
+<ul>
+<li>Una tarjeta wifi. Es la que traen incorporada la práctica totalidad de los portátiles. Convierten la información en ondas electromagnéticas.</li>
+</ul>
+<p> </p>
+<p>Decimos que son los más habituales porque puedes tener alguna variante, por ejemplo, un adaptador wifi USB o los módem USB (que conocemos por "pinchos USB" ). Incluso en algunos modelos de móvil basta con conectar por usb al equipo y compartir la conexión. Es lo que se conoce como <a href="http://es.wikipedia.org/wiki/Anclaje_a_red">tethering</a>. Por si fuera poco empieza a haber Internet a través del tendido eléctrico, tanto dentro como fuera de casa. Con enchufar un adaptador conectado al router y otro adaptador donde quieras tener conexión es suficiente. <b>Te recomiendo que <a href="http://www.xataka.com/hogar-digital/especial-plc-alternativa-a-la-conectividad-wifi-ii" target="_blank">leas este artículo</a>. </b></p>
+<p> </p>
+<p>Lo habitual en una red doméstica es que los equipos se conecten directamente al modem-router (habitualmente llamado <i>router</i>), bien enchufando el cable de red en alguno de los <b>puertos</b> disponible bien por wifi.</p>
+<p> </p>
+<p>¿Qué pasa si estamos en una red un poco más grande? ¿O si de un único cable de red queremos tener conectados dos equipos? Para esto tenemos los hub (concentradores) y los switch (conmutadores). Para que tengas una analogía, si de un enchufe queremos conectar el ordenador, el monitor, los altavoces y la impresora necesitamos usar una tripleta.</p>
+<p> </p>
+<p>Con estos componentes: tarjeta de red, <em>hub</em>/<em>switch</em> y <em>modem-router</em> tendríamos nuestra red doméstica.</p>
+<p> </p>
+<p>Para redes más complejas hay dispositivos específicos como puentes (<em>bridges</em>) para conectar tipos de redes distintas.</p>
+<p> </p>
+<p>Ahora te mostramos algunos ejemplos y más datos:</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id44">
+<div class="iDevice emphasis0">
+<div id="ta44_1" class="block iDevice_content">
+<p><span style="text-decoration: underline;"><b>Dispositivos de red</b></span></p>
+<p> </p>
+<table border="0" cellspacing="15">
+<tbody>
+<tr>
+<td valign="top">
+<div align="justify"><span style="text-decoration: underline;">Tarjeta de red</span>.- es un dispositivo que conecta el ordenador u otro equipo con el medio físico. La tarjeta NIC (<span>Network Interface Card) es un tipo de tarjeta de expansión que proporciona un puerto para conectar el cable de red.</span></div>
+</td>
+<td valign="top"><img src="Imagen9.jpg" alt="tarjeta de red" title="tarjeta de red" height="98" width="180" /> </td>
+</tr>
+<tr>
+<td align="justify" valign="top"><span><span style="text-decoration: underline;">Hub/switch</span>- son equipos que permiten organizar y estructurar el cableado de las redes.</span></td>
+<td valign="top"><img src="Imagen10.jpg" alt="hub" title="hub" height="98" width="180" /></td>
+</tr>
+<tr>
+<td align="justify" valign="top"><span><span style="text-decoration: underline;">Puente o Bridge</span>.- es un equipo que une dos tipos de redes distintas ando sobre los protocolos de bajo nivel (nivel de <span class="autolink">control</span> de acceso al medio). Solo el tráfico de una red que va dirigido a la otra atraviesa el dispositivo, lo que permite a dividir las redes en segmentos lógicos, descargando de tráfico las interconexiones. <br /> </span></td>
+<td valign="top">
+<div style="text-align: center;"><img src="Imagen11.jpg" alt="puente de red" title="puente de red" height="98" width="159" /></div>
+</td>
+</tr>
+<tr>
+<td align="justify" valign="top"><span><span style="text-decoration: underline;">Enrutador</span>.- es un dispositivo de interconexión de redes que actúa a nivel de los protocolos de red. Permite utilizar varios <span class="autolink">sistemas</span> de interconexión mejorando el rendimiento de la transmisión entre redes. Su funcionamiento es más lento que los bridges pero su capacidad es mayor. Permiten, incluso, enlazar dos redes basadas en un protocolo, por medio de otra que utilice un protocolo diferente.</span></td>
+<td valign="top">
+<div style="text-align: center;"><img src="Imagen12.jpg" alt="enrutador" title="enrutador" height="98" width="147" /></div>
+</td>
+</tr>
+<tr>
+<td align="justify" valign="top"><span><span style="text-decoration: underline;">Módem</span>.- es un dispositivo que permite a los ordenadores comunicarse entre sí a través de líneas telefónicas gracias a la modulación y demodulación de señales electrónicas que pueden ser procesadas. Los módems pueden ser externos o internos. Lo habitual es que en casa tengamos un modem-router. </span></td>
+<td valign="top">
+<div style="text-align: center;"><img src="Imagen13.jpg" alt="módem" title="módem" height="98" width="147" /></div>
+</td>
+</tr>
+<tr>
+<td> </td>
+<td style="border: 1px solid #000000;" align="center">
+<p><span size="1" style="font-size: xx-small;">Img 3,4,5,6,7 y 8. Dispositivos de red</span></p>
+<p><span size="1" style="font-size: xx-small;">Banco de imágenes de <a href="http://bancoimagenes.isftic.mepsyd.es/" target="_blank">ISFTIC</a> </span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id45">
+<div class="iDevice emphasis0">
+<div id="ta45_1" class="block iDevice_content">
+<p><span style="text-decoration: underline;"><b>Medio de conexión</b></span></p>
+<p> </p>
+<p align="justify">El medio de conexión o medio de transmisión es la forma de conectar físicamente los equipos y transmitir los datos, tanto los terminales entre sí como con el servidor o con otros dispositivos de la red. Tradicionalmente, el medio más utilizado ha sido el cable (trenzado, coaxial o fibra óptica), aunque también se han utilizado los medios inalámbricos (ondas de radio, microondas o infrarrojos).</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ReflectionIdevice em_iDevice" id="id46">
+<div class="iDevice emphasis1" >
+<img alt="" class="iDevice_icon" src="icon_reflection.gif" /><h2 class="iDeviceTitle">AV - Reflexión</h2><div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta46_8" class="block iDevice_content">
+<p>Es importante que conozcas los tipos de cables que se utilizan en las redes de ordenadores. Por eso te proponemos que realices un pequeña investigación y completes la siguiente tabla sobre los tipos más utilizados de cables.</p>
+<table border="0" cellspacing="10">
+<tbody>
+<tr>
+<td style="background-color: #ff6633;" align="center">Tipo de cable</td>
+<td style="background-color: #ff6633;" align="center">Descripción</td>
+<td style="background-color: #ff6633;" align="center">Velocidad de transferencia</td>
+<td style="background-color: #ff6633;" align="center">Ancho de banda</td>
+<td style="background-color: #ff6633;" align="center">Imagen</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ff6633;">Par trenzado (UTP):</td>
+<td style="border: 1px solid #ff6633;"> </td>
+<td style="border: 1px solid #ff6633;"> </td>
+<td style="border: 1px solid #ff6633;"> </td>
+<td style="border: 1px solid #ff6633;"> </td>
+</tr>
+<tr>
+<td style="border: 1px solid #ff6633;">Cable coaxial:</td>
+<td style="border: 1px solid #ff6633;"> </td>
+<td style="border: 1px solid #ff6633;"> </td>
+<td style="border: 1px solid #ff6633;"> </td>
+<td style="border: 1px solid #ff6633;"> </td>
+</tr>
+<tr>
+<td style="border: 1px solid #ff6633;">Fibra óptica:</td>
+<td style="border: 1px solid #ff6633;"> </td>
+<td style="border: 1px solid #ff6633;"> </td>
+<td style="border: 1px solid #ff6633;"> </td>
+<td style="border: 1px solid #ff6633;"> </td>
+</tr>
+</tbody>
+</table>
+<p>Puedes encontrar información en distintas páginas web. A modo de ejemplo, pincha <a href="http://neo.lcc.uma.es/evirtual/cdd/tutorial/fisico/Mtransm.html" target="_blank"><strong>aquí</strong></a>.</p>
+</div>
+<form name="feedback-form-46" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><input type="button" name="toggle-feedback-46" value="Mostrar retroalimentación" class="feedbackbutton" onclick="$exe.toggleFeedback(this,true);return false" /></p>
+</div>
+<div id="feedback-46" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<div id="ta46_9" class="block iDevice_content">
+<p align="justify">
+<br />
+</p>
+<table border="0" cellspacing="10">
+	<tbody>
+		<tr>
+			<td style="background-color: #ff6633" align="center">Tipo de clable
+			</td>
+			<td style="background-color: #ff6633" align="center">Descripción </td>
+			<td style="background-color: #ff6633" align="center">Velocidad de transferencia<br />
+			</td>
+			<td style="background-color: #ff6633" align="center">Ancho de banda</td>
+			<td style="background-color: #ff6633" align="center">Imagen </td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid #ff6633">Par
+			trenzado (UTP): <font size="2"></font>
+			<p>
+			<font size="2"> </font>
+			</p>
+			</td>
+			<td style="border: 1px solid #ff6633" align="justify">Está formado por conductores de cobre trenzados entre
+			de 2 en 2 y protegidos con una cubierta aislante (similar al de las
+			líneas telefónicas). Suele tener 4 pares (8 hilos), es apantallado de
+			tipo STP y termina en una clavija RJ45. <font size="2">Sus ventajas mayores son su disponibilidad y bajo coste.</font><font size="2"> Las desventajas son la gran atenuación de la señal 
+			a medida que aumenta la distancia y que son muy susceptibles a interferencias 
+			eléctricas.</font></td>
+			<td style="border: 1px solid #ff6633">entre 10 y 100  Mbps</td>
+			<td style="border: 1px solid #ff6633">3 MHz<br />
+			</td>
+			<td style="border: 1px solid #ff6633"> <img src="trenzado.jpg" alt="par trenzado" title="par trenzado" height="72" width="180" /></td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid #ff6633">Cable coaxial:<br />
+			</td>
+			<td style="border: 1px solid #ff6633">
+			<div align="justify">
+			</div>
+			<p align="justify">
+			El cable coaxial consiste en dos conductores concéntricos, separados por un 
+			dieléctrico y protegido del exterior por un aislante (similar al de las antenas 
+			de TV).<font size="2"> Existen distintos tipos de cable coaxial, según las redes o las 
+			necesidades de mayor protección o distancia. Tiene mejor blindaje que el par trenzado por lo que puede alcanzar velocidades de transmisión mayores y una excelente inmunidad al ruido. Este tipo de cable sólo lo utilizan 
+			las redes EtherNet.</font> 
+			</p>
+			</td>
+			<td style="border: 1px solid #ff6633">entre 100 Mbps y 1 Gbps<br />
+			</td>
+			<td style="border: 1px solid #ff6633">350 MHz<br />
+			</td>
+			<td style="border: 1px solid #ff6633"> <img src="coaxial.jpg" alt="coaxial" title="coaxial" height="72" width="180" /></td>
+		</tr>
+		<tr>
+			<td style="border: 1px solid #ff6633">Fibra óptica:</td>
+			<td style="border: 1px solid #ff6633" align="justify">
+			<p>
+			<font size="2">Es el medio de transmisión más moderno y avanzado. Las señales de datos se 
+			transmiten a través de impulsos luminosos y pueden recorrer grandes distancias sin amplificar la señal. Por su naturaleza, este tipo de señal y cableado es inmune a las 
+			interferencias electromagnéticas, y por su gran ancho de banda permite transmitir grandes volúmenes de información a alta 
+			velocidad. Debido a estas características, se utiliza para 
+			redes de alta velocidad a grandes distancias, con flujos de datos considerables, garantizando además la seguridad de la información. El mayor inconveniente es su alto coste debido al equipo requerido y al mantenimiento 
+			del sistema.</font> 
+			</p>
+			</td>
+			<td style="border: 1px solid #ff6633">hasta 2 Gps<br />
+			</td>
+			<td style="border: 1px solid #ff6633">2 GHz<br />
+			</td>
+			<td style="border: 1px solid #ff6633"> <img src="fibraoptica.jpg" alt="fibra óptica" title="fibra óptica" height="72" width="180" /></td>
+		</tr>
+		<tr>
+			<td> </td>
+			<td> </td>
+			<td> </td>
+			<td> </td>
+			<td style="border: 1px solid #000000" align="center">
+			<p>
+			<font size="1">Img 9, 10, 11. Medios de transmisión</font>
+			</p>
+			<p>
+			<font size="1">Imágenes de producción propia </font>
+			</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+&nbsp;
+</p>
+
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id47">
+<div class="iDevice emphasis0">
+<div id="ta47_1" class="block iDevice_content">
+
+<p align="justify">
+<u><b>Terminal</b></u>
+</p>
+<p align="justify">
+&nbsp;
+</p>
+<p align="justify">
+Es cada uno de los ordenadores conectado a la red. También recibe el
+nombre de nodo o estación de trabajo. Suelen realizar sus propias
+funciones y contactan con los servidores cuando lo necesitan, bien sea
+para recurrir al uso de alguno de los recursos compartidos, bien para
+trabajar con alguna información contenida en él.
+</p>
+
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id48">
+<div class="iDevice emphasis0">
+<div id="ta48_1" class="block iDevice_content">
+<p><span style="text-decoration: underline;"><b>Servidor</b></span></p>
+<p> </p>
+<p align="justify">Cuanto más compleja es una red más se especializan los equipos que la forman. Es el caso de los servidores.</p>
+<p align="justify">Un servidor es un equipo o un programa que usan los demás componentes de la red. Alguna de sus funciones pueden ser: gestionar el correo que llega a la empresa, gestionar las impresoras, hacer copias de seguridad, incluso podemos tener el caso de terminales tontas.</p>
+<p align="justify">El servidor físico puede ser uno de los ordenadores de la red con características similares al resto, si la red es de pocos equipos, o un ordenador mucho más potente si se trata de administrar muchos equipos o mucha información. El servidor ejecuta el sistema operativo de red y ofrece los servicios de red a las estaciones de trabajo.</p>
+<p align="justify"> </p>
+<p align="justify">Cuando el servidor es de software, se refiere a un sistema operativo de red (Network Operating System) que posibilita la comunicación entre equipos de una red. Su función es coordinar y manejar las actividades de los recursos del ordenador en una red.</p>
+<p align="justify"> </p>
+<table border="0">
+<tbody>
+<tr>
+<td><img src="Imagen14.gif" alt="red de ordenadores" title="red de ordenadores" height="335" width="600" /> </td>
+</tr>
+<tr align="center">
+<td style="border: 1px solid #000000;">
+<p><span size="1" style="font-size: xx-small;">Img 2. Ejemplo de red de ordenadores</span></p>
+<p><span size="1" style="font-size: xx-small;">Imagen obtenida de <a href="http://www.monografias.com/trabajos11/reco/reco.shtml" target="_blank">www.monografías.com</a> (Autor: cecidsousa) </span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p align="justify"> </p>
+<p>En el siguiente apartado trataremos con más profundidad algunas aplicaciones de los servidores.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper ReflectionIdevice em_iDevice" id="id49">
+<div class="iDevice emphasis1" >
+<img alt="" class="iDevice_icon" src="icon_reflection.gif" /><h2 class="iDeviceTitle">AV - Reflexión</h2><div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta49_8" class="block iDevice_content">
+
+<div align="justify">
+Te proponemos ahora el siguiente ejercicio de reflexión sobre cómo empezar a montar una red. Te servirá de apoyo para la realización de uno de los ejercicios de la tarea de este tema ya que va en la misma línea.
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+Piensa en una oficina pequeña, con tres o cuatro ordenadores y hazte las siguientes preguntas:
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+¿Cuál sería el servidor? ¿Qué funciones necesitaría que realizara?  ¿Cuáles serían las estaciones de trabajo? ¿Qué otros dispositivos conectaría?  
+</div>
+
+</div>
+<form name="feedback-form-49" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><input type="button" name="toggle-feedback-49" value="Mostrar retroalimentación" class="feedbackbutton" onclick="$exe.toggleFeedback(this,true);return false" /></p>
+</div>
+<div id="feedback-49" class="feedback js-feedback js-hidden">
+<h3 class="js-sr-av">Retroalimentación</h3>
+<div id="ta49_9" class="block iDevice_content">
+
+<div align="justify">
+Suponemos que el ordenador del jefe sería el servidor de la red, ya que en él encontraríamos al administrador del sistema. El resto de ordenadores de los empleados serían las estaciones de trabajo y éstos accederían al sistema como usuarios de la red. 
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+Teniendo en cuenta los dispositivos instalados en la oficina, necesitaríamos un servidor de impresión, un servidor de fax y un servidor de comunicaciones. También necesitaríamos un servidor de archivos donde almacenar toda la documentación. Contrataríamos los servicios de servidores web, de correo y proxy con otra empresa de ese sector. 
+</div>
+
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper preknowledgeIdevice em_iDevice" id="id50">
+<div class="iDevice emphasis1" >
+<img alt="" class="iDevice_icon" src="icon_preknowledge.gif" /><h2 class="iDeviceTitle">Pre-conocimiento</h2><div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta50_21_2" class="block iDevice_content">
+<p>¿Sabías que ...?</p>
+<p>Cada tarjeta de red tiene un número único que la identifica: es la <b>dirección MAC</b> (siglas en inglés de <em>Media Access Control o Control de Acceso al Medio</em>) es un identificador de 48 bits (3 bloques hexadecimales) que corresponde de forma única a una tarjeta o dispositivo de red. Se conoce también como <b>dirección física</b>, y es única para cada dispositivo.</p>
+<p>Esta dirección puedes encontrarla en <span style="text-decoration: underline;">Windows</span> en: En "Buscar", escribe "cmd". Se te abrirá una ventana de comandos. Escribe en la nueva ventana "ipconfig /all". En el listado que te aparece, verás que de cada tarjeta que tienes conectada en tu PC, aparece los datos de la misma. Entre estos datos, está la dirección MAC o dirección física. En <span style="text-decoration: underline;">Linux</span>, también puedes averiguarlo de una forma parecida. Abres una ventana de comando o terminal y debes escribir el siguiente comando "ifconfig -a".</p>
+<p><b><br /></b><span style="font-size: 22pt; font-family: Arial; color: black;"></span></p>
+<p>Si consultas la dirección MAC de tu propia tarjeta de red, puedes averiguar cuál es el fabricante de la misma en la siguiente página web:</p>
+<p><a href="http://systemadmin.es/herramientas/traducir-mac-a-fabricante-del-equipo" target="_blank">http://systemadmin.es/herramientas/traducir-mac-a-fabricante-del-equipo</a></p>
+<p> </p>
+<p> </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

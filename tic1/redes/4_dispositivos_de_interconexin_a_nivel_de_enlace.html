@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>4. Dispositivos de interconexión a nivel de enlace | TC1 - Tema 5.1: Redes de ordenadores: Modelo OSI y protocolos </title>
+<meta http-equiv="content-language" content="es" />
+<meta name="author" content="IEDA" />
+<meta name="generator" content="eXeLearning 2.0.4 - exelearning.net" />
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Show",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menu"}</script>
+<script type="text/javascript" src="common.js"></script>
+<script type="text/javascript" src="SCORM_API_wrapper.js"></script>
+<script type="text/javascript" src="SCOFunctions.js"></script>
+</head>
+<body class="exe-scorm" onload="loadPage()" onunload="unloadPage()"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><h1 id="nodeTitle">4. Dispositivos de interconexión a nivel de enlace</h1></div>
+<div class="iDevice_wrapper activityIdevice em_iDevice" id="id98">
+<div class="iDevice emphasis1" >
+<img alt="" class="iDevice_icon" src="icon_activity.gif" /><h2 class="iDeviceTitle">Importante</h2><div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta98_43_2" class="block iDevice_content">
+<p>Recuerda que la función principal del nivel de enlace (nivel 2) es asegurar un intercambio de datos fiable entre dos elementos de red conectados a través de un medio de transmisión.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id100">
+<div class="iDevice emphasis0">
+<div id="ta100_239" class="block iDevice_content">
+<p>En una red, los dispositivos de interconexión más comunes son los siguientes:</p>
+<ul>
+<li><strong>Repetidor.</strong> Este tipo de elementos de red son necesarios en redes que han crecido tanto que es necesario regenerar la señal eléctrica que viene por el cable para que pueda ser reconocida por todos los elementos de red que estén conectados al medio. En teoría, un repetidor no hace nada y se puede considerar como una extensión del cable (no añade ninguna información ni la quita). Realmente, no es transparente e introduce un inevitable retardo. Es por este motivo, por el que está limitado a 4 el número máximo de repetidores que puede haber en un segmento de una red Ethernet.</li>
+<li><strong>Concentrador</strong>: Un concentrador o<em> hub</em> es un dispositivo con una serie de puertos ethernet a los que es posible conectar ordenadores. Cuando un PC envía una trama por un puerto, el concentrador la reenvía por todos los demás por lo que se comporta igual que un bus. Por tanto, en un concentrador todo aquello que se conecta pertenece al mismo dominio de colisión, donde es posible que dos ordenadores se interfieran. No hace nada con las tramas, no regenera la señal, ni la amplifica.</li>
+<li><strong>Conmutador</strong> o <em>switch</em>. Un <em>switch</em> y un <em>hub</em> se puede decir que son muy parecidos y aparentemente realizan la misma función. Realmente, hay una diferencia radical entre ambos casos, ya que en una LAN con un concentrador, cuando un PC escribe en su cable, el <em>hub</em> reenvía esa información por todos los demás puertos. La red se comporta como si hubiera solo un cable al que todos los ordenadores están conectados, mientras que en el caso del <em>switch</em> con “n” puertos, se comporta como “n” redes independientes en la que cada red tiene un solo PC, por tanto, hay “n” dominios de colisión. En un <em>switch</em>, si una computadora A quiere hablar con otra B, la trama no se reenvía a todos los puertos del <em>switch</em> sino solo al puerto donde se encuentra la computadora B.</li>
+<li><strong>Puente</strong>: Los puentes o <em>bridge</em> aparecen debido a la necesidad de conectar varias LAN. Con un puente todavía la distancia puede aumentar aún más cuando se desean conectar dos redes independientes que pueden ser colocalizadas o distantes.</li>
+<li><strong>Router</strong>: Los enrutadores o router hacen una función parecida a la de un puente, pero trabaja en un nivel distinto. Un puente trabaja con la trama (capa 2 de OSI), mientras que un enrutador trabaja con el paquete de nivel de red.</li>
+</ul>
+<p style="margin-left: 30px;">Respecto a las capas de OSI, un concentrador y un repetidor pertenecen al nivel 1 o nivel físico. En cambio, los puentes y conmutadores se encuentran en el nivel de enlace o nivel 2. En un puente, es posible conectar LAN directamente a un puerto. En cambio, con un <em>switch</em> normalmente se suele conectar solo una computadora a un puerto del mismo.</p>
+<p style="margin-left: 30px;"><br />Un <em>router</em> tiene dos funciones importantes. Una de ellas es la función de <span style="text-decoration: underline;">enrutamiento</span> que consiste en construir las tablas para ello. Al igual que se ha visto para los puentes, cuando se alimenta a un <em>router</em>, tienen que aprender a enrutar los paquetes y así construir sus tablas. La otra función que tiene es la de <span style="text-decoration: underline;">reenvío</span> en la que, una vez que ya tiene sus tablas completas, si llega un paquete de A hacia B, el router examina la dirección B va a sus tablas de enrutamiento y decide la interfaz por el que debe enviar el paquete.</p>
+<p style="margin-left: 30px;"><img src="Figura16.jpg" width="450" height="180" alt="Componentes de una red" title="Componentes de una red" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="margin-left: 30px; text-align: center;"><span style="font-size: x-small;">Imagen de elaboración propia</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

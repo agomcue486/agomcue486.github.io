@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>5. Modelos de red y principales protocolos | TC1 - Tema 5.1: Redes de ordenadores: Modelo OSI y protocolos </title>
+<meta http-equiv="content-language" content="es" />
+<meta name="author" content="IEDA" />
+<meta name="generator" content="eXeLearning 2.0.4 - exelearning.net" />
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Show",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menu"}</script>
+<script type="text/javascript" src="common.js"></script>
+<script type="text/javascript" src="SCORM_API_wrapper.js"></script>
+<script type="text/javascript" src="SCOFunctions.js"></script>
+</head>
+<body class="exe-scorm" onload="loadPage()" onunload="unloadPage()"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><h1 id="nodeTitle">5. Modelos de red y principales protocolos</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id109">
+<div class="iDevice emphasis0">
+<div id="ta109_239" class="block iDevice_content">
+<p>Las primeras redes que hicieron su aparición fueron aquellos que seguían un modelo centralizado. En este modelo, existía un ordenador central, potente, que se encarga de asumir las tareas de todo el conjunto. A él se conectaban estaciones terminales, con muy poca capacidad de procesamiento.</p>
+<p>Este tipo de modelos centralizados tenían grandes inconvenientes. Si el ordenador central tenía algún tipo de avería, la red entera quedaba indisponible. La escalabilidad de este tipo de redes es costosa. También presentaban problemas de integración con otros sistemas.</p>
+<p>Así, aparecieron los sistemas distribuidos en los que se hacía un trabajo colaborativo para realizar las tareas. Hay distintos modelos que se pueden tener en los sistemas distribuidos. De todos ellos, se prestará especial atención al modelo cliente / servidor.</p>
+<p><strong>SISTEMAS DISTRIBUIDOS</strong></p>
+<p>La mayoría de los sistemas informáticos que se tienen actualmente son sistemas distribuidos donde el procesamiento se distribuye sobre todos los elementos de la red en lugar de centralizarse en uno solo. Se hace un procesamiento cooperativo donde los componentes de la red realizan una tarea común mediante el paso de mensajes a través de la red, con los que se comunican y se coordinan. Internet es un buen ejemplo de sistema distribuido.</p>
+<p><br />Son muchas las ventajas de los sistemas distribuidos frente a los centralizados. La compartición de recursos es algo intrínseco en estos sistemas. Suelen ser sistemas abiertos en los que no hay tanta dificultad a la hora de combinar hardware y software de distintos fabricantes. Otro aspecto importante es la buena escalabilidad o la tolerancia a los fallos, dado que al ser un sistema distribuido, si se le añade un nuevo elemento, disminuye de forma proporcional la carga en otros o al contrario, si un elemento de red deja de realizar tareas, estás se reparten entre el resto.</p>
+<p>Los modelos de red más habituales:</p>
+<ul>
+<li>Arquitectura cliente / servidor. Los elementos de la red actúan como clientes o como servidores. Es decir, un servidor ofrece un servicios para atender a los clientes a través de las peticiones de servicio. Un servidor de un servicio puede ser a su vez cliente de un servicio diferente.</li>
+</ul>
+<p><img src="Cliente-Servidor.png" width="450" height="217" alt="Modelo cliente servidor" title="Modelo cliente servidor" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: center;"><em><span style="font-size: x-small;">Modelo cliente servidor</span></em></p>
+<p style="text-align: center;"><span style="font-size: xx-small;">Imagen de Wikimedia Commons (Autor: Tiago de Jesus Neves). Recuperado de <a href="https://commons.wikimedia.org/wiki/File:Cliente-Servidor.png">https://commons.wikimedia.org/wiki/File:Cliente-Servidor.png</a>. <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" target="_blank">Licencia CC BY-SA 3.0 de Creative Commons</a>.</span><a href="https://commons.wikimedia.org/w/index.php?title=User:Tiago_de_Jesus_Neves&amp;action=edit&amp;redlink=1" class="new" title="User:Tiago de Jesus Neves (page does not exist)"><br /></a></p>
+<p align="center"><span style="font-size: x-small;"><em> </em></span></p>
+<p align="center"></p>
+<ul>
+<li>Servicios proporcionados por múltiples servidores. En este modelo existen varios servidores. Estos pueden realizar la misma función, por tanto, sería un sistema con redundancia en el que si uno pasa a indisponible, los otros lo sustituyen. También es posible que el servicio se divida en partes y cada servidor realiza una.</li>
+</ul>
+<p></p>
+<ul>
+<li>Servidores proxy y cachés. Una caché es un almacén de datos utilizados recientemente. Cuando un cliente solicita un dato, el servicio comprueba si el dato se encuentra en la caché para proporcionárselo al cliente o busca una copia actualizada, guardando el dato nuevo. La caché puede residir en el cliente o en un servidor proxy. De esta manera se optimiza el tráfico que sale o entra de la red ya que si un cliente demanda una página web, es posible que no sea necesario acceder al servidor web donde reside la página a través de Internet, ya que se encuentra en la caché.</li>
+</ul>
+<p><img src="servidor_proxy.PNG" width="864" height="329" alt="Servidor proxy" title="Servidor proxy" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: center;"><span style="font-size: x-small;"><em>Servidor proxy en una red local con conexión a Internet</em></span></p>
+<p style="text-align: center;"><span style="font-size: xx-small;">Imagen de elaboración propia</span></p>
+<ul>
+<li>Procesos de igual a igual. En este modelo hay una serie de objetos que interaccionan entre sí. No es importante si los objetos ofrecen un servicio o hacen uso de él ya que hacen una actividad distribuida trabajando de una forma cooperativa para llevarla a cabo. En este tipo de sistemas, es necesario que existan unos procesos de sincronización que aseguren la consistencia de los recursos compartidos.</li>
+</ul>
+<p></p>
+<ul>
+<li>Variaciones en el modelo clientes – servidor:</li>
+</ul>
+<p style="margin-left: 60px;">- Código móvil: este tipo de modelos puede implicar una amenaza de la seguridad de una computadora. Se puede englobar como una tipología de modelo cliente / servidor, donde un cliente inicia un diálogo con un servidor que implica la descarga de un código (<em>applet</em>) que reside en este y se ejecuta en el cliente de forma local.</p>
+<p style="margin-left: 60px;">- Agentes móviles. Este tipo de modelos también puede suponer una amenaza potencial de la seguridad. Un agente móvil es un programa en ejecución que se va trasladando a distintos ordenadores de una red para realizar alguna función, como puede ser la instalación y mantenimiento de software.</p>
+<p style="margin-left: 60px;">- Computadoras en red. En este tipo de modelos, se tiene una serie de ordenadores conectados en red. En el disco local hay un software mínimo, pero la mayor parte de las aplicaciones, e incluso es posible que también el sistema operativo, reside en un servidor donde se van descargando las aplicaciones a medida que el usuario las va demandando.</p>
+<p style="margin-left: 60px;">- Clientes ligeros. En este tipo de modelo de red, hay una serie de ordenadores que básicamente se encargan de implementar la interfaz. Realmente, las aplicaciones no se ejecutan de forma local, sino que esto se hace en un servidor remoto. Evidentemente, cuando la necesidad de intercambio de datos entre el servidor con el resto de ordenadores es elevada, este tipo de solución no es la más adecuada como es el caso de programas de diseño gráfico o de CAD.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper activityIdevice em_iDevice" id="id110">
+<div class="iDevice emphasis1" >
+<img alt="" class="iDevice_icon" src="icon_activity.gif" /><h2 class="iDeviceTitle">Importante</h2><div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta110_41_2" class="block iDevice_content">
+<p>La mayoría de los sistemas informáticos que se tienen actualmente son <strong>sistemas distribuidos</strong> donde el procesamiento se distribuye sobre todos los elementos de la red. Presentan ventajas frente a los centralizados (compartición de recursos, escalabilidad, tolerancia a fallos, etc.).</p>
+<p>Los modelos de red más habituales:</p>
+<p>- Arquitectura <span style="text-decoration: underline;">cliente - servidor</span>: un servidor ofrece un servicios para atender a los clientes a través de las peticiones de servicio.</p>
+<p>- Servicios proporcionados por <span style="text-decoration: underline;">múltiples servidores</span>.</p>
+<p>- <span style="text-decoration: underline;">Servidores proxy</span> y cachés.</p>
+<p>- <span style="text-decoration: underline;">Procesos de igual a igual</span>. Los componentes de este modelo hacen una actividad distribuida trabajando de una forma cooperativa para llevarla a cabo.</p>
+<p>- <span style="text-decoration: underline;">Variaciones en el modelo cliente - servidor</span>: código móvil (applet), agentes móviles, computadores en red, clientes ligeros (solo implementan la interfaz gráfica y las aplicaciones se ejecutan en un servidor externo).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

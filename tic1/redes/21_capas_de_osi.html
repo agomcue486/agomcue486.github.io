@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>2.1. Capas de OSI | TC1 - Tema 5.1: Redes de ordenadores: Modelo OSI y protocolos </title>
+<meta http-equiv="content-language" content="es" />
+<meta name="author" content="IEDA" />
+<meta name="generator" content="eXeLearning 2.0.4 - exelearning.net" />
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Show",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menu"}</script>
+<script type="text/javascript" src="common.js"></script>
+<script type="text/javascript" src="SCORM_API_wrapper.js"></script>
+<script type="text/javascript" src="SCOFunctions.js"></script>
+</head>
+<body class="exe-scorm" onload="loadPage()" onunload="unloadPage()"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><h1 id="nodeTitle">2.1. Capas de OSI</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id81">
+<div class="iDevice emphasis0">
+<div id="ta81_239" class="block iDevice_content">
+<p>El modelo OSI para intercambio de datos entre dos ordenadores conectados en red fue creado por ISO (Organización Internacional para la Estandarización) formado por comités de estandarización de muchos países con el objetivo de mejorar la compatibilidad entre productos.</p>
+<p>El modelo OSI es muy general y no especifica los protocolos que componen cada capa sino más bien las funciones que debía tener cada una. En este modelo se distinguen 7 capas:</p>
+<p>1. Capa física<br />2. Capa de enlace<br />3. Capa de red<br />4. Capa de transporte<br />5. Capa de sesión<br />6. Capa de presentación<br />7. Capa de aplicación</p>
+<p>En la siguiente imagen se refleja cómo quedaría esta modelo implementado para la comunicación entre dos ordenadores.</p>
+<p style="text-align: center;"><img src="OSI.PNG" width="430" height="258" alt="Modelo de referencia OSI" title="Modelo de referencia OSI" /><br /><br /></p>
+<p style="text-align: center;"><span style="font-size: x-small;">Modelo de referencia OSI</span></p>
+<p style="text-align: center;"><span style="font-size: xx-small;">Imagen de elaboración propia</span></p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id83">
+<div class="iDevice emphasis0">
+<div id="ta83_239" class="block iDevice_content">
+<p><strong>CAPA FÍSICA</strong></p>
+<p>En esta capa se definen:</p>
+<ul>
+<li>Las características físicas que describen cómo se envían datos a través de una medio de transmisión. Por ejemplo, si lo que hay que enviar son una serie de bits, se define la duración del envío de un bit por el canal, cómo se envía el bit (nivel alto o nivel bajo o una combinación de ambos), si es un cable habrá que especificar los niveles de tensión para el envío de ese bit, etc.</li>
+<li>Las características físicas que describen el interfaz entre la computadora y el medio de transmisión, es decir, se especifica el conector. A modo de ejemplo, un conector RJ-45 es un buen ejemplo. En él quedan especificados todos los aspectos físicos, como las dimensiones, el número de pines, la función que debe tener cada pin, etc.</li>
+</ul>
+<p><strong>CAPA DE ENLACE</strong></p>
+<p>Si dos elementos de red están conectados a través de un medio de transmisión, dentro de las funciones de la capa de enlace se encuentran el envío de datos libre de <span style="text-decoration: underline;">errores</span> ya que hay que pensar que la posibilidad de que estos existan es importante. No se puede olvidar que un medio de transmisión puede ser compartido, por tanto, es posible que dos ordenadores traten de acceder al mismo tiempo produciéndose una <span style="text-decoration: underline;">colisión</span> entre ambos. También se debe pensar que un ordenador puede ser más lento que otro, por tanto, en el envío de datos a través del medio hay que acordar una velocidad para la transmisión de datos. Los datos se envían a través del medio de transmisión enpaquetados. A un paquete de datos de la capa de enlace, se le conoce como <span style="text-decoration: underline;">trama</span>.</p>
+<p><strong>CAPA DE RED</strong></p>
+<p>Como función principal de esta capa, se tiene el envío de datos de un origen a un destino . A diferencia de lo que ocurría en la capa anterior, los datos se envían desde un origen a un destino y no tienen por qué estar conectados a través de un medio de transmisión. Es decir, los datos que pertenecen a esta capa pueden pasar por otros elementos de red conocidos como <em>router</em> que se encargan de reenviar los paquetes por el camino adecuado en función la dirección de destino.</p>
+<p>La complejidad de las funciones de esta capa aumentan ya que hay que tener en cuenta aspectos como la <span style="text-decoration: underline;">calidad del servicio</span> que está relacionada con la velocidad en el intercambio de los datos en la red y que determina si se puede llevar a cabo un determinado servicio como una videoconferencia. También hay que tener en cuenta que los datos pueden viajar por <span style="text-decoration: underline;">redes de distinta naturaleza</span>, por lo que es posible que el <span style="text-decoration: underline;">tamaño de los paquetes</span> pueden ser diferentes y haya que controlarlo.</p>
+<p><strong>CAPA DE TRANSPORTE</strong></p>
+<p>La función principal de esta capa es ofrecer a las capas superiores una conexión libre de errores entre un origen y un destino. En el nivel de enlace, se ofreció una conexión libre de errores entre dos elementos de red conectados por un medio de transmisión. Ahora, es posible que haya varios saltos en el camino, por tanto, puede ser que los paquetes tengan un camino diferente para llegar al destino y es posible que lleguen desordenados. Es posible que por el camino se pierdan paquetes y haya que volver a retransmitirlos. Es decir, son muchas las dificultades que se pueden dar y que se resuelven en esta capa.</p>
+<p><strong>CAPA DE SESIÓN</strong></p>
+<p>En una computadora es posible que existan varias sesiones activas. Por tanto, dentro de las funciones de este nivel está la gestión de las mismas. Por ejemplo, se establecen puntos de referencia en las sesiones que se necesitarán para la recuperación de alguna en caso de interrupción de la conexión.</p>
+<p><strong>CAPA DE PRESENTACIÓN</strong></p>
+<p>En esta capa se trabaja con el contenido de la comunicación e importa poco los aspectos relacionados con la comunicación en sí. Cada ordenador puede tener su propia forma de representar los datos. Esta capa se encarga de la presentación de la información posibilitando que distintos equipos informáticos puedan tener representaciones internas diferentes. Se manejan estructuras de datos abstractas y se realizan las conversiones oportunas para que esta información se represente de forma correcta en el elementos de red en cuestión.</p>
+<p><strong>CAPA DE APLICACIÓN</strong></p>
+<p>Esta es la capa que se encuentra en lo alto de la torre de protocolos. Es la que utiliza la aplicación final y es la más cercana al usuario que es el que hace uso de la aplicación. Se encarga de ofrecer el acceso a las capas inferiores. A esta capa no accede el usuario directamente, sino que lo hacen los programas que maneja el usuario simplificando esta labor.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper activityIdevice em_iDevice" id="id84">
+<div class="iDevice emphasis1" >
+<img alt="" class="iDevice_icon" src="icon_activity.gif" /><h2 class="iDeviceTitle">Importante</h2><div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta84_50_2" class="block iDevice_content">
+<p>El modelo de referencia OSI distingue las siguientes capas:</p>
+<ol>
+<li><span style="text-decoration: underline;">Capa física</span>: recoge las especificaciones del envío de datos a través del medio de transmisión así como las características de la interfaz entre el elemento de red y el medio de transmisión.</li>
+<li><span style="text-decoration: underline;">Capa de enlace</span>: ofrece el envío de datos libre de errores entre dos elementos de red conectados punto a punto.</li>
+<li><span style="text-decoration: underline;">Capa de red</span>: ofrece la posibilidad de enviar datos entre un origen y un destino aunque la información tenga que pasar por otros elementos de red. Entre las funciones importantes de esta capa está el encaminamientos de los datos que puede ser estático o dinámico.</li>
+<li><span style="text-decoration: underline;">Capa de transporte</span>: La función principal de esta capa es ofrecer a las capas superiores una conexión libre de errores entre un origen y un destino, aunque para ello haya que pasar por otros elementos de red.</li>
+<li><span style="text-decoration: underline;">Capa de sesión</span>: se encarga de la gestión de las sesiones activas de un ordenador.</li>
+<li><span style="text-decoration: underline;">Capa de presentación</span>: maneja estructuras de datos abstractas y posibilita que cada ordenador pueda utilizar su propia representación de la información.</li>
+<li><span style="text-decoration: underline;">Capa de aplicación</span>: se encarga de ofrecer a los programas de usuario el acceso a las capas inferiores. Se encuentra en lo alto de la torre de protocolos.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>5.2. Protocolo de Internet (IP). Enrutadores | TC1 - Tema 5.1: Redes de ordenadores: Modelo OSI y protocolos </title>
+<meta http-equiv="content-language" content="es" />
+<meta name="author" content="IEDA" />
+<meta name="generator" content="eXeLearning 2.0.4 - exelearning.net" />
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={show:"Show",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menu"}</script>
+<script type="text/javascript" src="common.js"></script>
+<script type="text/javascript" src="SCORM_API_wrapper.js"></script>
+<script type="text/javascript" src="SCOFunctions.js"></script>
+</head>
+<body class="exe-scorm" onload="loadPage()" onunload="unloadPage()"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="outer">
+<div id="main">
+<div id="nodeDecoration"><h1 id="nodeTitle">5.2. Protocolo de Internet (IP). Enrutadores</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id116">
+<div class="iDevice emphasis0">
+<div id="ta116_239" class="block iDevice_content">
+<p><img src="Internet_Protocol_Analysis.png" width="350" height="238" alt="Protocolo IP" title="Protocolo IP" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: center;"><span style="font-size: x-small;"><em>Internet Protocol Analysis</em></span></p>
+<p style="text-align: center;"><span style="font-size: xx-small;">Imagen de commons.wikimedia.org (Autor: Dave Braunschweig). Recuperado de <a href="https://commons.wikimedia.org/wiki/File:Internet_Protocol_Analysis.png">https://commons.wikimedia.org/wiki/File:Internet_Protocol_Analysis.png</a>. </span><span style="font-size: xx-small;">Licencia </span><a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" target="_blank" style="font-size: xx-small;">CC BY-SA</a><span style="font-size: xx-small;"> de Creative Commons 3.0</span></p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id115">
+<div class="iDevice emphasis0">
+<div id="ta115_239" class="block iDevice_content">
+<p><strong>PROTOCOLO IP</strong></p>
+<p>El protocolo IP (Internet Protocol) es el protocolo que se utiliza en Internet. Corresponde al nivel de red o nivel 3 y es uno de los responsables del éxito de Internet.</p>
+<p>Actualmente, existen dos versiones de IP (versión 4 y versión 6). La versión 6 apareció debido a que IPv4 se estaba quedado sin direcciones libres. En la cabecera IP, existe un campo "Tiempo de vida" mediante el cuál se puede controlar el tiempo que un paquete está viajando por la red. Si supera un número de saltos máximo, el paquete se descarta y se informa al origen de dicho suceso.</p>
+<p>Cualquier equipo conectado a una red, necesita estar identificado de forma que otros equipos informáticos puedan enviarle datos encapsulados en paquetes. Esta identificación se consigue con la dirección IP, por tanto, todos los dispositivos en una red tienen que tener asignada una dirección IP. Las dirección IPv4 son de 4 bytes (32 bits). En un mensaje de este protocolo deben viajar tanto la dirección de origen como la dirección de destino.</p>
+<p>Con la versión 6 de IP, se supone que se eliminan aquellos aspectos negativos de la versión 4 y añade mejoras. Además, se sigue manteniendo la modularidad, es decir, es compatible con las capas superiores. A diferencia de los 4 bytes de IPv4, en esta versión se tienen 16 bytes por lo que sería prácticamente imposible agotarlas. La idea es proporcionar múltiples niveles de jerarquía y flexibilidad en el diseño del direccionamiento y enrutamiento jerárquicos.<br />Entre las mejoras que introduce, destaca la simplificación de las cabeceras de este protocolo haciendo que sea más sencilla la conmutación en los <em>router</em>. También introduce mejoras en cuanto a la calidad de servicio, dado la creciente aparición de aplicaciones web que demandan distintos tipos de requerimientos.</p>
+<p><br /><strong>ROUTER</strong></p>
+<p>Un <em>router</em> o encaminador de paquetes posiblemente sea el elemento más importante en una red. Se encarga de dirigir los paquetes que entran por alguno de sus interfaces y, de acuerdo a unas tablas de encaminamiento que dispone, selecciona el interfaz de salida en función de la dirección de destino del paquete.</p>
+<p>Un <em>router</em> pertenece al nivel de red en el modelo de OSI. En el modelo TCP/IP, en este nivel se tiene IP (<em>Internet Protocol</em>).</p>
+<p>La función del <em>router</em> es analizar los paquetes que le llegan, para ello comprueba la dirección IP del destino de los paquetes y busca la acción a realizar en la tabla de enrutamiento. El resultado puede ser que el equipo al que van los paquetes pertenezcan a una subred que es controlada por el <em>router</em>, por tanto, solo tendría que enviar los paquetes por el puerto correspondiente. Puede ser que no sea así y tenga que enviarlo por otro interfaz que tendrá otro <em>router</em> en el extremo opuesto que sabrá qué hacer con ese paquete.</p>
+<p>Además, el éxito de este protocolo radica en el dinamismo de las tablas de encaminamiento de los <em>router</em>. Son tablas dinámicas que se actualizan, de manera que normalmente no se define en una red solo un camino para alcanzar un destino, sino que se configura para que haya varias alternativas. Si un enlace queda indisponible, los paquetes que necesitan dicho enlace para alcanzar al destino, usarán una ruta alternativa hasta que se recupere.</p>
+<p>En entornos domésticos, es frecuente encontrar un <em>router</em> que realizan varias funciones en una red local. En primer lugar, hace la función de concentrador ya que dispone de puertos RJ-45 a los que se puede conectar algún equipo informático mediante cable. Además, la mayoría de estos <em>router</em> dota a la red local de acceso inalámbrico dotándola de gran flexibilidad.</p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id118">
+<div class="iDevice emphasis0">
+<div id="ta118_239" class="block iDevice_content">
+<p><img src="wlan-3131127_1920.png" width="450" height="300" alt="Router" title="Router" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: center;"><span style="font-size: x-small;"><em>Router</em></span></p>
+<p style="text-align: center;"><span style="font-size: xx-small;">Imagen de pixabay.com (autor: annca). Recuperado de <a href="https://pixabay.com/es/wlan-web-acceso-internet-3131127">https://pixabay.com/es/wlan-web-acceso-internet-3131127</a>. Licencia CC0 Creative Commons. Gratis para usos comerciales. No es necesario reconocimiento.</span></p>
+<p></p>
+</div>
+</div>
+</div>
+<div class="iDevice_wrapper activityIdevice em_iDevice" id="id131">
+<div class="iDevice emphasis1" >
+<img alt="" class="iDevice_icon" src="icon_activity.gif" /><h2 class="iDeviceTitle">Importante</h2><div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta131_42_2" class="block iDevice_content">
+<p>- El <strong>protocolo IP</strong>: El protocolo IP (Internet Protocol) es el protocolo que se utiliza en Internet. Corresponde al nivel de red o nivel 3 y es uno de los responsables del éxito de Internet.</p>
+<p>- <strong>Router o encaminador de paquetes</strong>: Posiblemente es el elemento más importante en una red. Se encarga de dirigir los paquetes que entran por alguno de sus interfaces y, de acuerdo a unas tablas de encaminamiento que dispone, selecciona el interfaz de salida en función de la dirección de destino del paquete.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>
