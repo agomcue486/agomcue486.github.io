@@ -1,8 +1,8 @@
 #! /bin/bash
 
-sudo apt-get update
+apt-get update
 
-sudo apt-get install \
+apt-get install \
     apt-transport-https \
     ca-certificates \
     curl \
@@ -11,13 +11,13 @@ sudo apt-get install \
 
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 
-sudo add-apt-repository \
+add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/debian \
    $(lsb_release -cs) \
    stable"
 
-sudo apt-get update
+apt-get update
 
-sudo apt-get install docker-ce docker-ce-cli containerd.io
+apt-get install docker-ce docker-ce-cli containerd.io
 
-sudo docker run hello-world
+docker run hello-world
