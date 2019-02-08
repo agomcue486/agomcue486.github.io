@@ -2,7 +2,7 @@
 
 apt-get -y update;
 apt-get -y upgrade;
-apt-get -y build-essential module-assistant;
+apt-get -y install build-essential module-assistant;
 m-a -i prepare;
 mount /media/cdrom;
 cp -v /media/cdrom/VBoxLinuxAdditions.run /tmp;
