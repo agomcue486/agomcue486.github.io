@@ -1,0 +1,490 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8" />
+    <title>Testing</title>
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.16.2/dist/phaser-facebook-instant-games.js"></script>
+    <!-- <style type="text/css">
+        body {
+            margin: 0 auto;
+            width: 50%;
+        }
+    </style> -->
+</head>
+<body>
+
+<script type="text/javascript">
+
+    var config = {
+        type: Phaser.AUTO,
+        width: 800,
+        height: 700,
+        physics: {
+            default: 'arcade',
+            arcade: {
+                gravity: { y: 300 },
+                debug: false
+            }
+        },
+        scene: {
+            //init: init,
+            preload: preload,
+            create: create,
+            update: update
+        }
+    };
+
+    var game = new Phaser.Game(config);
+    var platforms;
+    var player, snail;
+    var stars;
+    var bombs;
+    var cursors;
+    var score = 0;
+    var gameOver = false;
+    var scoreText;
+    var key_e;
+    var double_mode = false;
+    var time_double_mode = 0;
+    var gameoverText;
+    var pressingDownKey = false;
+    var level = 1;
+
+    var buttonjump, buttonleft, buttonright;
+    var buttonrightpressed = false;
+    var buttonleftpressed = false;
+    var buttonjumppressed = false;
+
+    // function init () {
+    //     var canvas = this.sys.game.canvas;
+    //     var fullscreen = this.sys.game.device.fullscreen;
+
+    //     if (!fullscreen.available) {
+    //         return;
+    //     }
+        
+    //     // You don't really have to create the buttons here.
+    //     // You could add them to HTML instead and then select here.
+
+    //     startBtn = document.createElement('button');
+    //     stopBtn = document.createElement('button');
+
+    //     startBtn.textContent = 'Start Fullscreen';
+    //     stopBtn.textContent = 'Stop Fullscreen';
+
+    //     canvas.parentNode.appendChild(startBtn);
+    //     canvas.parentNode.appendChild(stopBtn);
+
+    //     startBtn.addEventListener('click', function () {
+    //         if (document.fullscreenElement) { return; }
+
+    //         canvas[fullscreen.request]();
+    //     });
+
+    //     stopBtn.addEventListener('click', function () {
+    //         document[fullscreen.cancel]();
+    //     });
+
+    //     this.events.on('shutdown', shutdown, this);
+    // }
+
+    // function shutdown () {
+    //     var canvas = this.sys.game.canvas;
+
+    //     canvas.parentNode.removeChild(startBtn);
+    //     canvas.parentNode.removeChild(stopBtn);
+    // }
+
+    function preload ()
+    {
+        this.load.image('sky', 'assets/sevilla3.png');
+        this.load.image('ground', 'assets/platform.png');
+        this.load.image('star', 'assets/star.png');
+        this.load.image('bomb', 'assets/bomb.png');
+        //this.load.image('fullscreen', 'assets/fullscreen.png');
+        this.load.spritesheet('dude-idle', 'assets/idle32.png', { frameWidth: 19, frameHeight: 32, spacing: 13 });
+        this.load.spritesheet('snail', 'assets/snail.png', { frameWidth: 32, frameHeight: 32 });
+        //this.load.spritesheet('dude-idle', 'assets/run-left.png', { frameWidth: 19, frameHeight: 32, spacing: 13 });
+        this.load.spritesheet('dude-right', 'assets/run-right.png', { frameWidth: 19, frameHeight: 32, spacing: 13 });
+
+        if(!this.sys.game.device.os.desktop)
+        {
+            this.load.spritesheet('buttonvertical', 'assets/button-vertical.png', {frameWidth: 64, frameHeight: 64});
+            this.load.spritesheet('buttonhorizontal', 'assets/button-horizontal.png', {frameWidth: 96, frameHeight: 64});
+            this.load.spritesheet('buttondiagonal', 'assets/button-diagonal.png', {frameWidth: 64, frameHeight: 64});
+            this.load.spritesheet('buttonjump', 'assets/button-round-a.png', {frameWidth: 96, frameHeight: 96});
+        }
+    }
+
+    function create ()
+    {
+        //if (!game.device.desktop){ game.input.onDown.add(gofull, this); } //go fullscreen on mobile devices
+
+
+        //  A simple background for our game
+        this.add.image(400, 400, 'sky');
+
+          //  Show the whole animation sheet
+        //this.add.image(32, 32, 'dude', '__BASE').setOrigin(0);
+
+        //  The platforms group contains the ground and the 2 ledges we can jump on
+        platforms = this.physics.add.staticGroup();
+
+        //  Here we create the ground.
+        //  Scale it to fit the width of the game (the original sprite is 400x32 in size)
+        platforms.create(400, 668, 'ground').setScale(2).refreshBody();
+
+        //  Now let's create some ledges
+        platforms.create(600, 500, 'ground');
+        platforms.create(50, 350, 'ground');
+        platforms.create(750, 320, 'ground');
+        platforms.create(-50, 190, 'ground');
+
+        // The player and its settings
+        snail = this.physics.add.sprite(140, 450, 'snail');
+        player = this.physics.add.sprite(100, 450, 'dude-idle').setScale(2);
+
+        // Buttons
+
+        if(!this.sys.game.device.os.desktop)
+        {
+            buttonjump = this.add.sprite(750, 650, 'buttonjump').setInteractive();
+
+            buttonjump.on('pointerdown', function() {
+                console.log("Inicio botón salto");
+                buttonjumppressed = true;
+            });
+
+            buttonjump.on('pointerup', function() {
+                console.log("Fin botón salto");
+                buttonjumppressed = false;
+            });
+
+
+            buttonright = this.add.sprite(200, 670, 'buttonhorizontal').setInteractive();
+
+            buttonright.on('pointerdown', function() {
+                console.log("Inicio botón derecha")
+                buttonrightpressed = true;
+            });
+
+
+            buttonright.on('pointerup', function() {
+                console.log("Final bptón derecha")
+                buttonrightpressed = false;
+            });
+
+
+            buttonleft = this.add.sprite(50, 670, 'buttonhorizontal').setInteractive();
+
+            buttonleft.on('pointerdown', function() {
+                console.log("Inicio botón izquierda")
+                buttonleftpressed = true;
+            });
+
+            buttonleft.on('pointerup', function() {
+                console.log("Final botón izquierda")
+                buttonleftpressed = false;
+            });
+        }
+
+        // let fullscreen = this.add.image(16,16,'fullscreen').setInteractive()
+        // fullscreen.on('pointerup',()=>{window['game']['canvas'][game.device.fullscreen.request]();})
+
+
+
+        // Los siguientes dos métodos sólo van a funcionar
+        // correctamente si el sprite "player" se ha creado
+        // dentro del objeto "physics". 
+        // Si no, no se deben ejecutar porque entonces 
+        // no hay animación que funcione.
+        //  Player physics properties. Give the little guy a slight bounce.
+        player.setBounce(0.1);
+        player.setCollideWorldBounds(true);
+
+        //  Our player animations, turning, walking left and walking right.
+        this.anims.create({
+            key: 'turn',
+            frames: this.anims.generateFrameNumbers('dude-idle'),
+            frameRate: 10,
+            //yoyo: true,
+            repeat: -1
+        });
+
+        //  Snail anim
+        this.anims.create({
+            key: 'snail-anim',
+            frames: this.anims.generateFrameNumbers('snail'),
+            frameRate: 4,
+            //yoyo: true,
+            repeat: -1
+        });
+
+        //player.anims.load('turn');
+        // player.anims.play('turn');
+
+        // this.anims.create({
+        //     key: 'left',
+        //     frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
+        //     frameRate: 10,
+        //     repeat: -1
+        // });
+
+        // this.anims.create({
+        //     key: 'turn',
+        //     frames: [ { key: 'dude', frame: 4 } ],
+        //     frameRate: 20
+        // });
+
+        this.anims.create({
+            key: 'right',
+            frames: this.anims.generateFrameNumbers('dude-right'),
+            frameRate: 10,
+            repeat: -1
+        });
+
+        // Iniciamos la animación de cuando el muñeco está quieto.
+        player.anims.play('turn');
+        snail.anims.play('snail-anim');
+
+
+
+        //  Input Events
+        //if (!game.device.desktop){
+        cursors = this.input.keyboard.createCursorKeys();
+        //}
+
+        key_e = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.E);
+
+        //  Some stars to collect, 12 in total, evenly spaced 70 pixels apart along the x axis
+        stars = this.physics.add.group({
+            key: 'star',
+            repeat: 11,
+            setXY: { x: 12, y: 0, stepX: 70 }
+        });
+
+        stars.children.iterate(function (child) {
+            //  Give each star a slightly different bounce
+            child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
+        });
+
+        // Aquí tenemos las bombas.
+        bombs = this.physics.add.group();
+
+        //  The score
+        scoreText = this.add.text(16, 16, 'Nivel: ' + level + '. Puntos: 0', { fontSize: '24px', fill: '#FFF' });
+
+        //  Collide the player and the stars with the platforms
+        this.physics.add.collider(player, platforms);
+        this.physics.add.collider(snail, platforms);
+        this.physics.add.collider(stars, platforms);
+        this.physics.add.collider(bombs, platforms);
+
+        //  Checks to see if the player overlaps with any of the stars, if he does call the collectStar function
+        this.physics.add.overlap(player, stars, collectStar, null, this);
+
+        // También hay un choque entre el jugador y las bombas. Entonces se llama
+        // a la función "hitBomb".
+        this.physics.add.collider(player, bombs, hitBomb, null, this);
+
+        createBomb();
+
+    }
+
+    function update ()
+    {
+        //console.log("Player body velocity: " + player.body.velocity.x);
+
+        if (gameOver)
+        {
+            if (!key_e.isDown)
+            {
+                return;
+            }
+            else
+            {
+                console.log("Has pulsado E");
+                return;
+            }
+        }
+
+        if (cursors.left.isDown || buttonleftpressed)
+        {
+            console.log("left");
+            player.flipX = true;
+            player.setVelocityX(-160);
+            player.anims.play('right', true);
+        }
+        else if (cursors.right.isDown || buttonrightpressed)
+        {
+            moveright();
+        }
+        else
+        {
+            player.setVelocityX(0);
+            
+            if (player.body.touching.down) {
+                player.anims.play('turn', true);
+            }
+        }
+
+        if (cursors.down.isDown && player.body.touching.down && player.body.velocity.x === 0)
+        {
+            player.setTint(0xFF00);
+            pressingDownKey = true;
+        }
+        else {
+            player.setTint(0xFFFFFF);
+            pressingDownKey = false;
+        }
+
+        if (cursors.up.isDown || buttonjumppressed)
+        {
+            jumping();
+        }
+
+        // Evitamos que lleguen dos eventos muy seguidos de presionar la tecla E.
+        if (key_e.isDown && time_double_mode + 500 < new Date().getTime() ) {
+            time_double_mode = new Date().getTime();
+
+            // player.y -= 30;
+            // console.log("player is: " + player.x + ", " + player.y);
+            // console.log("player size: " + player.width + ", " + player.height);
+            // console.log("player display size: " + player.displayWidth  + ", " + player.displayHeight );
+
+            double_mode = !double_mode;
+
+            // console.log("[" + time_double_mode + "] double_mode is: " + double_mode);
+            // console.log("scaleX: " + player.scaleX);
+
+
+            if (double_mode) {
+                changeScale(player, 2);
+                stars.children.iterate(function (child) {
+                    changeScale(child, 2);
+                });
+                bombs.children.iterate(function (child) {
+                    changeScale(child, 2);
+                });
+            }
+            else {
+                changeScale(player, 0.5);
+                stars.children.iterate(function (child) {
+                    changeScale(child, 0.5);
+                });
+                bombs.children.iterate(function (child) {
+                    changeScale(child, 0.5);
+                });
+
+            }
+
+
+            // if (double_mode) {
+            //     player.setScale(4);
+
+            //     stars.children.iterate(function (child) {
+            //         child.setScale(2);
+            //     });
+            // }
+            // else {
+            //     player.setScale(2);
+            //     stars.children.iterate(function (child) {
+            //         child.setScale(1);
+            //     });
+
+            // }
+
+            // var newheight = player.displayHeight;
+
+            // var diff = oldheight - newheight;
+            // console.log("diff: " + diff);
+            // player.y += diff / 2;
+
+
+            // console.log("player is: " + player.x + ", " + player.y);
+            // console.log("player size: " + player.width + ", " + player.height);
+            // console.log("player display size: " + player.displayWidth  + ", " + player.displayHeight );
+        }
+    }
+
+    function jumping() {
+
+        if (player.body.touching.down)
+        {
+            player.anims.play('right', true);
+            player.setVelocityY(-310);
+        }
+    }
+
+    function moveright() {
+        //console.log("right");
+        player.flipX = false;
+        player.setVelocityX(160);
+
+        player.anims.play('right', true);
+    }
+
+    function changeScale(item, newFactor) {
+        var currentScaleX = item.scaleX;
+        var newScale = currentScaleX * newFactor;
+        var oldDisplayHeight = item.displayHeight;
+        item.setScale(newScale);
+        var newDisplayHeight = item.displayHeight;
+        var diff = oldDisplayHeight - newDisplayHeight;
+        item.y += diff / 2;
+    }
+
+    function collectStar (player, star)
+    {
+        star.disableBody(true, true);
+        //  Add and update the score
+        score += 1;
+        scoreText.setText('Nivel: ' + level + '. Puntos: ' + score);
+
+        if (stars.countActive(true) === 0)
+        {
+            //  A new batch of stars to collect
+            stars.children.iterate(function (child) {
+                child.enableBody(true, child.x, 0, true, true);
+            });
+
+            level++;
+            scoreText.setText('Nivel: ' + level + '. Puntos: ' + score);
+
+            snail.setVelocityY(-310);
+
+            createBomb();
+        }
+    }
+
+    function createBomb() {
+        var x = (player.x < 400) ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
+
+        var firstBombScale = 1;
+
+        if (bombs.children.getArray().length > 0) {
+            firstBombScale = bombs.children.getArray()[0].scaleX;
+        }
+
+        var bomb = bombs.create(x, 16, 'bomb').setScale(firstBombScale);
+        bomb.setBounce(1);
+        bomb.setCollideWorldBounds(true);
+        bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
+        bomb.allowGravity = false;
+    }
+
+    function hitBomb (player, bomb)
+    {
+        if (!pressingDownKey)
+        {
+            this.physics.pause();
+            player.setTint(0xff0000);
+            player.anims.play('turn');
+            gameOver = true;
+            gameoverText = this.add.text(320, 16, 'Game over. Presiona F5', { fontSize: '32px', fill: '#00FFFF' });
+        }
+    }
+</script>
+
+</body>
+</html>
