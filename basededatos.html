@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo WebSQL</title>
+
+    <style>
+        table,tr,td,th {
+            border:1px solid #ccc;
+            border-radius:5px;
+            padding:10px;
+            margin:10px;
+        }
+
+        th {
+            background-color: lightgray;
+        }
+
+        #lastSqlSentences {
+            font-family: monospace;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        function listTables(dbInstance) {
+            executeSql(
+                dbInstance,
+                "SELECT name as 'Nombre de la tabla', sql as 'Sentencia SQL que creó la tabla' from sqlite_master WHERE type='table' and not(name like '@_@_%' ESCAPE '@' or name like 'sqlite_%');",
+                "#listTables",
+                false
+            );
+        }
+
+        function executeSql(dbInstance, sql, idResult, seeHour) {
+
+            if (idResult === undefined) idResult = '#sqlResult';
+
+            function errorHandler(transaction, errorFromSql) {
+                let message = '';
+
+                if (idResult === '#sqlResult') {
+                    message += '<p><b>Sentencia SQL:</b> <i>' + sql + '</i></p>';
+                }
+                
+                message += "<span style='color:red'>Error: " + errorFromSql.message + "</span>";
+
+                $(idResult).html(message);
+
+                if (idResult === '#sqlResult') {
+                    $("#lastSqlSentences").prepend("<li>(Error) " + sql + "</li>");
+                }
+            }
+
+            dbInstance.transaction(
+                (tran) => tran.executeSql(
+                    sql,
+                    [],
+                    (tran, data) => {
+
+                        var html = '';
+                        
+                        if (idResult === '#sqlResult') {
+                            html += '<p><b>Sentencia SQL:</b> <i>' + sql + '</i></p>';
+                        }
+
+                        if (data.rows.length > 0) {
+                            html += '<table><thead>';
+                            var properties = Object.getOwnPropertyNames(data.rows[0]);
+
+                            html += '<tr>';
+
+                            for (let j = 0; j < properties.length; j++) {
+                                html += '<th>' +  properties[j] + '</th>';
+                            }
+                        
+                            html += '</tr></thead><tbody>';
+
+                            for (let i = 0; i < data.rows.length; i++) {
+                                html += '<tr>'
+
+                                for (let j = 0; j < properties.length; j++) {
+                                    html +=  '<td>' +  data.rows[i][properties[j]] + '</td>';
+                                }
+                                
+                                html += '</tr>';
+                            }
+
+                            html += '</tbody></table>';
+                        }
+                        else
+                        {
+                            html += "<p>La sentencia SQL es correcta. No se ha devuelto ninguna fila.</p>"
+                        }
+
+                        $(idResult).html(html);
+
+                        if (idResult === '#sqlResult') {
+                            $("#lastSqlSentences").prepend("<li>(Correcto) " + sql + "</li>");
+                        }
+                    },
+                    errorHandler
+                )
+            );
+        }
+
+
+        $(document).ready(function() {
+            var myDBInstance = openDatabase('dbSibeeshPassion', '1.0', 'This is a client side database', 2 * 1024 * 1024);
+
+            if (!myDBInstance) {
+                alert('Oops, your database was not created');
+            }
+            else {
+                var version = myDBInstance.version;
+                $("#version").text(version);
+                listTables(myDBInstance);
+            }
+
+            $("button#insertSelect").click(function() {
+                $("#query").val('select * from [table_name];');
+            });
+
+            $("button#insertInsert").click(function() {
+                $("#query").val('insert into [table_name] (col1, col2) values (value1, value2);');
+            });
+
+            $("button#insertCreateTable").click(function() {
+                $("#query").val('create table if not exists [table_name] (id unique, name varchar, address varchar, phone integer);');
+            });
+
+            $("button#insertDropTable").click(function() {
+                $("#query").val('drop table [table_name];');
+            });
+
+            $("button#execQuery").click(function() {
+                let query = $("#query").val();
+                executeSql(myDBInstance, query);
+                listTables(myDBInstance);
+            });
+
+            $("button#createTableUsers").click(function () {
+                myDBInstance.transaction(function (tran) {
+                    tran.executeSql('CREATE TABLE IF NOT EXISTS Users (id unique, Name, MailID)');
+                    tran.executeSql('insert into Users (id, Name, MailID) values (1, "Sibi","sibikv4u@gmail.com")');
+                    tran.executeSql('insert into Users (id, Name, MailID) values (2, "Aji","ajaybhasy@gmail.com")');
+                    tran.executeSql('insert into Users (id, Name, MailID) values (3, "Ansu","ansary.ans21@gmail.com")');
+                });
+
+                $("#query").val('select * from Users;');
+                listTables(myDBInstance);
+            });
+
+            $("button#deleteTableUsers").click(function () {
+                myDBInstance.transaction(function (tran) {
+                    tran.executeSql('drop table Users');
+                });
+
+                listTables(myDBInstance);
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <h1>Algunas ayudas</h1>
+    <button id="insertSelect">Inserta una orden <i>select</i>.</button>
+    <button id="insertInsert">Inserta una orden <i>insert into</i>.</button>
+    <button id="insertCreateTable">Inserta una orden <i>create table</i>.</button>
+    <button id="insertDropTable">Inserta una orden <i>drop table</i>.</button>
+    <h3>Crear una tabla</h3>
+    <button id="createTableUsers">Crear tabla <i>Users</i>.</button>
+    <button id="deleteTableUsers">Borrar la tabla <i>Users</i>.</button>
+
+    <h1>Consulta</h1>
+    <label for="query">Introduce aquí una sentencia SQL:</label><br/>
+    <textarea id="query" cols="100" rows="5"></textarea><br/>
+    <button id="execQuery">Ejecutar SQL</button>
+
+
+    <h1>Resultado de la sentencia SQL</h1>
+    <div id="sqlResult"></div>
+
+    <h1>Tablas de la base de datos</h1>
+    <div id="listTables"></div>
+
+    <h1>Últimas sentencias SQL ejecutadas</h1>
+    <ol id="lastSqlSentences"></ol>
+</body>
+</html>
