@@ -26,17 +26,17 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -6.006958,
-          37.382333
+          -5.98594,
+          37.365998
         ]
       },
       "properties": {
         "orden": 2,
-        "tiempo": "0:05:00",
-        "codigo": 41700041,
-        "nombre": "I.E.S. Triana",
-        "direccion": "C/ San Jacinto, 79",
-        "codPostal": 41010,
+        "tiempo": "0:11:00",
+        "codigo": 41006924,
+        "nombre": "I.E.S. Fernando de Herrera",
+        "direccion": "Avda. de la Palmera, 20",
+        "codPostal": 41012,
         "municipio": "Sevilla",
         "provincia": "Sevilla"
       }
@@ -66,17 +66,17 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -5.992079,
-          37.377726
+          -5.977619,
+          37.394492
         ]
       },
       "properties": {
         "orden": 4,
-        "tiempo": "0:09:00",
-        "codigo": 41007266,
-        "nombre": "E.A. Sevilla",
-        "direccion": "Avda. de Chile, s/n. Pabellón de Chile",
-        "codPostal": 41013,
+        "tiempo": "0:17:00",
+        "codigo": 41700403,
+        "nombre": "I.E.S. Isbilya",
+        "direccion": "C/ Esperanza de la Trinidad, 7",
+        "codPostal": 41003,
         "municipio": "Sevilla",
         "provincia": "Sevilla"
       }
@@ -86,37 +86,17 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -6.001,
-          37.375636
+          -5.977689,
+          37.385682
         ]
       },
       "properties": {
         "orden": 5,
-        "tiempo": "0:10:00",
-        "codigo": 41006997,
-        "nombre": "I.E.S. Politécnico",
-        "direccion": "C/ Virgen de la Victoria, 48",
-        "codPostal": 41011,
-        "municipio": "Sevilla",
-        "provincia": "Sevilla"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -5.98594,
-          37.365998
-        ]
-      },
-      "properties": {
-        "orden": 6,
-        "tiempo": "0:11:00",
-        "codigo": 41006924,
-        "nombre": "I.E.S. Fernando de Herrera",
-        "direccion": "Avda. de la Palmera, 20",
-        "codPostal": 41012,
+        "tiempo": "0:19:00",
+        "codigo": 41006951,
+        "nombre": "I.E.S. Luca de Tena",
+        "direccion": "C/ Pirineos, 17",
+        "codPostal": 41005,
         "municipio": "Sevilla",
         "provincia": "Sevilla"
       }
@@ -131,7 +111,7 @@
         ]
       },
       "properties": {
-        "orden": 7,
+        "orden": 6,
         "tiempo": "0:11:00",
         "codigo": 41700351,
         "nombre": "I.E.S. Atenea",
@@ -151,7 +131,7 @@
         ]
       },
       "properties": {
-        "orden": 8,
+        "orden": 7,
         "tiempo": "0:13:00",
         "codigo": 41000880,
         "nombre": "I.E.S. Tartessos",
@@ -171,7 +151,7 @@
         ]
       },
       "properties": {
-        "orden": 9,
+        "orden": 8,
         "tiempo": "0:13:00",
         "codigo": 41011713,
         "nombre": "I.E.S. Hipatia",
@@ -186,132 +166,12 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -6.043028,
-          37.431497
-        ]
-      },
-      "properties": {
-        "orden": 10,
-        "tiempo": "0:14:00",
-        "codigo": 41701419,
-        "nombre": "I.E.S. Itálica",
-        "direccion": "C/ TIERNO GALVÁN, S/N",
-        "codPostal": 41970,
-        "municipio": "Santiponce",
-        "provincia": "Sevilla"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -6.076727,
-          37.371999
-        ]
-      },
-      "properties": {
-        "orden": 11,
-        "tiempo": "0:15:00",
-        "codigo": 41011464,
-        "nombre": "I.E.S. Juan Ciudad Duarte",
-        "direccion": "Ctra. de Gines, s/n",
-        "codPostal": 41930,
-        "municipio": "Bormujos",
-        "provincia": "Sevilla"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -5.969109,
-          37.373936
-        ]
-      },
-      "properties": {
-        "orden": 12,
-        "tiempo": "0:16:00",
-        "codigo": 41010769,
-        "nombre": "I.E.S. Nervión",
-        "direccion": "C/ Profesor Buenaventura Pinillos, s/n",
-        "codPostal": 41005,
-        "municipio": "Sevilla",
-        "provincia": "Sevilla"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -6.069474,
-          37.368247
-        ]
-      },
-      "properties": {
-        "orden": 13,
-        "tiempo": "0:16:00",
-        "codigo": 41701821,
-        "nombre": "I.E.S. Los Álamos",
-        "direccion": "C/ Clara Campoamor, s/n",
-        "codPostal": 41930,
-        "municipio": "Bormujos",
-        "provincia": "Sevilla"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -5.977619,
-          37.394492
-        ]
-      },
-      "properties": {
-        "orden": 14,
-        "tiempo": "0:17:00",
-        "codigo": 41700403,
-        "nombre": "I.E.S. Isbilya",
-        "direccion": "C/ Esperanza de la Trinidad, 7",
-        "codPostal": 41003,
-        "municipio": "Sevilla",
-        "provincia": "Sevilla"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -5.974127,
-          37.398221
-        ]
-      },
-      "properties": {
-        "orden": 15,
-        "tiempo": "0:18:00",
-        "codigo": 41009071,
-        "nombre": "I.E.S. Antonio Machado",
-        "direccion": "C/ Arroyo, 80",
-        "codPostal": 41008,
-        "municipio": "Sevilla",
-        "provincia": "Sevilla"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -5.971525,
           37.404268
         ]
       },
       "properties": {
-        "orden": 16,
+        "orden": 9,
         "tiempo": "0:18:00",
         "codigo": 41700117,
         "nombre": "I.E.S. Llanes",
@@ -326,32 +186,12 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -5.977689,
-          37.385682
-        ]
-      },
-      "properties": {
-        "orden": 17,
-        "tiempo": "0:19:00",
-        "codigo": 41006951,
-        "nombre": "I.E.S. Luca de Tena",
-        "direccion": "C/ Pirineos, 17",
-        "codPostal": 41005,
-        "municipio": "Sevilla",
-        "provincia": "Sevilla"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -5.967878,
           37.376869
         ]
       },
       "properties": {
-        "orden": 18,
+        "orden": 10,
         "tiempo": "0:19:00",
         "codigo": 41009871,
         "nombre": "I.E.S. Beatriz de Suabia",
@@ -371,7 +211,7 @@
         ]
       },
       "properties": {
-        "orden": 19,
+        "orden": 11,
         "tiempo": "0:20:00",
         "codigo": 41000089,
         "nombre": "I.E.S. Miguel Servet",
@@ -386,12 +226,152 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -6.043028,
+          37.431497
+        ]
+      },
+      "properties": {
+        "orden": 12,
+        "tiempo": "0:14:00",
+        "codigo": 41701419,
+        "nombre": "I.E.S. Itálica",
+        "direccion": "C/ TIERNO GALVÁN, S/N",
+        "codPostal": 41970,
+        "municipio": "Santiponce",
+        "provincia": "Sevilla"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.076727,
+          37.371999
+        ]
+      },
+      "properties": {
+        "orden": 13,
+        "tiempo": "0:15:00",
+        "codigo": 41011464,
+        "nombre": "I.E.S. Juan Ciudad Duarte",
+        "direccion": "Ctra. de Gines, s/n",
+        "codPostal": 41930,
+        "municipio": "Bormujos",
+        "provincia": "Sevilla"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.974127,
+          37.398221
+        ]
+      },
+      "properties": {
+        "orden": 14,
+        "tiempo": "0:18:00",
+        "codigo": 41009071,
+        "nombre": "I.E.S. Antonio Machado",
+        "direccion": "C/ Arroyo, 80",
+        "codPostal": 41008,
+        "municipio": "Sevilla",
+        "provincia": "Sevilla"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.006958,
+          37.382333
+        ]
+      },
+      "properties": {
+        "orden": 15,
+        "tiempo": "0:05:00",
+        "codigo": 41700041,
+        "nombre": "I.E.S. Triana",
+        "direccion": "C/ San Jacinto, 79",
+        "codPostal": 41010,
+        "municipio": "Sevilla",
+        "provincia": "Sevilla"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.001,
+          37.375636
+        ]
+      },
+      "properties": {
+        "orden": 16,
+        "tiempo": "0:10:00",
+        "codigo": 41006997,
+        "nombre": "I.E.S. Politécnico",
+        "direccion": "C/ Virgen de la Victoria, 48",
+        "codPostal": 41011,
+        "municipio": "Sevilla",
+        "provincia": "Sevilla"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.969109,
+          37.373936
+        ]
+      },
+      "properties": {
+        "orden": 17,
+        "tiempo": "0:16:00",
+        "codigo": 41010769,
+        "nombre": "I.E.S. Nervión",
+        "direccion": "C/ Profesor Buenaventura Pinillos, s/n",
+        "codPostal": 41005,
+        "municipio": "Sevilla",
+        "provincia": "Sevilla"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.069474,
+          37.368247
+        ]
+      },
+      "properties": {
+        "orden": 18,
+        "tiempo": "0:16:00",
+        "codigo": 41701821,
+        "nombre": "I.E.S. Los Álamos",
+        "direccion": "C/ Clara Campoamor, s/n",
+        "codPostal": 41930,
+        "municipio": "Bormujos",
+        "provincia": "Sevilla"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -6.123499,
           37.379425
         ]
       },
       "properties": {
-        "orden": 20,
+        "orden": 19,
         "tiempo": "0:20:00",
         "codigo": 41008398,
         "nombre": "I.E.S. Lauretum",
@@ -411,7 +391,7 @@
         ]
       },
       "properties": {
-        "orden": 21,
+        "orden": 20,
         "tiempo": "0:20:00",
         "codigo": 41011491,
         "nombre": "I.E.S. Galileo Galilei",
@@ -431,7 +411,7 @@
         ]
       },
       "properties": {
-        "orden": 22,
+        "orden": 21,
         "tiempo": "0:20:00",
         "codigo": 41701754,
         "nombre": "I.E.S. Mariana de Pineda",
@@ -451,7 +431,7 @@
         ]
       },
       "properties": {
-        "orden": 23,
+        "orden": 22,
         "tiempo": "0:21:00",
         "codigo": 41010824,
         "nombre": "I.E.S. Margarita Salas",
@@ -471,7 +451,7 @@
         ]
       },
       "properties": {
-        "orden": 24,
+        "orden": 23,
         "tiempo": "0:23:00",
         "codigo": 41001471,
         "nombre": "I.E.S. Caura",
@@ -491,7 +471,7 @@
         ]
       },
       "properties": {
-        "orden": 25,
+        "orden": 24,
         "tiempo": "0:23:00",
         "codigo": 41014003,
         "nombre": "I.E.S. Chaves Nogales",
@@ -511,7 +491,7 @@
         ]
       },
       "properties": {
-        "orden": 26,
+        "orden": 25,
         "tiempo": "0:23:00",
         "codigo": 41700385,
         "nombre": "I.E.S. V Centenario",
@@ -531,7 +511,7 @@
         ]
       },
       "properties": {
-        "orden": 27,
+        "orden": 26,
         "tiempo": "0:23:00",
         "codigo": 41701869,
         "nombre": "I.E.S. Ibn Jaldún",
@@ -551,7 +531,7 @@
         ]
       },
       "properties": {
-        "orden": 28,
+        "orden": 27,
         "tiempo": "0:24:00",
         "codigo": 41001707,
         "nombre": "I.E.S. Virgen de Valme",
@@ -571,7 +551,7 @@
         ]
       },
       "properties": {
-        "orden": 29,
+        "orden": 28,
         "tiempo": "0:24:00",
         "codigo": 41701766,
         "nombre": "I.E.S. Carmen Laffón",
@@ -591,7 +571,7 @@
         ]
       },
       "properties": {
-        "orden": 30,
+        "orden": 29,
         "tiempo": "0:26:00",
         "codigo": 41000284,
         "nombre": "I.E.S. Al-Guadaira",
@@ -611,7 +591,7 @@
         ]
       },
       "properties": {
-        "orden": 31,
+        "orden": 30,
         "tiempo": "0:26:00",
         "codigo": 41700877,
         "nombre": "I.E.S. Vistazul",
@@ -631,7 +611,7 @@
         ]
       },
       "properties": {
-        "orden": 32,
+        "orden": 31,
         "tiempo": "0:27:00",
         "codigo": 41011002,
         "nombre": "I.E.S. Ilipa Magna",
@@ -651,7 +631,7 @@
         ]
       },
       "properties": {
-        "orden": 33,
+        "orden": 32,
         "tiempo": "0:28:00",
         "codigo": 41701638,
         "nombre": "I.E.S. Al-Iscar",
@@ -671,7 +651,7 @@
         ]
       },
       "properties": {
-        "orden": 34,
+        "orden": 33,
         "tiempo": "0:28:00",
         "codigo": 41701778,
         "nombre": "I.E.S. Lucus Solis",
@@ -691,7 +671,7 @@
         ]
       },
       "properties": {
-        "orden": 35,
+        "orden": 34,
         "tiempo": "0:30:00",
         "codigo": 41008994,
         "nombre": "I.E.S. Maestro Diego Llorente",
@@ -711,7 +691,7 @@
         ]
       },
       "properties": {
-        "orden": 36,
+        "orden": 35,
         "tiempo": "0:30:00",
         "codigo": 41700105,
         "nombre": "I.E.S. Albero",
@@ -731,7 +711,7 @@
         ]
       },
       "properties": {
-        "orden": 37,
+        "orden": 36,
         "tiempo": "0:32:00",
         "codigo": 41700154,
         "nombre": "I.E.S. Ponce de León",
@@ -751,7 +731,7 @@
         ]
       },
       "properties": {
-        "orden": 38,
+        "orden": 37,
         "tiempo": "0:36:00",
         "codigo": 41007904,
         "nombre": "I.E.S. Virgen de Consolación",
@@ -771,7 +751,7 @@
         ]
       },
       "properties": {
-        "orden": 39,
+        "orden": 38,
         "tiempo": "0:37:00",
         "codigo": 41001094,
         "nombre": "I.E.S. Maese Rodrigo",
@@ -791,7 +771,7 @@
         ]
       },
       "properties": {
-        "orden": 40,
+        "orden": 39,
         "tiempo": "0:37:00",
         "codigo": 41009585,
         "nombre": "I.E.S. Arrabal",
@@ -811,7 +791,7 @@
         ]
       },
       "properties": {
-        "orden": 41,
+        "orden": 40,
         "tiempo": "0:37:00",
         "codigo": 41702138,
         "nombre": "I.E.S. Profesor Juan Bautista",
@@ -831,7 +811,7 @@
         ]
       },
       "properties": {
-        "orden": 42,
+        "orden": 41,
         "tiempo": "0:38:00",
         "codigo": 41700555,
         "nombre": "I.E.S. Blas Infante",
@@ -851,7 +831,7 @@
         ]
       },
       "properties": {
-        "orden": 43,
+        "orden": 42,
         "tiempo": "0:39:00",
         "codigo": 21700460,
         "nombre": "I.E.S. La Palma",
@@ -871,7 +851,7 @@
         ]
       },
       "properties": {
-        "orden": 44,
+        "orden": 43,
         "tiempo": "0:44:00",
         "codigo": 21700204,
         "nombre": "I.E.S. Campo de Tejada",
@@ -891,7 +871,7 @@
         ]
       },
       "properties": {
-        "orden": 45,
+        "orden": 44,
         "tiempo": "0:46:00",
         "codigo": 21700654,
         "nombre": "I.E.S. Doñana",
@@ -911,7 +891,7 @@
         ]
       },
       "properties": {
-        "orden": 46,
+        "orden": 45,
         "tiempo": "0:46:00",
         "codigo": 41000557,
         "nombre": "I.E.S. Al-Ándalus",
@@ -931,7 +911,7 @@
         ]
       },
       "properties": {
-        "orden": 47,
+        "orden": 46,
         "tiempo": "0:47:00",
         "codigo": 41702278,
         "nombre": "I.E.S. El Fontanal",
@@ -951,7 +931,7 @@
         ]
       },
       "properties": {
-        "orden": 48,
+        "orden": 47,
         "tiempo": "0:49:00",
         "codigo": 41009822,
         "nombre": "I.E.S. Bajo Guadalquivir",
@@ -971,7 +951,7 @@
         ]
       },
       "properties": {
-        "orden": 49,
+        "orden": 48,
         "tiempo": "0:53:00",
         "codigo": 41008507,
         "nombre": "I.E.S. López de Arenas",
@@ -991,7 +971,7 @@
         ]
       },
       "properties": {
-        "orden": 50,
+        "orden": 49,
         "tiempo": "0:56:00",
         "codigo": 41002955,
         "nombre": "I.E.S. Fray Bartolomé de las Casas",
@@ -1011,7 +991,7 @@
         ]
       },
       "properties": {
-        "orden": 51,
+        "orden": 50,
         "tiempo": "0:56:00",
         "codigo": 41700907,
         "nombre": "I.E.S. Castillo de Luna",
@@ -1031,7 +1011,7 @@
         ]
       },
       "properties": {
-        "orden": 52,
+        "orden": 51,
         "tiempo": "0:57:00",
         "codigo": 41701043,
         "nombre": "I.E.S. Castillo de Cote",
@@ -1051,7 +1031,7 @@
         ]
       },
       "properties": {
-        "orden": 53,
+        "orden": 52,
         "tiempo": "1:01:00",
         "codigo": 21001892,
         "nombre": "I.E.S. La Rábida",
@@ -1066,12 +1046,72 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -6.381233,
+          36.629976
+        ]
+      },
+      "properties": {
+        "orden": 53,
+        "tiempo": "1:26:00",
+        "codigo": 11007533,
+        "nombre": "I.E.S. Arroyo Hondo",
+        "direccion": "C/ Maestro  Manuel J. Casal Egea, 2",
+        "codPostal": 11520,
+        "municipio": "Rota",
+        "provincia": "Cadiz"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.091776,
+          36.280312
+        ]
+      },
+      "properties": {
+        "orden": 54,
+        "tiempo": "1:37:00",
+        "codigo": 11008461,
+        "nombre": "I.E.S. La Atalaya",
+        "direccion": "C/ Atalaya, s/n",
+        "codPostal": 11140,
+        "municipio": "Conil de la Frontera",
+        "provincia": "Cadiz"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.609897,
+          36.015672
+        ]
+      },
+      "properties": {
+        "orden": 55,
+        "tiempo": "2:16:00",
+        "codigo": 11700731,
+        "nombre": "I.E.S. Baelo Claudia",
+        "direccion": "C/ Los Lances, s/n",
+        "codPostal": 11380,
+        "municipio": "Tarifa",
+        "provincia": "Cadiz"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -6.955558,
           37.260528
         ]
       },
       "properties": {
-        "orden": 54,
+        "orden": 56,
         "tiempo": "1:03:00",
         "codigo": 21700058,
         "nombre": "I.E.S. Pablo Neruda",
@@ -1091,7 +1131,7 @@
         ]
       },
       "properties": {
-        "orden": 55,
+        "orden": 57,
         "tiempo": "1:04:00",
         "codigo": 11003205,
         "nombre": "I.E.S. Padre Luis Coloma",
@@ -1111,7 +1151,7 @@
         ]
       },
       "properties": {
-        "orden": 56,
+        "orden": 58,
         "tiempo": "1:04:00",
         "codigo": 21700551,
         "nombre": "I.E.S. Juan Antonio Pérez Mercader",
@@ -1131,7 +1171,7 @@
         ]
       },
       "properties": {
-        "orden": 57,
+        "orden": 59,
         "tiempo": "1:06:00",
         "codigo": 41009123,
         "nombre": "I.E.S. Sierra Sur",
@@ -1146,18 +1186,18 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -5.109141,
-          37.240502
+          -6.007383,
+          37.377709
         ]
       },
       "properties": {
-        "orden": 58,
-        "tiempo": "1:07:00",
-        "codigo": 41003066,
-        "nombre": "I.E.S. Francisco Rodríguez Marín",
-        "direccion": "Paseo San Arcadio, s/n",
-        "codPostal": 41640,
-        "municipio": "Osuna",
+        "orden": 60,
+        "tiempo": "0:03:00",
+        "codigo": 41006912,
+        "nombre": "I.E.S. Gustavo Adolfo Bécquer",
+        "direccion": "C/ López de Gomara, s/n",
+        "codPostal": 41010,
+        "municipio": "Sevilla",
         "provincia": "Sevilla"
       }
     },
@@ -1171,7 +1211,7 @@
         ]
       },
       "properties": {
-        "orden": 59,
+        "orden": 61,
         "tiempo": "1:08:00",
         "codigo": 11007545,
         "nombre": "I.E.S. Castillo de Matrera",
@@ -1191,7 +1231,7 @@
         ]
       },
       "properties": {
-        "orden": 60,
+        "orden": 62,
         "tiempo": "1:09:00",
         "codigo": 41000594,
         "nombre": "I.E.S. Nicolás Copérnico",
@@ -1211,7 +1251,7 @@
         ]
       },
       "properties": {
-        "orden": 61,
+        "orden": 63,
         "tiempo": "1:10:00",
         "codigo": 11700433,
         "nombre": "I.E.S. Profesor Antonio Muro",
@@ -1231,7 +1271,7 @@
         ]
       },
       "properties": {
-        "orden": 62,
+        "orden": 64,
         "tiempo": "1:11:00",
         "codigo": 21700381,
         "nombre": "I.E.S. San Blas",
@@ -1251,7 +1291,7 @@
         ]
       },
       "properties": {
-        "orden": 63,
+        "orden": 65,
         "tiempo": "1:12:00",
         "codigo": 11000711,
         "nombre": "I.E.S. Alminares",
@@ -1271,7 +1311,7 @@
         ]
       },
       "properties": {
-        "orden": 64,
+        "orden": 66,
         "tiempo": "1:12:00",
         "codigo": 11700445,
         "nombre": "I.E.S. José Luis Tejada Peluffo",
@@ -1291,7 +1331,7 @@
         ]
       },
       "properties": {
-        "orden": 65,
+        "orden": 67,
         "tiempo": "1:16:00",
         "codigo": 11005241,
         "nombre": "I.E.S. Isla de León",
@@ -1311,7 +1351,7 @@
         ]
       },
       "properties": {
-        "orden": 66,
+        "orden": 68,
         "tiempo": "1:16:00",
         "codigo": 11006668,
         "nombre": "I.E.S. Fuente Alta",
@@ -1331,7 +1371,7 @@
         ]
       },
       "properties": {
-        "orden": 67,
+        "orden": 69,
         "tiempo": "1:17:00",
         "codigo": 11005287,
         "nombre": "I.E.S. Wenceslao Benítez",
@@ -1351,7 +1391,7 @@
         ]
       },
       "properties": {
-        "orden": 68,
+        "orden": 70,
         "tiempo": "1:17:00",
         "codigo": 11700615,
         "nombre": "I.E.S. Juan Sebastián Elcano",
@@ -1371,7 +1411,7 @@
         ]
       },
       "properties": {
-        "orden": 69,
+        "orden": 71,
         "tiempo": "1:18:00",
         "codigo": 11008239,
         "nombre": "I.E.S. Sancti Petri",
@@ -1391,7 +1431,7 @@
         ]
       },
       "properties": {
-        "orden": 70,
+        "orden": 72,
         "tiempo": "1:18:00",
         "codigo": 21700411,
         "nombre": "I.E.S. El Sur",
@@ -1411,7 +1451,7 @@
         ]
       },
       "properties": {
-        "orden": 71,
+        "orden": 73,
         "tiempo": "1:19:00",
         "codigo": 11005275,
         "nombre": "I.E.S. Las Salinas",
@@ -1431,7 +1471,7 @@
         ]
       },
       "properties": {
-        "orden": 72,
+        "orden": 74,
         "tiempo": "1:19:00",
         "codigo": 11008525,
         "nombre": "I.E.S. Santo Domingo",
@@ -1451,7 +1491,7 @@
         ]
       },
       "properties": {
-        "orden": 73,
+        "orden": 75,
         "tiempo": "1:19:00",
         "codigo": 41008970,
         "nombre": "I.E.S. Aguilar y Cano",
@@ -1471,7 +1511,7 @@
         ]
       },
       "properties": {
-        "orden": 74,
+        "orden": 76,
         "tiempo": "1:19:00",
         "codigo": 41701079,
         "nombre": "I.E.S. Flavio Irnitano",
@@ -1491,7 +1531,7 @@
         ]
       },
       "properties": {
-        "orden": 75,
+        "orden": 77,
         "tiempo": "1:20:00",
         "codigo": 14700298,
         "nombre": "I.E.S. Nuevas Poblaciones",
@@ -1511,7 +1551,7 @@
         ]
       },
       "properties": {
-        "orden": 76,
+        "orden": 78,
         "tiempo": "1:21:00",
         "codigo": 11700147,
         "nombre": "I.E.S. La Bahía",
@@ -1531,7 +1571,7 @@
         ]
       },
       "properties": {
-        "orden": 77,
+        "orden": 79,
         "tiempo": "1:21:00",
         "codigo": 41002013,
         "nombre": "I.E.S. Ostippo",
@@ -1551,7 +1591,7 @@
         ]
       },
       "properties": {
-        "orden": 78,
+        "orden": 80,
         "tiempo": "1:22:00",
         "codigo": 11700123,
         "nombre": "I.E.S. Huerta del Rosario",
@@ -1571,7 +1611,7 @@
         ]
       },
       "properties": {
-        "orden": 79,
+        "orden": 81,
         "tiempo": "1:22:00",
         "codigo": 11700962,
         "nombre": "I.E.S. Fernando Quiñones",
@@ -1591,7 +1631,7 @@
         ]
       },
       "properties": {
-        "orden": 80,
+        "orden": 82,
         "tiempo": "1:22:00",
         "codigo": 21003323,
         "nombre": "I.E.S. Diego Macías",
@@ -1611,7 +1651,7 @@
         ]
       },
       "properties": {
-        "orden": 81,
+        "orden": 83,
         "tiempo": "1:23:00",
         "codigo": 11700354,
         "nombre": "I.E.S. Ciudad de Hércules",
@@ -1631,7 +1671,7 @@
         ]
       },
       "properties": {
-        "orden": 82,
+        "orden": 84,
         "tiempo": "1:24:00",
         "codigo": 21700502,
         "nombre": "I.E.S. Guadiana",
@@ -1646,32 +1686,12 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -6.381233,
-          36.629976
-        ]
-      },
-      "properties": {
-        "orden": 83,
-        "tiempo": "1:26:00",
-        "codigo": 11007533,
-        "nombre": "I.E.S. Arroyo Hondo",
-        "direccion": "C/ Maestro  Manuel J. Casal Egea, 2",
-        "codPostal": 11520,
-        "municipio": "Rota",
-        "provincia": "Cadiz"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -4.973717,
           37.099824
         ]
       },
       "properties": {
-        "orden": 84,
+        "orden": 85,
         "tiempo": "1:28:00",
         "codigo": 41700750,
         "nombre": "I.E.S. Maestro Francisco Gallardo",
@@ -1691,7 +1711,7 @@
         ]
       },
       "properties": {
-        "orden": 85,
+        "orden": 86,
         "tiempo": "1:32:00",
         "codigo": 11700421,
         "nombre": "I.E.S. Casas Viejas",
@@ -1711,7 +1731,7 @@
         ]
       },
       "properties": {
-        "orden": 86,
+        "orden": 87,
         "tiempo": "1:36:00",
         "codigo": 14002972,
         "nombre": "I.E.S. Séneca",
@@ -1731,7 +1751,7 @@
         ]
       },
       "properties": {
-        "orden": 87,
+        "orden": 88,
         "tiempo": "1:36:00",
         "codigo": 29701131,
         "nombre": "I.E.S. Las Viñas",
@@ -1739,26 +1759,6 @@
         "codPostal": 29532,
         "municipio": "Mollina",
         "provincia": "Malaga"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -6.091776,
-          36.280312
-        ]
-      },
-      "properties": {
-        "orden": 88,
-        "tiempo": "1:37:00",
-        "codigo": 11008461,
-        "nombre": "I.E.S. La Atalaya",
-        "direccion": "C/ Atalaya, s/n",
-        "codPostal": 11140,
-        "municipio": "Conil de la Frontera",
-        "provincia": "Cadiz"
       }
     },
     {
@@ -2366,32 +2366,12 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -5.609897,
-          36.015672
-        ]
-      },
-      "properties": {
-        "orden": 119,
-        "tiempo": "2:16:00",
-        "codigo": 11700731,
-        "nombre": "I.E.S. Baelo Claudia",
-        "direccion": "C/ Los Lances, s/n",
-        "codPostal": 11380,
-        "municipio": "Tarifa",
-        "provincia": "Cadiz"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -4.550292,
           36.665485
         ]
       },
       "properties": {
-        "orden": 120,
+        "orden": 119,
         "tiempo": "2:17:00",
         "codigo": 29000062,
         "nombre": "I.E.S. Capellanía",
@@ -2399,6 +2379,26 @@
         "codPostal": 29130,
         "municipio": "Alhaurín de la Torre",
         "provincia": "Malaga"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.711297,
+          37.189772
+        ]
+      },
+      "properties": {
+        "orden": 120,
+        "tiempo": "0:12:00 (desde Cijuela)",
+        "codigo": 18009444,
+        "nombre": "I.E.S. Hispanidad",
+        "direccion": "C/ Celestino Mutis, 1",
+        "codPostal": 18320,
+        "municipio": "Santa Fe",
+        "provincia": "Granada"
       }
     }
   ]
