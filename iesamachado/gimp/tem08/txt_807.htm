@@ -1,0 +1,387 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem08/txt_807.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:20 GMT -->
+<head>
+<title>Documento sin t&iacute;tulo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../css/defecto.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+.Estilo1 {
+	font-size: 18px;
+	font-weight: bold;
+	color: #FF0000;
+}
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features, myWidth, myHeight, isCenter) { //v3.0
+  if(window.screen)if(isCenter)if(isCenter=="true"){
+    var myLeft = (screen.width-myWidth)/2;
+    var myTop = (screen.height-myHeight)/2;
+    features+=(features!='')?',':'';
+    features+=',left='+myLeft+',top='+myTop;
+  }
+  window.open(theURL,winName,features+((features!='')?',':'')+'width='+myWidth+',height='+myHeight);
+}
+//-->
+</script>
+</head>
+
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="5" class="textos">
+  <tr>
+    <td valign="top"><table width="96%"  border="0" align="center" cellpadding="0" cellspacing="0" class="textos">
+        <tr>
+          <td valign="top"><b> </b> <p class="titulosunidadr">Filtros de Mapa</p>
+            <p>Estos filtros se basan en una imagen para conseguir la de formaci&oacute;n 
+              de otra, las dos im&aacute;genes deben tener el mismo tama&ntilde;o. 
+              Podemos crear efectos tridimensionales y otros muy interesantes. 
+            </p>
+            <span class="titulosunidad2">1. Deformar</span>            <p>Deformamos una imagen de forma tridimensional a partir de otra. Una debe ser la <strong>imagen fuente</strong>, sobre la que se realiza la deformaci&oacute;n, y la otra  la de <strong>asignaci&oacute;n</strong>, en la que se basa el filtro para realizar la deformaci&oacute;n. Veamos las posibilidades de este filtro y su cuadro de di&aacute;logo.</p>
+              <div align="center">
+                <table width="100%" border="0" cellspacing="5" class="textos">
+                  <tr>
+                    <td width="51%"><div>
+                      <div align="center"><img src="images/tem08_44.gif" width="345" height="306" align="left"> 
+                      </div>
+                    </div>
+                    <div align="left"></div></td><td width="49%">Las opciones de la zona sombreada en rojo son las que van a producir el desplazamiento sobre la imagen fuente. Podemos elegir el <strong>Tama&ntilde;o del paso</strong>, las veces que se va a <strong>repetir</strong> y las opciones de lo que ocurre en los bordes del desplazamiento. Tenemos un deplegable para elegir la imagen de asignaci&oacute;n, entre las que tengamos abiertas en GIMP (s&oacute;lo aparecen las que tengan el mismo tama&ntilde;o).<br>
+                      <br>
+Las opciones de las zonas sombreadas en verde y azul, son menos importantes y a&ntilde;aden peque&ntilde;os detalles al desplazamiento que se va a realizar. Vemos que podemos utilizar como <strong>Mapa de magnitud </strong>las im&aacute;genss que tengamos abiertas y que coincidan en tama&ntilde;o. </td>
+                  </tr>
+                </table>
+                <p align="justify">Una peque&ntilde;a pr&aacute;ctica para comprender mejor el funcionamiento.</p>
+              </div>
+              <ol>
+                <li>
+                  
+                <div align="left"> 
+                  <p>La imagen fuente va a ser la siguiente. <br>
+                  </p>
+                  <table width="100" align="center">
+                    <tr>
+                      <td><a href="javascript:;" onClick="MM_openBrWindow('images/velas.jpg','','','310','310','false')"><img src="images/velas_pequea.jpg" width="150" height="150" border="0"></a></td>
+                    </tr>
+                  </table>
+                  <p><br>
+                  </p>
+                    </div>
+                </li>
+                <li>
+                  
+                <p>Creamos una nueva imagen con fondo blanco de 300x300 p&iacute;xeles. 
+                  Vamos a dibujar una espiral ayud&aacute;ndonos de la herramienta 
+                  <strong>Degradado</strong>, seleccionamos &quot;<strong>Burning 
+                  Transparency</strong>&quot; y en las <strong>opciones de la 
+                  herramienta </strong>elegimos &quot;Forma Espiral (sentido 
+                  horario)&quot;. En la parte central de la <strong>Ventana Imagen 
+                  </strong>reci&eacute;n creada hacemos clic y arrastramos el 
+                  puntero del rat&oacute;n hacia una esquina, soltamos el bot&oacute;n.<br>
+                  </p>
+                  <table border="0" align="center" cellspacing="0">
+                    <tr>
+                      <td><img src="images/tem08_53.jpg" width="150" height="150"> </td>
+                    </tr>
+                  </table>
+                  <br>
+                </li>
+                <li>Con la <strong>Ventana Imagen </strong>&quot;velas.jpg&quot; activa hacemos clic con el bot&oacute;n derecho en cualquier parte de la imagen y seleccionamos <strong>Filtros --&gt; Mapa --&gt; Deformar</strong>.<br>
+                  <br>
+                </li>
+                <li>Seleccionamos como <strong>Mapa de desplazamiento</strong> la otra imagen que tenemos abierta, el &quot;tama&ntilde;o del paso&quot; debe ser 20 y las &quot;iteraciones&quot; 15. Marcamos la opci&oacute;n &quot;Negro en los bordes&quot; y dejamos el resto de opciones con los valores por defecto. <br>
+                  <br>
+                  Una vez aceptamos, GIMP comienza a realizar las deformaciones de la imagen y las repetir&aacute; 15 veces.<br>
+        <br>
+        <table width="100" border="0" align="center" cellpadding="5" cellspacing="0" bgcolor="#FFD5AA" class="textoscolor" style='border:1px solid black'>
+          <tr>
+            <td><div align="center">Original</div></td>
+            <td bgcolor="#FFC891"><div align="center">Tras la aplicaci&oacute;n del filtro</div></td>
+          </tr>
+          <tr>
+            <td><img src="images/tem08_55.jpg" width="200" height="200"></td>
+            <td bgcolor="#FFC891"><img src="images/tem08_54.jpg" width="200" height="200"></td>
+          </tr>
+        </table>
+        <br>
+                </li>
+                <li>Realiza diversa deformaciones utilizando otras im&aacute;genes y con diferentes valores a los utilizados en esta ocasi&oacute;n.<br>
+                  <br>
+                </li>
+              </ol>
+                <p>Otra posibilidad consiste en crear un texto con volumen, utilizando como <strong>fuente </strong>una imagen que sea un degradado simple y sobre ella una <strong>imagen de asignaci&oacute;n </strong>de un texto, al que se le ha aplicado un <strong>Desenfoque Gaussiano</strong>. <br>
+            </p>
+                <table width="100" border="0" align="center" cellpadding="5" cellspacing="0" bgcolor="#FFD5AA" class="textoscolor" style='border:1px solid black'>
+                  <tr>
+                    <td><div align="center">Imagen fuente</div></td>
+                    <td bgcolor="#FFC891"><div align="center">Imagen de asignaci&oacute;n</div></td>
+                  </tr>
+                  <tr>
+                    <td><img src="images/tem08_57.jpg" width="150" height="75" align="middle"></td>
+                    <td bgcolor="#FFC891"><img src="images/tem08_56.jpg" width="150" height="75" align="middle"></td>
+                  </tr>
+                </table>                
+            <p>                  Este es el resultado: </p>                
+                <table width="100" border="0" align="center" cellpadding="0" cellspacing="0" class="textoscolor" style='border:1px solid black'>
+                  <tr>
+                    <td colspan="2"><div align="center"><img src="images/tem08_58.jpg" width="300" height="150"></div>                      </td>
+                  </tr>
+                </table>
+                <p>&nbsp;</p>
+                <span class="titulosunidad2">2. Desplazar</span>            <p>Es un filtro que se utiliza habitualmente para distorsionar las im&aacute;genes,  conseguir efectos de curvatura en textos, as&iacute; como combar y marchar im&aacute;genes.<br>
+                  <br>
+                  En este caso tambi&eacute;n necesitamos dos im&aacute;genes sobre las que trabajar, una sobre la que aplicaremos el efecto (fuente) y otra  (asignaci&oacute;n) que permitir&aacute; desplazar la primera. <br>
+                  <br>
+              La imagen de asignaci&oacute;n es conveniente que est&eacute; en 
+              escala de grises y sea del mismo tama&ntilde;o que la imagen que 
+              va a ser desplazada, dado que el efecto que tiene &eacute;sta sobre 
+              la imagen fuente depende del valor de los p&iacute;xeles en la asignaci&oacute;n. 
+              Los p&iacute;xeles blancos puros desplazan la imagen hacia arriba 
+              o hacia la izquierda, los p&iacute;xeles totalmente negros hacia 
+              abajo o hacia la derecha, los pixeles que sean 50% gris no producen 
+              desplazamiento, mientras que los situados entre un valor y otro 
+              producen desplazamientos acordes con su valor de gris.</p>
+                <div align="center">
+                <table width="100%" border="0" cellspacing="5" class="textos">
+                  <tr>
+                    
+                  <td ><img src="images/tem08_45.gif" width="325" height="394"></td>
+                    <td ><div align="justify">Podemos seleccionar la <strong>cantidad de desplazamiento</strong> que se realizar&aacute; en cada uno de los ejes X e Y, pudiendo utilizar diferentes im&aacute;genes de asignaci&oacute;n para cada uno de los ejes. <br>
+                      <br>
+                      Ponemos la cantidad de desplazamiento y seleccionamos la 
+                      opci&oacute;n <strong>Ajustar en los bordes</strong>. Con 
+                      estos datos hacemos clic en Aceptar y tendremos nuestra 
+                      modificaci&oacute;n realizada. </div></td>
+                  </tr>
+                </table>
+              </div>
+                <ol>
+                  <li>Crea dos im&aacute;genes del mismo tama&ntilde;o, por ejemplo de 300x150 p&iacute;xeles. En una de ellas escribes un texto que ocupe dos l&iacute;neas y combinas todas las capas para tener una sola en esta imagen.<br>
+                    <br>
+                  </li>
+                  <li>En la otra imagen y con la herramienta <strong>Relleno de degradado</strong> crea una imagen similar a la que se encuentra debajo de estas l&iacute;neas, ser&aacute; la imagen de <strong>asignaci&oacute;n</strong>.<br>
+                    <br>
+                    <table border="0" align="center" cellspacing="0">
+                      <tr>
+                        <td><img src="images/tem08_59.jpg" width="150" height="75"> </td>
+                      </tr>
+                    </table>
+                    <br>
+                  </li>
+                  <li>Activa la imagen con el texto y accede al filtro <strong>Desplazar</strong>. Prueba con distintos valores. La imagen que se observa a continuaci&oacute;n ha sido conseguida con los valores que figuran en el cuadro de di&aacute;logos <strong>Desplazar</strong>, usado para explicar las caracter&iacute;sticas del mismo.<br>
+                    <br>
+                    <table width="100" border="0" align="center" cellpadding="5" cellspacing="0" bgcolor="#FFD5AA" class="textoscolor" style='border:1px solid black'>
+                      <tr>
+                        <td><div align="center">Original</div></td>
+                        <td bgcolor="#FFC891"><div align="center">Modificada</div></td>
+                      </tr>
+                      <tr>
+                        <td><img src="images/tem08_61.jpg" width="150" height="75"></td>
+                        <td bgcolor="#FFC891"><img src="images/tem08_60.jpg" width="150" height="75"></td>
+                      </tr>
+                    </table>
+                  </li>
+                </ol>                
+                <span class="titulosunidad2">3.                 Espejismo</span>        <p>Es un filtro muy sencillo en el que s&oacute;lo necesitamos una imagen. Simula un caleidoscopio. Debemos indicar en el cuadro de di&aacute;logo el n&uacute;mero de piezas en que queremos se convierta nuestra imagen. Tiene dos modos que act&uacute;an de la siguiente forma:</p>                <div align="center">
+                <table width="80%" border="0" cellpadding="5" cellspacing="0" bgcolor="#D4D4D4" class="textoscolor" style='border:1px solid black'>
+                  <tr>
+                    <td rowspan="6"><div align="center"><img src="images/tem08_46.gif" width="250" height="273"></div></td>
+                    <td height="18" bgcolor="#FFD5AA">Original</td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#FFD5AA"><img src="images/tem08_62.jpg" width="250" height="126"></td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#FFC891">Modo 1</td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#FFC891"><img src="images/tem08_63.jpg" width="250" height="126"></td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#FFBD7B">Modo 2</td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#FFBD7B"><img src="images/tem08_64.jpg" width="250" height="126"></td>
+                  </tr>
+                </table>
+              </div>            
+                <span class="titulosunidad2"><br>
+            4. Enlosar</span> 
+            <p>Es un filtro parecido al anterior pero sin opciones. En este caso  la parte central de la imagen se repite como si fuera un &quot;enlosado&quot;.</p>
+                <p>Partiendo del mismo original del filtro anterior obtenemos la imagen siguiente.</p>              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  <td><div align="center"><img src="images/tem08_65.jpg" width="250" height="126"> </div></td>
+                </tr>
+              </table>
+                
+            <p class="titulosunidad2">5. Traza fractal </p>
+                
+            <p align="left">Asigna la imagen a un <strong>fractal Mandelbrot</strong>. 
+              Tenemos varias opciones para controlar el aspecto de la imagen.</p>
+            <div align="center">
+                <table width="100%" border="0" cellspacing="5" class="textos">
+                  <tr>
+                    <td width="45%"><div align="center"><img src="images/tem08_47.gif" width="347" height="392" align="absmiddle"></div></td>
+                    <td width="55%" valign="top"><div align="justify">En la <strong>Vista previa</strong> podemos comprobar c&oacute;mo van afectando las distintas opciones seleccionadas. La zona exterior al fractal puede rellenarse de distintas formas: con la imagen deformada, transparente, negro o blanco.<br>
+                      <br>
+                      <strong>X1</strong> determina el factor de escalado de la parte izquierda de la imagen; <strong>X2</strong> de  la parte derecha; <strong>Y1 </strong>la parte superior e <strong>Y2 </strong>la parte inferior.<br>
+                    <br>
+                    La <strong>profundidad</strong> se refiere al n&uacute;mero de repeticiones empleadas en calcular el fractal. Si ampliamos mucho el n&uacute;mero de repeticiones nuestro ordenador puede tardar un poco de tiempo.</div></td>
+                  </tr>
+                </table>
+                <br>
+                </div>
+              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  <td><img src="images/tem08_66.jpg" width="275" height="139"></td>
+                </tr>
+              </table>
+              <p><br align="center">
+                Imagen obtenida con las opciones seleccionadas en el anterior cuadro de di&aacute;logo.</p>            
+              <span class="titulosunidad2"><br>
+              6. Mapa de relieve</span>            <p>A pesar de la gran cantidad de opciones que tiene su cuadro de di&aacute;logo, el manejo de este filtro es sumamente sencillo. Consiste en dar sensaci&oacute;n de relieve a la imagen, el cual puede ser modificado con las distintas opciones del filtro.<br>
+                <br> 
+              Con las que figuran a continuaci&oacute;n hemos obtenido la imagen que se acompa&ntilde;a.</p>              <div align="center">
+                <table width="100" border="0" cellspacing="10" class="table2">
+                  <tr>
+                    
+                  <td width="55%"><img src="images/tem08_48.gif" width="450" height="356"></td>
+                    <td width="45%"><img src="images/tem08_67.jpg" width="200" height="101"></td>
+                  </tr>
+                </table>
+              </div>
+              <p class="titulosunidad2"><br class="titular2" align="left">
+                <strong>7. Mapa de objeto</strong></p>
+              <p>Asigna una imagen a un objeto, pudiendo tratarse de un plano, una esfera, una caja (hexaedro) o un cilindro. Es un filtro que consume muchos recursos de la CPU por lo que debe usarse con cuidado y paciencia si tarda bastante en crear la imagen. Las cuatro im&aacute;genes siguientes han sido credas con este filtro.</p>              <div align="center">
+                <table width="100" border="1" cellpadding="6" cellspacing="0" bordercolor="#993300" class="textoscolor">
+                  <tr>
+                    <td><img src="images/tem08_68.jpg" width="184" height="175"><br>
+        Caja </td>
+                    <td><img src="images/tem08_69.jpg" width="179" height="173"><br>
+        Plano </td>
+                  </tr>
+                  <tr>
+                    <td height="198"><img src="images/tem08_70.jpg" width="147" height="141"><br>
+        Esfera </td>
+                    <td><img src="images/tem08_71.jpg" width="176" height="181"><br>
+        Cilindro </td>
+                  </tr>
+                </table>
+              </div>
+              
+            <p>En su cuadro de di&aacute;logo tenemos cinco pesta&ntilde;as para 
+              elegir las diferentes opciones y crear nuestra nueva imagen.</p>
+              <ul>
+                <li>Opciones: Elegimos el tipo de objeto (caja, cilindro, esfera y plano), el suavizado y el fondo.<br>
+  </li>
+                <li>Luz: Tipo y direcci&oacute;n de la luz.<br>
+                </li>
+                <li>Material: Reflejos y luz ambiente sobre el material.<br>
+                </li>
+                <li>Posici&oacute;n y rotaci&oacute;n de nuestro objeto.<br>
+                </li>
+                <li>Objeto: Selecci&oacute;n de las im&aacute;genes a colocar en cada cara del objeto en el caso de la caja y del cilindro.</li>
+              </ul>            
+              <span class="titulosunidad2"><br>
+            8. Mosaico de papel</span>            <p>Rompe nuestra imagen y la &quot;recompone&quot; simulando un mosaico de trocitos de papel.</p>
+              <div align="center">
+                <table width="100" border="0" cellspacing="10" class="table2">
+                  <tr>
+                    <td><img src="images/tem08_49.gif" width="207" height="275"></td>
+                    <td><img src="images/tem08_72.jpg" width="200" height="200"></td>
+                  </tr>
+                </table>
+              </div>              
+              <span class="titulosunidad2"><br>
+            9. Crear sin costuras</span> 
+            <p align="left">Crea un mosaico con la imagen activa, utilizando su 
+              tama&ntilde;o como &quot;baldosa&quot; del nuevo mosaico. Sirve 
+              para crear fondos que se pueden repetir formando una sola imagen 
+              y sin mostrar &quot;costuras&quot; al unir esas im&aacute;genes.</p>            
+            <span class="titulosunidad2"><br>
+            10. Baldosas peque&ntilde;as</span> 
+            <p>El mosaico se crea dentro del tama&ntilde;o de la imagen y con 
+              el n&uacute;mero de &quot;baldosas&quot; que queramos (hasta 6x6). 
+              Tiene una opci&oacute;n muy intersante que consiste en rotar horizontal 
+              o verticalmente, una de las teselas en las que hemos transformado 
+              nuestra imagen. Se puede observar el efecto en el ejemplo siguiente.</p>
+            <div align="center">
+                <table width="100" border="0" cellpadding="5" cellspacing="5" class="textoscolor">
+                  <tr>
+                    <td width="54%"><div align="center">Original</div></td>
+                    <td width="46%"><div align="center">Mosaico 2x2 con giro</div></td>
+                  </tr>
+                  <tr>
+                    <td height="153"><img src="images/tem08_55.jpg" width="200" height="200"></td>
+                    <td><img src="images/tem08_73.jpg" width="200" height="200"></td>
+                  </tr>
+                </table>
+              </div>
+            <span class="titulosunidad2"><br>
+            11. Van Gogh (LIC)</span>            <p>Este otro filtro imita una pintura manual al estilo de Van Gogh. Es un filtro bastante complejo y con grandes posibilidades. Veamos el efecto que crea sobre una imagen y su cuadro de di&aacute;logo.</p>              <div align="center"></div>
+              <div align="center">
+                <table width="90%" border="0" cellpadding="5" cellspacing="0" class="textos">
+                  <tr>
+                    
+                  <td width="54%"><div align="center"><img src="images/tem08_50.gif" width="325" height="318"></div></td>
+                    <td width="46%"><div align="justify">
+                      <p>Podemos seleccionar el <strong>canal</strong> sobre el que se va a realizar el efecto de la terna HSV (Tono, Saturaci&oacute;n, Brillo); el <strong>operador</strong> para realizar el efecto y el <strong>relleno</strong> de los huecos que quedan al realizar el movimiento de p&iacute;xeles (queda mejor &quot;Con imagen fuente&quot;).<br>
+                        <br>
+                        Para conseguir el efecto podemos utilizar la misma imagen o cualquier otra que tengamos abierta, distribuye las &quot;pinceladas&quot; acorde a las formas que tenga la imagen.<br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                      </p>
+                      <p>&nbsp;</p>
+                      <p>&nbsp;</p>
+                      <p>&nbsp;</p>
+                      <p>&nbsp;</p>
+                      <p>&nbsp;                      </p>
+                    </div></td>
+                  </tr>
+                  <tr bgcolor="#FFC891">
+                    <td><div align="center"><strong>Original</strong></div></td>
+                    <td bgcolor="#FFBD7B"><div align="center"><strong>Flitro Van Gogh (LIC)</strong></div></td>
+                  </tr>
+                  <tr bgcolor="#FFC891">
+                    <td><div align="center"><img src="images/tem08_74.jpg" width="200" height="183"></div></td>
+                    <td bgcolor="#FFBD7B"><div align="center"><img src="images/tem08_75.jpg" width="200" height="183"></div></td>
+                  </tr>
+                </table>
+            </div>
+              
+            <p>Concluimos aqu&iacute; esta Unidad dedicada a los filtros. GIMP 
+              posee m&aacute;s filtros a los que haremos referencia en posteriores 
+              unidades.</p>
+            <div align="left"></div>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" height="32">
+                <tr valign="bottom">
+                  <td width="100%" height="21" colspan="3">
+                    <hr noshade color="#C5E3EC"  size="1">
+                  </td>
+                </tr>
+                <tr valign="bottom">
+                  <td width="935" height="21"><p class="titulosunidad2">Los filtros &gt; Filtros de Mapa</td>
+                  <td width=22 align="right" height="21"><a href="hoja0806.htm" target="right"><img border="0" src="../images/atras2.jpg" width="20" height="21"></a></td>
+                  <td width=21 align="right" height="21"><a href="hoja0808.htm" target="right"><img border="0" src="../images/adelante2.jpg" width="20" height="21"></a></td>
+                </tr>
+          </table></td>
+        </tr>
+      </table>
+        <p align="justify">   
+  </tr>
+</table>
+</body>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem08/txt_807.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:20 GMT -->
+</html>

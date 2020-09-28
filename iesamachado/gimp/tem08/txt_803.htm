@@ -1,0 +1,316 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem08/txt_803.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:20 GMT -->
+<head>
+<title>Documento sin t&iacute;tulo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../css/defecto.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+-->
+</style>
+</head>
+
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="5" class="textos">
+  <tr>
+    <td valign="top"><table width="96%"  border="0" align="center" cellpadding="0" cellspacing="0" class="textos">
+        <tr>
+          <td valign="top"><b> </b> <p class="titulosunidadr"> Filtros de ruido</p>
+            <p>Cuando escaneamos a veces se introduce ruido en la imagen, es decir, p&iacute;xeles de color aleatorio que se mezclan entre los valores aceptables. <br>
+              <br>
+              Los filtros de <strong>Ruido </strong>pueden mezclar esos p&iacute;xeles &quot;de ruido&quot; (llamados as&iacute; porque no aportan nada si no que entorpecen la correcta reproducci&oacute;n de la imagen) entre los circundantes, para disimular ese defecto de la imagen. En otras ocasiones se utilizan para producir un ruido en la imagen, llegando a esconderla dentro del ruido producido por los filtros o para formar im&aacute;genes a partir de cero, modificando esa imagen con estos filtros.</p>
+            <p>Los filtros de ruido que incorpora GIMP son los siguientes:<br>
+            </p>
+              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  
+                <td><img src="images/tem08_05.gif" width="110" height="132" align="middle"></td>
+                </tr>
+              </table>              
+            <p class="titulosunidad2">&nbsp;</p>
+            <p align="justify" class="titulosunidad2">1. Escoger</p>
+            <p>Pone ruido en toda la imagen de una forma aleatoria, sin posibilidad 
+              de controlar el color del ruido. Podemos controlar la cantidad de 
+              ruido aumentando o disminuyendo el valor de <strong>Aleatorizaci&oacute;n</strong>. 
+              Tambi&eacute;n es posible indicar el n&uacute;mero de veces que 
+              queremos repetir el proceso y la semilla (p&iacute;xel elegido para 
+              modificar).</p>
+            <table border="0" align="center" cellspacing="0">
+              <tr> 
+                <td><img src="images/tem08_07.gif" width="325" height="141"></td>
+              </tr>
+            </table>
+            <p class="titulosunidad2">&nbsp;</p>
+            <p align="justify"><span class="titulosunidad2">2. Esparcir por HSV</span> 
+            </p>
+            <p>De acuerdo con el tono, saturaci&oacute;n y brillo de los p&iacute;xeles 
+              existentes, a&ntilde;ade m&aacute;s o menos cantidad de ruido. Podemos 
+              configurar las modificaciones.</p>
+            <table border="0" align="center" cellspacing="0">
+              <tr> 
+                <td><img src="images/tem08_12.jpg" width="205" height="86"></td>
+              </tr>
+            </table>
+            <p>Este filtro esparce el ruido por toda la imagen, habiendo elegido 
+              el radio sobre el que esparcirlo. A mayor radio, mayor ruido y esparcimiento 
+              es a&ntilde;adido a los p&iacute;xeles.</p>
+            <p class="titulosunidad2">3. Esparcir por RGB</p>
+              <p>A&ntilde;ade ruido a una imagen y lo mezcla con ella. Puede utilizarse para crear fondos de p&aacute;ginas webs con motivos interesantes. <br>
+                <br>
+              Se accede a este filtro desde men&uacute;<strong> Filtros --&gt; 
+              Ruido --&gt; Esparcir por RGB</strong>. </p>
+              <div align="center">
+                <table width="100%" border="0" cellpadding="0" cellspacing="5" class="textosnojustificado">
+                  <tr>
+                    
+                  <td><img src="images/tem08_06.gif" width="242" height="375"></td>
+                    <td valign="top"><div align="justify">Los par&aacute;metros pueden ajustarse de modo independiente, proporcionando ruido de color cuyo valor aumentemos o disminu&iacute;mos entre 0 y 1. <br>
+                      <br>
+                      Si desactivamos &quot;<strong>RGB Independiente</strong>&quot; 
+                      los cursores de color se mueven de forma conjunta.<br>
+                      <br>
+                    En la <strong>Vista previa</strong> podemos comprobar el ruido que se producir&aacute; en nuestra imagen. En este caso  trabajando sobre un fondo blanco.</div></td>
+                  </tr>
+                </table>
+              </div>
+              <ol>
+                <li>
+                  <div align="left">
+                    <p>Creamos una nueva imagen de 256 x 256 p&iacute;xeles de tama&ntilde;o y con fondo blanco.<br>
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div align="left">
+                    <p>Realizamos una selecci&oacute;n el&iacute;ptica que rellenamos con un color marr&oacute;n.<br>
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  
+                <p>Seleccionamos el filtro <strong>Esparcir por RGB</strong> y 
+                  ponemos unos valores cercanos a los que se observan en la imagen 
+                  anterior. Hacemos clic en Aceptar.<br>
+                  </p>
+                </li>
+                <li>
+                  <p>La zona seleccionada se ha rellenado de ruido. Ahora, y sin quitar la selecci&oacute;n, vamos a  poner un desenfoque de movimiento sencillo con un cierto &aacute;ngulo, para obtener una superficie con la que podemos rellenar otras im&aacute;genes.</p>
+                </li>
+            </ol>
+              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  <td><img src="images/tem08_10.jpg" width="175" height="115"></td>
+                </tr>
+              </table>
+              
+            <p align="justify" class="titulosunidad2"><span class="titulosunidad2"><br>
+              4 . Esparcir</span> </p>
+              
+            <p>Como los dos anteriores pero sin atender a ning&uacute;n color. 
+              Simplemente esparce ruido por la imagen bas&aacute;ndose en el color 
+              del p&iacute;xel.</p>
+            <p>&nbsp;</p>
+            <p class="titulosunidad2">5.- Lanzar</p>
+            <p align="left">Exactamente igual que Escoger.</p>
+            <p align="left">&nbsp;</p>
+            <p align="left" class="titulosunidad2">6.- Manchar</p>
+            <p align="left">Tambi&eacute;n a&ntilde;ade ruido de forma aleatoria, 
+              consiguiendo la sensaci&oacute;n de que una parte de la imagen se 
+              &quot;derrite&quot;. El cuadro de di&aacute;logo es similar al anterior. 
+            </p>
+              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  <td><img src="images/tem08_11.jpg" width="252" height="126"></td>
+                </tr>
+              </table>
+              
+            <p align="justify"><span class="titulosunidadr">Otros filtros</span></p>
+            <p align="justify"><span class="titulosunidadr">1. Detecci&oacute;n 
+              de bordes</span> </p>
+              
+            <p>Contiene un conjunto de filtros que buscan las &aacute;reas de 
+              la imagen con mayores cambios de color y hace un resalte de los 
+              p&iacute;xeles que se encuentran en el lugar de la transici&oacute;n. 
+              Dependiendo de las caracter&iacute;sticas de cada filtro podemos 
+              conseguir que una imagen parezca que ha sido perfilada con un l&aacute;piz.</p>
+              <p>Tenemos diferentes tipos de filtros para hallar bordes, cada uno de ellos emplea un diferente algoritmo matem&aacute;tico, que le permite localizar los cambios de densidad en la imagen y producir el borde.</p>
+              <div align="center">
+                <table width="50%" border="0" cellpadding="10" cellspacing="0" bgcolor="#FFCB97" class="textoscolor" style='border:1px solid black'>
+                  <tr>
+                    <td bgcolor="#FFD5AA"><div align="center">Opciones de filtros de Borde</div></td>
+                    <td><div align="center">Posibilidades dentro del filtro Arista.</div></td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#FFD5AA"><div align="center"><img src="images/tem08_08.gif" width="149" height="120"></div></td>
+                    <td><div align="center"><img src="images/tem08_09.gif" width="242" height="325"></div></td>
+                  </tr>
+                </table>
+              </div>
+              
+            <p>A menor cantidad (entre 1 y 10) menos bordes son detectados por 
+              el filtro. Pueden conseguirse efectos que simulan un trazado a l&aacute;piz, 
+              si una vez aplicado el filtro detecci&oacute;n de bordes invertimos 
+              el color de la imagen desde men&uacute;<strong> Capas --&gt; Colores 
+              --&gt; Invertir</strong>.</p>
+              <div align="center">
+                <table width="75%" border="0" cellpadding="10" cellspacing="0" bgcolor="#FFD5AA" class="textoscolor" style='border:1px solid brown'>
+                  <tr>
+                    <td bgcolor="#FFCB97"><div align="center">Original</div></td>
+                    <td><div align="center">Detecci&oacute;n de bordes</div></td>
+                    <td bgcolor="#FFDFBF"><div align="center">Invertir</div></td>
+                  </tr>
+                  <tr>
+                    <td height="225" bgcolor="#FFCB97"><div align="center"><img src="images/tem08_15.jpg" width="150" height="226"></div></td>
+                    <td><div align="center"><img src="images/tem08_13.jpg" width="150" height="226"></div></td>
+                    <td bgcolor="#FFDFBF"><div align="center"><img src="images/tem08_14.jpg" width="150" height="226"></div></td>
+                  </tr>
+                </table>
+                <p>&nbsp;</p>
+              </div>
+                            
+            <span class="titulosunidad2">2. Realzar</span> 
+            <p>Sirven para mejorar la apariencia de las im&aacute;genes, en especial las escaneadas y las que provienen de una capturadora de v&iacute;deo. Es el primer paso para mejorar una imagen.</p>
+              
+            <ul>
+              <li><strong>Desentrelazado</strong>: sirve para arreglar las im&aacute;genes 
+                fijas que provienen de una captura de v&iacute;deo, en la que 
+                se observan las l&iacute;neas de los campos pares o impares de 
+                una imagen v&iacute;deo. No produce ning&uacute;n efecto en una 
+                imagen normal.<br>
+              </li>
+              <li> 
+                <div align="left"><strong> Desparasitar</strong>: produce el efecto 
+                  contrario al filtro Arrojar ruido. Tambi&eacute;n podemos eliminar 
+                  el ruido producido por una imagen con errores de escaneo.<br>
+                </div>
+              </li>
+              <li><strong>Enfocar</strong>: Quiz&aacute;s sea el filtro m&aacute;s 
+                &uacute;til para mejorar r&aacute;pidamente las im&aacute;genes 
+                que tengan errores de enfoque. Podemos intentar arreglar el peque&ntilde;o 
+                desenfoque que tiene el avi&oacute;n en la imagen &quot;avion_nubes.xcf&quot; 
+                aplicando este filtro. <br>
+                <br>
+                <div align="center"> 
+                  <table width="100%" border="0" cellpadding="0" cellspacing="5" class="textosnojustificado">
+                    <tr> 
+                      <td width="20%"><div align="center"><img src="images/tem08_10.gif" width="239" height="275"></div></td>
+                      <td width="50%"><div align="justify">En la ventana de <strong>Vista 
+                          previa</strong> podemos comprobar el efecto del filtro 
+                          antes de aplicarlo. La <strong>agudeza </strong>es controlada 
+                          por la barra deslizadora, si bien no es conveniente 
+                          poner un nivel excesivo porque puede parecer antinatural.<br>
+                          <br>
+                          Este filtro aclara los p&iacute;xeles en el extremo 
+                          m&aacute;s claro y los oscurece en el m&aacute;s oscuro, 
+                          al detectar un cambio en el color. Esto hace que nuestro 
+                          ojo vea la imagen m&aacute;s n&iacute;tida.<br>
+                          <br>
+                          Si la fotograf&iacute;a est&aacute; excesivamente desenfocada 
+                          no podremos conseguir un enfoque de la imagen.</div></td>
+                    </tr>
+                  </table>
+                </div>
+                <span class="titulosunidad2"></span></li>
+              <li> <strong>Filtro NL</strong>. Este filtro es muy interesante 
+                porque puede aplicar distintas operaciones a las im&aacute;genes 
+                escaneadas para mejorarlas. Permite reducir el ruido, suavizar 
+                las im&aacute;genes y realizar mejoras en los bordes. La diferencia 
+                de este filtro con el resto de los utilizados en realzar, es que 
+                utiliza un hex&aacute;gono de siete p&iacute;xeles (en el centro 
+                el p&iacute;xel a modificar) para calcular los valores medios. 
+                <br>
+                <br>
+                <div align="center"> 
+                  <table width="100%" border="0" cellpadding="0" cellspacing="8" class="textosnojustificado">
+                    <tr> 
+                      <td width="41%"><div align="center"><img src="images/tem08_11.gif" width="255" height="400"></div></td>
+                      <td width="59%"><div align="justify">El filtro <strong>Media 
+                          arreglada por alfa</strong> es el m&aacute;s parecido 
+                          a los otros filtros de Realzar. Poniendo valores bajos 
+                          de Alfa se consiguen los mejores resultados.<br>
+                          <br>
+                          <strong>Estimaci&oacute;n &oacute;ptima</strong> presupone 
+                          que en la imagen hay variaciones muy grandes y s&oacute;lo 
+                          elimina las que son muy peque&ntilde;as, con lo que 
+                          limpia la imagen del ruido que pueda tener.<br>
+                          <br>
+                          <strong>Realce de bordes</strong>, resalta las diferencias 
+                          de las im&aacute;genes para conseguir los mejores resultados.<br>
+                        </div></td>
+                    </tr>
+                  </table>
+                </div>
+                <p class="titulosunidad2"></p>
+              </li>
+              <li>El filtro <strong>M&aacute;scara de desenfoque</strong> nos 
+                permite tratar los desenfoques de la imagen atendiendo a: <br>
+                <ul>
+                  <li> <strong>Radio</strong> sobre el que actuar (0 a 120).<br>
+                  </li>
+                  <li><strong>Cantidad de desenfoque</strong> que debe encontrar 
+                    en ese radio (0 a 5).<br>
+                  </li>
+                  <li><strong>Umbral</strong> de niveles sobre los que aplicar 
+                    el filtro (0 a 255).<br>
+                  </li>
+                </ul>
+              </li>
+              <li><strong>Quitar bandas</strong> nos permite eliminar las bandas 
+                que se producen por un mal escaneado al producirse fallos en el 
+                arrastre de la cabeza lectora de la imagen. Si se utiliza en una 
+                imagen correcta obtendremos unas bandas que empeoran la imagen.<span class="titulosunidad2"><br>
+                </span> </li>
+            </ul>
+            <p> Finalizamos este apartado haciendo una menci&oacute;n a los denominados 
+              <strong>filtros Gen&eacute;ricos</strong> en los que se engloban:</p>
+              <ul>
+                
+              <li><strong> Dilatar</strong> refuerza y amplia las zonas oscuras 
+                de la imagen o zona seleccionada.<br>
+                  </li>
+                
+              <li><strong>Erosionar </strong> refuerza las zonas claras de la 
+                imagen.<br>
+                  </li>
+                
+              <li>
+                <div align="left"><strong>Matriz de convoluci&oacute;n</strong>: 
+                  Sirve para crear filtros. Los filtros utilizan matrices para 
+                  modificar los p&iacute;xeles de la imagen. Desde aqu&iacute; 
+                  podemos crear cualquier filtro sabiendo c&oacute;mo vamos a 
+                  modificar los p&iacute;xeles circundantes al que tratamos.</div>
+              </li>
+              </ul>            
+            <p align="left"><strong>Filtros --&gt; Colores</strong>: han sido 
+              tratados en la Unidad dedicada al color.</p>
+              <div align="center"></div>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" height="32">
+                <tr valign="bottom">
+                  <td width="100%" height="21" colspan="3">
+                    <hr noshade color="#C5E3EC"  size="1">
+                  </td>
+                </tr>
+                <tr valign="bottom">
+                  <td width="935" height="21"><p class="titulosunidad2">Los filtros &gt; Filtros de ruido</td>
+                  <td width=22 align="right" height="21"><a href="hoja0802.htm" target="right"><img border="0" src="../images/atras2.jpg" width="20" height="21"></a></td>
+                  <td width=21 align="right" height="21"><a href="hoja0804.htm" target="right"><img border="0" src="../images/adelante2.jpg" width="20" height="21"></a></td>
+                </tr>
+          </table></td>
+        </tr>
+      </table>
+        <p align="justify">   
+  </tr>
+</table>
+</body>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem08/txt_803.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:20 GMT -->
+</html>

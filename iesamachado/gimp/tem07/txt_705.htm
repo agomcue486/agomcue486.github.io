@@ -1,0 +1,310 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem07/txt_705.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:19 GMT -->
+<head>
+<title>Documento sin t&iacute;tulo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../css/defecto.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features, myWidth, myHeight, isCenter) { //v3.0
+  if(window.screen)if(isCenter)if(isCenter=="true"){
+    var myLeft = (screen.width-myWidth)/2;
+    var myTop = (screen.height-myHeight)/2;
+    features+=(features!='')?',':'';
+    features+=',left='+myLeft+',top='+myTop;
+  }
+  window.open(theURL,winName,features+((features!='')?',':'')+'width='+myWidth+',height='+myHeight);
+}
+//-->
+</script>
+</head>
+
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="5" class="textos">
+  <tr>
+    <td valign="top"><table width="96%"  border="0" align="center" cellpadding="0" cellspacing="0" class="textos">
+        <tr>
+          <td valign="top"><p>             <span class="titulosunidadr">Curvas</span></p>
+            <p>La herramienta <strong>Curvas</strong> es una de las m&aacute;s potentes y con mayores posibilidades para la <strong>correcci&oacute;n de color y tono </strong>en GIMP. <br>
+              Permite el ajuste de la curva tonal de una imagen:  ajusta el nivel de luminosidad u oscuridad de cada p&iacute;xel y los <strong>Niveles</strong> el rango de colores de una capa. <br>
+              <br>
+              Los <strong>Niveles</strong> cambian todo el rango de colores de una capa y las <strong>Curvas</strong> el brillo de cualquier conjunto de p&iacute;xeles, dentro del rango existente. </p>
+            <p>Para acceder elegimos en el men&uacute; de la <strong>Ventana imagen</strong> <strong>Herramientas 
+              --&gt; Herramientas de color --&gt; Curvas</strong>. Tambi&eacute;n 
+              podemos hacerlo desde el men&uacute; <strong>Capa --&gt; Colores 
+              --&gt; Curvas</strong>.</p>
+              <div align="center">
+                <table width="100%" border="0" cellpadding="0" cellspacing="9" class="textosnojustificado">
+                  <tr>
+                    <td width="49%"><div align="center"><img src="images/tem07_43.gif" width="338" height="469"></div></td>
+                    
+                  <td width="90%" valign="top"><div align="justify">Nos aparece de fondo, en color 
+                      gris, el histograma de la imagen y en primer plano una l&iacute;nea 
+                      diagonal. El <strong>eje horizontal</strong> (X) de este gr&aacute;fico 
+                      representa los valores de entrada de la imagen, valores del 
+                      brillo de la imagen cuando abrimos esta herramienta, y el <strong>eje vertical </strong>(Y) representa lo valores de 
+                      salida, los que tendr&aacute; nuestra imagen despu&eacute;s 
+                      de cambiar la curva. El rango de estos valores oscila entre 
+                      0 (negro) y 255 (blanco).<br>
+                        <br>
+                      Cuando desplazamos el puntero del rat&oacute;n sobre el gr&aacute;fico 
+                      se transforma en una cruz que nos indica los valores de entrada 
+                      y salida. Si nos situamos en la l&iacute;nea diagonal observaremos 
+                      que los valores son id&eacute;nticos, dado que todav&iacute;a 
+                      no hemos modificado nada.<br>
+                      <br>
+                      Tambi&eacute;n podemos seleccionar el canal de color sobre 
+                      el que vamos a actuar eligi&eacute;ndolo en el desplegable <strong>Canal</strong>, elegir el tipo de curva a utilizar, 
+                      suave o a mano alzada, y el tipo de gr&aacute;fico en el que 
+                      se muestra el histograma de la imagen.<br>
+                      <br>
+                      Podemos reiniciar un canal cuando trabajemos con un canal 
+                      o la imagen completa y guardar o recuperar valores utilizados 
+                    en otras im&aacute;genes.</div></td>
+                  </tr>
+                </table>
+                <h5 align="left" class="titulosunidad2"><br>
+                1. Modificando curvas</h5>
+              </div>
+              
+            <p>Comencemos a trabajar con esta herramienta con la imagen &quot;<strong>quiosco.jpg</strong>&quot; 
+              y coloquemos la ventana <strong>Curvas</strong> y la <strong>Ventana 
+              imagen </strong>de tal forma que no se superpongan y nos permitan 
+              comprobar los cambios que vayamos realizando. <br>
+                <br>
+              Desplacemos el puntero del rat&oacute;n fuera del di&aacute;logo <strong>Curvas </strong>y vayamos a la <strong>Ventana Imagen</strong>, &eacute;ste se ha transformado en un cuentagotas. Al hacer clic sobre cualquier lugar de la imagen, en el gr&aacute;fico aparece una l&iacute;nea vertical con un valor  de entrada, indic&aacute;ndonos el valor tonal exacto del p&iacute;xel elegido. Si pulsamos sobre una parte oscura de la imagen la l&iacute;nea aparece cerca de los valores bajos de la l&iacute;nea diagonal; mientras que  si pulsamos sobre una zona clara de la imagen, lo har&aacute; sobre los valores altos de la gr&aacute;fica. Por ejemplo,  hacemos clic en la farola (valores bajos) y en el tejado del quiosco (valores altos). Estos valores son los valores de entrada, si queremos modificar el rango tonal al que pertenece el p&iacute;xel elegido, moveremos la curva en ese lugar dando un valor diferente de salida. Vamos a comenzar.</p>
+            <ol>
+              <li>
+                  
+                <p>Abrimos la imagen &quot;<strong>quiosco.jpg</strong>&quot;, 
+                  si no lo hemos hecho ya, y la ventana <strong>Curvas</strong>.<br>
+                </p>
+              </li>
+              <li>
+                  
+                <p>Deseamos aclarar las zonas m&aacute;s luminosas de la imagen 
+                  y oscurecer m&aacute;s las zonas m&aacute;s oscuras, dado que 
+                  la imagen es un poco plana en cuanto a contraste. Localizamos 
+                  una zona clara, por ejemplo la nieve encima del tejado del quiosco 
+                  (podemos hacer uso de la herramienta <strong>Zoom</strong> para 
+                  acercarnos m&aacute;s a la imagen), hacemos clic y el valor 
+                  obtenido de la X es 232.<br>
+                </p>
+              </li>
+              <li>
+                  <p>Nos ponemos en el punto de la gr&aacute;fica donde se cortan las dos l&iacute;neas, la de la gr&aacute;fica y la que ha aparecido ahora al hacer clic en la imagen. Podemos comprobar que es el punto exacto moviendo el rat&oacute;n hasta que nos aparezca encima de la gr&aacute;fica un cuadro con el valor que buscamos.</p>
+                <table border="0" align="center" cellspacing="0">
+          <tr>
+            <td><img src="images/tem07_44.gif" width="87" height="38"> </td>
+          </tr>
+        </table>
+                <br>
+              </li>
+              <li>Hacemos clic en ese lugar y en la l&iacute;nea diagonal queda marcado un punto. Cuando nos situemos de nuevo en ese punto, el puntero del rat&oacute;n se transforma en una flecha doble que permite moverlo. Pongamos un valor de salida m&aacute;s claro (245), intentando mantenernos verticalmente en el mismo punto de entrada (232). Al arrastar vemos c&oacute;mo la l&iacute;nea diagonal se transforma en una curva, por lo que valores pr&oacute;ximos al elegido van cambiando tambi&eacute;n. Si queremos delimitar los valores sobre los que va a cambiar la imagen debemos crear puntos de control muy pr&oacute;ximos y posteriormente modificar los valores entre esos puntos de control.<br>
+                <br>
+                <table border="0" align="center" cellspacing="0" class="textos">
+          <tr>
+            <td><img src="images/tem07_45.gif" width="48" height="100" align="middle"></td>
+            <td>En cualquier momento podemos eliminar un punto de control arrastr&aacute;ndolo fuera de la gr&aacute;fica.</td>
+          </tr>
+        </table>
+                <br>
+              </li>
+              <li>Las zonas m&aacute;s luminosas se han aclarado un poco m&aacute;s 
+                y ahora vamos a localizar las zonas oscuras en la parte central 
+                de la farola. El valor de entrada es x=46. Oscurecemos un poco 
+                m&aacute;s dando como valor de salida 20. La imagen ha mejorado 
+                algo con respecto a la original.<br>
+                <br>
+              </li>
+              <li> 
+                <div align="justify">Modificamos tambi&eacute;n los puntos de 
+                  entrada para los tonos medios aclarando la imagen con valores 
+                  X= 124; Y= 158. Aplicamos los valores a nuestra imagen.<br>
+                  <br>
+                  Observamos las diferencias entre la imagen original y la modificada.</div>
+              </li>
+            </ol>
+              <table width="80%" border="0" align="center" cellpadding="8" cellspacing="0" bgcolor="#FFE9D2" class="textos" style='border:1px solid orange'>
+                <tr bgcolor="#FFE9D2">
+                  <td><div align="center"><strong>Original</strong></div></td>
+                  <td><div align="center"><strong>Modificada con Curvas</strong></div></td>
+                </tr>
+                <tr>
+                  <td width="40%"><div align="center"><img src="images/tem07_30.jpg" width="250" height="333"></div></td>
+                  <td width="34%"><img src="images/tem07_31.jpg" width="250" height="333"></td>
+                </tr>
+              </table>              
+              <p>&nbsp;</p>              <h5 class="titulosunidad2">2. Utilizando el m&eacute;todo &quot;Mano alzada&quot;</h5>
+              
+            <p>Podemos utilizar un m&eacute;todo distinto al de los puntos de 
+              control en la <strong>Curva</strong> para realizar modificaciones 
+              en la imagen. Vamos a conseguir peculiares efectos con este m&eacute;todo.</p>
+            <ol>
+              <li>
+                  
+                <p>Abrimos la imagen original &quot;<strong>quiosco.jpg</strong>&quot; 
+                  y la ventana <strong>Curvas</strong>.<br>
+                </p>
+              </li>
+              <li>
+                  <p>Hacemos clic en el icono de &quot;Mano Alzada&quot; en la opci&oacute;n <strong>Tipo de Curva</strong> <img src="images/tem07_46.gif" width="78" height="46">.<br>
+                </p>
+              </li>
+              <li>
+                  
+                <p>El puntero del rat&oacute;n al situarnos en la gr&aacute;fica 
+                  es ahora un l&aacute;piz y nos permite &quot;dibujar&quot; la 
+                  curva que deseemos. Comencemos a dibujar sobre la curva y vemos 
+                  c&oacute;mo &eacute;sta va cambiando. Hemos utilizado la siguiente 
+                  &quot;curva&quot; y el resultado ha sido el que se muestra.<br>
+                </p>
+                  <table width="80%" border="0" align="center" cellpadding="8" cellspacing="0" bgcolor="#FFE9D2" class="textos" style='border:1px solid orange'>
+                    <tr bgcolor="#FFE9D2">
+                      <td><div align="center"><strong>Curva</strong></div></td>
+                      <td><div align="center"><strong>Resultado</strong></div></td>
+                    </tr>
+                    <tr>
+                      <td width="40%"><div align="center"><img src="images/tem07_47.gif" width="261" height="263"></div></td>
+                      <td width="34%"><img src="images/tem07_32.jpg" width="290" height="386"></td>
+                    </tr>
+                  </table>
+                  <p>&nbsp;                  </p>
+              </li>
+            </ol>
+              <p class="titulosunidad2">3. Otros ejemplos</p>
+              <p>La herramienta <strong>Curvas</strong> es muy potente para manejar el color de las im&aacute;genes. Mostramos a continuaci&oacute;n otros ejemplos para ilustrar esas posibilidades.</p>
+              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  <td><img src="images/tem07_33.jpg" width="533" height="167"></td>
+                </tr>
+              </table>
+              <p align="center"><br>
+  Tonalidad dominante clara: original y correcci&oacute;n.</p>
+              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  <td><img src="images/tem07_34.jpg" width="492" height="181"></td>
+                </tr>
+              </table>
+              <p align="center"><br>
+  Tonalidad dominante oscura: original y correcci&oacute;n.</p>
+              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  <td><img src="images/tem07_35.jpg" width="511" height="164"></td>
+                </tr>
+              </table>
+              <p align="center"><br>
+  Tonalidad dominante media: original y correcci&oacute;n.</p>
+              <h5 align="left" class="titular2">4. Modificaciones sobre gris</h5>
+              
+            <p align="left">Para concluir este apartado vamos a comprobar las 
+              modificaciones que realiza la herramienta <strong>Curvas</strong> 
+              sobre una imagen en escala de grises. Utilizaremos la imagen &quot;<strong>degradado.xcf</strong>&quot;.</p>
+              <table width="50%" border="0" align="center" cellpadding="8" cellspacing="0" bgcolor="#CCCCCC" class="textoscolor" style='border:1px solid black'>
+                <tr class="table2">
+                  <td><div align="center"><strong>Valores de Curvas </strong></div></td>
+                  <td><div align="center"><strong>Resultado</strong></div></td>
+                </tr>
+                <tr bgcolor="#EEEEFB" class="table2">
+                  <td><div align="center">Original</div></td>
+                  <td><div align="center"><img src="images/tem07_29.gif" width="150" height="150"></div></td>
+                </tr>
+                <tr bgcolor="#DDDDF7" class="table2">
+                  <td><div align="center"><img src="images/tem07_48.gif" width="150" height="149"></div></td>
+                  <td><div align="center"><img src="images/tem07_49.gif" width="150" height="150"></div></td>
+                </tr>
+                <tr bgcolor="#CBCBF3" class="table2">
+                  <td><div align="center"><img src="images/tem07_50.gif" width="150" height="151"></div></td>
+                  <td><div align="center"><img src="images/tem07_51.gif" width="150" height="150"></div></td>
+                </tr>
+                <tr bgcolor="#BABAEF" class="table2">
+                  <td><div align="center"><img src="images/tem07_52.gif" width="150" height="149"></div></td>
+                  <td><div align="center"><img src="images/tem07_53.gif" width="150" height="150"></div></td>
+                </tr>
+              </table>              <p align="left">&nbsp;</p>              <h5 align="left" class="titulosunidad2">5. Trabajando con una imagen en Escala de grises</h5>
+              
+            <p align="left">Partiendo de la imagen que puedes obtener a continuaci&oacute;n, 
+              vamos a realizar unos cambios en ella con la herramienta <strong>Curvas</strong>.</p>
+            <table width="100" align="center">
+              <tr>
+                <td><a href="javascript:;" onClick="MM_openBrWindow('images/blanco.jpg','','','320','420','false')"><img src="images/blanco_pequea.jpg" width="188" height="250" border="0"></a></td>
+              </tr>
+            </table>
+            <p align="left">&nbsp;</p>
+              <p align="left">Si tiramos de la curva hacia arriba aclaramos la imagen.</p>
+              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  <td><img src="images/tem07_36.jpg" width="441" height="400"></td>
+                </tr>
+              </table>
+              <p align="center">&nbsp;</p>
+              <p align="left">Si lo hacemos hacia abajo la oscurecemos.</p>
+              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  <td><img src="images/tem07_37.jpg" width="441" height="400"></td>
+                </tr>
+              </table>
+              <p align="center">&nbsp;</p>
+              <p align="left">Aumentar la inclinaci&oacute;n de la curva supone aumentar el contraste.</p>
+              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  <td><img src="images/tem07_38.jpg" width="441" height="400"> </td>
+                </tr>
+              </table>
+              <p align="center">&nbsp;</p>
+              
+            <p align="left">Para disminuir el contraste debemos disminuir la inclinaci&oacute;n 
+              de la gr&aacute;fica.</p>
+              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  <td><img src="images/tem07_39.jpg" width="441" height="400"></td>
+                </tr>
+              </table>
+              
+            <p align="left">Para obtener una imagen invertida debemos invertir 
+              la inclinaci&oacute;n de la gr&aacute;fica.</p>
+              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  <td><img src="images/tem07_40.jpg" width="441" height="400"></td>
+                </tr>
+              </table>
+              <p align="center">&nbsp;</p>
+              <p align="left">Y un efecto de &quot;Posterizaci&oacute;n&quot;.</p>
+              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  <td><img src="images/tem07_41.jpg" width="441" height="400"></td>
+                </tr>
+              </table>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" height="32">
+                <tr valign="bottom">
+                  <td width="978" height="21" colspan="3">&nbsp; </td>
+                </tr>
+                <tr valign="bottom">
+                  <td width="935" height="21"><p class="titulosunidad2">El color &gt; Curvas</td>
+                  <td width=22 align="right" height="21"><a href="hoja0704.htm" target="right"><img border="0" src="../images/atras2.jpg" width="20" height="21"></a></td>
+                  <td width=21 align="right" height="21"><a href="hoja0706.htm" target="right"><img border="0" src="../images/adelante2.jpg" width="20" height="21"></a></td>
+                </tr>
+              </table>
+          <hr noshade color="#C5E3EC"  size="1"></td>
+        </tr>
+      </table>
+        <p align="justify">   
+  </tr>
+</table>
+</body>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem07/txt_705.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:19 GMT -->
+</html>

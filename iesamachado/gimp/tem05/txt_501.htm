@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem05/txt_501.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:15 GMT -->
+<head>
+<title>Documento sin t&iacute;tulo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../css/defecto.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+.Estilo1 {
+	font-size: 18px;
+	color: #FF0000;
+}
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features, myWidth, myHeight, isCenter) { //v3.0
+  if(window.screen)if(isCenter)if(isCenter=="true"){
+    var myLeft = (screen.width-myWidth)/2;
+    var myTop = (screen.height-myHeight)/2;
+    features+=(features!='')?',':'';
+    features+=',left='+myLeft+',top='+myTop;
+  }
+  window.open(theURL,winName,features+((features!='')?',':'')+'width='+myWidth+',height='+myHeight);
+}
+//-->
+</script>
+</head>
+
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="5" class="textos">
+  <tr>
+    <td valign="top"><table width="96%"  border="0" align="center" cellpadding="0" cellspacing="0" class="textos">
+        <tr>
+          <td valign="top">  <span class="titulosunidadr">Los canales</span>            <p>Una imagen RGB tiene tres canales de color:  Rojo, Verde y Azul. La <strong>Pesta&ntilde;a Canales </strong>se encuentra  en la <strong>Ventana Capas, Canales, Rutas y Deshacer</strong>, tal y como observamos en la siguiente figura.</p>
+              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  <td><img src="images/tem05_01.gif" width="200" height="177"></td>
+                </tr>
+              </table>
+              <p>Cada capa lleva asociados los tres canales de color correspondientes al modo de color RGB y podemos a&ntilde;adir o eliminar canales. Pero, &iquest;qu&eacute; son los canales?</p>
+              <p>Usando escalas de grises se almacenan varios tipos de informaci&oacute;n. Si observamos el <strong>Canal Rojo </strong>de una imagen, podemos observar que muestra, en gris, la cantidad de rojo que tiene un p&iacute;xel. Si una zona de nuestra imagen es completamente roja, en el Canal Rojo aparecer&aacute; como blanco.</p>
+              <p>Un Canal puede representar una <strong>selecci&oacute;n</strong>. Podemos guardar selecciones en un canal. Cuando guardamos una selecci&oacute;n, &eacute;sta  se guarda como un canal.</p>
+              <p>Un canal representa una <strong>opacidad</strong> variable dentro de una imagen. La escala de grises del canal puede servir para mostrar o no  determinada parte de una imagen.<br>
+              </p>
+              <p><span class="titulosunidad2">            1. Trabajar con Canales</span> </p>
+              
+            <p>Vamos a comprobar el funcionamiento b&aacute;sico de los canales 
+              con la siguiente imagen que puedes conseguir por el procedimiento 
+              habitual.</p>
+            <table width="100" align="center">
+              <tr>
+                <td><a href="javascript:;" onClick="MM_openBrWindow('images/tem05_01.jpg','image27','','420','555','false')"><img src="images/tem05_01_peque.jpg" width="169" height="225" border="0"></a></td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+              <p>Cuando hayamos abierto esta imagen en GIMP, hacemos clic en el icono correspondiente a canales de la <strong>Ventana Capas, Canales, ... </strong>y observaremos que nuestra imagen dispone de tres canales: Rojo, Verde y Azul. A la izquierda de los nombres de los canales encontramos con una miniatura de la imagen en gris. Adem&aacute;s, podemos mostrar u ocultar un canal o varios (icono del ojo). Probemos a ocultar uno a dos canales y observemos lo que se muestra en la <strong>Ventana Imagen</strong>.</p>
+              <div align="center">
+                <table width="50%" border="0" cellpadding="7" cellspacing="0" style='border:1px solid black'>
+                  <tr bgcolor="#FF9999">
+                    <td><div align="center"><img src="images/tem05_02.gif" width="175" height="96"></div></td>
+                    <td><div align="center"><img src="images/tem05_05.jpg" width="187" height="250"></div></td>
+                  </tr>
+                  <tr bgcolor="#B0FFB0">
+                    <td><div align="center"><img src="images/tem05_03.gif" width="175" height="99"></div></td>
+                    <td><div align="center"><img src="images/tem05_04.jpg" width="188" height="250"></div></td>
+                  </tr>
+                  <tr bgcolor="#B7CEFF">
+                    <td><div align="center"><img src="images/tem05_04.gif" width="175" height="96"></div></td>
+                    <td><div align="center"><img src="images/tem05_03.jpg" width="188" height="250"></div></td>
+                  </tr>
+                </table>
+              </div>
+              <p>Debemos recordar que el modo RGB es un modo aditivo, es decir, las cantidades de cada uno de los colores se van sumando para poder obtener el resultado final de la imagen a todo color. Eso es lo que ocurre cuando dejamos visibles los tres canales de color: Rojo, Verde y Azul.</p>
+              <p>Podemos crear nuevos canales, eliminar canales y trabajar con uno solo, con dos canales o con los tres a la vez. Cada nueva capa que creemos en GIMP tendr&aacute; sus tres canales correspondientes sobre los que podremos trabajar.</p>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" height="32">
+                <tr valign="bottom">
+                  <td width="100%" height="21" colspan="3">
+                    <hr noshade color="#C5E3EC"  size="1">
+                  </td>
+                </tr>
+                <tr valign="bottom">
+                  <td width="935" height="21"><p class="titulosunidad2">Canales &gt; Introducci&oacute;n</td>
+                  <td width=22 align="right" height="21"></td>
+                  <td width=21 align="right" height="21"><a href="hoja0502.htm" target="right"><img border="0" src="../images/adelante2.jpg" width="20" height="21"></a></td>
+                </tr>
+          </table></td>
+        </tr>
+      </table>
+        <p align="justify">   
+  </tr>
+</table>
+</body>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem05/txt_501.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:15 GMT -->
+</html>

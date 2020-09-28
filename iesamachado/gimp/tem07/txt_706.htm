@@ -1,0 +1,433 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem07/txt_706.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:19 GMT -->
+<head>
+<title>Documento sin t&iacute;tulo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../css/defecto.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+.Estilo1 {
+	color: #FF0000;
+	font-size: 24px;
+	font-weight: bold;
+}
+.Estilo2 {font-weight: bold}
+.Estilo9 {color: #003399; font-weight: bold; }
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features, myWidth, myHeight, isCenter) { //v3.0
+  if(window.screen)if(isCenter)if(isCenter=="true"){
+    var myLeft = (screen.width-myWidth)/2;
+    var myTop = (screen.height-myHeight)/2;
+    features+=(features!='')?',':'';
+    features+=',left='+myLeft+',top='+myTop;
+  }
+  window.open(theURL,winName,features+((features!='')?',':'')+'width='+myWidth+',height='+myHeight);
+}
+//-->
+</script>
+</head>
+
+
+<body>
+<div align="center"> </div>
+<table width="100%"  border="0" cellpadding="0" cellspacing="5" class="textos">
+  <tr>
+    <td valign="top"><table width="96%"  border="0" align="center" cellpadding="0" cellspacing="0" class="textos">
+        <tr>
+          <td valign="top"><b> </b>
+              <h1 class="titulosunidadr">M&eacute;todos de correcci&oacute;n del color</h1>
+              
+            <p>Hemos visto las herramientas m&aacute;s importantes para el ajuste 
+              del color como son la herramienta <strong>Niveles </strong>y la 
+              herramienta <strong>Curvas</strong>. Utiliz&aacute;ndolas conjuntamente 
+              podemos conseguir muy buenos resultados y experimentando con ellas 
+              aprenderemos a manejar el color de una forma bastante adecuada.</p>
+              
+            <p>Existen en GIMP otras formas para corregir el color, si bien los 
+              resultados que se pueden obtener dependen de nuestro gusto a la 
+              hora de contemplar las im&aacute;genes en color. No por eso las 
+              herramientas de las que vamos a hablar son menos &uacute;tiles.</p>
+              
+            <p align="justify">Para trabajar con estas nuevas herramientas vamos 
+              a utilizar la siguiente imagen: </p>
+            <table width="100" align="center">
+              <tr>
+                <td><a href="javascript:;" onClick="MM_openBrWindow('images/ninots.jpg','','','358','470','false')"><img src="images/ninots_pequea.jpg" width="188" height="250" border="0"></a></td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+              
+            <p>A todas las herramientas de color se accede desde el men&uacute; 
+              <strong>Herramientas --&gt; Herramientas de color</strong>. Tambi&eacute;n 
+              haciendo clic derecho sobre la imagen abierta, en nuestro caso &quot;<strong>ninots.jpg</strong>&quot;, 
+              elegimos <strong>Herramientas --&gt; Herramientas de color</strong>.</p>
+              <h5 align="left" class="titulosunidad2">1. Balance de color</h5>
+              <p align="justify">Al elegir esta herramienta, que se encuentra situada dentro de la opci&oacute;n <strong>Herramientas de color</strong>, obtenemos el siguiente cuadro de di&aacute;logo, que nos ayudar&aacute; a pensar en RGB... y tambi&eacute;n en CMYK. Nos encontramos con tres cursores, los <strong>colores de tinta</strong> a la izquierda (CMY) y los <strong>colores luz </strong>(RGB) a la derecha. Si movemos un cursor lejos de un color, disminuye la cantidad de ese color en la imagen y aumenta el color al que nos acercamos.</p>
+              <div align="center">
+                <table width="100%" border="0" cellpadding="0" cellspacing="6" class="textosnojustificado">
+                  <tr>
+                    
+                  <td width="37%"><img src="images/tem07_55.gif" width="324" height="329"></td>
+                    <td width="63%" valign="top"><div align="justify">Los colores 
+                      los podemos modificar sobre tres gamas (rangos) de valores 
+                      diferentes: &quot;<strong>Sombras</strong>&quot;, &quot;<strong>Tonos 
+                      medios</strong>&quot; y &quot;<strong>Puntos de luz</strong>&quot;.<br>
+                      <br>
+                      Disponemos de una casilla de verificaci&oacute;n que nos 
+                      permite &quot;<strong>Conservar la luminosidad</strong>&quot;, 
+                      manteniendo los valores del brillo. Podemos desactivarla 
+                      para que al mover el cursor y modificar el color, tambi&eacute;n 
+                      var&iacute;e el brillo de los p&iacute;xeles. Aconsejamos 
+                      dejarlo siempre marcado, aunque podemos desactivarla para 
+                      ver qu&eacute; ocurre.<br>
+                      <br>
+                      La opci&oacute;n &quot;<strong>Reiniciar el rango</strong>&quot; 
+                      nos pone a cero los valores correspondientes al rango elegido, 
+                      dejando los otros sin reiniciar.<br>
+                      <br>
+                      La opci&oacute;n &quot;<strong>Reiniciar</strong>&quot; 
+                      pone a cero los valores de todos los rangos, est&eacute;n 
+                      o no activados.<br>
+                    </div></td>
+                  </tr>
+                </table>
+              </div>
+              <ol>
+                <li>
+                  
+                <p>Con la imagen &quot;<strong>ninots.jpg</strong>&quot; abierta 
+                  y la herramienta <strong>Balance de color</strong>, seleccionamos 
+                  el rango &quot;<strong>Tonos medios</strong>&quot; y observamos 
+                  que la imagen tiene un tono rojo-amarillo producido al hacer 
+                  la fotograf&iacute;a en un interior con luz de tungsteno (luz 
+                  amarillenta), estando la c&aacute;mara preparada para hacer 
+                  fotos con luz de d&iacute;a.<br>
+                  </p>
+                </li>
+                <li>
+                  <p>Pongamos los siguientes valores: -20 para el nivel de color Cian-Rojo; 10 para Magenta-Verde y 45 para Amarillo- Azul.<br>
+                  </p>
+                </li>
+                <li>
+                  
+                <p>Mantenemos &quot;<strong>Conservar la luminosidad</strong>&quot; 
+                  y probamos c&oacute;mo se muestra la imagen si desactivamos 
+                  esta casilla. Observamos que la imagen tiene un color m&aacute;s 
+                  natural, menos amarillento. </p>
+                  <table border="0" align="center" cellspacing="0">
+                    <tr>
+                      <td><img src="images/tem07_42.jpg" width="500" height="317"> </td>
+                    </tr>
+                  </table>
+                  <p>&nbsp;                  </p>
+                </li>
+                <li>Prueba otras combinaciones en los diferentes rangos: Sombras y Puntos de luz.<br>
+                </li>
+              </ol>
+              <h5 class="titulosunidad2">2. Brillo y contraste</h5>
+              <p>Cuando queremos hacer un ajuste r&aacute;pido sobre una imagen, &eacute;sta es la herramienta ideal para manejar el brillo y el contraste, afectando a toda la gama de tonos, sin posibilidad de hacer ninguna limitaci&oacute;n.</p>
+              <ol>
+                <li>
+                  
+                <p>Partiendo de la imagen original &quot;<strong>ninots.jpg</strong>&quot; 
+                  abrimos, desde el men&uacute; de <strong>Herramientas de color</strong>, 
+                  el cuadro de di&aacute;logo <strong>Brillo y contraste</strong>.<br>
+                  </p>
+                </li>
+                <li>
+                  
+                <p>Ponemos como valor de brillo 50 y de contraste 55. Podemos 
+                  ver el resultado antes de aplicar si tenemos marcada la opci&oacute;n 
+                  &quot;<strong>Vista previa</strong>&quot;.<br>
+                  </p>
+                </li>
+                <li>
+                  <p>Si nos agrada el resultado hacemos clic en <strong>Aceptar</strong>.<br>
+                    <br>
+                  </p>
+                  <table border="0" align="center" cellspacing="0">
+                    <tr>
+                      <td><img src="images/tem07_43.jpg" width="500" height="282"> </td>
+                    </tr>
+                  </table>
+                  <br>
+                </li>
+              </ol>
+            <span class="titulosunidad2">3. Tono y saturaci&oacute;n</span>
+              <p>Los controles que aparecen en el cuadro de di&aacute;logo nos 
+              permiten ajustar el <strong>Tono</strong>, la <strong>Saturaci&oacute;n</strong> 
+              y la <strong>Luminosidad</strong> de los diferentes componentes 
+              de color de una imagen o sobre la composici&oacute;n completa de 
+              la imagen.</p>
+              <div align="center">
+                <table width="100%" border="0" cellpadding="0" cellspacing="6" class="textosnojustificado">
+                  <tr>
+                    
+                  <td width="36%"><img src="images/tem07_44.jpg" width="289" height="350"></td>
+                    <td width="64%" valign="top"><div align="justify">La primera 
+                      parte de este cuadro nos permite elegir el color sobre el 
+                      que vamos a actuar, el color que vamos a modificar. Tenemos 
+                      los colores tinta (Cian -C-, Magenta -M- y Amarillo -Y-) 
+                      y los colores luz (Rojo, Verde y Azul) colocados en su posici&oacute;n 
+                      en el c&iacute;rculo de color. <br>
+                      <br>
+                      Por defecto viene seleccionada la opci&oacute;n &quot;<strong>Principal</strong>&quot; 
+                      para que los cambios afecten a todos los canales de color.<br>
+                      <br>
+                      Una vez seleccionado un color podemos mover los controles para modificar ese color en cuanto a Tono, Saturaci&oacute;n y Luminosidad.<br>
+                      <br>
+                      La opci&oacute;n &quot;<strong>Vista previa</strong>&quot; 
+                      nos permite ver los resultados en la <strong>Ventana Imagen</strong>; 
+                      la opci&oacute;n &quot;<strong>Reiniciar el color</strong>&quot; 
+                      devuelve los valores originales al color seleccionado. La 
+                      opci&oacute;n &quot;<strong>Reiniciar</strong>&quot; devuelve 
+                      los valores originales a todos los colores.</div></td>
+                  </tr>
+                </table>
+              </div>
+              <ol>
+                <li>
+                  
+                <p>Con la imagen original &quot;<strong>ninots.jpg</strong>&quot; 
+                  abrimos la herramienta <strong>Tono y saturaci&oacute;n...</strong> 
+                  desde el men&uacute; <strong>Herramientas de color</strong>.<br>
+                  </p>
+                </li>
+                <li>
+                  
+                <p>Dejamos seleccionada la opci&oacute;n &quot;<strong>Principal</strong>&quot;, 
+                  y nos fijamos en los rect&aacute;ngulos de color del c&iacute;rculo 
+                  crom&aacute;tico que forman los colores. Cuando movemos el cursor 
+                  de <strong>Tono </strong>hacia la derecha lo que ocurre es que 
+                  el color rojo va tomando el valor del color amarillo, el magenta 
+                  toma el valor del color rojo y as&iacute; sucesivamente, es 
+                  decir, al mover el cursor de tono hacia la derecha los colores 
+                  cambian en el sentido de las agujas del reloj; mientras que 
+                  si lo movemos hacia la izquierda los colores se modifican en 
+                  sentido contrario a las agujas del reloj. En la pr&aacute;ctica 
+                  esto quiere decir que si una zona de la imagen es de color amarillo 
+                  y movemos el cursor hacia la derecha cambiar&aacute; primero 
+                  a verde y si lo movemos m&aacute;s cambiar&aacute; a cian. Si 
+                  el movimiento del cursor es hacia la izquierda el color amarillo 
+                  primero cambiar&aacute; a rojo y si lo llevamos m&aacute;s a 
+                  la izquierda cambiar&aacute; a magenta. Haz la prueba.<br>
+                  </p>
+                </li>
+                <li>
+                  <p>Si seleccionamos un solo color en el c&iacute;rculo, por ejemplo el amarillo, lo &uacute;nico que cambiar&aacute; en nuestra imagen ser&aacute;n los tonos amarillos que tiene la imagen y en el mismo sentido que el apuntado en el punto anterior.<br>
+                  </p>
+                </li>
+                <li>
+                  
+                <p>Al mover hacia la derecha el cursor correspondiente a la <strong>Luminosidad</strong> 
+                  y estar seleccionada la opci&oacute;n &quot;<strong>Principal</strong>&quot;, 
+                  todos los colores se aclaran, podemos observarlo en los rect&aacute;ngulos 
+                  de color. Si movemos el cursor hacia la izquierda todos los 
+                  colores se oscurecen, porque a&ntilde;adimos negro a todos los 
+                  colores. Al elegir un solo color, se a&ntilde;ade blanco si 
+                  movemos a la derecha y negro si movemos hacia la izquierda.<br>
+                  </p>
+                </li>
+                <li>
+                  
+                <p> Sobre la saturaci&oacute;n podemos decir lo mismo. Al mover 
+                  el cursor hacia la derecha con la opci&oacute;n &quot;<strong>Principal</strong>&quot; 
+                  seleccionada, aumenta la saturaci&oacute;n de todos los colores 
+                  y hacia la izquierda aumenta la desaturaci&oacute;n. En caso 
+                  de que queramos saturar o desaturar un solo color deberemos 
+                  seleccionar ese color.<br>
+                  </p>
+                </li>
+                <li>
+                  <p>Prueba las distintas opciones con esta herramienta.<br>
+                  </p>
+                </li>
+              </ol>
+              <span class="titulosunidad2">4. Colorear imagen</span>            <p>La 
+              herramienta &quot;<strong>Colorizar</strong>&quot; (Colorear) hace 
+              lo que su nombre indica, colorear la imagen con 256 niveles de color 
+              permiti&eacute;ndonos elegir el color que queremos dar a nuestra 
+              imagen.</p>
+            <p align="justify">Accedemos desde el men&uacute; <strong>Herramientas 
+              de color --&gt; Colorizar</strong>.</p>
+              <div align="center">
+                <table width="100%" border="0" cellpadding="0" cellspacing="6" class="textosnojustificado">
+                  <tr>
+                    <td width="41%"><div align="left"><img src="images/tem07_45.jpg" width="275" height="175"></div></td>
+                    <td width="59%"><div align="left">El cursor de <strong>Tono</strong> 
+                      nos permite elegir el color con el que colorearemos nuestra 
+                      imagen.<br>
+                    <br>
+          Mayor <strong>Saturaci&oacute;n </strong>del color hacia la derecha y menor a la izquierda.<br>
+          <br>
+          La <strong>Luminosidad </strong>aumentar&aacute; llevando el cursor a la derecha y a la izquierda disminuir&aacute;.</div></td>
+                  </tr>
+                </table>
+              </div>
+              <ol>
+                <li>
+                  <p>Con nuestra imagen habitual accedemos a <strong>Colorizar</strong>.<br>
+                  </p>
+                </li>
+                <li>
+                  
+                <p>Seleccionamos un tono con su correspondiente saturaci&oacute;n 
+                  y luminosidad. El resultado de la imagen puede guardarse en 
+                  modo indexado adem&aacute;s de en modo RGB.</p>
+                </li>
+              </ol>
+              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  <td><img src="images/tem07_46.jpg" width="400" height="215"></td>
+                </tr>
+              </table>
+              <p>Es una buena forma de obtener fotograf&iacute;as viradas.</p>
+              <span class="titulosunidad2">5. Umbral</span>            <p>Sirve 
+              para reducir los colores de una imagen a dos: blanco y negro. Es 
+              igual que el modo mapa de bits pero con la diferencia de que en 
+              este caso permanecen los canales de color, es decir, seguimos trabajando 
+              con una imagen en color (RGB). Accedemos desde el men&uacute; Herramientas, 
+              <strong>Herramientas de color --&gt; Umbral</strong>.</p>
+              <div align="center">
+                <table width="100%" border="0" cellpadding="0" cellspacing="6" class="textosnojustificado">
+                  <tr>
+                    
+                  <td width="37%"><img src="images/tem07_56.gif" width="300" height="242"></td>
+                    <td width="63%" valign="top"><div align="left">Debemos elegir el rango del umbral. Todos los tonos comprendidos en el rango del umbral se transformar&aacute;n en blanco y el resto en negro.<br>
+                    <br>
+                      Hacemos clic y arrastramos sobre el histograma el rango 
+                      que queremos que sea blanco, o introducimos los valores 
+                      del rango del umbral.</div></td>
+                  </tr>
+                </table>
+              </div>
+              <ol>
+                <li>
+                  <p>Podemos conseguir efectos muy interesantes haciendo una copia de la capa de fondo de nuestra imagen y aplicando la herramienta <strong>Umbral </strong>sobre la nueva capa.<br>
+                  </p>
+                </li>
+                <li>
+                  <p>Luego podemos jugar con los modos de fusi&oacute;n de la capa a la que hemos aplicado el <strong>Umbral</strong>.</p>
+                </li>
+              </ol>
+              
+            <p>El siguiente ejemplo se ha conseguido duplicando la capa de fondo, 
+              aplicando el <strong>Umbral </strong>con los valores por defecto 
+              y poniendo como modo de fusi&oacute;n &quot;<strong>Claridad suave</strong>&quot;. 
+              El resultado es bastante espectacular para tan pocos pasos realizados 
+              sobre la imagen.</p>
+              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  <td><img src="images/tem07_47.jpg" width="188" height="250"></td>
+                </tr>
+              </table>
+              <p align="justify" class="titulosunidad2">6. Posterizar</p>
+              
+            <p>Es un proceso que nos permite la reducci&oacute;n de colores de 
+              una imagen. El cuadro de di&aacute;logos se compone de un cursor, 
+              que nos permite elegir el n&uacute;mero de colores que tendr&aacute; 
+              nuestra imagen final. Cuanto menor sea el n&uacute;mero de colores 
+              elegidos, mayor ser&aacute; el efecto producido. Comprueba su funcionamiento.</p>
+              <span class="titulosunidad2"><br>
+            7. Otras herramientas</span>            <p>Desde el men&uacute;<strong> 
+              </strong> <strong>Capa --&gt; Colores</strong> podemos acceder a 
+              otras herramientas de color.</p>
+              
+            <table width="352" border="0" align="center" cellspacing="0">
+              <tr>
+                  
+                <td width="400"><img src="images/tem07_57.gif" width="350" height="404"></td>
+              </tr>
+            </table>
+              <p align="center">&nbsp;</p>
+              
+            <table width="60%" border="0" align="center" cellpadding="10" cellspacing="0" class="textos" style='border:1px solid black'>
+              <tr bgcolor="#DCDCF8" class="textos_tabla"> 
+                <td width="50%" bordercolor="#33CC99"><div align="justify">Original</div></td>
+                <td width="50%" bordercolor="#33CC99"><div align="right"><img src="images/tem07_48.jpg" width="160" height="116"></div></td>
+              </tr>
+              <tr bgcolor="#D2D2F7" class="textos_tabla"> 
+                <td width="50%" bordercolor="#33CC99"><div align="justify"><strong>Desaturar</strong>: 
+                    Quita la saturaci&oacute;n, transforma la imagen en escala 
+                    de grises, pero manteniendo la informaci&oacute;n de los canales.</div></td>
+                <td width="50%" bordercolor="#33CC99"><div align="right"><img src="images/tem07_49.jpg" width="160" height="116"></div></td>
+              </tr>
+              <tr bgcolor="#C9C9F5" class="textos_tabla"> 
+                <td width="50%" bordercolor="#33CC99"><div align="justify"><strong>Invertir</strong>: 
+                    Conseguimos un negativo de nuestra imagen.</div></td>
+                <td width="50%" bordercolor="#33CC99"><div align="right"><img src="images/tem07_50.jpg" width="160" height="116"></div></td>
+              </tr>
+              <tr bgcolor="#C0C0F3" class="textos_tabla"> 
+                <td width="50%" bordercolor="#33CC99"><div align="justify"><strong>Auto 
+                    --&gt; Ecualizar</strong>: Distribuye equilibradamente los 
+                    valores de luces y sombras.</div></td>
+                <td width="50%" bordercolor="#33CC99"><div align="right"><img src="images/tem07_51.jpg" width="160" height="116"></div></td>
+              </tr>
+              <tr bgcolor="#C0C0F3" class="textos_tabla"> 
+                <td bordercolor="#33CC99" bgcolor="#B4B4F1"><strong>Auto --&gt; 
+                  Balance de blancos</strong>: Aplica de forma autom&aacute;tica 
+                  la herramienta Niveles</td>
+                <td bordercolor="#33CC99" bgcolor="#B4B4F1">
+<div align="right"><img src="images/tem07_54.jpg" width="160" height="117"></div></td>
+              </tr>
+              <tr bgcolor="#B8B8F1" class="textos_tabla"> 
+                <td width="50%" bordercolor="#33CC99" bgcolor="#A8A8EE"> 
+                  <div align="justify"><strong>Auto --&gt; Estirar HSV</strong>. 
+                    Aumenta el contraste de forma autom&aacute;tica.</div></td>
+                <td width="50%" bordercolor="#33CC99" bgcolor="#A8A8EE">
+<div align="right"><img src="images/tem07_52.jpg" width="160" height="116"></div></td>
+              </tr>
+              <tr bgcolor="#AFAFEF" class="textos_tabla"> 
+                <td bordercolor="#33CC99" bgcolor="#9D9DEC"><strong>Auto --&gt; 
+                  Normalizar</strong>: Acerca los valores extremos del histograma 
+                  de una imagen</td>
+                <td bordercolor="#33CC99" bgcolor="#9D9DEC">
+<div align="right"><img src="images/tem07_55.jpg" width="161" height="118"></div></td>
+              </tr>
+              <tr bgcolor="#AFAFEF" class="textos_tabla"> 
+                <td bordercolor="#33CC99" bgcolor="#9696EB"> 
+                  <div align="justify"><strong>Auto --&gt; Realzar color</strong>. 
+                    Pone de relieve los colores, aumentando la saturaci&oacute;n 
+                    de los mismos.</div></td>
+                <td bordercolor="#33CC99" bgcolor="#9696EB"> 
+                  <div align="right"><span class="Estilo2"><img src="images/tem07_53.jpg" width="160" height="116"></span></div></td>
+              </tr>
+              <tr bgcolor="#AFAFEF" class="textos_tabla"> 
+                <td width="50%" bordercolor="#33CC99" bgcolor="#8D8DE9"> 
+                  <div align="justify"><strong>Auto --&gt; Reducir el contraste</strong>. 
+                    Reduce el contraste de forma autom&aacute;tica.</div></td>
+                <td width="50%" bordercolor="#33CC99" bgcolor="#8D8DE9"> 
+                  <div align="right"><span class="Estilo2"><img src="images/tem07_56.jpg" width="162" height="118"></span></div></td>
+              </tr>
+            </table>
+            <p>Prueba las otras opciones de<span class="Estilo2"> Capa --&gt; Colores --&gt; Auto</span>. </p>              <table border="0" cellpadding="0" cellspacing="0" width="100%" height="32">
+                <tr valign="bottom">
+                  <td width="978" height="21" colspan="3" class="Estilo2">&nbsp; </td>
+                </tr>
+                <tr valign="bottom">
+                  <td width="935" height="21" class="Estilo2"><p class="titulosunidad2">El color &gt; Correcci&oacute;n del color</td>
+                  <td width=22 height="21" align="right" class="Estilo2"><a href="hoja0705.htm" target="right"><img border="0" src="../images/atras2.jpg" width="20" height="21"></a></td>
+                  <td width=21 height="21" align="right" class="Estilo2"><a href="hoja0707.htm" target="right"><img border="0" src="../images/adelante2.jpg" width="20" height="21"></a></td>
+                </tr>
+              </table>
+          <hr noshade color="#C5E3EC"  size="1"></td>
+        </tr>
+      </table>
+        <p align="justify" class="Estilo2">   
+  </tr>
+</table>
+</body>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem07/txt_706.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:19 GMT -->
+</html>

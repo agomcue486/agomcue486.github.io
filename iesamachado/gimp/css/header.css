@@ -1,0 +1,33 @@
+/* Código de colores para los enlaces */
+a:link {color:#99CC66; text-decoration:none; ; font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold}
+a:visited {color:#99CC66;text-decoration:none; ; font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold}
+a:hover { color:#FFFFFF; text-decoration:none; ; font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold}
+a:active {color:#FFFFFF;text-decoration:none; ; font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold}
+
+/* Propiedades del body */
+body {
+	
+	scrollbar-face-color: #2668B3;
+	scrollbar-shadow-color: #69A2E3;
+	scrollbar-highlight-color: #69A2E3;
+	scrollbar-3dlight-color: #336699;
+	scrollbar-darkshadow-color: black;
+	scrollbar-track-color: #CCCCCC;
+	scrollbar-arrow-color: #FFFFCE;
+	font-size: 80%; 
+	font-family: Tahoma, Verdana, Arial, Helvetica; 
+}
+
+TD {
+	FONT-SIZE: 15px; FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif
+}
+TD B {
+	FONT-SIZE: 11px; FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif
+}
+
+/* Formatos */
+h1 { font-family:Tahoma; font-size:14pt; color:rgb(27,104,133); }
+h2 { font-family:Tahoma; font-size:12pt; color:rgb(0,128,128); }
+p { font-family:Tahoma; color:rgb(0,0,0); }
+ 
+.iconos {  font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: #99CC66; text-decoration: none}

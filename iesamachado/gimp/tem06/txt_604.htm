@@ -1,0 +1,473 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem06/txt_604.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:17 GMT -->
+<head>
+<title>Documento sin t&iacute;tulo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../css/defecto.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features, myWidth, myHeight, isCenter) { //v3.0
+  if(window.screen)if(isCenter)if(isCenter=="true"){
+    var myLeft = (screen.width-myWidth)/2;
+    var myTop = (screen.height-myHeight)/2;
+    features+=(features!='')?',':'';
+    features+=',left='+myLeft+',top='+myTop;
+  }
+  window.open(theURL,winName,features+((features!='')?',':'')+'width='+myWidth+',height='+myHeight);
+}
+//-->
+</script>
+</head>
+
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="5" class="textos">
+  <tr>
+    <td valign="top"><table width="96%"  border="0" align="center" cellpadding="0" cellspacing="0" class="textos">
+        <tr>
+          <td valign="top"><b> </b>
+              <p><span class="titulosunidadr">Editar rutas</span></p>
+              <p>Una vez que hemos creado una ruta o  importado de otro documento, es posible que necesitemos adaptarla a la imagen sobre la que vamos a trabajar. </p>
+              <p>GIMP facilita bastante la edici&oacute;n de las rutas, las herramientas a utilizar son sencillas y una vez conocidas todas las posibilidades veremos la gran utilidad que tienen las rutas para nuestro trabajo.</p>
+              <p>En un nuevo documento creemos una nueva ruta a la que llamaremos &quot;control&quot;, con tres puntos de anclaje.</p>
+              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  <td><img src="images/tem06_16.gif" width="254" height="278"></td>
+                </tr>
+              </table>
+              <p align="center">&nbsp;</p>
+              
+            <p>Vamos a utilizar una ruta abierta. Luego veremos c&oacute;mo se 
+              puede cerrar una ruta.</p>
+              
+            <p>La imagen de arriba debe servirnos para tener muy claro el significado 
+              de cada elemento de una ruta y la forma en que se representan en 
+              GIMP:</p>
+              
+            <ul>
+              <li> 
+                <p>Los puntos de anclaje se representan con un c&iacute;rculo 
+                  blanco cuando est&aacute;n seleccionados (ellos o los puntos 
+                  de direcci&oacute;n que permiten modificar el trazado curvo) 
+                  y un c&iacute;rculo negro cuando no est&aacute;n seleccionados.</p>
+              </li>
+              <li> 
+                <p>Los puntos de direcci&oacute;n est&aacute;n representados por 
+                  cuadrados blancos y las l&iacute;neas de direcci&oacute;n s&oacute;lo 
+                  aparecen cuando tenemos seleccionado el punto de anclaje del 
+                  que dependen.</p>
+              </li>
+              <li> 
+                <p>Cuando dibujamos una ruta los puntos de anclaje se van uniendo 
+                  con l&iacute;neas rectas salvo cuando hacemos clic y arrastramos 
+                  el punto de anclaje, entonces aparecen los puntos de direcci&oacute;n 
+                  del punto de anclaje que se est&aacute; dibujando y podemos 
+                  dibujar la ruta con trazado curvo.</p>
+              </li>
+              <li> 
+                <p>Los puntos de anclaje inicial y final s&oacute;lo tienen un 
+                  punto de direcci&oacute;n cuando son dibujados, si queremos 
+                  que aparezcan los dos debemos presionar la tecla <strong>May&uacute;s</strong> 
+                  una vez que hayamos hecho clic en un punto de anclaje.</p>
+              </li>
+            </ul>
+            <p>Comenzamos</p>
+            <ol>
+                <li>
+                  <p>En un nuevo documento con un tama&ntilde;o de 400 x 400 p&iacute;xeles dibujemos tres puntos de anclaje que est&eacute;n en l&iacute;nea recta.<br>
+                  </p>
+                </li>
+                <li>
+                  
+                <p>Seleccionemos &quot;<strong>Editar</strong>&quot; en las <strong>Opciones 
+                  de herramienta</strong>. Hagamos clic en el punto de anclaje 
+                  central y sin liberar el rat&oacute;n movamos el punto de direcci&oacute;n 
+                  por la pantalla. Vemos que s&oacute;lo manejamos uno de los 
+                  dos puntos de direcci&oacute;n que tiene el punto de anclaje 
+                  central. Si a la vez presionemos la tecla <strong>May&uacute;s.</strong> 
+                  vemos que al arrastrar el rat&oacute;n aparece el otro punto 
+                  de direcci&oacute;n y &iexcl;se mueven los dos puntos de direcci&oacute;n 
+                  a la vez y de forma sim&eacute;trica! De esta forma modificamos 
+                  a la vez la curva anterior y posterior al punto de anclaje.<br>
+                  </p>
+                </li>
+                <li>
+                  <p>Vayamos a los puntos de anclaje inicial y final. Siguiendo el mismo procedimiento mostremos los dos puntos de direcci&oacute;n correspondientes a esos puntos de anclaje y modifiquemos la curva hasta obtener algo similar a: <br>
+                  </p>
+                  <table border="0" align="center" cellspacing="0">
+          <tr>
+            <td><img src="images/tem06_17.gif" width="200" height="166"> </td>
+          </tr>
+        </table>
+                  <p>&nbsp;</p>
+                </li>
+                <li>
+                  <p>Probemos distintos movimientos de los puntos de direcci&oacute;n para comprobar el funcionamiento de cada uno de ellos y ver como modifican la curva. Recuerda que si haces clic en uno de ellos y luego presionas la tecla may&uacute;sculas, podr&aacute;s manejar los dos puntos de direcci&oacute;n a la vez.</p>
+                </li>
+            </ol>
+              <p>Habr&aacute;s comprobado que seg&uacute;n situamos el rat&oacute;n encima de un punto de anclaje, un punto de direcci&oacute;n o la propia curva se va modificando la imagen del cursor para indicarnos lo que va a hacer en ese momento la herramienta que estamos utilizando. Veamos los iconos que aparecen y su significado.</p>
+              <div align="center">
+                <table width="80%" border="1" cellpadding="6" cellspacing="0" bordercolor="#FFCC66" bgcolor="#FFEAD5" class="textosnojustificado">
+                  <tr bordercolor="#BABAEF" bgcolor="#BABAEF">
+                    <td width="23%"><strong>Modo de edici&oacute;n</strong></td>
+                    <td width="21%"><strong>Icono</strong></td>
+                    <td width="56%"><strong>Concepto</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Dise&ntilde;o</strong></td>
+                    <td valign="middle" bgcolor="#FFFFFF"><div align="center"><img src="images/mouse.png" width="32" height="32"> <img src="images/bezier_select_small.png" width="32" height="32"> <img src="images/control.png" width="32" height="32"> </div></td>
+                    <td>
+                      <div align="left">Aparecen m&aacute;s cercanos que en la 
+                      imagen y nos indica que al hacer clic se crea el primer 
+                      punto de anclaje.</div></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Dise&ntilde;o</strong></td>
+                    <td valign="middle" bgcolor="#FFFFFF"><div align="center"><img src="images/mouse.png" width="32" height="32"> <img src="images/bezier_select_small.png" width="32" height="32"><img src="images/plus.png" width="32" height="32"></div></td>
+                    <td>
+                    <div align="left">Aparecen superpuestos y nos indica que al 
+                      hacer clic se crea el segundo y sucesivos puntos de anclaje.</div></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Dise&ntilde;o</strong></td>
+                    <td valign="middle" bgcolor="#FFFFFF"><div align="center"><img src="images/mouse.png" width="32" height="32"> <img src="images/bezier_select_small.png" width="32" height="32"><img src="images/move_small.png" width="32" height="32"></div></td>
+                    <td>
+                    <div align="justify">Aparecen muy cercanos: al situarnos sobre 
+                      un punto de anclaje y arrastrar, nos permite modificar la 
+                      posici&oacute;n de ese punto de anclaje. Si nos situamos 
+                      sobre la recta de uni&oacute;n de dos puntos de anclaje 
+                      y arrastramos nos permite modificar la curva, apareciendo 
+                      los puntos de direcci&oacute;n de los puntos de anclaje 
+                      que limitan la curva.</div></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Edici&oacute;n</strong></td>
+                    <td valign="middle" bgcolor="#FFFFFF"><div align="center"><img src="images/bad.png" width="32" height="32"><img src="images/bezier_select_small.png" width="32" height="32"></div></td>
+                    <td><div align="left">Aparece cuando nos situamos en cualquier 
+                      zona en la que no se puede editar la curva.</div></td>
+                  </tr>
+                  <tr>
+                    <td height="57"><strong>Edici&oacute;n</strong></td>
+                    <td valign="middle" bgcolor="#FFFFFF"><div align="center"><img src="images/hand_small.png" width="32" height="32"></div></td>
+                    <td><div align="justify">Aparece al situarnos encima de un punto de anclaje, nos permite seleccionar y comenzar a modificar la posici&oacute;n de los puntos de direcci&oacute;n de este punto de anclaje. Si presionamos <strong>May&uacute;s</strong> modificamos los dos puntos de direcci&oacute;n de la curva a la vez.</div></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Edici&oacute;n</strong></td>
+                    <td valign="middle" bgcolor="#FFFFFF"><div align="center"><img src="images/mouse.png" width="32" height="32"><img src="images/bezier_select_small.png" width="32" height="32"><img src="images/plus.png" width="32" height="32"></div></td>
+                    <td><div align="left">Al situarnos sobre la curva que une 
+                      dos puntos de anclaje nos permiten, haciendo clic, a&ntilde;adir 
+                      un punto de anclaje.</div></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Edici&oacute;n</strong></td>
+                    <td valign="middle" bgcolor="#FFFFFF"><div align="center"><img src="images/mouse.png" width="32" height="32"> <img src="images/bezier_select_small.png" width="32" height="32"><img src="images/minus.png" width="32" height="32"></div></td>
+                    <td><div align="left">Si tenemos presionada la tecla <strong>May&uacute;s</strong> y nos situamos sobre un punto de anclaje aparecen estos iconos. Al hacer clic eliminamos el punto de anclaje.</div></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Edici&oacute;n</strong></td>
+                    <td valign="middle" bgcolor="#FFFFFF"><div align="center"><img src="images/mouse.png" width="32" height="32"> <img src="images/bezier_select_small.png" width="32" height="32"><img src="images/minus.png" width="32" height="32"></div></td>
+                    <td><div align="left">Si tenemos presionada la tecla <strong>May&uacute;s</strong> y nos situamos sobre un segmento que une dos puntos de anclaje y hacemos clic, eliminamos ese segmento. De esta forma se pueden dividir trazados.</div></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Edici&oacute;n</strong></td>
+                    <td valign="middle" bgcolor="#FFFFFF"><div align="center"><img src="images/mouse.png" width="32" height="32"> <img src="images/bezier_select_small.png" width="32" height="32"><img src="images/intersect.png" width="32" height="32"></div></td>
+                    <td><div align="justify">Si tenemos seleccionado el &uacute;ltimo punto de anclaje de nuestra ruta,  nos situamos sobre el primero y hacemos clic, une el punto final con el inicial, cerrando la curva.</div></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Mover</strong></td>
+                    <td valign="middle" bgcolor="#FFFFFF"><div align="center"><img src="images/mouse.png" width="32" height="32"> <img src="images/bezier_select_small.png" width="32" height="32"><img src="images/move_small.png" width="32" height="32"></div></td>
+                    <td><div align="left">Situ&aacute;ndonos en cualquier parte de la ruta nos permite moverla completa por nuestra imagen.</div></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Poligonal</strong></td>
+                    <td valign="middle" bgcolor="#FFFFFF"><div align="center"></div></td>
+                    <td><div align="left">Si la opci&oacute;n poligonal est&aacute; activada cualquier punto de anclaje que a&ntilde;adamos aparece sin puntos de direcci&oacute;n. Para hacer que aparezcan tendremos que desactivar la opci&oacute;n Poligonal.</div></td>
+                  </tr>
+                </table>
+              </div>
+              
+            <table width="100%">
+              <tr>
+                <td class="menuindice">Animaci&oacute;n: creaci&oacute;n, edici&oacute;n 
+                  y trazado de Ruta <a href="javascript:;" onClick="MM_openBrWindow('images/ruta.swf','','','800','571','false')"><img src="../tem01/images/gimpito.gif" width="38" height="31" border="0" align="middle"></a></td>
+              </tr>
+            </table>
+            <p class="titulosunidad2">&nbsp;</p>
+            <p class="titulosunidad2">1. Transformar rutas</p>
+              
+            <p>Las rutas pueden transformarse de forma independiente utilizando 
+              las herramientas de transformaci&oacute;n que ya hemos visto en 
+              anteriores unidades. Vamos a modificar una ruta con las herramientas 
+              de transformaci&oacute;n que se observan en la figura: </p>
+              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  <td><img src="images/tem06_18.gif" width="200" height="225"></td>
+                </tr>
+              </table>
+              
+            <p>Estas herramientas permiten <strong>Rotar</strong>, <strong>Escalar</strong>, 
+              <strong>Inclinar</strong>, <strong>Crear perspectiva</strong> e 
+              <strong>Invertir</strong>. Estas herramientas pueden aplicarse sobre 
+              una capa, una selecci&oacute;n o una ruta. Para elegir sobre que 
+              elemento se aplica la transformaci&oacute;n debemos seleccionarlo 
+              en las <strong>Opciones de la herramienta de transformaci&oacute;n</strong> que vayamos 
+              a utilizar. En esta ocasi&oacute;n vamos a elegir <strong>Rutas</strong>.</p>
+              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  <td><img src="images/tem06_19.gif" width="226" height="128"></td>
+                </tr>
+              </table>
+              
+            <p>Para trabajar con estas herramientas vamos a crear una ruta y aplicaremos 
+              sobre &eacute;l estas herramientas.</p>
+              <p class="textoscolor">a) Rotar</p>              
+              
+            <ol>
+              <li> 
+                <p>Crea una ruta como la de la figura. En caso de que te resulte 
+                  muy complicado puedes obtener un archivo <strong>xcf</strong> 
+                  que contiene una ruta con esa forma, haciendo clic <a href="images/estrellado.xcf">AQUI</a>, 
+                  con el bot&oacute;n derecho del rat&oacute;n y <strong>Guardar 
+                  destino como</strong>...<br>
+                </p>
+                <table border="0" align="center" cellspacing="0">
+                  <tr> 
+                    <td><img src="images/tem06_20.gif" width="200" height="196"></td>
+                  </tr>
+                </table>
+                <p>&nbsp; </p>
+              </li>
+              <li> 
+                <p>Seleccionemos la herramienta <strong>Rotar</strong> <img src="images/stock-tool-rotate-22.png" width="22" height="22"> 
+                  y en las opciones hacemos clic en el icono de <strong>Rutas 
+                  <img src="images/rutas.gif" width="30" height="28"> </strong>. 
+                  Al ponernos en la<strong> Ventana Imagen </strong>y mover el 
+                  rat&oacute;n veremos c&oacute;mo nuestro trazado &quot;rota&quot; 
+                  en la vista previa, aunque no es efectiva hasta que no aceptamos 
+                  la rotaci&oacute;n.<br>
+                </p>
+              </li>
+              <li> 
+                <p>Para comprobar la efectividad de esta herramienta vamos a duplicar 
+                  el trazado que tenemos y aplicar, posteriormente, la herramienta 
+                  <strong>Rotar</strong>. En la pesta&ntilde;a <strong>Rutas</strong>, 
+                  duplicamos el trazado <strong>Estrella</strong> y dejamos visible 
+                  s&oacute;lo el trazado copia.<br>
+                </p>
+              </li>
+              <li> 
+                <p>Con la herramienta <strong>Rotar</strong> seleccionada, hacemos 
+                  un giro manual a nuestra ruta o bien introducimos 30 en el valor 
+                  de &quot;<strong>&Aacute;ngulo</strong>&quot; en &quot;<strong>Informaci&oacute;n 
+                  de Rotaci&oacute;n</strong>&quot; y aceptamos.<br>
+                </p>
+              </li>
+              <li> 
+                <p>Aplicamos sobre cada una de las rutas que tenemos el <strong>Trazado 
+                  de ruta</strong> con un color diferente, sobre la misma o distinta 
+                  capa, y obtendremos. <br>
+                </p>
+                <table border="0" align="center" cellspacing="0">
+                  <tr> 
+                    <td><img src="images/tem06_21.gif" width="200" height="196"> 
+                    </td>
+                  </tr>
+                </table>
+              </li>
+            </ol>
+              <h5 class="textoscolor">b) Escalar</h5>
+              
+            <ol>
+              <li> 
+                <p>Partimos de la misma ruta que hemos utilizado anteriormente.<br>
+                </p>
+              </li>
+              <li> 
+                <p>Seleccionemos la herramienta <strong>Escalar </strong><img src="images/stock-tool-scale-22.png" width="22" height="22"> 
+                  y en las opciones hacemos clic en el icono <strong> Rutas</strong>. 
+                  Al ponernos en la <strong>Ventana Imagen </strong>y mover el 
+                  rat&oacute;n veremos como nuestra ruta &quot;escala&quot;, mostr&aacute;ndose 
+                  en vista previa. Recuerda que no es efectiva hasta que no aceptamos.<br>
+                </p>
+              </li>
+              <li> 
+                <p>Ahora vamos a duplicar la ruta que tenemos y aplicar la herramienta 
+                  <strong>Escalar </strong>(Redimensionar) sobre la ruta duplicada. 
+                  En la pesta&ntilde;a <strong>Rutas</strong>, duplicamos la ruta 
+                  &quot;Estrella&quot; y dejamos visible s&oacute;lo esta ruta 
+                  copia. <br>
+                </p>
+              </li>
+              <li> 
+                <p>A continuaci&oacute;n, ponemos los valores que se muestran 
+                  en la figura.<br>
+                </p>
+                <table border="0" align="center" cellspacing="0">
+                  <tr> 
+                    <td><img src="images/tem06_22.gif" width="350" height="256"> 
+                    </td>
+                  </tr>
+                </table>
+                <br>
+              </li>
+              <li>Hacemos clic en <strong>Escalar</strong> y ya tenemos dos rutas 
+                semejantes pero de distinto tama&ntilde;o. Coloquemos la ruta 
+                de menor tama&ntilde;o en el centro de la de mayor tama&ntilde;o.<br>
+                <br>
+              </li>
+              <li>Trazamos las rutas con distintos pinceles.<br>
+                <br>
+                <table border="0" align="center" cellspacing="0">
+                  <tr> 
+                    <td><img src="images/tem06_23.gif" width="200" height="184"> 
+                    </td>
+                  </tr>
+                </table>
+              </li>
+            </ol>
+              <h5 class="textoscolor">c) Inclinar</h5>
+              <ol><li>
+                <p>Partimos de la misma ruta que hemos utilizado anteriormente.<br>
+                </p>
+                </li>
+                <li>
+                  <p>Escalamos la ruta un 50% y la ponemos en la parte superior izquierda de la imagen.<br>
+                  </p>
+                  <table border="0" align="center" cellspacing="0">
+                    <tr>
+                      <td><img src="images/tem06_24.gif" width="150" height="146"> </td>
+                    </tr>
+                  </table>
+                  <p>&nbsp;</p>
+                </li>
+                <li>
+                  <p>Duplica  la ruta y selecci&oacute;nala dejando visibles las dos.</p>
+                </li>
+                <li>
+                  
+                <p>Seleccionemos la herramienta <strong>Inclinar</strong> (Cizallar) 
+                  <img src="images/stock-tool-shear-22.png" width="22" height="22"> 
+                  y en las opciones haz clic en el icono <strong> Rutas</strong>. 
+                  Al ponernos en la <strong>Ventana Imagen</strong> y mover el 
+                  rat&oacute;n veremos en la vista previa c&oacute;mo nuestra 
+                  ruta se &quot;inclina&quot;, aunque no es efectiva hasta que 
+                  no aceptamos.<br>
+                  </p>
+                </li>
+                <li>
+                  <p>La inclinaci&oacute;n se puede hacer en el eje X (de izquierda a derecha) o en el eje Y (de arriba a abajo). Vamos a hacer dos inclinaciones, primero en el eje X con un valor de 600. Y posteriormente en el eje Y con un valor de -300. En ambos casos hacemos clic en <strong>Cizallar</strong>.<br>
+                  </p>
+                </li>
+                <li>
+                  
+                <p>Movemos la ruta modificada para que simule ser la sombra de 
+                  la otra no modificada.<br>
+                  </p>
+                </li>
+                <li>
+                  <p>Trazamos las rutas con distintos pinceles.<br>
+                  </p>
+                  <table border="0" align="center" cellspacing="0">
+                    <tr>
+                      <td><img src="images/tem06_25.gif" width="250" height="231"> </td>
+                    </tr>
+                  </table>
+                </li>
+              </ol>
+              <p class="textoscolor">d) Perspectiva</p>
+              
+            <ol>
+              <li> 
+                <p>Partimos de la misma ruta que hemos utilizado anteriormente.<br>
+                </p>
+              </li>
+              <li> 
+                <p>Seleccionemos la herramienta <strong>Perspectiva</strong> <img src="images/stock-tool-perspective-22.png" width="22" height="22"> 
+                  y en las opciones elige <strong>Rutas</strong>. Al ponernos 
+                  en la <strong>Ventana Imagen </strong>y mover el rat&oacute;n 
+                  podemos seguir en vista previa c&oacute;mo se inclina nuestra 
+                  ruta. Como en ocasiones anteriores, hasta que no aceptamos la 
+                  nueva perspectiva no es efectiva. Creemos una perspectiva de 
+                  derecha a izquierda.<br>
+                </p>
+              </li>
+              <li> 
+                <p>Trazamos la ruta con un pincel con degradado.<br>
+                  <br>
+                </p>
+                <table border="0" align="center" cellspacing="0">
+                  <tr> 
+                    <td><img src="images/tem06_26.gif" width="183" height="200"> 
+                    </td>
+                  </tr>
+                </table>
+              </li>
+            </ol>
+              <p class="textoscolor">e) Simetr&iacute;a</p>
+              <ol>
+                
+              <li>Para esta transformaci&oacute;n vamos a crear una nueva ruta 
+                similar a la utilizada al principio del apartado. Ponemos tres 
+                puntos de anclaje y damos la siguiente forma a la ruta. Guardamos 
+                la ruta con el nombre &quot;<strong>curva doble</strong>&quot; 
+                y la duplicamos.<br>
+        <br>
+        <table border="0" align="center" cellspacing="0">
+          <tr>
+            <td><img src="images/tem06_27.gif" width="206" height="150"> </td>
+          </tr>
+        </table>
+        <br>
+                </li>
+                <li>Seleccionamos en la pesta&ntilde;a <strong>Ruta </strong>la copia de la ruta.<br>
+                </li>
+                <li>Seleccionemos la herramienta <strong>Simetr&iacute;a</strong> <img src="images/stock-tool-flip-22.png" width="22" height="22"> y en las opciones  hacemos clic en el icono de <strong>Rutas</strong>. Realizamos un &quot;Volteo Vertical&quot; y movemos la ruta volteada hasta obtener:<br>
+                  <br>
+                  <table border="0" align="center" cellspacing="0">
+          <tr>
+            <td><img src="images/tem06_28.gif" width="225" height="150"> </td>
+          </tr>
+        </table>
+                </li>
+                <li>Tracemos las rutas con un pincel distinto para cada una.<br>
+                  <br>
+                  <table border="0" align="center" cellspacing="0">
+                    <tr>
+                      <td><img src="images/tem06_29.gif" width="243" height="150"> </td>
+                    </tr>
+                  </table>
+                </li>
+              </ol>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" height="32">
+                <tr valign="bottom">
+                  <td width="100%" height="21" colspan="3">
+                    <hr noshade color="#C5E3EC"  size="1">
+                  </td>
+                </tr>
+                <tr valign="bottom">
+                  <td width="935" height="21"><p class="titulosunidad2">Rutas &gt; Editar rutas</td>
+                  <td width=22 align="right" height="21"><a href="hoja0603.htm" target="right"><img border="0" src="../images/atras2.jpg" width="20" height="21"></a></td>
+                  <td width=21 align="right" height="21"><a href="hoja0605.htm" target="right"><img border="0" src="../images/adelante2.jpg" width="20" height="21"></a></td>
+                </tr>
+          </table></td>
+        </tr>
+      </table>
+        <p align="justify">   
+  </tr>
+</table>
+</body>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem06/txt_604.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:18 GMT -->
+</html>

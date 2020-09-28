@@ -1,0 +1,97 @@
+iterations 160000
+max_memory 4096
+subdivide 3
+radius 0.217391
+aspect_ratio 1.000000
+center_x 0.500000
+center_y 0.460000
+element {
+    x 0.273333
+    y 0.380000
+    theta 0.124355
+    scale 0.527148
+    asym 1.000000
+    shear 0.000000
+    flip 0
+    red_color { 0.500000,0.000000,0.000000 }
+    green_color { 0.000000,0.500000,0.000000 }
+    blue_color { 0.000000,0.000000,0.500000 }
+    black_color { 0.000000,0.000000,0.000000 }
+    target_color { 0.000000,0.000000,0.000000 }
+    hue_scale 0.500000
+    value_scale 0.500000
+    simple_color 0
+    prob 1.313131
+}
+element {
+    x 0.736666
+    y 0.493333
+    theta 2.593011
+    scale 0.646381
+    asym -0.879628
+    shear 0.580873
+    flip 1
+    red_color { 0.500000,0.000000,0.000000 }
+    green_color { 0.000000,0.500000,0.000000 }
+    blue_color { 0.000000,0.000000,0.500000 }
+    black_color { 0.000000,0.000000,0.000000 }
+    target_color { 0.000000,0.000000,0.000000 }
+    hue_scale 0.500000
+    value_scale 0.500000
+    simple_color 1
+    prob 1.000000
+}
+element {
+    x 0.533333
+    y 0.713333
+    theta -0.287554
+    scale 0.608276
+    asym 0.795401
+    shear 0.334698
+    flip 0
+    red_color { 0.500000,0.000000,0.000000 }
+    green_color { 0.000000,0.500000,0.000000 }
+    blue_color { 0.000000,0.000000,0.500000 }
+    black_color { 0.000000,0.000000,0.000000 }
+    target_color { 0.000000,0.000000,0.000000 }
+    hue_scale 0.500000
+    value_scale 0.500000
+    simple_color 1
+    prob 1.000000
+}
+element {
+    x 0.510000
+    y 0.326667
+    theta 0.049742
+    scale 0.465657
+    asym 0.591294
+    shear 0.061710
+    flip 0
+    red_color { 0.500000,0.000000,0.000000 }
+    green_color { 0.000000,0.500000,0.000000 }
+    blue_color { 0.000000,0.000000,0.500000 }
+    black_color { 0.000000,0.000000,0.000000 }
+    target_color { 0.000000,0.000000,0.000000 }
+    hue_scale 0.500000
+    value_scale 0.500000
+    simple_color 1
+    prob 1.000000
+}
+element {
+    x 0.326666
+    y 0.593334
+    theta 0.810581
+    scale 0.469135
+    asym 1.209906
+    shear -0.273234
+    flip 0
+    red_color { 0.500000,0.000000,0.000000 }
+    green_color { 0.000000,0.500000,0.000000 }
+    blue_color { 0.000000,0.000000,0.500000 }
+    black_color { 0.000000,0.000000,0.000000 }
+    target_color { 0.000000,0.000000,0.000000 }
+    hue_scale 0.500000
+    value_scale 0.500000
+    simple_color 1
+    prob 1.000000
+}

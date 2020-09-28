@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem07/txt_703.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:19 GMT -->
+<head>
+<title>Documento sin t&iacute;tulo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../css/defecto.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+.Estilo3 {font-family: Tahoma}
+-->
+</style></head>
+
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="5" class="textos">
+  <tr>
+    <td valign="top"><table width="96%"  border="0" align="center" cellpadding="0" cellspacing="0" class="textos">
+        <tr>
+          <td valign="top"><p><span class="titulosunidadr">Histograma<b></b></span>  </p>
+            <p>El histograma analiza los p&iacute;xeles de una imagen interpret&aacute;ndolos 
+              de forma gr&aacute;fica. Para ver su funcionamiento, abre en GIMP 
+              la imagen &quot;quiosco.jpg&quot; y accede al men&uacute; <strong> 
+              Di&aacute;logos --&gt; Histograma</strong>. </p>
+            <div align="center">
+                <table width="100%" border="0" cellpadding="0" class="textos">
+                  <tr>
+                    <td width="40%"><div align="center"><img src="images/tem07_20.gif" width="216" height="275"></div></td>
+                    <td width="60%" valign="top"><div align="justify">El histograma 
+                      de una imagen nos muestra una gr&aacute;fica en la que se 
+                      sit&uacute;an a la izquierda los grados oscuros de gris 
+                      y a la derecha los claros. El valor de las l&iacute;neas 
+                      de la gr&aacute;fica indica los valores de luminosidad de 
+                      la imagen. La lista desplegable &quot;Canal&quot; nos permite 
+                      hacer que aparezcan los valores de luminosidad de los diferentes 
+                      canales de color Rojo, Verde y Azul (RGB).<br>
+                      <br>
+                      Los valores de luminosidad tambi&eacute;n se denominan <strong>niveles</strong>, cuantos m&aacute;s matices de brillo distintos muestre la imagen mayor ser&aacute; la extensi&oacute;n de los niveles y mejor ser&aacute; la imagen.<br>
+                      <br>
+                      En este histograma vemos que nuestra imagen tiene alg&uacute;n error, en la parte izquierda no se representan los niveles correspondientes a los tonos cercanos al negro, por lo que faltan tonos oscuros y se observa que dominan los tonos grises cercanos al blanco.<br>
+                      <br>
+                      Cualquier cambio que realicemos en la capa seleccionada 
+                      de nuestra imagen, se mostrar&aacute; en el histograma.</div></td>
+                  </tr>
+                </table>
+            </div>
+              <p>Los datos que se muestran debajo de la gr&aacute;fica del histograma nos ofrecen m&aacute;s informaci&oacute;n sobre la calidad de la imagen.</p>
+              <ul>
+                <li>
+                  
+                <p>La <strong>Media</strong> indica el promedio de valor de claridad 
+                  de todos los niveles, esta imagen tiene una media superior a 
+                  la mitad (128), por lo que podemos decir que es una imagen con 
+                  tendencia a tonos claros.<br>
+                  </p>
+                </li>
+                <li>
+                  <p>El valor <strong>Desviaci&oacute;n est</strong>. nos muestra si las diferencias de valores son muy fuertes. En este caso no es excesivamente alta (66,1).<br>
+                  </p>
+                </li>
+                <li>
+                  <p>La <strong>Mediana</strong> nos muestra el valor medio de brillo de la imagen.<br>
+                  </p>
+                </li>
+                <li>
+                  <p>El valor <strong>P&iacute;xeles</strong> nos &iacute;ndica los p&iacute;xeles que contiene esta imagen: 338 x 450 = 152.100.<br>
+                  </p>
+                </li>
+                <li>
+                  <p><strong>Cuenta</strong> nos indica el n&uacute;mero de p&iacute;xeles, que abarca una selecci&oacute;n que hagamos sobre la gr&aacute;fica del histograma. Nos ponemos en la gr&aacute;fica, hacemos clic y arrastramos.<br>
+                    <br>
+                  </p>
+                  <table border="0" align="center" cellspacing="0">
+          <tr>
+            <td><img src="images/tem07_21.gif" width="225" height="176"> </td>
+          </tr>
+        </table>
+                  <p><br>
+                  </p>
+                </li>
+                <li> 
+                  
+                <p><strong>Percentil</strong> es un porcentaje basado en la cantidad 
+                  de p&iacute;xeles, sobre el total, seleccionados mediante <strong>Cuenta</strong>.</p>
+                </li>
+              </ul>
+              <h5 class="titulosunidad2"><br>
+              &iquest;Y con todos estos datos que podemos decir de la imagen?</h5>
+              
+            <p>Si en el histograma de una imagen escaneada se ven puntas o agujeros 
+              entre valores, significa que el escaneo realizado a una imagen es 
+              defectuoso o que la imagen digitalizada no es todo lo correcta que 
+              debiera ser. Los niveles no presentes pueden a&ntilde;adirse manipulando 
+              la imagen con GIMP, pero es mejor volver a escanearla si es posible.</p>
+              
+            <p>Siempre debemos intentar tener todos los niveles posibles, que 
+              la gr&aacute;fica abarque desde negro hasta blanco.</p>
+              <p>Vamos a crear una imagen que nos servir&aacute; para comprobar el funcionamiento de las distintas herramientas con las que trabajaremos el color.</p>
+              <p>Creamos una imagen nueva con fondo blanco y un tama&ntilde;o de 256x256. Elige la herramienta <strong>Rellenar con degradado </strong>y despu&eacute;s pincha y arrastra de arriba a abajo, intenta partir de la l&iacute;nea media. Ahora que tenemos rellena toda la imagen con un degradado que va desde blanco puro a negro puro, abre su histograma. La gr&aacute;fica es pr&aacute;cticamente plana.</p>
+              <div align="center">
+                <table width="100" border="0" cellpadding="0" class="table2">
+                  <tr>
+                    <td height="16"><img src="images/tem07_22.gif" width="259" height="263"></td>
+                    <td><div align="center"><img src="images/tem07_23.gif" width="263" height="311"></div></td>
+                  </tr>
+                </table>
+              </div>
+              <br>
+              <br>
+            Guardamos esta imagen como <span class="textos">&quot;<span class="Estilo3"><strong>degradado.xc</strong></span><strong>f</strong>&quot;</span> 
+            y en los siguientes apartados trabajaremos con ella. 
+            <table border="0" cellpadding="0" cellspacing="0" width="100%" height="32">
+                <tr valign="bottom">
+                  <td width="978" height="21" colspan="3">&nbsp; </td>
+                </tr>
+                <tr valign="bottom">
+                  <td width="935" height="21"><p class="titulosunidad2">El color &gt; Histograma</td>
+                  <td width=22 align="right" height="21"><a href="hoja0702.htm"><img border="0" src="../images/atras2.jpg" width="20" height="21"></a></td>
+                  <td width=21 align="right" height="21"><a href="hoja0704.htm" target="right"><img border="0" src="../images/adelante2.jpg" width="20" height="21"></a></td>
+                </tr>
+              </table>
+          <hr noshade color="#C5E3EC"  size="1"></td>
+        </tr>
+      </table>
+        <p align="justify">   
+  </tr>
+</table>
+</body>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem07/txt_703.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:19 GMT -->
+</html>

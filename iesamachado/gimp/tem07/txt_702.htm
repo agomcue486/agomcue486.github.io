@@ -1,0 +1,305 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem07/txt_702.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:19 GMT -->
+<head>
+<title>Documento sin t&iacute;tulo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../css/defecto.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features, myWidth, myHeight, isCenter) { //v3.0
+  if(window.screen)if(isCenter)if(isCenter=="true"){
+    var myLeft = (screen.width-myWidth)/2;
+    var myTop = (screen.height-myHeight)/2;
+    features+=(features!='')?',':'';
+    features+=',left='+myLeft+',top='+myTop;
+  }
+  window.open(theURL,winName,features+((features!='')?',':'')+'width='+myWidth+',height='+myHeight);
+}
+//-->
+</script>
+</head>
+
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="5" class="textos">
+  <tr>
+    <td valign="top"><table width="96%"  border="0" align="center" cellpadding="0" cellspacing="0" class="textos">
+        <tr>
+          <td valign="top"><b> </b>
+              <h1 class="titulosunidadr">Diferentes modos de color</h1>
+              
+            <p>En l&iacute;neas generales debemos saber que:</p>
+            <p>El <strong>modo RGB</strong> se emplea cuando las im&aacute;genes van destinadas 
+              a Internet, a aplicaciones multimedia o cuando se van a imprimir 
+              en una impresora dom&eacute;stica.</p>
+            <p>El <strong>modo Indexado</strong> es para archivos de imagen en formato GIF o PNG 
+              destinados a Internet.</p>
+            <p>El <strong>modo Escala de grises</strong> para eliminar la informaci&oacute;n de 
+              color y obtener la t&iacute;pica fotograf&iacute;a de los peri&oacute;dicos 
+              que tanto gusta a los amantes de la fotograf&iacute;a.</p>
+            <p>El <strong>modo CMYK</strong> se utiliza cuando la imagen se va a imprimir en cuatricrom&iacute;a 
+              (imprentas). Este modo, por ahora, no est&aacute; soportado por 
+              GIMP. Confiemos en que pronto se implemente.</p>
+            <p>Sea cual sea el origen de la imagen, cuando trabajamos con im&aacute;genes 
+              en el ordenador lo m&aacute;s correcto es utilizar el modo RGB, 
+              que nos asegura millones de colores (im&aacute;genes de 24 bits), 
+              para despu&eacute;s tratarla y adecuarla a nuestras necesidades. 
+            </p>
+            <p>Partiendo de esta imagen vamos a ir probando las diferentes herramientas que tiene GIMP para el tratamiento del color. </p>
+              <table align="center">
+                <tr>
+                  <td><a href="javascript:;" onClick="MM_openBrWindow('images/quiosco.jpg','','','353','465','false')"><img src="images/quiosco_pequea.jpg" width="169" height="225" border="0"></a></td>
+                </tr>
+              </table>              
+              <p>Primero convertiremos la imagen a distintos modos y posteriormente la trataremos con varias herramientas para conseguir cambios y mejoras.</p>
+              <h5 class="titulosunidad2">1. Convertir una imagen a mapa de bits</h5>
+              
+            <p>Es reducir la imagen a dos colores, dejando la m&iacute;nima informaci&oacute;n, 
+              por lo que el archivo es muy peque&ntilde;o pero la calidad de la 
+              imagen tambi&eacute;n es baja. </p>
+              <p>El proceso para convertir la imagen a mapa de bits es muy sencillo.</p>
+              <ol>
+                <li>Abrimos la imagen &quot;quiosco.jpg&quot; en GIMP y accedemos a <strong>Men&uacute; --&gt; Imagen --&gt; Modo --&gt; Indexado...</strong>. Marcamos las opciones que se muestran a continuaci&oacute;n. <br>
+        <br>
+        <table border="0" align="center" cellspacing="0">
+          <tr>
+                    <td><img src="images/tem07_05.gif" width="310" height="334" align="left"></td>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+                </li>
+                
+              <li> Obtenemos una imagen en blanco y negro. GIMP hace una estimaci&oacute;n 
+                en escala de grises de los diferentes valores de color de la imagen 
+                y transforma en blanco los p&iacute;xeles con un valor mayor de 
+                128 y en negro los p&iacute;xeles con un valor menor de 128.<br>
+        <br>
+        <table border="0" align="center" cellspacing="0">
+          <tr>
+            <td><img src="images/tem07_06.gif" width="188" height="250"> </td>
+          </tr>
+        </table>
+                </li>
+                <li> Probemos los diferentes difuminados que vienen en la ventana &quot;Conversi&oacute;n de color indexado&quot;: Difuminado de color normal, de color sangrado o de color posicionado.<br>
+                  <br>
+                  <br>
+                  <br>
+                  <table width="80%" border="0" align="center" cellpadding="8" cellspacing="0" bgcolor="#FFE9D2" class="textoscolor" style='border:1px solid orange'>
+                    <tr>
+                      <td><div align="center">Difuminado de color normal (Floyd-Steinberg)</div></td>
+                      <td><div align="center">Difuminado de color sangrado (Floyd-Steinberg)</div></td>
+                      <td><div align="center">Difuminado de color posicionado</div></td>
+                    </tr>
+                    <tr>
+                      <td width="33%" ><div align="center"><img src="images/tem07_07.gif" width="150" height="199"></div></td>
+                      <td width="33%"><div align="center"><img src="images/tem07_08.gif" width="150" height="199"></div></td>
+                      <td width="33%"><div align="center"><img src="images/tem07_09.gif" width="150" height="199"></div></td>
+                    </tr>
+                  </table>
+                  <br>
+                  <br>
+                </li>
+                <li>Dependiendo de nuestras necesidades utilizaremos un m&eacute;todo u otro. Aunque cuando queramos conseguir im&aacute;genes de estas caracter&iacute;sticas es conveniente partir de im&aacute;genes en escala de grises, para poder controlar mejor las zonas que van a terminar siendo negras y blancas. <br>
+                  <br>
+                  Vamos a probarlo. Partiendo de la imagen base, &quot;quiosco.jpg&quot;, vamos a <strong>Men&uacute; --&gt; Imagen --&gt; Modo --&gt; Escala de grises</strong>.<br>
+                  <br>
+                </li>
+                <li>Ahora realizamos la conversi&oacute;n a mapa de bits, tal y como hemos visto en el primer paso.<br>
+                  <br>
+                </li>
+                <li>Para poder comprobar que este m&eacute;todo es m&aacute;s v&eacute;rsatil que el anterior vamos a realizar unos cambios en la imagen en mapa de bits. Accedemos a <strong>Men&uacute; --&gt; Herramientas --&gt; Herramientas de color --&gt; Brillo y contraste</strong> y disminuimos el brillo de la imagen para despu&eacute;s volver cambiar al modo mapa de bits. Al aumentar los grises con valor menor de 128 en la imagen, en el modo mapa de bits ahora dominan m&aacute;s los negros.<br>
+                  <br>
+                  <table border="0" align="center" cellspacing="0">
+          <tr>
+            <td><img src="images/tem07_10.gif" width="188" height="250"> </td>
+          </tr>
+        </table>
+                  <p><br>
+                  </p>
+                </li>
+                <li>
+                  <p>Podemos hacer distintas pruebas manejando la herramienta de color <strong>Brillo y contraste</strong>.<br>
+                    <br>
+                  </p>
+                  <table width="80%" border="0" align="center" cellpadding="8" cellspacing="0" bgcolor="#FFE9D2" class="textoscolor" style='border:1px solid orange'>
+                    <tr>
+                      <td><div align="center">Brillo 60, contraste 0</div></td>
+                      <td><div align="center">Brillo -60, contraste 70</div></td>
+                      <td><div align="center">Brillo 0, contraste -70</div></td>
+                    </tr>
+                    <tr>
+                      <td><div align="center"><img src="images/tem07_11.gif" width="150" height="199"></div></td>
+                      <td><div align="center"><img src="images/tem07_12.gif" width="150" height="199"></div></td>
+                      <td><div align="center"><img src="images/tem07_13.gif" width="150" height="199"></div></td>
+                    </tr>
+                  </table>
+                  <p>&nbsp;                    </p>
+                </li>
+              </ol>
+              <h5 class="titulosunidad2">2. A escala de grises</h5>
+              <p> El proceso consiste en acceder a <strong>Men&uacute; --&gt; Imagen --&gt; Modo --Escala de grises</strong>. El programa transforma los distintos colores en los niveles de gris correspondientes, como si fuera una fotograf&iacute;a tradicional en blanco y negro (mejor ser&iacute;a decir, en blanco, negro y grises). </p>
+              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  <td><img src="images/tem07_14.gif" width="188" height="250"></td>
+                </tr>
+              </table>              <p>&nbsp;</p>                            <p>Para mejorar la calidad de la imagen en escala de grises, podemos tratar la imagen con distintas herramientas de color antes de hacer el cambio. </p>
+              <ol>
+                <li>
+                  <p>Partiendo de la fotograf&iacute;a original accedamos a <strong>Men&uacute; --&gt; Filtros --&gt; Colores --&gt; Mezclador de canales</strong>. En el cuadro de di&aacute;logo que nos aparece vamos a marcar la opci&oacute;n &quot;mono cromo&quot;. En la &quot;Vista previa&quot; vemos c&oacute;mo quedar&iacute;a.<br>
+                    <br>
+                  </p>
+                  
+                <table width="100" height="493" border="0" align="center" cellpadding="0" cellspacing="5">
+                  <tr>
+                    <td width="71%"><img src="images/tem07_15.gif" width="300" height="490"></td>
+            <td width="29%"><div align="left"></div></td>
+          </tr>
+        </table>
+                  <br>
+                </li>
+                
+              <li>Modifiquemos los valores de los distintos canales hasta obtener 
+                la imagen que deseamos. Con estos valores que figuran en la imagen 
+                nuestra fotograf&iacute;a queda correcta en el modo de color <strong>Escala 
+                de grises</strong>.<br>
+                  <br>
+
+                </li>
+                
+              <li>Puedes observar que existen dos botones que sirven para &quot;Abrir&quot; 
+                y &quot;Guardar&quot; las configuraciones que consideremos correctas. 
+                En el caso de que tengamos una serie de fotos con las mismas caracter&iacute;sticas, 
+                si corregimos una de ellas con el &quot;Mezclador de canales&quot;, 
+                podemos guardar esas modificaciones para aplicarlas posteriormente 
+                al resto de im&aacute;genes.<br>
+                  <br>
+                </li>
+                
+              <li>La imagen obtenida aparece ya en <strong>Escala de grises</strong> 
+                tal y como observamos. Comprueba las diferencias.<br>
+                  <br>
+                  <table border="0" align="center" cellspacing="5">
+          <tr>
+            <td><img src="images/tem07_16.gif" width="188" height="250"></td>
+            <td><img src="images/tem07_14.gif" width="188" height="250"></td>
+          </tr>
+        </table>
+                </li>
+              </ol>
+              <p class="titulosunidad2"><strong>3. Color indexado</strong></p>
+              
+            <p>El <strong>modo Color indexado</strong> reduce los colores de la imagen a un m&aacute;ximo 
+              de 256, pudiendo elegir la paleta de colores o dejar a GIMP que 
+              elija la paleta.</p>
+              <ol><li>
+                <p>Partiendo de la imagen original &quot;quiosco.jpg&quot; accedemos 
+                  a <strong>Men&uacute; --&gt; Imagen --&gt; Modo --&gt; Indexado... 
+                  </strong>y elegimos las opciones &quot;Generar paleta &oacute;ptima&quot; 
+                  (podemos elegir el n&uacute;mero de colores a utilizar hasta 
+                  un m&aacute;ximo de 256) y &quot;Ninguno&quot; como Difuminado 
+                  del color.<br>
+                </p>
+                </li>
+                <li>
+                  <p>El resultado a simple vista parace  adecuado, trabajando exclusivamente con 256 colores y no con millones de colores (que es el modo en el que est&aacute; la imagen original). Pero si nos acercamos con el <strong>Zoom </strong>(+) hasta un 400% veremos que hay diferencias.<br>
+                    <br>
+                  </p>
+                  <table width="50%" border="0" align="center" cellpadding="8" cellspacing="0" bgcolor="#FFE9D2" class="textoscolor" style='border:1px solid orange'>
+                    <tr>
+                      <td><div align="center">Imagen en modo RGB</div></td>
+                      <td><div align="center">Imagen en modo Indexado (256 colores)</div></td>
+                    </tr>
+                    <tr>
+                      <td><div align="center"><img src="images/tem07_06.jpg" width="213" height="300"></div></td>
+                      <td><div align="center"><img src="images/tem07_05.jpg" width="207" height="300"></div></td>
+                    </tr>
+                  </table>
+                  <p>&nbsp;                        </p>
+                </li>
+              </ol>
+              
+            <p>Tambi&eacute;n podemos conseguir, exclusivamente con 256 colores, 
+              im&aacute;genes que se asemejan a las tradicionales fotograf&iacute;as 
+              viradas.</p>
+              <ol>
+                <li>
+                  <p>Partiendo de la imagen original &quot;quiosco.jpg&quot; accedemos a <strong>Men&uacute; --&gt; herramientas --&gt; Herramientas de color --&gt; Colorizar...</strong> Podemos transformar la imagen en otra de 256 colores, con un efecto parecido a la Escala de grises, pero con el color que elijamos y determinado tono, saturaci&oacute;n y brillo.<br>
+                  </p>
+                </li>
+                <li>                  Probemos distintas opciones. <br>
+                  <br>
+                a) Tono 180, Saturaci&oacute;n 55 y Brillo 24. Obtenemos un virado en azul.<br>
+                </li>
+                <table border="0" align="center" cellspacing="0">
+                  <tr>
+                    <td><img src="images/tem07_17.gif" width="188" height="250"></td>
+                  </tr>
+                </table>
+                <p>b) Tono 33, Saturaci&oacute;n 71 y Brillo 25. Obtenemos un virado en sepia.<br>
+                  <br>
+                </p>
+                <table border="0" align="center" cellspacing="0">
+                  <tr>
+                    <td><img src="images/tem07_18.gif" width="188" height="250"></td>
+                  </tr>
+                </table>
+                <p>c)  Tono 0, Saturaci&oacute;n 89 y Brillo 37. Obtenemos un virado en rojo. <br>
+                  <br>
+                </p>
+                <table border="0" align="center" cellspacing="0">
+                  <tr>
+                    <td><img src="images/tem07_19.gif" width="188" height="250"> </td>
+                  </tr>
+                </table>
+                <p><br>
+                  3. 
+                Una vez elegida la opci&oacute;n deseada seguimos teniendo la imagen en modo RGB. Pasemos la imagen a modo Indexado con <strong>Men&uacute; --&gt; Imagen --&gt; Modo --&gt; Indexado... </strong>seleccionando las mismas opciones que hemos utilizado antes. <br>
+                </p>
+            </ol>
+              <table width="75%"  border="0" align="center" cellspacing="8" bordercolor="#CC6600" bgcolor="#C6D9EC" class="textoscolor" style='border:1px solid'>
+                <tr>
+                  <td><strong>&iexcl;OJO! Cuando pasamos cualquier imagen a modo Mapa de bits, Escala de grises o Indexado perdemos la informaci&oacute;n de los canales de color (RGB) y no podemos volver a recuperarlos, por lo que es conveniente tener una copia de la imagen en modo RGB.</strong></td>
+                </tr>
+              </table>              
+            <p>En los siguientes apartados, vamos a ver el funcionamiento detallado 
+              de cada uno de los efectos que se consiguen a trav&eacute;s de las 
+              <strong>Herramientas de color </strong>de GIMP. Vienen todas agrupadas 
+              en el <strong>Men&uacute; --&gt; Herramientas --&gt; Herramientas 
+              de color</strong>: Balance de color, Tono y saturaci&oacute;n, Colorizar, 
+              Brillo y contraste, Umbral, Niveles, Curvas y Posterizar.</p>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" height="32">
+                <tr valign="bottom">
+                  <td width="100%" height="21" colspan="3">
+                    <hr noshade color="#C5E3EC"  size="1">
+                  </td>
+                </tr>
+                <tr valign="bottom">
+                  <td width="935" height="21"><p class="titulosunidad2">El color &gt; Cambio de modo de color</td>
+                  <td width=22 align="right" height="21"><a href="hoja0701.htm" target="right"><img border="0" src="../images/atras2.jpg" width="20" height="21"></a></td>
+                  <td width=21 align="right" height="21"><a href="hoja0703.htm" target="right"><img border="0" src="../images/adelante2.jpg" width="20" height="21"></a></td>
+                </tr>
+              </table></td>
+        </tr>
+      </table>
+        <p align="justify">   
+  </tr>
+</table>
+</body>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem07/txt_702.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:19 GMT -->
+</html>

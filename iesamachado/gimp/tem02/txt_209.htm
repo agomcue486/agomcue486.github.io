@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem02/txt_209.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:03 GMT -->
+<head>
+<title>Documento sin t&iacute;tulo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../css/defecto.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+.Estilo3 {font-size: 11px; color: #993300; text-decoration: none; text-align: justify; font-family: Verdana, Arial, Helvetica, sans-serif;}
+-->
+</style></head>
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="5" class="textos">
+  <tr>
+    <td valign="top"><table width="96%"  border="0" align="center" cellpadding="0" cellspacing="0" class="textos">
+      <tr>
+        <td valign="top"><p class="titulosunidadr">Construir la imagen</p>
+            <p>              El objetivo final de un trabajo con una imagen es imprimirla o visionarla 
+              en la pantalla. Cuando construimos una imagen lo hacemos bas&aacute;ndonos en las capas y el resultado ser&aacute; distinto seg&uacute;n las que mostremos. Si queremos imprimir la imagen final debemos componer las capas, es decir, juntarlas formando una sola capa. Entonces no se podr&aacute;n distinguir las capas 
+            que la forman. </p>
+            <p>La excepci&oacute;n la encontramos con el formato 
+              GIF que permite animaci&oacute;n y lo que hace esta animaci&oacute;n 
+              es mostrar una a una las distintas capas, como los fotogramas de 
+            una pel&iacute;cula.</p>
+            <p>GIMP nos permite dos posibilidades diferentes para la composici&oacute;n de la imagen final, <strong>mezclando</strong> o <strong>aplanando</strong>, aunque en ambos casos conseguimos b&aacute;sicamente lo mismo: combinar las capas visibles.</p>
+            <h5 class="titulosunidad2">1. Combinar capas</h5>
+            <p>Existen dos formas de mezclar capas: <strong>Combinar capas visibles </strong>y <strong>Combinar hacia abajo</strong>, especificadas en las opciones que aparecen en la <strong>Ventana Capas</strong> cuando hacemos clic con el bot&oacute;n derecho sobre una capa activa.</p>
+            <p>Es conveniente recordar que la combinaci&oacute;n de teclas<strong> 
+              Ctrl+M</strong> tambi&eacute;n consigue el mismo resultado de 
+              combinaci&oacute;n de las capas visibles. </p>
+            <ol>
+              <li>
+                <p>Abramos el archivo &quot;<strong>capas.xcf</strong>&quot; que 
+                  utilizamos en el anterior apartado para realizar un ejercicio 
+                  y comprenderlo mejor. Dupliquemos dos veces la capa &quot;C&iacute;rculo&quot; 
+                  y pintemos uno de los c&iacute;rculos de color verde y otro 
+                  de naranja. Ahora movemos el c&iacute;rculo verde a la parte 
+                  superior derecha y el naranja a la inferior izquierda. El orden 
+                  en la pila de capas debe quedar como se observa en la figura. 
+                  Guarda la composici&oacute;n como &quot;<strong>capas mezcladas0.xcf</strong>&quot;.</p>
+                <table  border="0" align="center" cellspacing="7">
+                  <tr>
+                    <td><img src="images/tem02_63.gif" width="247" height="230" align="middle"></td>
+                  </tr>
+                  <tr>
+                    <td><img src="images/tem02_64.gif" width="247" height="220" align="middle"></td>
+                  </tr>
+                </table>
+                <br>
+              </li>
+              <li>Mantenemos visibles las capas &quot;C&iacute;rculo naranja&quot;, 
+                &quot;C&iacute;rculo verde&quot;, &quot;C&iacute;rculo&quot; y 
+                &quot;Fondo&quot;. Haz clic con el bot&oacute;n derecho sobre 
+                la capa activa (&quot;C&iacute;rculo naranja&quot;) y elige <strong>Combinar 
+                las capas visibles...</strong>, aparece la siguiente ventana:<br>
+                <br>
+                  <table border="0" align="center" cellspacing="0">
+                    <tr>
+                      <td><img src="images/tem02_65.gif" width="250" height="165" align="left"></td>
+                    </tr>
+                  </table>
+                  <br>
+                Por defecto viene seleccionada la opci&oacute;n <strong>Expendida 
+                lo necesario</strong>, que es la que recomendamos utilizar para 
+                que no se queden fuera de nuestra imagen partes de las capas utilizadas. 
+                Observamos que se crea una sola capa denominada &quot;Fondo&quot; 
+                y que une todo lo que ten&iacute;amos en las capas visibles. La 
+                capa aumenta de tama&ntilde;o para poder albergar el contenido 
+                de las capas &quot;C&iacute;rculo verde&quot; y &quot;C&iacute;rculo 
+                naranja&quot;. Se mantiene como capa independiente la capa que 
+                no era visible. Esta acci&oacute;n es reversible si pulsamos <strong>Ctrl+Z</strong> (deshacer) y las capas vuelven a aparecer de forma 
+                independiente. esta operaci&oacute;n es conveniente realizarla 
+                cuando tenemos muchas capas y queremos unir algunas para trabajar 
+                de forma m&aacute;s c&oacute;moda. Guardemos nuestro trabajo como 
+                &quot;<strong>capas mezcladas1.xcf</strong>&quot;.<br>
+        <br>
+              </li>
+              <li>Deshagamos la mezcla de capas para poder comparar los resultados 
+                con la otra forma de mezclar capas. Seleccionemos la capa denominada 
+                &quot;C&iacute;rculo naranja&quot;, hacemos clic con el bot&oacute;n 
+                derecho del rat&oacute;n sobre la capa activa y elegimos <strong>Combinar 
+                hacia abajo</strong>. Observa que se han unido las capas &quot;C&iacute;rculo 
+                naranja&quot; y &quot;C&iacute;rculo verde&quot;, tomando el nombre 
+                de esta &uacute;ltima. La denominada &quot;Capas&quot;, que se 
+                manten&iacute;a oculta, no se une con estas capas. Esta opci&oacute;n 
+                lo que hace es juntar la capa activa con la capa visible que se 
+                encuentre inmediatamente debajo de ella. Guardemos ahora nuestro 
+                trabajo como &quot;<strong>capas mezcladas2.xcf</strong>&quot;.<br>
+              </li>
+            </ol>
+            <p class="titulosunidad2">2. Aplanar la imagen</p>
+            <p>Es el &uacute;ltimo de los pasos a realizar cuando queremos terminar 
+              una imagen o mandarla imprimir. El resultado es la desaparici&oacute;n 
+              de todas las capas &quot;fundi&eacute;ndose&quot; en una sola. Por 
+              este motivo, recomendamos guardar previamente nuestro trabajo en 
+              el formato nativo de GIMP (XCF) con todas las capas separadas para 
+              poder seguir trabajando con ellas si fuera necesario.</p>
+            <ol>
+              <li>Recuperemos el archivo &quot;<strong>capas mezcladas0.xcf</strong>&quot;. 
+                Para realizar el aplanado de la imagen, debemos hacer clic con 
+                el bot&oacute;n derecho del rat&oacute;n sobre cualquier capa 
+                activa en la <strong>Ventana Capas</strong> y elegir <strong>Aplanar 
+                imagen</strong>. Observaremos que todas las capas se unen en una 
+                sola llamada &quot;Fondo&quot; (o con el nombre que hayamos puesto 
+                a la capa del fondo). <br>
+                <br>
+              </li>
+              <li>Guarda el trabajo como &quot;<strong>capas mezcladas3.xcf</strong>&quot;.</li>
+            </ol>
+            <span class="titular2"><br>
+            </span><span class="titulosunidad2">3. Comparaci&oacute;n de resultados </span>
+            <p align="left">Abramos ahora los cuatro archivos y comparemos su 
+              <strong>Ventana Capas</strong>.</p>
+            <table width="80%" border="0" align="center" cellpadding="8" cellspacing="0" bgcolor="#FFE9D2" class="textos" style='border:1px solid orange'>
+              <tr bgcolor="#FFE9D2">
+                <td colspan="2"><div align="center"><span class="textoscolor"><strong>capas mezcladas0.xcf</strong></span><strong><br>
+                      <br>
+                </strong>Imagen sin mezclar ni aplanar capas. </div></td>
+              </tr>
+              <tr>
+                <td width="40%"><div align="center"><img src="images/tem02_63.gif" width="247" height="230" align="middle"></div></td>
+                <td width="34%"><img src="images/tem02_77.jpg" width="200" height="128"></td>
+              </tr>
+            </table>            
+            <br>
+            <table width="80%" border="0" align="center" cellpadding="8" cellspacing="0" bgcolor="#FFE9D2" class="textos" style='border:1px solid orange'>
+              <tr bgcolor="#FFE9D2">
+                <td colspan="2"><div align="center"><span class="textoscolor"><strong>capas mezcladas1.xcf</strong></span><strong><br>
+                      <br>
+Mezclar capas visibles</strong>, excepto &quot;Capas&quot; que no es visible.<strong> </strong></div></td>
+              </tr>
+              <tr>
+                <td width="40%"><div align="center"><img src="images/tem02_66.gif" width="247" height="243"></div></td>
+                <td width="34%"><img src="images/tem02_78.jpg" width="200" height="128"></td>
+              </tr>
+            </table>            
+            <br>
+            <table width="80%" border="0" align="center" cellpadding="8" cellspacing="0" bgcolor="#FFE9D2" class="textos" style='border:1px solid orange'>
+              <tr bgcolor="#FFE9D2">
+                <td colspan="2"><div align="center"><span class="textoscolor"><strong>capas mezcladas2.xcf</strong></span><strong><br>
+                      <br>
+Combinar hacia abajo</strong>, siendo activa la capa &quot;C&iacute;rculo naranja&quot; y no visible la capa &quot;Capas&quot;.</div></td>
+              </tr>
+              <tr>
+                <td width="40%"><div align="center"><img src="images/tem02_67.gif" width="245" height="234"></div></td>
+                <td width="34%"><img src="images/tem02_79.jpg" width="200" height="128"></td>
+              </tr>
+            </table>
+            <br>
+            <table width="80%" border="0" align="center" cellpadding="8" cellspacing="0" bgcolor="#FFE9D2" class="textos" style='border:1px solid orange'>
+              <tr bgcolor="#FFE9D2">
+                <td colspan="2"><div align="center"><strong><span class="Estilo3">capas mezcladas3.xcf</span><br>
+                    <br>
+                    Aplanar imagen, con la capa &quot;Capas&quot; no visible.</strong></div></td>
+              </tr>
+              <tr>
+                <td width="40%"><div align="center"><strong><img src="images/tem02_68.gif" width="247" height="233"></strong></div></td>
+                <td width="34%"><img src="images/tem02_80.jpg" width="200" height="128"></td>
+              </tr>
+            </table>            
+            <br>
+            <table border="0" cellpadding="0" cellspacing="0" width=100% height="63">
+              <tr valign="bottom">
+                <td width="978" height="21" colspan="3">
+                  <p><br>
+                </p></td>
+              </tr>
+              <tr valign="bottom">
+                <td width="100%" height="21" colspan="3">
+                  <hr width="100%"  size="1" noshade color="#C5E3EC">
+                </td>
+              </tr>
+              <tr valign="bottom">
+                <td width="978" height="21"><p class="titulosunidad2">Las capas &gt; Componer capas</td>
+                <td width=22 align="right" height="21"><a href="hoja0208.htm" target="right"><img border="0" src="../images/atras2.jpg" width="20" height="21"></a></td>
+                <td width=21 align="right" height="21"><a href="hoja0210.htm" target="right"><img border="0" src="../images/adelante2.jpg" width="20" height="21"></a></td>
+              </tr>
+          </table></td>
+      </tr>
+        <tr>
+          <td height="0" valign="top">&nbsp;</td>
+        </tr>
+      </table>
+        <p align="justify">   
+  </tr>
+</table>
+</body>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem02/txt_209.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:03 GMT -->
+</html>

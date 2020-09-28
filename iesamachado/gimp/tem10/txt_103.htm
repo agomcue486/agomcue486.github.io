@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem10/txt_103.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:21 GMT -->
+<head>
+<title>Documento sin t&iacute;tulo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+<link href="../css/defecto.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+-->
+</style></head>
+
+
+<body onLoad="MM_preloadImages('images/boton2.gif')">
+<table width="100%"  border="0" cellpadding="0" cellspacing="5" class="textos">
+  <tr>
+    <td valign="top"><table width="96%"  border="0" align="center" cellpadding="0" cellspacing="0" class="textos">
+        <tr>
+          <td valign="top"><b> </b>
+              <p class="titulosunidadr">Elementos web</p>
+              <p>Hemos visto en unidades anteriores que GIMP dispone de herramientas para crear botones, cabeceras y distintos elementos comunes a p&aacute;ginas web. GIMP nos ayuda a mantener la uniformidad necesaria en los distintos elementos de una p&aacute;gina web. En este apartado vamos a crear los elementos b&aacute;sicos para una p&aacute;gina web: botones, bolitas, flechas, encabezados y barras separadoras.</p>
+              <span class="titulosunidad2">1. Temas web</span>            <p>Desde <strong>Exts --&gt; Script-Fu</strong> accedemos a tres <strong>Temas web</strong> para la creaci&oacute;n de los elementos mencionados. Ya hemos visto en el tema dedicado a los Script-Fu las posibilidades que tienen estos temas,  vamos a centrarnos ahora en la elecci&oacute;n de uno de ellos para crear los elementos b&aacute;sicos de nuestra p&aacute;gina web. </p>
+              
+            <p>La opci&oacute;n <strong>Resplandor alien&iacute;gena</strong> 
+              est&aacute; orientada a p&aacute;ginas que tengan un color oscuro 
+              de fondo, preferiblemente negro por lo que vamos a obviar esta opci&oacute;n.</p>
+              <p><strong>Gimp.org</strong> es la opci&oacute;n b&aacute;sica para crear p&aacute;ginas relativas a GIMP, aunque modificable nos proporciona siempre un estilo de gr&aacute;ficos que nos identificar&aacute; con las webs que se dedican a trabajar con GIMP. Descartaremos esta opci&oacute;n tambi&eacute;n.</p>
+              
+            <p>Nos quedamos con la opci&oacute;n <strong>Patr&oacute;n biselado</strong>, 
+              que puede adaptarse mejor a una p&aacute;gina con las caracter&iacute;sticas 
+              que tiene la que hemos iniciado en el apartado anterior.<br>
+            </p>
+              <span class="titulosunidad2">2. Patr&oacute;n biselado</span>              <p>Nos permite crear Bolita para marcar diferentes apartados; Flecha para utilizar en el enlazado con p&aacute;ginas; Bot&oacute;n para la ejecuci&oacute;n de acciones; Barra horizontal para separar contenidos y Encabezado para dar t&iacute;tulo a la p&aacute;gina en la que nos situemos.</p>
+              <span class="titulosunidad2">3. Bolita</span>            <p>Las 
+              opciones son pocas y sencillas, nos permite elegir el di&aacute;metro 
+              de la bolita y el patr&oacute;n de relleno de la bolita. Pongamos 
+              de di&aacute;metro 16 y como patr&oacute;n seleccionemos &quot;Rain&quot;, 
+              marquemos el fondo transparente para que el fondo de la p&aacute;gina 
+              web sobre la que situaremos la imagen se vea correctamente. Obtenemos...</p>
+              
+            <p align="justify"> <img src="images/bolita.gif" width="16" height="16"> 
+              Que debemos guardar en formato GIF para mantener la transparencia 
+              del fondo.</p>
+              <span class="titulosunidad2"><br>
+            4. Flecha </span>            <p>Podemos seleccionar la direcci&oacute;n de la flecha y el tama&ntilde;o. Mantenemos el relleno &quot;Rain&quot; para dar uniformidad a nuestra web y el tama&ntilde;o en 32 m&aacute;s que suficiente para este elemento.</p>
+              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  <td><img src="images/izquierda.gif" width="32" height="32"></td>
+                  <td><img src="images/derecha.gif" width="32" height="32"></td>
+                  <td><img src="images/arriba.gif" width="32" height="32"></td>
+                  <td><img src="images/abajo.gif" width="32" height="32"></td>
+                </tr>
+              </table>
+              <p>&nbsp; </p>
+              <span class="titulosunidad2">5. Barra horizontal</span>            <p>Podemos seleccionar el relleno y el tama&ntilde;o de la barra. Pongamos el mismo patr&oacute;n y como medidas pongamos 480 x 10.</p>
+              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  <td><img src="images/barra.gif" width="480" height="10"></td>
+                </tr>
+              </table>
+              <p align="center">&nbsp;</p>
+              <span class="titulosunidad2">6. Encabezado</span>            <p>Para poner nombre a cada una de nuestras p&aacute;ginas. Cambiemos el tama&ntilde;o de la fuente a 50 y hagamos transparente el fondo tras elegir el patr&oacute;n &quot;Rain&quot;.</p>
+              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  <td><img src="images/cabecera.gif" width="401" height="61"> </td>
+                </tr>
+              </table>
+              <p>&nbsp;</p>
+              <span class="titulosunidad2">7. Bot&oacute;n</span>              <p>Nos permite crear un bot&oacute;n simple sin efectos aunque podemos utilizarlo para crear las distintas posiciones de un bot&oacute;n.</p>
+              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  <td><img src="images/boton.gif" width="149" height="34"></td>
+                </tr>
+              </table>
+              <p>&nbsp;</p>
+              <p>Recordemos aqu&iacute; que GIMP dispone de un par de<strong> Script-Fu</strong> para crear botones con todas las posiciones del bot&oacute;n: <strong>Script-Fu --&gt; Botones</strong>,  pero que no permiten rellenar el bot&oacute;n con un patr&oacute;n tal y como hace el Script-Fu del que nos ocupamos en estos momentos. Si queremos conseguir posiciones diferentes de un bot&oacute;n deberemos crear varios botones con caracter&iacute;sticas distintas.</p>
+              
+            <p>Creemos el mismo bot&oacute;n que el destinado al &quot;Claustro&quot; 
+              pero con el color de texto blanco y la opci&oacute;n &quot;<strong>Pulsado</strong>&quot; 
+              activa.</p>
+              <table border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td><a href="javascript:;" target="_top" onClick="MM_nbGroup('down','group1','boton','',1)" onMouseOver="MM_nbGroup('over','boton','images/boton2.gif','',1)" onMouseOut="MM_nbGroup('out')"><img src="images/boton.gif" alt="Accedes a la p&aacute;gina del claustro" name="boton" width="149" height="34" border="0" onload=""></a> Pasa y haz clic con el rat&oacute;n sobre el bot&oacute;n</td>
+                </tr>
+              </table>
+              <p>Nuestra p&aacute;gina se va completando poco a poco...</p>
+              <table border="1" align="center" bordercolor="#000066">
+                <tr>
+                  <td height="481" background="images/tem10_10.jpg">
+                    <div align="right">
+                      <p align="center"> <img src="images/cabecera.gif" width="401" height="61"><br>
+                      <img src="images/tem10_07.jpg" width="344" height="100"></p>
+                      <p align="left">Nuestro colegio te ofrece:</p>
+                      <p align="left"><img src="images/bolita.gif" width="16" height="16"> Aprender practicando.</p>
+                      <p align="left"><img src="images/bolita.gif" width="16" height="16"> Utilizar programas de libre distribuci&oacute;n.</p>
+                      <p align="center"><img src="images/barra.gif" width="300" height="10"></p>
+                      <p align="center">Con&oacute;cenos</p>
+                      <p align="center"><img src="images/boton_c.gif" width="99" height="26"> <img src="images/boton_d.gif" width="158" height="26"> <img src="images/boton_m.gif" width="86" height="26"></p>
+                      <p align="center"><img src="images/izquierda.gif" width="32" height="32"> <img src="images/derecha.gif" width="32" height="32"></p>
+                  </div></td>
+                </tr>
+              </table>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" height="32">
+                <tr valign="bottom">
+                  <td width="100%" height="21" colspan="3">
+                    <hr noshade color="#C5E3EC"  size="1">
+                  </td>
+                </tr>
+                <tr valign="bottom">
+                  <td width="935" height="21"><p class="titulosunidad2">Animaci&oacute;n y web &gt; Elementos web</td>
+                  <td width=22 align="right" height="21"><a href="hoja1002.htm" target="right"><img border="0" src="../images/atras2.jpg" width="20" height="21"></a></td>
+                  <td width=21 align="right" height="21"><a href="hoja1004.htm" target="right"><img border="0" src="../images/adelante2.jpg" width="20" height="21"></a></td>
+                </tr>
+          </table>          </td>
+        </tr>
+      </table>
+        <p align="justify">   
+  </tr>
+</table>
+</body>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem10/txt_103.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:21 GMT -->
+</html>

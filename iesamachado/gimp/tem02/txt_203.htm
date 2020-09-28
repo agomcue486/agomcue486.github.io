@@ -1,0 +1,221 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem02/txt_203.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:02 GMT -->
+<head>
+<title>Documento sin t&iacute;tulo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+<link href="../css/defecto.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+-->
+</style></head>
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="5" class="textos">
+  <tr>
+    <td valign="top"><table width="96%"  border="0" align="center" cellpadding="0" cellspacing="0" class="textos">
+        <tr>
+          <td valign="top"><p class="titulosunidadr"><b> </b>            Trabajando con capas</p>
+            <p class="titulosunidad2">1. Creando una imagen con capas </p>
+            <ol>
+              <li>Con Gimp abierto accedemos a la <strong>Caja de Herramientas</strong> 
+                y seleccionamos <strong>Archivo --&gt; Nuevo</strong>. Creamos 
+                una imagen nueva de 350 x 250 p&iacute;xeles, en modo RGB y con 
+                fondo blanco. Adem&aacute;s, tendr&aacute; cuatro capas, una de 
+                fondo con color blanco y otras tres con fondo transparente y que 
+                nos servir&aacute;n para rellenar con colores distintos.<br>
+              </li>
+              <li>En la <strong>Ventana </strong><strong>Capas</strong> hacemos 
+                doble clic en la palabra &quot;Fondo&quot;, la renombramos como 
+                &quot;Fondo blanco&quot; y presionamos <strong>Enter</strong>.<br>
+              </li>
+              <li>Por defecto, las dimensiones de una nueva capa son iguales a 
+                las de la imagen con la que estamos trabajando, pero podemos crearlas 
+                m&aacute;s grandes o m&aacute;s peque&ntilde;as. Para ello hacemos 
+                clic con el bot&oacute;n derecho del rat&oacute;n sobre una de 
+                las capas existentes en la paleta de capas y elegimos <strong>Capa 
+                nueva...</strong>, damos un tama&ntilde;o de 200x200 p&iacute;xeles 
+                y relleno transparente. Despu&eacute;s pulsamos <strong>Aceptar</strong>. 
+                <br>
+              </li>
+              <li>En la <strong>Ventana</strong> <strong>Capas</strong> hacemos 
+                doble clic en &quot;Capa nueva&quot; y cambiamos el nombre por 
+                &quot;Capa azul&quot;. <br>
+                <br>
+              </li>
+              <li>Observa que en la <strong>Ventana Capas</strong> est&aacute;n 
+                las capas denominadas &quot;Fondo blanco&quot; y &quot;Capa azul&quot;. 
+                Si seleccionamos esta &uacute;ltima, en la <strong>Ventana imagen 
+                </strong>se muestra con una zona cuadrada delimitada por una l&iacute;nea 
+                discontinua, que marca el tama&ntilde;o y posici&oacute;n de la 
+                capa.<br>
+                <br>
+                <table border="0" align="center" cellspacing="0">
+                  <tr> 
+                    <td><img src="images/tem02_15.gif" width="450" height="212"></td>
+                  </tr>
+                </table>
+                <br>
+                <br>
+              </li>
+              <li>Vamos a rellenar la nueva capa de color azul. Seleccionamos 
+                la &quot;Capa azul&quot; en la <strong>Paleta de capas</strong> 
+                haciendo clic con el bot&oacute;n derecho en la capa<strong></strong> 
+                y elegimos <strong>Seleccionar--&gt;Todo</strong> (Ctrl+A) en 
+                el Men&uacute; de la Ventana Imagen. Aparece entonces sobre el 
+                recuadro de l&iacute;nea discontinua, otro con l&iacute;nea discontinua 
+                en movimiento (se suele llamar a este movimiento &quot;hormigas 
+                marchantes&quot;) mostrando la zona seleccionada. </li>
+              <li>En la <strong>Ventana de herramientas</strong> hacemos clic 
+                en el color de primer plano<img src="../tem01/images/herram/her_colores.gif" width="94" height="48"> 
+                e introducimos en la <strong>Ventana de selecci&oacute;n de color</strong> 
+                el valor hexadecimal <strong>0b10b7</strong> (azul) en el apartado 
+                Notaci&oacute;n HTML. Pulsamos <strong>Aceptar</strong>. </li>
+              <li>Ahora en la <strong>Ventana de herramientas</strong> elegimos 
+                el cubo (rellenar con un color o patr&oacute;n)<img src="../tem01/images/herram/her_relleno.gif" width="33" height="36"> 
+                y en la <strong>Ventana imagen</strong> hacemos clic en el cuadro 
+                seleccionado. De esta forma hemos rellenado la capa con el color 
+                azul. Si no se ha rellenado correctamente de azul la capa deberemos 
+                hacer algunos cambios en las opciones de la herramienta. En concreto, 
+                deber&iacute;an estar marcadas las opciones &quot;<strong>Relleno 
+                con color de frente</strong>&quot; y &quot;<strong>Rellenar la 
+                selecci&oacute;n completamente</strong>&quot;. <br>
+                <p class="textos"><a href="javascript:; "><img src="../extras/images/extra_a.gif" border="0" align="top" onClick="MM_openBrWindow('../extras/relleno.htm','pref','scrollbars=yes,resizable=yes,width=800,height=650')"></a> 
+                  <span class="textosmini">Relativo a la herramienta <strong>Relleno 
+                  con color o patr&oacute;n</strong></span>.<br>
+                </p>
+              </li>
+              <li>Antes de continuar creando otras capas, guardarmos nuestro trabajo 
+                como &quot;<strong>capas.xcf</strong>&quot;, formato de GIMP, que 
+                nos va a permitir seguir trabajando con capas aunque cerremos 
+                y volvamos a abrir la imagen sobre la que estamos trabajando.</li>
+            </ol>
+              <h4 class="titulosunidad2">2. Hacer una copia de una capa</h4>
+              
+            <p align="justify">Otra forma de crear una capa es hacer copias de 
+              una ya existente. La copia de la capa &quot;hereda&quot; todas las 
+              caracter&iacute;sticas de la capa copiada: es exactamente igual.</p>
+              <table width="100%" border="0" align="center" cellpadding="10" cellspacing="0" class="textos">
+                <tr>
+                  <td width="0"><p>Hacemos clic en <img src="images/tem02_08.gif" width="35" height="24"> 
+                    y obtenemos una nueva capa llamada &quot;Copia de Capa azul&quot;. 
+                    Ren&oacute;mbrala como &quot;Capa roja&quot; y rell&eacute;nala de 
+                    este color <strong>cc0d0a</strong> (rojo). Observa c&oacute;mo 
+                    queda la <strong>Ventana Capas</strong>. </p></td>
+                  <td width="0"><div align="center"><img src="images/tem02_20.gif" width="200" height="187"></div></td>
+                </tr>
+                <tr>
+                  
+                <td width="0">Observamos, en la <strong>Ventana Imagen</strong>, 
+                  que la nueva capa &quot;Capa roja&quot; oculta la &quot;Capa 
+                  azul&quot;. Por lo que vamos a mover la &quot;Capa roja&quot; 
+                  hacia la derecha. Antes de nada hay que comprobar que en la 
+                  <strong>Ventana Capas</strong> est&aacute; seleccionada la &quot;Capa 
+                  roja&quot;. Despu&eacute;s elegimos la herramienta <strong>Mover 
+                  </strong><img src="../tem01/images/herram/her_mover.gif" width="32" height="33"> 
+                  en la <strong>Caja de herramientas</strong> de GIMP y hacemos clic en cualquier 
+                  parte de la <strong>Ventana imagen </strong>para activar esa 
+                  ventana. Podemos mover la capa tanto arrastr&aacute;ndola con 
+                  el rat&oacute;n como con las flechas del teclado (es m&aacute;s 
+                  preciso). <br>
+                      <br>
+      Si pulsamos la flecha derecha (tecla), la capa se mover&aacute; un p&iacute;xel a la derecha. Si a la vez mantenemos presionada la tecla May&uacute;sculas, se mover&aacute; 10 p&iacute;xeles. <br>
+      <br>
+                  Pulsa seis veces la flecha derecha teniendo presionada la tecla 
+                  May&uacute;sculas, hasta que la &quot;Capa roja&quot; llegue 
+                  al borde derecho de la imagen, tal y como se observa en la imagen.                </td>
+                  <td width="0"><div align="center"><img src="images/tem02_21.gif" width="300" height="258"></div></td>
+                </tr>
+                <tr>
+                  
+                <td width="0">Creamos una nueva capa de la misma manera que hemos 
+                  creado la &quot;Capa azul&quot; y la llamamos &quot;Capa verde&quot;. 
+                  Rellenamos esta capa con el color que tiene el valor hexadecimal 
+                  <strong>349906</strong> para situarla en el lugar que se observa 
+                  en la imagen.</td>
+                  <td width="0"><div align="center"><img src="images/tem02_22.gif" width="300" height="258"></div></td>
+                </tr>
+                <tr>
+                  <td width="0"><p></p>
+                  <p> Ahora vamos a mover las capas &quot;Capa azul&quot; y &quot;Capa 
+                    roja&quot; hacia arriba. Para que se muevan a la vez tenemos 
+                    que enlazarlas. En la <strong>Ventana Capas</strong> seleccionamos 
+                    la &quot;Capa azul&quot; y hacemos clic en el espacio que 
+                    hay entre el ojo y la miniatura de la capa, apareciendo entonces 
+                    el s&iacute;mbolo <img src="images/tem02_24.gif" width="28" height="28" align="top">. 
+                    Repetimos la misma operaci&oacute;n con la &quot;Capa roja&quot;.</p></td>
+                  <td width="0"><div align="center"><img src="images/tem02_23.gif" width="225" height="218"></div></td>
+                </tr>
+                <tr>
+                  <td width="0"><p>Si ahora utilizamos la herramienta <strong>Mover 
+                    </strong><img src="../tem01/images/herram/her_mover.gif" width="32" height="33"> 
+                    observaremos c&oacute;mo se mueven las dos capas a la vez. 
+                    Subimos las dos capas veinte p&iacute;xeles (<strong>May&uacute;sculas 
+                    + flecha arriba</strong>) para obtener:</p>
+                  <p> Guarda la imagen para no perder el trabajo.</p></td>
+                  <td width="0"><div align="center"><img src="images/tem02_25.gif" width="300" height="258"></div></td>
+                </tr>
+              </table>
+              <p class="titulosunidad2"><br>
+              3. Transparencias de capa</p>
+              <p>Volvamos a la <strong>Ventana Capas</strong> para dar distintas trasparencias a cada una de las capas con las que estamos trabajando.</p>
+              <table width="100%" border="0" align="center" cellpadding="6" cellspacing="0" class="textos">
+                <tr>
+                  <td width="0"><p>Desactivamos el enlace de capas haciendo clic en cada uno de los iconos <img src="images/tem02_24.gif" width="30" height="28" align="bottom">.</p>
+                      
+                  <p>Seleccionamos la &quot;Capa azul&quot; y ponemos un <strong>60% 
+                    de opacidad</strong> utilizando el bot&oacute;n deslizante 
+                    <strong>Control de opacidad</strong>. </p>
+                      <p>Ahora seleccionamos la &quot;Capa roja&quot; y establecemos un 50% de transparencia. </p>
+                      
+                  <p> Despu&eacute;s hacemos lo mismo con la &quot;Capa verde&quot;, 
+                    en este caso con un 40%. Obtendremos algo similar a la siguiente 
+                    figura:</p>
+                  <p> Guardamos la imagen como &quot;<strong>Capas transparentes.xcf</strong>&quot;.</p></td>
+                  <td width="0"><img src="images/tem02_27.gif" width="300" height="258" align="middle"></td>
+                </tr>
+              </table>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" height="32">
+                <tr valign="bottom">
+                  <td width="978" height="21" colspan="3"> &nbsp;&nbsp;&nbsp; </td>
+                </tr>
+                <tr valign="bottom">
+                  <td width="100%" height="21" colspan="3">
+                    <hr noshade color="#C5E3EC"  size="1">
+                  </td>
+                </tr>
+                <tr valign="bottom">
+                  <td width="935" height="21"><p class="titulosunidad2">Las capas &gt; Trabajando con capas</td>
+                  <td width=22 align="right" height="21"><a href="hoja0202.htm" target="right"><img border="0" src="../images/atras2.jpg" width="20" height="21"></a></td>
+                  <td width=21 align="right" height="21"><a href="hoja0204.htm" target="right"><img border="0" src="../images/adelante2.jpg" width="20" height="21"></a></td>
+                </tr>
+              </table>          </td>
+        </tr>
+      </table>
+        <p align="justify">   
+  </tr>
+</table>
+</body>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem02/txt_203.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:02 GMT -->
+</html>

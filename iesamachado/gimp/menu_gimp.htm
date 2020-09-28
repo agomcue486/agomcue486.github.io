@@ -1,0 +1,1148 @@
+<html>
+<head>
+<title>Menu</title>
+<base target="right">
+<style type="text/css">
+.clTopMenu       {position:absolute; width:190px; left:4px; top:20px; clip:rect(0px 101px 80px 0px); layer-background-color:#eeeeee; background-color:#E6F7FF; z-index:31; visibility:hidden;font-family:arial,helvetica,sans-serif; font-size:11px; background-color:#E6F7FF;} 
+.clTopMenuBottom {position:relative; width:190px; left:0px; clip:rect(0px 190px 1px 0px); layer-background-color:#E6F7FF; background-color:#E6F7FF; z-index:2; visibility: hidden;}
+.clTopMenuText   {position:relative; width:190px; left:3px; font-family:arial,helvetica,sans-serif; color: #000000; font-size:11px; background-color:#E6F7FF; z-index:3;
+}  
+a:active {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; text-decoration: none}
+a:hover {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #003366; text-decoration: none}
+a:link {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #000000; text-decoration: none}
+
+
+
+
+</style>
+<script language="JavaScript" type="text/javascript">
+/**********************************************************************************
+************************************************************************************/
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+
+
+
+
+
+function lib_bwcheck(){ //Browsercheck (needed)
+	this.ver=navigator.appVersion
+	this.agent=navigator.userAgent
+	this.dom=document.getElementById?1:0
+	this.opera5=this.agent.indexOf("Opera 5")>-1
+	this.ie5=(this.ver.indexOf("MSIE 5")>-1 && this.dom && !this.opera5)?1:0; 
+	this.ie6=(this.ver.indexOf("MSIE 6")>-1 && this.dom && !this.opera5)?1:0;
+	this.ie4=(document.all && !this.dom && !this.opera5)?1:0;
+	this.ie=this.ie4||this.ie5||this.ie6
+	this.mac=this.agent.indexOf("Mac")>-1
+	this.ns6=(this.dom && parseInt(this.ver) >= 5) ?1:0; 
+	this.ns4=(document.layers && !this.dom)?1:0;
+	this.bw=(this.ie6 || this.ie5 || this.ie4 || this.ns4 || this.ns6 || this.opera5)
+	return this
+}
+var bw=new lib_bwcheck()
+
+
+/********************************************************************************
+If you want to change the appearance of the text, background-colors, size or
+anything do that in the style tag above.
+
+This menu might not be as easy to adapt to your own site, but please
+play around with it before you mail me for help...
+****************************************************************************/
+
+/***************************************************************************
+Variables to set.
+****************************************************************************/
+
+//There are 2 ways these menus can be placed
+// 0 = column
+// 1 = row
+nPlace=1
+
+
+//How many menus do you have? (remember to copy and add divs in the body if you add menus)
+
+var nNumberOfMenus=12
+var nMwidth=190//The width on the menus (set the width in the stylesheet as well)
+var nPxbetween=2 //Pixels between the menus
+var nFromleft=0 //The first menus left position
+var nFromtop=28//The top position of the menus
+var nBgcolor='#E6F7FF' //The bgColor of the bottom mouseover div 
+var nBgcolorchangeto='#E6F7FF' //The bgColor to change to
+var nImageheight=15 //The position the mouseover line div will stop at when going up!
+
+/***************************************************************************
+You shouldn't have to change anything below this
+****************************************************************************/
+//Object constructor
+function makeNewsMenu(obj,nest){
+	nest=(!nest) ? "":'document.'+nest+'.'					
+   	this.css=bw.dom? document.getElementById(obj).style:bw.ie4?document.all[obj].style:bw.ns4?eval(nest+"document.layers." +obj):0;		
+	this.evnt=bw.dom? document.getElementById(obj):bw.ie4?document.all[obj]:bw.ns4?eval(nest+"document.layers." +obj):0;			
+	this.scrollHeight=bw.ns4?this.css.document.height:this.evnt.offsetHeight
+	this.moveIt=b_moveIt;this.bgChange=b_bgChange;
+	this.slideUp=b_slideUp; this.slideDown=b_slideDown;
+	this.clipTo=b_clipTo;
+    this.obj = obj + "Object"; 	eval(this.obj + "=this")		
+}
+//Objects methods
+
+// A unit of measure that will be added when setting the position of a layer.
+var px = bw.ns4||window.opera?"":"px";
+
+function b_moveIt(x,y){this.x=x; this.y=y; this.css.left=this.x+px; this.css.top=this.y+px;}
+function b_bgChange(color){this.css.backgroundColor=color; this.css.bgColor=color; this.css.background=color;}
+function b_clipTo(t,r,b,l){
+	if(bw.ns4){this.css.clip.top=t; this.css.clip.right=r; this.css.clip.bottom=b; this.css.clip.left=l
+	}else this.css.clip="rect("+t+"px "+r+"px "+b+"px "+l+"px)";
+}
+function b_slideUp(ystop,moveby,speed,fn,wh, num){
+	if(!this.slideactive){
+		if(this.y>ystop){
+			this.moveIt(this.x,this.y-5); eval(wh)
+			setTimeout(this.obj+".slideUp("+ystop+","+moveby+","+speed+",'"+fn+"','"+wh+"','"+num+"')",speed)
+		}else{
+			this.slideactive=false; this.moveIt(0,ystop); eval(fn)
+		}
+		moverTodosUp(num,5);
+	}
+}
+function b_slideDown(ystop,moveby,speed,fn,wh, num){
+	if(!this.slideactive){
+		if(this.y<ystop){
+			this.moveIt(this.x,this.y+5); eval(wh)
+			setTimeout(this.obj+".slideDown("+ystop+","+moveby+","+speed+",'"+fn+"','"+wh+"', '"+num+"')",speed)
+		}else{
+			this.slideactive=false; this.moveIt(0,ystop); eval(fn)
+		}
+		moverTodosDown(num,5);
+	}
+}
+
+function moverTodosDown(num, position){
+	for(i=0;i<nNumberOfMenus;i++){
+		if(i>num){
+			oTopMenu[i][0].moveIt(oTopMenu[i][0].x,oTopMenu[i][0].y+position);
+		}
+	}
+}
+
+function moverTodosUp(num, position){
+	for(i=0;i<nNumberOfMenus;i++){
+		if(i>num){
+			oTopMenu[i][0].moveIt(oTopMenu[i][0].x,oTopMenu[i][0].y-position);
+		}
+	}
+}
+//Initiating the page, making cross-browser objects
+function newsMenuInit(){
+	oTopMenu=new Array()
+	zindex=12
+	for(i=0;i<nNumberOfMenus;i++){
+		oTopMenu[i]=new Array()
+		oTopMenu[i][0]=new makeNewsMenu('divTopMenu'+i)
+		oTopMenu[i][1]=new makeNewsMenu('divTopMenuBottom'+i,'divTopMenu'+i)
+		oTopMenu[i][2]=new makeNewsMenu('divTopMenuText'+i,'divTopMenu'+i)
+		oTopMenu[i][1].moveIt(0,nImageheight)
+		oTopMenu[i][0].clipTo(0,nMwidth,nImageheight+3,0)
+		if(!nPlace) oTopMenu[i][0].moveIt(i*nMwidth+nFromleft+(i*nPxbetween),nFromtop)
+		else{
+			oTopMenu[i][0].moveIt(nFromleft,i*nImageheight+nFromtop+(i*nPxbetween))
+			oTopMenu[i][0].css.zIndex=zindex--
+		}
+		oTopMenu[i][0].css.visibility="visible"
+	}
+}
+//Moves the menu
+function topMenu(num){
+	if(oTopMenu[num][1].y==nImageheight) {
+		//Menu de bajada
+
+		oTopMenu[num][1].slideDown(oTopMenu[num][2].scrollHeight+20,10,10,'oTopMenu['+num+'][0].clipTo(0,nMwidth,oTopMenu['+num+'][1].y+3,0)','oTopMenu['+num+'][0].clipTo(0,nMwidth,oTopMenu['+num+'][1].y+3,0)', num);
+		if (num==0){
+			moverTodosUp(num,3);
+		}else{
+			moverTodosUp(num,7);
+		}
+
+	} else if(oTopMenu[num][1].y==oTopMenu[num][2].scrollHeight+20) {
+		//Menu de subida
+		oTopMenu[num][1].slideUp(nImageheight,10,10,'oTopMenu['+num+'][0].clipTo(0,nMwidth,oTopMenu['+num+'][1].y+3,0)','oTopMenu['+num+'][0].clipTo(0,nMwidth,oTopMenu['+num+'][1].y+3,0)',num);
+		if (num==0){
+			moverTodosDown(num,3);
+		}else{
+			moverTodosDown(num,7);
+		}
+
+	}
+	//resetear resto de menus
+	setTimeout("resetMenus("+num+")",100);
+}
+
+function resetMenus(num){
+	for(i=0;i<nNumberOfMenus;i++){
+		if(i!=num){	
+			if(oTopMenu[i][1].y==oTopMenu[i][2].scrollHeight+20) {
+				topMenuReset(i);
+			}
+		}
+	}
+}
+function topMenuReset(num){
+	if(oTopMenu[num][1].y==nImageheight) {
+		//Menu de bajada
+
+		oTopMenu[num][1].slideDown(oTopMenu[num][2].scrollHeight+20,10,10,'oTopMenu['+num+'][0].clipTo(0,nMwidth,oTopMenu['+num+'][1].y+3,0)','oTopMenu['+num+'][0].clipTo(0,nMwidth,oTopMenu['+num+'][1].y+3,0)', num);
+		if (num==0){
+			moverTodosUp(num,3);
+		}else{
+			moverTodosUp(num,7);
+		}
+
+	} else if(oTopMenu[num][1].y==oTopMenu[num][2].scrollHeight+20) {
+		//Menu de subida
+		oTopMenu[num][1].slideUp(nImageheight,10,10,'oTopMenu['+num+'][0].clipTo(0,nMwidth,oTopMenu['+num+'][1].y+3,0)','oTopMenu['+num+'][0].clipTo(0,nMwidth,oTopMenu['+num+'][1].y+3,0)',num);
+		if (num==0){
+			moverTodosDown(num,3);
+		}else{
+			moverTodosDown(num,7);
+		}
+
+	}
+}
+
+
+//Changes background onmouseover
+function menuOver(num){oTopMenu[num][1].bgChange(nBgcolorchangeto)}
+function menuOut(num){oTopMenu[num][1].bgChange(nBgcolor)}
+
+//Calls the init function onload if the browser is ok...
+if (bw.bw) onload = newsMenuInit;
+
+
+/***************
+Multiple Scripts
+If you have two or more scripts that use the onload event, probably only one will run (the last one).
+Here is a solution for starting multiple scripts onload:
+   1. Delete or comment out all the onload assignments, onload=initScroll and things like that.
+   2. Put the onload assignments in the body tag like in this example, note that they must have braces ().
+   Example: <body onload="initScroll(); initTooltips(); initMenu();">
+**************/
+</script>
+<link rel="stylesheet" href="menufr.css" type="text/css">
+</head>
+
+<body marginleft="0" marginheight="0" bgcolor="#E6F7FF" leftmargin="0" topmargin="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td><img src="images/fnd_menu_cont.jpg"  border="0"></td>
+
+  </tr>
+</table>
+<!-- START DELETE -->
+<div style="position:absolute; left:0; top:0"></div>
+<a href="#" onclick="self.close(); return false">
+<br><br><br>
+<!-- END DELETE -->
+
+<!-- Remember the "news" "key control" and "page contols" text are images, you probably want to change those
+with your own images. If your own images have different sizes please adjust the height and clips
+of the divs, and change the nImageheight variable in the script. Good luck -->
+</a>
+
+<!-- Menu 0 -->
+<div id="divTopMenu0" class="clTopMenu"><a href="tem01/hoja0101.htm" target="right" onclick="topMenu(0);" onfocus="if(this.blur)this.blur();"><img src="images/cerrada.gif" width="16" height="16" border="0" align="middle"><b>&nbsp;0. Conociendo GIMP</b></a> 
+  <div id="divTopMenuText0" class="clTopMenuText"> 
+   <table width="180"  border="0" cellpadding="2" cellspacing="0">
+
+	     <tr valign="middle">
+  <td width="16" height="0"></td>
+          <td width="12" height="0" align="left"><div align="center"><a href="tem01/hoja0101.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+          <td width="152" height="0"><b><a href="tem01/hoja0101.htm">&iquest;Por qu&eacute; GIMP?</a></b></td>
+        </tr>
+  
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+
+          <td width="12" height="0" align="left"><div align="center"><a href="tem01/hoja0105.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+          <td height="0"><b><a href="tem01/hoja0105.htm">Iniciar GIMP</a></b></td>
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="12" height="0" align="left"><div align="center"><a href="tem01/hoja0106.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+          <td height="0"><b><a href="tem01/hoja0106.htm">La primera imagen</a></b></td>
+        </tr>
+
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="12" height="0" align="left"><div align="center"><a href="tem01/hoja0107.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+          <td height="0"><b><a href="tem01/hoja0107.htm">Una imagen r&aacute;pida</a></b></td>
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="12" height="0" align="left"><div align="center"><a href="tem01/hoja0108.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+
+          <td height="0"><b><a href="tem01/hoja0108.htm">Pr&aacute;ctica guiada</a></b></td>
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="12" height="0" align="left"><div align="center"><a href="doc0109.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+          <td height="0"><b><a href="tem01/hoja0109.htm">Cerrar GIMP</a></b></td>
+        </tr>
+
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="12" height="0" align="left"><div align="center"><a href="tem01/hoja0110.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+          <td height="0"><b><a href="tem01/hoja0110.htm">Ejercicios</a></b></td>
+ </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="12" height="0" align="left"><div align="center"><a href="tem01/hoja0110.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+
+          <td height="0"><b><a href="pdf/unidad00.pdf" target="blank">PDF</a></b></td>
+ </tr>
+    </table>
+  
+  </div>
+  <div id="divTopMenuBottom0" class="clTopMenuBottom"></div>
+</div> 
+
+
+<!-- Menu 1 -->
+
+<div id="divTopMenu1" class="clTopMenu"><a href="tem0/hoja0001.htm" target="right" onclick="topMenu(1);" onfocus="if(this.blur)this.blur();"><img src="images/cerrada.gif" width="16" height="16" border="0" align="middle"><b>&nbsp;1. Imagen digital</b></a>
+
+  <div id="divTopMenuText1" class="clTopMenuText"> 
+    <table width="180"  border="0" cellpadding="2" cellspacing="0">
+	     <tr valign="middle">
+<td height="0"></td>
+        <td width="12" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td width="153" height="0"><b><a href="tem0/hoja0001.htm">Introducci&oacute;n</a></b></td>
+      </tr>
+      <tr valign="middle">
+        <td height="0"></td>
+
+        <td width="12" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td height="0"><b><a href="tem0/hoja0002.htm">El p&iacute;xel</a></b></td>
+      </tr>
+      <tr valign="middle">
+        <td height="0"></td>
+        <td width="12" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td height="0"><b><a href="tem0/hoja0003.htm">Modos de color</a></b></td>
+
+      </tr>
+      <tr valign="middle">
+        <td height="0"></td>
+        <td width="12" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td height="0"><b><a href="tem0/hoja0004.htm">Resoluci&oacute;n</a></b></td>
+      </tr>
+      <tr valign="middle">
+        <td height="0"></td>
+
+        <td width="12" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td height="0"><b><a href="tem0/hoja0005.htm">Formatos</a></b></td>
+      </tr>
+      <tr valign="middle">
+        <td height="0"></td>
+        <td width="12" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td height="0"><b><a href="tem0/hoja0006.htm">Pr&aacute;ctica guiada 1</a></b></td>
+
+		 </tr>
+		         <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="12" height="0" align="left"><div align="center"><a href="tem01/hoja0110.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+          <td height="0"><b><a href="tem0/hoja0007.htm">Ejercicios 1</a></b></td>
+ </tr>
+   <tr valign="middle">
+          <td width="16" height="0"></td>
+
+          <td width="12" height="0" align="left"><div align="center"><a href="tem01/hoja0110.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+          <td height="0"><b><a href="pdf/unidad01.pdf" target="blank">PDF</a></b></td>
+ </tr>
+    </table>
+
+
+  </div>
+  <div id="divTopMenuBottom1" class="clTopMenuBottom"></div>
+</div>
+
+<!-- Menu 2 -->
+
+
+<div id="divTopMenu2" class="clTopMenu"><a href="tem02/hoja0201.htm" target="right" onclick="topMenu(2);" onfocus="if(this.blur)this.blur();"><img src="images/cerrada.gif" width="16" height="16" border="0" align="middle"><b>&nbsp;2. Las capas</b></a>
+
+  <div id="divTopMenuText2" class="clTopMenuText"> 
+  
+ <table width="180" height="10"  border="0" cellpadding="2" cellspacing="0">
+	     <tr valign="middle">
+<td width="16" height="0"></td>
+          <td width="11" height="0" align="left"><div align="center"><a href="tem02/hoja0201.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+          <td width="150" height="0"><b><a href="tem02/hoja0201.htm">Las capas en GIMP</a></b></td>
+
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="11" height="0" align="left"><div align="center"><a href="tem02/hoja0202.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+          <td width="150" height="0"><b><a href="tem02/hoja0202.htm">Ventana Capas</a></b></td>
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+
+          <td width="11" height="0" align="left"><div align="center"><a href="tem02/hoja0203.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+          <td width="150" height="0"><b><a href="tem02/hoja0203.htm">Trabajando con Capas</a></b></td>
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="11" height="0" align="left"><div align="center"><a href="tem02/hoja0204.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+          <td width="150" height="0"><b><a href="tem02/hoja0204.htm">Cambiar y mover</a></b></td>
+        </tr>
+
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="11" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+          <td width="150" height="0"><b><a href="tem02/hoja0205.htm">Poner gu&iacute;as</a></b></td>
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="11" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+
+          <td width="150" height="0"><b><a href="tem02/hoja0206.htm">Capas flotantes</a></b></td>
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="11" height="0" align="left"><div align="center"><a href="../tem01/hoja0107.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+          <td width="150" height="0"><b><a href="tem02/hoja0207.htm">Transformar 
+          capas</a></b></td>
+        </tr>
+        <tr valign="middle">
+
+          <td width="16" height="0"></td>
+          <td width="11" height="0" align="left"><div align="center"><a href="../tem01/hoja0108.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+          <td width="150" height="0"><b><a href="tem02/hoja0208.htm">Combinar capas</a></b></td>
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="11" height="0" align="left"><div align="center"><a href="../tem01/doc0109.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+          <td width="150" height="0"><b><a href="tem02/hoja0209.htm">Componer capas</a></b></td>
+
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="11" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+          <td width="150" height="0"><b><a href="tem02/hoja0210.htm">Pr&aacute;ctica guiada 2</a></b></td>
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+
+          <td width="11" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+          <td width="150" height="0"><b><a href="tem02/hoja0211.htm">Ejercicios 2</a></b></td>		 
+        </tr>
+		  <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="12" height="0" align="left"><div align="center"><a href="tem01/hoja0110.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+          <td height="0"><b><a href="pdf/unidad02.pdf" target="blank">PDF</a></b></td>
+ </tr>
+
+    </table>
+
+
+
+  </div>
+  <div id="divTopMenuBottom2" class="clTopMenuBottom"> </div>
+</div>
+
+<!-- Menu 3 -->
+<div id="divTopMenu3" class="clTopMenu"><a href="tem03/hoja0301.htm" target="right" onclick="topMenu(3);" onfocus="if(this.blur)this.blur();"><img src="images/cerrada.gif" width="16" height="16" border="0" align="middle"><b>&nbsp;3. Los textos</b></a>
+
+  <div id="divTopMenuText3" class="clTopMenuText"> 
+  
+  <table width="180"  border="0" cellpadding="2" cellspacing="0">
+
+	     <tr valign="middle">
+
+	 <td width="16" height="0"></td>
+          <td width="14" height="0" align="left"><div align="center"><a href="tem03/hoja0301.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+          <td width="148" height="0"><b><a href="tem03/hoja0301.htm">Introducci&oacute;n</a></b></td>
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+
+          <td width="14" height="0" align="left"><div align="center"><a href="tem03/hoja0302.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+          <td height="0"><b><a href="tem03/hoja0302.htm">Texto est&aacute;ndar</a></b></td>
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="14" height="0" align="left"><div align="center"><a href="tem03/hoja0303.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+          <td height="0"><b><a href="tem03/hoja0303.htm">Text FreeType</a></b></td>
+
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="14" height="0" align="left"><div align="center"><a href="tem03/hoja0304.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+          <td height="0"><b><a href="tem03/hoja0304.htm">Texto sobre im&aacute;genes </a></b></td>
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+
+          <td width="14" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+          <td height="0"><b><a href="tem03/hoja0305.htm">Logos</a></b></td>
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="14" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+          <td height="0"><b><a href="tem03/hoja0306.htm">Script-fu con textos</a></b></td>
+        </tr>
+
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="14" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+          <td height="0"><b><a href="tem03/hoja0308.htm">Pr&aacute;ctica guiada 3</a></b></td>
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="14" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+
+          <td height="0"><b><a href="tem03/hoja0309.htm">Ejercicios 3</a></b></td>
+	 
+	 </tr>
+	   <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="12" height="0" align="left"><div align="center"><a href="tem01/hoja0110.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+          <td height="0"><b><a href="pdf/unidad03.pdf" target="blank">PDF</a></b></td>
+ </tr>
+    </table>
+
+
+  </div>
+	
+  <div id="divTopMenuBottom3" class="clTopMenuBottom"></div>
+</div>
+
+
+<!-- Menu 4 -->
+
+<div id="divTopMenu4" class="clTopMenu"><a href="tem04/hoja0401.htm" target="right" onclick="topMenu(4);" onfocus="if(this.blur)this.blur();"><img src="images/cerrada.gif" width="16" height="16" border="0" align="middle"><b>&nbsp;4. Máscaras y selecciones</b></a>
+
+	
+  <div id="divTopMenuText4" class="clTopMenuText"> 
+	
+ <table width="180"  border="0" cellpadding="2" cellspacing="0">
+
+	     <tr valign="middle">
+
+<td width="16" height="0"></td>
+          <td width="11" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+          <td width="150" height="0"><b><a href="tem04/hoja0401.htm">Introducci&oacute;n</a></b></td>
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="11" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+
+          <td height="0"><b><a href="tem04/hoja0402.htm">Herramientas</a></b></td>
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="11" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+          <td height="0"><b><a href="tem04/hoja0403.htm">Selecci&oacute;n por
+          color </a></b></td>
+        </tr>
+
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="11" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+          <td height="0"><b><a href="tem04/hoja0404.htm">Tijeras inteligentes</a></b></td>
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="11" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+
+          <td height="0"><b><a href="tem04/hoja0405.htm">Herramienta B&eacute;zier</a></b></td>
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="11" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+          <td height="0"><b><a href="tem04/hoja0406.htm">M&aacute;scaras r&aacute;pidas</a></b></td>
+
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="11" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+          <td height="0"><b><a href="tem04/hoja0407.htm">Uni&oacute;n e intersecci&oacute;n</a></b></td>
+        </tr>
+        <tr valign="middle">
+
+          <td width="16" height="0"></td>
+          <td width="11" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+          <td height="0"><b><a href="tem04/hoja0408.htm">Pr&aacute;ctica guiada 4 </a></b></td>
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="11" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+          <td height="0"><b><a href="tem04/hoja0409.htm">Ejercicios 4</a></b></td>
+
+	 
+	 </tr>
+	   <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="12" height="0" align="left"><div align="center"><a href="tem01/hoja0110.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+          <td height="0"><b><a href="pdf/unidad04.pdf" target="blank">PDF</a></b></td>
+ </tr>
+    </table>
+
+</div>
+
+  <div id="divTopMenuBottom4" class="clTopMenuBottom"></div>
+</div>
+
+
+<!-- Menu 5 -->
+<div id="divTopMenu5" class="clTopMenu"><a href="tem05/hoja0501.htm" target="right" onclick="topMenu(5);" onfocus="if(this.blur)this.blur();"><img src="images/cerrada.gif" width="16" height="16" border="0" align="middle"><b>&nbsp;5. Canales</b></a>
+
+ <div id="divTopMenuText5" class="clTopMenuText"> 
+   <table width="180"  border="0" cellpadding="2" cellspacing="0">
+	     <tr valign="middle">
+<td width="16" height="0"></td>
+        <td width="11" height="0" align="center"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+
+        <td width="150" height="0"><b><a href="tem05/hoja0501.htm">Introducci&oacute;n</a></b></td>
+      </tr>
+      <tr valign="middle">
+        <td width="16" height="0"></td>
+        <td width="11" height="0" align="center"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td width="150" height="0"><b><a href="tem05/hoja0502.htm">Los canales b&aacute;sicos</a></b></td>
+      </tr>
+
+      <tr valign="middle">
+        <td width="16" height="0"></td>
+        <td width="11" height="0" align="center"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td width="150" height="0"><b><a href="tem04/hoja0403.htm"> </a><a href="tem05/hoja0503.htm">Como selecci&oacute;n</a></b></td>
+      </tr>
+      <tr valign="middle">
+        <td width="16" height="0"></td>
+
+        <td width="11" height="0" align="center"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td width="150" height="0"><b><a href="tem04/hoja0404.htm"> </a><a href="tem05/hoja0504.htm">Canal alfa</a></b></td>
+      </tr>
+      <tr valign="middle">
+        <td width="16" height="0"></td>
+        <td width="11" height="0" align="center"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td width="150" height="0"><b><a href="tem05/hoja0505.htm">M&aacute;scara</a></b></td>
+
+      </tr>
+      <tr valign="middle">
+        <td width="16" height="0"></td>
+        <td width="11" height="0" align="center"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td width="150" height="0"><b><a href="tem05/hoja0506.htm">Otras posibilidades</a></b></td>
+      </tr>
+      <tr valign="middle">
+        <td width="16" height="0"></td>
+
+        <td width="11" height="0" align="center"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td width="150" height="0"><b><a href="tem04/hoja0407.htm"> </a><a href="tem05/hoja0507.htm">Pr&aacute;ctica guiada 5</a></b></td>
+      </tr>
+      <tr valign="middle">
+        <td width="16" height="0"></td>
+        <td width="11" height="0" align="left"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td height="0"><b><a href="tem05/hoja0508.htm">Ejercicios 5</a></b></td>
+
+	 
+	 </tr>
+	   <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="12" height="0" align="left"><div align="center"><a href="tem01/hoja0110.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+          <td height="0"><b><a href="pdf/unidad05.pdf" target="blank">PDF</a></b></td>
+ </tr>
+    </table>
+  
+  </div>
+
+	
+  <div id="divTopMenuBottom5" class="clTopMenuBottom"></div>
+</div>
+
+
+<!-- Menu 6 -->
+
+<div id="divTopMenu6" class="clTopMenu"><a href="tem06/hoja0601.htm" target="right" onclick="topMenu(6);" onfocus="if(this.blur)this.blur();"><img src="images/cerrada.gif" width="16" height="16" border="0" align="middle"><b>&nbsp;6. Rutas</b></a>
+
+	
+  <div id="divTopMenuText6" class="clTopMenuText"> 
+  
+     <table width="180"  border="0" cellpadding="2" cellspacing="0">
+	     <tr valign="middle">
+
+<td width="16" height="0"></td>
+
+          <td width="11" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+          <td width="150" height="0"><b><a href="tem06/hoja0601.htm"><b> Introducci&oacute;n</b></a></b></td>
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="11" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+          <td width="150" height="0"><b><a href="tem06/hoja0602.htm"><b>Crear rutas</b></a></b></td>
+
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="11" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+          <td width="150" height="0"><b><a href="../tem05/hoja0403.htm"> </a><a href="tem06/hoja0603.htm"><b>Dibujar con rutas</b></a></b></td>
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+
+          <td width="11" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+          <td width="150" height="0"><b><a href="../tem05/hoja0404.htm"> </a><a href="tem06/hoja0604.htm"><b>Editar rutas</b></a></b></td>
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="11" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+          <td width="150" height="0"><b><a href="tem06/hoja0605.htm"><b>Ruta a selecci&oacute;n</b></a></b></td>
+
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="11" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+          <td width="150" height="0"><b><a href="../tem05/hoja0406.htm"> </a><a href="tem06/hoja0606.htm"><b>Selecci&oacute;n a ruta</b></a></b></td>
+        </tr>
+        <tr valign="middle">
+
+          <td width="16" height="0"></td>
+          <td width="11" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+          <td width="150" height="0"><b><a href="../tem05/hoja0407.htm"> </a><a href="tem06/hoja0607.htm"><b>Importar y exportar</b></a></b></td>
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="11" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+          <td width="150" height="0"><b><a href="../tem05/hoja0408.htm"> </a><a href="tem06/hoja0608.htm"><b>Pr&aacute;ctica guiada 6</b></a></b></td>
+
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="11" height="0" align="left"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td height="0"><b><a href="tem06/hoja0609.htm">Ejercicios 6</a></b></td>
+	 
+	 </tr>
+	   <tr valign="middle">
+          <td width="16" height="0"></td>
+
+          <td width="12" height="0" align="left"><div align="center"><a href="tem01/hoja0110.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+          <td height="0"><b><a href="pdf/unidad06.pdf" target="blank">PDF</a></b></td>
+ </tr>
+    </table>
+  </div>
+	
+  <div id="divTopMenuBottom6" class="clTopMenuBottom"></div>
+</div>
+
+
+
+<!-- Menu 7 -->
+
+
+<div id="divTopMenu7" class="clTopMenu"><a href="tem07/hoja0701.htm" target="right" onclick="topMenu(7);" onfocus="if(this.blur)this.blur();"><img src="images/cerrada.gif" width="16" height="16" border="0" align="middle"><b>&nbsp;7. El color</b></a>
+
+	
+  <div id="divTopMenuText7" class="clTopMenuText"> 
+  
+     <table width="180"  border="0" cellpadding="2" cellspacing="0">
+	     <tr valign="middle">
+
+<td width="16" height="0"></td>
+        <td width="14" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td width="152" height="0"><b><a href="tem07/hoja0701.htm"><b>Introducci&oacute;n</b></a></b></td>
+
+      </tr>
+      <tr valign="middle">
+        <td width="16" height="0"></td>
+        <td width="14" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td width="152" height="0"><b><a href="tem07/hoja0702.htm"><b>Cambio de modo de color</b></a></b></td>
+      </tr>
+      <tr valign="middle">
+        <td width="16" height="0"></td>
+
+        <td width="14" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td width="152" height="0"><b><a href="../tem05/hoja0403.htm"> </a><a href="tem07/hoja0703.htm"><b>Histograma</b></a></b></td>
+      </tr>
+      <tr valign="middle">
+        <td width="16" height="0"></td>
+        <td width="14" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td width="152" height="0"><b><a href="../tem05/hoja0404.htm"> </a><a href="tem07/hoja0704.htm"><b>Niveles</b></a></b></td>
+
+      </tr>
+      <tr valign="middle">
+        <td width="16" height="0"></td>
+        <td width="14" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td width="152" height="0"><b><a href="tem07/hoja0705.htm"><b>Curvas</b></a></b></td>
+      </tr>
+      <tr valign="middle">
+        <td width="16" height="0"></td>
+
+        <td width="14" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td width="152" height="0"><b><a href="tem07/hoja0706.htm"><b>Correcci&oacute;n del color</b></a></b></td>
+      </tr>
+      <tr valign="middle">
+        <td width="16" height="0"></td>
+        <td width="14" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td width="152" height="0"><b><a href="tem07/hoja0707.htm"><b>Filtros de color</b></a></b></td>
+
+      </tr>
+      <tr valign="middle">
+        <td width="16" height="0"></td>
+        <td width="14" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td width="152" height="0"><b><a href="tem07/hoja0708.htm"><b>Pr&aacute;ctica guiada 7</b></a></b></td>
+      </tr>
+      <tr valign="middle">
+        <td width="16" height="0"></td>
+
+        <td width="11" height="0" align="left"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td height="0"><b><a href="tem07/hoja0709.htm">Ejercicios 7</a></b></td>
+
+
+	 </tr>
+	   <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="12" height="0" align="left"><div align="center"><a href="tem01/hoja0110.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+          <td height="0"><b><a href="pdf/unidad07.pdf" target="blank">PDF</a></b></td>
+
+ </tr>
+    </table>
+  </div>
+	
+  <div id="divTopMenuBottom7" class="clTopMenuBottom"></div>
+</div>
+
+
+
+
+<!-- Menu 8 -->
+
+
+<div id="divTopMenu8" class="clTopMenu"><a href="tem08/hoja0801.htm" target="right" onclick="topMenu(8);" onfocus="if(this.blur)this.blur();"><img src="images/cerrada.gif" width="16" height="16" border="0" align="middle"><b>&nbsp;8. Filtros</b></a>
+
+	
+  <div id="divTopMenuText8" class="clTopMenuText"> 
+  
+     <table width="180"  border="0" cellpadding="2" cellspacing="0">
+	     <tr valign="middle">
+
+
+<td height="0"></td>
+        <td width="13" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td width="153" height="0"><b><a href="tem08/hoja0801.htm"><b>Introducci&oacute;n</b></a></b></td>
+      </tr>
+
+      <tr valign="middle">
+        <td height="0"></td>
+        <td width="13" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td height="0"><b><a href="tem08/hoja0802.htm"><b>Desenfoque</b></a></b></td>
+      </tr>
+      <tr valign="middle">
+        <td height="0"></td>
+        <td width="13" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+
+        <td height="0"><b><a href="../tem05/hoja0403.htm"> </a><a href="tem08/hoja0803.htm"><b>Ruido</b></a></b></td>
+      </tr>
+      <tr valign="middle">
+        <td height="0"></td>
+        <td width="13" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td height="0"><b><a href="tem08/hoja0804.htm">De efectos</a></b></td>
+      </tr>
+
+      <tr valign="middle">
+        <td height="0"></td>
+        <td width="13" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td height="0"><b><a href="tem08/hoja0805.htm">Distorsi&oacute;n</a></b></td>
+      </tr>
+      <tr valign="middle">
+        <td height="0"></td>
+        <td width="13" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+
+        <td height="0"><b><a href="tem08/hoja0806.htm">Art&iacute;sticos y Renderizar</a></b></td>
+      </tr>
+      <tr valign="middle">
+        <td height="0"></td>
+        <td width="13" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td height="0"><b><a href="../tem05/hoja0407.htm"> </a><a href="tem08/hoja0807.htm">Mapa</a></b></td>
+      </tr>
+
+      <tr valign="middle">
+        <td height="0"></td>
+        <td width="13" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td height="0"><b><a href="../tem05/hoja0408.htm"> </a><a href="tem08/hoja0808.htm">Pr&aacute;ctica guiada 8</a></b></td>
+      </tr>
+      <tr valign="middle">
+        <td height="0"></td>
+
+        <td width="11" height="0" align="left"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td height="0"><b><a href="tem08/hoja0809.htm">Ejercicios 8</a></b></td>
+
+	 </tr>
+	   <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="12" height="0" align="left"><div align="center"><a href="tem01/hoja0110.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+          <td height="0"><b><a href="pdf/unidad08.pdf" target="blank">PDF</a></b></td>
+
+ </tr>
+    </table>
+  </div>
+	
+  <div id="divTopMenuBottom8" class="clTopMenuBottom"></div>
+</div>
+
+
+<!-- Menu 9 -->
+
+
+<div id="divTopMenu9" class="clTopMenu"><a href="tem09/hoja0901.htm" target="right" onclick="topMenu(9);" onfocus="if(this.blur)this.blur();"><img src="images/cerrada.gif" width="16" height="16" border="0" align="middle"><b>&nbsp;9. Script-Fu</b></a>
+
+	
+  <div id="divTopMenuText9" class="clTopMenuText"> 
+  
+     <table width="180"  border="0" cellpadding="2" cellspacing="0">
+	 <tr valign="middle">
+
+<td width="16" height="0"></td>
+        <td width="14" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td width="148" height="0"><b><a href="tem09/hoja0901.htm"><b>Introducci&oacute;n</b></a></b></td>
+      </tr>
+      <tr valign="middle">
+
+        <td width="16" height="0"></td>
+        <td width="14" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td height="0"><b><a href="tem09/hoja0902.htm">Para la web</a></b></td>
+      </tr>
+      <tr valign="middle">
+        <td width="16" height="0"></td>
+        <td width="14" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td height="0"><b><a href="../tem05/hoja0403.htm"> </a><a href="tem09/hoja0903.htm">Para Gimp</a></b></td>
+
+      </tr>
+      <tr valign="middle">
+        <td width="16" height="0"></td>
+        <td width="14" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td height="0"><b><a href="../tem05/hoja0404.htm"> </a><a href="tem09/hoja0904.htm">Logos</a></b></td>
+      </tr>
+      <tr valign="middle">
+        <td width="16" height="0"></td>
+
+        <td width="14" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td height="0"><b><a href="tem09/hoja0905.htm">Imagen</a></b></td>
+      </tr>
+      <tr valign="middle">
+        <td width="16" height="0"></td>
+        <td width="14" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td height="0"><b><a href="tem09/hoja0906.htm">M&aacute;s imagen</a></b></td>
+
+      </tr>
+      <tr valign="middle">
+        <td width="16" height="0"></td>
+        <td width="14" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td height="0"><b><a href="tem09/hoja0907.htm">Selecci&oacute;n</a></b></td>
+      </tr>
+      <tr valign="middle">
+        <td width="16" height="0"></td>
+
+
+        <td width="14" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td height="0"><b><a href="tem09/hoja0908.htm">Pr&aacute;ctica guiada 9</a></b></td>
+      </tr>
+      <tr valign="middle">
+        <td width="16" height="0"></td>
+        <td width="11" height="0" align="left"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td height="0"><b><a href="tem09/hoja0909.htm">Ejercicios 9</a></b></td>
+
+	</tr>
+	  <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="12" height="0" align="left"><div align="center"><a href="tem01/hoja0110.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+          <td height="0"><b><a href="pdf/unidad09.pdf" target="blank">PDF</a></b></td>
+ </tr>
+    </table>
+  </div>
+
+	
+  <div id="divTopMenuBottom9" class="clTopMenuBottom"></div>
+</div>
+
+
+
+<!-- Menu 10 -->
+
+
+<div id="divTopMenu10" class="clTopMenu"><a href="tem10/hoja1001.htm" target="right" onclick="topMenu(10);" onfocus="if(this.blur)this.blur();"><img src="images/cerrada.gif" width="16" height="16" border="0" align="middle"><b>&nbsp;10. Animación y web</b></a>
+
+	
+  <div id="divTopMenuText10" class="clTopMenuText"> 
+  
+     <table width="180"  border="0" cellpadding="2" cellspacing="0">
+	 <tr valign="middle">
+
+<td height="0"></td>
+        <td width="13" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td width="153" height="0"><b><a href="tem10/hoja1001.htm">Formatos</a></b></td>
+      </tr>
+      <tr valign="middle">
+        <td height="0"></td>
+        <td width="13" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td height="0"><b><a href="tem10/hoja1002.htm">Logo y textura</a></b></td>
+
+      </tr>
+      <tr valign="middle">
+        <td height="0"></td>
+        <td width="13" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td height="0"><b><a href="tem10/hoja1003.htm">Elementos Web</a></b></td>
+      </tr>
+      <tr valign="middle">
+        <td height="0"></td>
+
+        <td width="13" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td height="0"><b><a href="tem10/hoja1004.htm">Animaci&oacute;n</a></b></td>
+      </tr>
+      <tr valign="middle">
+        <td height="0"></td>
+        <td width="13" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td height="0"><b><a href="tem10/hoja1005.htm">Mapa de imagen</a></b></td>
+
+      </tr>
+      <tr valign="middle">
+        <td height="0"></td>
+        <td width="13" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td height="0"><b><a href="tem10/hoja1006.htm">Dividir</a></b></td>
+      </tr>
+      <tr valign="middle">
+        <td height="0"></td>
+
+        <td width="13" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td height="0"><b><a href="tem10/hoja1007.htm">Pr&aacute;ctica guiada 10</a></b></td>
+      </tr>
+      <tr valign="middle">
+        <td height="0"></td>
+      <td width="11" height="0" align="left"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+        <td height="0"><b><a href="tem10/hoja1008.htm">Ejercicios 10</a></b></td>
+
+	</tr>
+	  <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="12" height="0" align="left"><div align="center"><a href="tem01/hoja0110.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+          <td height="0"><b><a href="pdf/unidad10.pdf" target="blank">PDF</a></b></td>
+ </tr>
+    </table>
+  </div>
+
+	
+  <div id="divTopMenuBottom10" class="clTopMenuBottom"></div>
+</div>
+
+
+<!-- Menu 11 -->
+
+
+<div id="divTopMenu11" class="clTopMenu"><a href="tem11/hoja1101.htm" target="right" onclick="topMenu(11);" onfocus="if(this.blur)this.blur();"><img src="images/cerrada.gif" width="16" height="16" border="0" align="middle"><b>&nbsp;11. Taller práctico</b></a>
+
+	
+  <div id="divTopMenuText11" class="clTopMenuText"> 
+  
+     <table width="180"  border="0" cellpadding="2" cellspacing="0">
+	 <tr valign="middle">
+
+<td width="16"></td>
+          <td width="12" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+          <td width="170"><b><a href="tem11/hoja1101.htm">Varita m&aacute;gica</a></b></td>
+        </tr>
+        <tr valign="middle">
+          <td width="16"></td>
+          <td width="12" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+          <td><b><a href="tem11/hoja1102.htm">Dibujo</a></b></td>
+
+        </tr>
+        <tr valign="middle">
+          <td width="16"></td>
+          <td width="12" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+          <td><b><a href="tem11/hoja1103.htm">Una sombra</a></b></td>
+        </tr>
+        <tr valign="middle">
+          <td width="16"></td>
+
+          <td width="12" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+          <td><b><a href="tem11/hoja1104.htm">Texto</a></b></td>
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="12" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+          <td width="170" height="0"><b><a href="tem11/hoja1105.htm">Utilización de las máscaras</a></b></td>
+        </tr>
+
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="12" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+          <td height="0"><b><a href="tem11/hoja1106.htm">De foto a dibujo</a></b></td>
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="12" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+
+          <td height="0"><b><a href="tem11/hoja1107.htm">Retoque y creación</a></b></td>
+        </tr>
+        <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="12" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+          <td height="0"><b><a href="tem11/hoja1108.htm">Creación</a></b></td>
+        </tr>
+  <tr valign="middle">
+
+          <td width="16" height="0"></td>
+          <td width="12" height="0" align="right"><div align="center"><img border="0" src="images/docu.gif" ></div></td>
+          <td height="0"><b><a href="tem11/hoja1109.htm">Ejercicios 11</a></b></td>
+        </tr>
+		  <tr valign="middle">
+          <td width="16" height="0"></td>
+          <td width="12" height="0" align="left"><div align="center"><a href="tem01/hoja0110.htm"><img border="0" src="images/docu.gif" ></a></div></td>
+          <td height="0"><b><a href="pdf/unidad11.pdf" target="blank">PDF</a></b></td>
+
+ </tr>
+    </table>
+  </div>
+	
+  <div id="divTopMenuBottom11" class="clTopMenuBottom"></div>
+</div>
+
+
+<!-- To add a new menu just copy these lines:
+<div id="divTopMenuN" class="clTopMenu"><a href="#" onmouseover="menuOver(N)" onmouseout="menuOut(N)" onclick="topMenu(N); return false;" onfocus="if(this.blur)this.blur();">HEADING IMAGE GOES HERE</a>
+	<div id="divTopMenuTextN" class="clTopMenuText">
+		TEXT HERE	
+	</div>
+	<div id="divTopMenuBottomN" class="clTopMenuBottom"></div>
+</div>
+And change the letter N to a number higher then the last menu...
+(and remember to set the variable nNumberOfMenus in the script to 
+the same number of menus you have (remember it starts counting
+at 0) --><br><br>
+
+
+
+</body>
+</html>
+

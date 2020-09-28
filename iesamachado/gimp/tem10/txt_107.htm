@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem10/txt_107.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:21 GMT -->
+<head>
+<title>Documento sin t&iacute;tulo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<link href="../css/defecto.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+-->
+</style></head>
+
+
+<body onLoad="MM_preloadImages('images/colegio0_b_2.jpg','images/colegio1_b_2.jpg','images/colegio2_b_2.jpg','images/colegio3_b_2.jpg')">
+<table width="100%"  border="0" cellpadding="0" cellspacing="5" class="textos">
+  <tr>
+    <td valign="top"><table width="96%"  border="0" align="center" cellpadding="0" cellspacing="0" class="textos">
+        <tr>
+          <td valign="top"><b> </b>            <p class="titulosunidadr">Pr&aacute;ctica guiada 10</p>
+            <p>Con esta pr&aacute;ctica pretendemos mostrar las posibilidades 
+              de GIMP para crear elementos de imagen para p&aacute;ginas web. 
+              Para montar la p&aacute;gina tal y como se explica en este apartado 
+              debemos contar con un programa de edici&oacute;n web y con los conocimientos 
+              necesarios para poder usarlo. El inter&eacute;s de la pr&aacute;ctica 
+              radica en mostrar que GIMP puede ser el programa con el que manipulemos 
+              todas las im&aacute;genes necesarias para la creaci&oacute;n de 
+              un sitio web.</p>
+            <p>Vamos a crear la primera p&aacute;gina completa de nuestro sitio web teniendo en cuenta lo que hemos trabajado en este tema. Primero hemos creado los elementos b&aacute;sicos del dise&ntilde;o de nuestra p&aacute;gina (bolitas, barras, botones, etc.),  posteriormente hemos visto c&oacute;mo podemos crear un mapa de imagen y una divisi&oacute;n de la misma para facilitar su descarga. Unamos todo para obtener nuestra p&aacute;gina.</p>
+            <p class="titulosunidad2"> 1. Un fondo m&aacute;s acorde</p>
+            <p>Vamos a modificar ligeramente la imagen donde crearemos el mapa de imagen para que encaje mejor en nuestra p&aacute;gina.</p>
+                <ol>
+                  <li>
+                    <p>Abre la imagen &quot;colegio.jpg&quot;. Aplica el <strong>Filtro --&gt; Gen&eacute;rico --&gt; Erosi&oacute;n</strong> para difuminar y aclarar nuestra imagen.<br>
+                    </p>
+                    <table border="0" align="center" cellspacing="0">
+            <tr>
+              <td><img src="images/tem10_11.jpg" width="250" height="166"> </td>
+            </tr>
+          </table>
+                    <br>
+                  </li>
+                  <li>Dado que vamos a situar los botones de texto a la izquierda de nuestra imagen, vamos a aclarar parcialmente la zona izquierda de la imagen. Creamos una capa nueva y en esa capa, utilizando una <strong>M&aacute;scara r&aacute;pida</strong>, creamos una selecci&oacute;n con la herramienta de relleno <strong>degradado</strong>. Una vez conseguida la selecci&oacute;n rellenamos con color blanco y aplicamos una opacidad del 60% a la capa.<br>
+                      <br>
+                      <table border="0" align="center" cellspacing="0">
+            <tr>
+              <td><img src="images/tem10_20.jpg" width="250" height="166"> </td>
+            </tr>
+          </table>
+                  </li>
+                </ol>
+                <span class="titulosunidad2">2. Los botones</span>            <ol>
+                  <li>
+                    <p>Vamos a crear los cuatro botones que incluiremos en la imagen, tendr&aacute;n dos posisiones (&quot;normal&quot; y &quot;pulsado&quot;) para poder intercambiarlos al pulsar sobre ellos. Texto que debemos incluir: &quot;Claustro&quot;; &quot;Ense&ntilde;anzas&quot;; &quot;Actividades&quot; y &quot;A.M.P.A.&quot;.<br>
+                    </p>
+                  </li>
+                  <li>
+                    <p>Desde el <strong>Exts --&gt; Script-Fu --&gt; Temas de p&aacute;ginas web --&gt; Patr&oacute;n biselado --&gt; Bot&oacute;n</strong> creamos los botones necesarios utilizando como patr&oacute;n &quot;Rain&quot;, tipograf&iacute;a de 20 p&iacute;xeles, en color negro para el bot&oacute;n en estado &quot;norma&quot; y color blanco para el bot&oacute;n &quot;pulsado&quot;. Obtenemos ocho im&aacute;genes.<br>
+                      <br>
+                    </p>
+                    <table width="50%" border="0" align="center" cellpadding="5" cellspacing="0" class="textoscolor" style='border:1px solid #993300'>
+            <tr bgcolor="#FFD5AA">
+              <td><div align="center">Normal</div></td>
+              <td><div align="center">Pulsado</div></td>
+            </tr>
+            <tr>
+              <td><div align="center"><img src="images/tem10_24.jpg" width="92" height="29"></div></td>
+              <td><div align="center"><img src="images/tem10_23.jpg" width="92" height="29"></div></td>
+            </tr>
+            <tr>
+              <td><div align="center"><img src="images/tem10_27.jpg" width="120" height="29"></div></td>
+              <td><div align="center"><img src="images/tem10_28.jpg" width="120" height="29"></div></td>
+            </tr>
+            <tr>
+              <td><div align="center"><img src="images/tem10_25.jpg" width="125" height="29"></div></td>
+              <td><div align="center"><img src="images/tem10_26.jpg" width="125" height="29"></div></td>
+            </tr>
+            <tr>
+              <td><div align="center"><img src="images/tem10_21.jpg" width="88" height="29"></div></td>
+              <td><div align="center"><img src="images/tem10_22.jpg" width="88" height="29"></div></td>
+            </tr>
+          </table>
+                  </li>
+                </ol>
+                <span class="titulosunidad2">3. Mapa de imagen</span>            <p>Vamos a incluir los botones en la imagen destinada a ser el <strong>mapa de imagen</strong>.</p>
+              <ol>
+                <li>
+                    <p>En la imagen anterior comenzamos a incluir los botones normales. Creamos <strong>gu&iacute;as</strong> para situarlos correctamente. Arrastramos desde cada <strong>Ventana Imagen </strong>de los botones, la &uacute;nica capa que tienen a la <strong>Ventana Imagen </strong> del colegio.<br>
+                      <br>
+                  </p>
+                  <table border="0" align="center" cellspacing="0">
+            <tr>
+              <td><img src="images/tem10_29.jpg" width="250" height="166"> </td>
+            </tr>
+          </table>
+                    <br>
+                </li>
+                <li>Vamos a dividir la imagen de acuerdo con las l&iacute;neas gu&iacute;as que hemos puesto: <strong> Imagen --&gt; Transformar --&gt; Guillotina</strong>. Se crean quince im&aacute;genes a las que vamos a denominar con su posici&oacute;n en la imagen, por ejemplo: &quot;colegio1_a&quot;; &quot;colegio1_b&quot;; &quot;colegio1_c&quot;; &quot;colegio2_a&quot; y as&iacute; sucesivamente.<br>
+                  <br>
+                </li>
+                <li>Los trozos de imagen que contienen los botones vamos a mantenerlos abiertos, para crear en ellos el <strong>mapa de imagen </strong>y una<strong> imagen de sustituci&oacute;n </strong>en la que aparezca el bot&oacute;n pulsado.<br>
+                      <br>
+                      <table width="50%" border="0" align="center" cellpadding="0" cellspacing="0" class="table2">
+            <tr>
+              <td><div align="center"><img src="images/colegio1_b.jpg" width="125" height="50"></div></td>
+              <td><div align="center"><img src="images/colegio1_b_2.jpg" width="125" height="50"></div></td>
+            </tr>
+          </table>
+                    <p><br>
+                    </p>
+                </li>
+                <li>
+                    
+                <p>Ahora debemos crear un <strong>mapa de imagen</strong> en cada 
+                  una de las im&aacute;genes anteriores con enlaces a las p&aacute;ginas 
+                  correspondientes y montar todas las im&aacute;genes en una tabla 
+                  mediante un programa de edici&oacute;n de p&aacute;ginas web..</p>
+                </li>
+            </ol>
+                <table width="50%" border="1" align="center" bordercolor="#000066">
+                  <tr>
+                    <td height="442" background="images/tem10_10.jpg">
+                      <div align="right">
+                        <p><img src="images/tem10_07.jpg" width="344" height="100"></p>
+                        <table width="76%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td width="18%"><div align="right"><img src="images/colegio0_a.jpg" width="39" height="100"></div></td>
+                            <td width="16%"><a href="claustro.htm" target="_blank" onMouseOver="MM_swapImage('Image34','','images/colegio0_b_2.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="images/colegio0_b.jpg" alt="El Claustro de profesores" name="Image34" width="125" height="100" border="0"></a></td>
+                            <td width="66%"><img src="images/colegio0_c.jpg" width="316" height="100"></td>
+                          </tr>
+                          <tr>
+                            <td><div align="right"><img src="images/colegio1_a.jpg" width="39" height="50"></div></td>
+                            <td><a href="ense.htm" target="_parent" onMouseOver="MM_swapImage('Image33','','images/colegio1_b_2.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="images/colegio1_b.jpg" alt="Impartimos..." name="Image33" width="125" height="50" border="0"></a></td>
+                            <td><img src="images/colegio1_c.jpg" width="316" height="50"></td>
+                          </tr>
+                          <tr>
+                            <td><div align="right"><img src="images/colegio2_a.jpg" width="39" height="50"></div></td>
+                            <td><a href="activi.htm" target="_blank" onMouseOver="MM_swapImage('Image35','','images/colegio2_b_2.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="images/colegio2_b.jpg" alt="Nuestra gran variedad de actividades" name="Image35" width="125" height="50" border="0"></a></td>
+                            <td><img src="images/colegio2_c.jpg" width="316" height="50"></td>
+                          </tr>
+                          <tr>
+                            <td><div align="right"><img src="images/colegio3_a.jpg" width="39" height="51"></div></td>
+                            <td><a href="ampa.htm" target="_blank" onMouseOver="MM_swapImage('Image36','','images/colegio3_b_2.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="images/colegio3_b.jpg" alt="La Asociaci&oacute;n de madres y padres de alumnos" name="Image36" width="125" height="51" border="0"></a></td>
+                            <td><img src="images/colegio3_c.jpg" width="316" height="51"></td>
+                          </tr>
+                          <tr>
+                            <td><div align="right"><img src="images/colegio4_a.jpg" width="39" height="68"></div></td>
+                            <td><img src="images/colegio4_b.jpg" width="125" height="68"></td>
+                            <td><img src="images/colegio4_c.jpg" width="316" height="68"></td>
+                          </tr>
+                        </table>
+                    </div></td>
+                  </tr>
+                </table>
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" height="32">
+                  <tr valign="bottom">
+                    <td width="100%" height="21" colspan="3">
+                      <hr noshade color="#C5E3EC"  size="1">
+                    </td>
+                  </tr>
+                  <tr valign="bottom">
+                    <td width="935" height="21"><p class="titulosunidad2">Animaci&oacute;n y web &gt; Pr&aacute;ctica guiada 10</td>
+                    <td width=22 align="right" height="21"><a href="hoja1006.htm" target="right"><img border="0" src="../images/atras2.jpg" width="20" height="21"></a></td>
+                    <td width=21 align="right" height="21"><a href="hoja1008.htm" target="right"><img border="0" src="../images/adelante2.jpg" width="20" height="21"></a></td>
+                  </tr>
+          </table></td>
+        </tr>
+      </table>
+        <p align="justify">   
+  </tr>
+</table>
+</body>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem10/txt_107.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:21 GMT -->
+</html>

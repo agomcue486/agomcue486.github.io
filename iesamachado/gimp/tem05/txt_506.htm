@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem05/txt_506.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:15 GMT -->
+<head>
+<title>Documento sin t&iacute;tulo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../css/defecto.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features, myWidth, myHeight, isCenter) { //v3.0
+  if(window.screen)if(isCenter)if(isCenter=="true"){
+    var myLeft = (screen.width-myWidth)/2;
+    var myTop = (screen.height-myHeight)/2;
+    features+=(features!='')?',':'';
+    features+=',left='+myLeft+',top='+myTop;
+  }
+  window.open(theURL,winName,features+((features!='')?',':'')+'width='+myWidth+',height='+myHeight);
+}
+//-->
+</script>
+</head>
+
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="5" class="textos">
+  <tr>
+    <td valign="top"><table width="96%"  border="0" align="center" cellpadding="0" cellspacing="0" class="textos">
+        <tr>
+          <td valign="top">  <p class="titulosunidadr">Otras posibilidades</p>
+            <p class="titulosunidad2">1. M&aacute;scaras a partir de canales </p>
+            <p>Hemos visto que desde un &quot;canal alfa&quot; se pod&iacute;a cargar una selecci&oacute;n. &iquest;Podremos cargar una selecci&oacute;n desde un canal RGB? En teor&iacute;a s&iacute;, dado que ambos, el canal alfa y el canal de color, tienen 256 tonos de gris.</p>
+                
+            <p>Vamos a probarlo partiendo de la siguiente imagen:</p>
+            <table width="100" align="center">
+              <tr>
+                <td><a href="javascript:;" onClick="MM_openBrWindow('images/quesos.jpg','','','619','418','false')"><img src="images/quesos_peque.jpg" width="250" height="166" border="0"></a></td>
+              </tr>
+            </table>
+            <p>Una vez abierta la imagen en GIMP, seleccionamos en la pesta&ntilde;a 
+              <strong>Canales </strong>el &quot;canal Rojo&quot; y en el men&uacute; 
+              contextual elegimos &quot;<strong>Canal a selecci&oacute;n</strong>&quot;. Observamos 
+              que tenemos una selecci&oacute;n que abarca numerosas zonas de la 
+              imagen, aunque no se aprecia claramente que zonas son las elegidas. 
+              Todos los tonos rojos de la imagen han sido seleccionados. Vamos 
+              a ver que ocurre si borramos todo el contenido de esta selecci&oacute;n.</p>
+                <p>Antes de nada debemos volver a la pesta&ntilde;a <strong>Capas</strong> y seleccionar la &uacute;nica capa que tenemos. Si no hacemos esto, lo &uacute;nico que se borrar&aacute; ser&aacute; la selecci&oacute;n en el &quot;canal Rojo&quot;. Pulsamos <strong>Ctrl. + K</strong>. Bueno... &iexcl;casi todos los quesos se han quedado sin color! dado que la fotograf&iacute;a inicial ten&iacute;a gran cantidad de rojos, al borrarlos la imagen casi ha perdido todo su color.</p>
+                <table width="100" border="0" align="center">
+                  <tr>
+                    <td><img src="images/quesos_sin_rojo.jpeg" width="250" height="166"></td>
+                  </tr>
+                </table>                <p>Si cambiamos el color de frente por el de fondo y realizamos similar operaci&oacute;n, nos encontramos con que toda la selecci&oacute;n se rellena con color negro. Las zonas claras se han oscurecido y las oscuras se han quedado como estaban.</p>
+                <table width="100" border="0" align="center">
+                  <tr>
+                    <td><img src="images/quesos_con_rojo.jpeg" width="250" height="166"></td>
+                  </tr>
+                </table>                <p>Podemos utilizar una herramienta muy potente para el trabajo con color: <strong>Niveles</strong>. Accedemos a ella mediante <strong>Men&uacute; --&gt; Herramientas --&gt; Herramientas de color --&gt; Niveles </strong>y ponemos los valores que figuran en la figura siguiente.</p>
+                <table border="0" align="center" cellspacing="0">
+                  <tr>
+                    <td><img src="images/tem05_10.gif" width="341" height="191"></td>
+                  </tr>
+                </table>
+                <p align="left">Obtenemos un efecto de excesivo contraste sobre la imagen pero interesante:</p>
+                <table border="0" align="center" cellspacing="0">
+                  <tr>
+                    <td><img src="images/tem05_16.jpg" width="300" height="199"> </td>
+                  </tr>
+                </table>
+                <h5 align="left" class="titulosunidad2"><br>
+                2. Transparencia</h5>
+                <p align="left">Para conseguir una transparencia de los tonos rojos de una imagen a partir de la selecci&oacute;n conseguida desde un &quot;canal Rojo&quot;, debemos hacer una copia de la &quot;Capa Fondo&quot; de nuestra imagen y trabajar sobre ella.</p>
+                <ol>
+                  <li>
+                    <p>Abrimos la imagen &quot;quesos.jpg&quot;.<br>
+                    </p>
+                  </li>
+                  <li>
+                    <p>Duplicamos la capa &quot;Fondo&quot;, dejamos la capa &quot;Copia de Fondo&quot; y borramos la capa &quot;Fondo&quot;. Creamos una nueva capa en blanco que ponemos debajo de la capa &quot;Copia de Fondo&quot;.<br>
+                    </p>
+                  </li>
+                  <li>
+                    <p>En la pesta&ntilde;a <strong>Canales </strong>hacemos una selecci&oacute;n partiendo del &quot;Canal Rojo&quot;, <strong>Canal a selecci&oacute;n</strong>. Seleccionamos los tres canales y volvemos a la pesta&ntilde;a <strong>Capas</strong> y hacemos clic en la capa &quot;Fondo copia&quot;. Pulsamos <strong>Ctrl + K </strong>para borrar la parte seleccionada. Observamos que la imagen se aclara.<br>
+                    </p>
+                  </li>
+                  <li>
+                    <p>Seleccionamos la capa que est&aacute; en blanco y que debe estar abajo en la pila de capas. Vamos a rellenar esta capa con un patr&oacute;n.<br>
+                    </p>
+                  </li>
+                  <li>
+                    <p>Elegimos la herramienta <strong>Rellenar con un color o patr&oacute;n</strong>. En las <strong>Opciones de herramienta </strong>elegimos &quot;<strong>Rellenar con patr&oacute;n</strong>&quot; y como patr&oacute;n elegimos &quot;<strong>Crinkled Paper</strong>&quot;. Hacemos clic en la <strong>Ventana imagen</strong>.<br>
+                    </p>
+                  </li>
+                  <li>
+                    <p>La capa blanca se ha rellenado del patr&oacute;n elegido y tenemos una imagen con una textura de fondo, como si el papel sobre el que est&aacute; la imagen tuviera una textura.</p>
+                  </li>
+                </ol>
+                <table border="0" align="center" cellspacing="0">
+                  <tr>
+                    <td><img src="images/tem05_17.jpg" width="300" height="199"></td>
+                  </tr>
+                </table>
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" height="32">
+                  <tr valign="bottom">
+                    <td width="100%" height="21" colspan="3">
+                      <hr noshade color="#C5E3EC"  size="1">
+                    </td>
+                  </tr>
+                  <tr valign="bottom">
+                    <td width="935" height="21"><p class="titulosunidad2">Canales &gt; Otras posibilidades</td>
+                    <td width=22 align="right" height="21"><a href="hoja0505.htm" target="right"><img src="../images/atras2.jpg" width="20" height="21" border="0"></a></td>
+                    <td width=21 align="right" height="21"><a href="hoja0507.htm" target="right"><img border="0" src="../images/adelante2.jpg" width="20" height="21"></a></td>
+                  </tr>
+          </table></td>
+        </tr>
+      </table>
+        <p align="justify">   
+  </tr>
+</table>
+</body>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem05/txt_506.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:15 GMT -->
+</html>

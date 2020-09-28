@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem05/txt_507.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:15 GMT -->
+<head>
+<title>Documento sin t&iacute;tulo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../css/defecto.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features, myWidth, myHeight, isCenter) { //v3.0
+  if(window.screen)if(isCenter)if(isCenter=="true"){
+    var myLeft = (screen.width-myWidth)/2;
+    var myTop = (screen.height-myHeight)/2;
+    features+=(features!='')?',':'';
+    features+=',left='+myLeft+',top='+myTop;
+  }
+  window.open(theURL,winName,features+((features!='')?',':'')+'width='+myWidth+',height='+myHeight);
+}
+//-->
+</script>
+</head>
+
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="5" class="textos">
+  <tr>
+    <td valign="top"><table width="96%"  border="0" align="center" cellpadding="0" cellspacing="0" class="textos">
+        <tr>
+          <td valign="top"><p class="titulosunidadr"><b> </b> Pr&aacute;ctica guiada 5            </p>
+            <p class="titulosunidad2">1. Canales alfa para crear texto con sombra </p>
+            <p>En esta pr&aacute;ctica vamos a realizar un texto con sombra, utilizando los canales.</p>
+              <ol>
+                <li>
+                  <p>Creamos un archivo nuevo RGB de 5x5 pulgadas. Establece como color frontal un color claro, por ejemplo el correspondiente al valor hexadecimal: <strong>e3e1e1</strong>.<br>
+                  </p>
+                </li>
+                <li>
+                  <p>Utiliza la herramienta <strong>Texto</strong> para escribir &quot;Sombra&quot;, con las siguientes <strong>Opciones de herramienta</strong>: tipo de letra &quot;Bookman Oldstyle&quot; o similar y 64 p&iacute;xeles de tama&ntilde;o. <br>
+                  </p>
+                </li>
+                <li>
+                  <p>Haz clic con el bot&oacute;n derecho sobre la &quot;capa de texto&quot; y elige <strong>Alfa a selecci&oacute;n</strong>, obtenemos una selecci&oacute;n de todo el texto. Si despu&eacute;s vamos a <strong> Men&uacute; --&gt; Seleccionar --&gt; Guardar en canal </strong>y en la pesta&ntilde;a <strong>Canales </strong>se ha creado un canal alfa llamado &quot;M&aacute;scara de selecci&oacute;n copia&quot;, ren&oacute;mbralo como &quot;alfa 1&quot;.<br>
+                  </p>
+                </li>
+                <li>
+                  <p>Quitamos la selecci&oacute;n del texto y creamos un duplicado del canal &quot;alfa 1&quot; al que llamamos &quot;alfa 2&quot;.<br>
+                  </p>
+                </li>
+                <li>
+                  <p>Creamos una nueva capa transparente y la situamos debajo de la capa de texto y la llamaremos &quot;Sombra&quot;.<br>
+                  </p>
+                </li>
+                <li>
+                  <p>Vamos a desplazar ligeramente el canal &quot;alfa 1&quot; para comenzar a crear el efecto sombra. Seleccionamos en la pesta&ntilde;a <strong>Canales</strong> el canal &quot;alfa 1&quot; y, teniendo seleccionada la herramienta <strong>Mover</strong>, lo desplazamos con las flechas del teclado cinco p&iacute;xeles a la derecha y otros tantos abajo.<br>
+                  </p>
+                </li>
+                <li>
+                  <p>Para que la sombra tenga un aspecto m&aacute;s suave vamos a aplicar un desenfoque al canal &quot;alfa 1&quot;. Seleccionamos el canal &quot;alfa 1&quot; y aplicamos un filtro de desenfoque: <strong>Men&uacute; --&gt; Filtros --&gt; Desenfoque gaussiano (IIR)</strong> con un valor de 5 en horizontal y vertical. <br>
+                  </p>
+                </li>
+                <li>
+                  <p>Hacemos una selecci&oacute;n de este canal: &quot;Canal a selecci&oacute;n&quot;.<br>
+                  </p>
+                </li>
+                <li>
+                  <p>Nos vamos a la pesta&ntilde;a <strong>Capas</strong> y seleccionamos la capa que tenemos vac&iacute;a y que est&aacute; debajo de la capa de texto, aqu&iacute; ser&aacute;  donde vaya la sombra del texto. <br>
+                  </p>
+                </li>
+                <li>
+                  <p>Elegimos como color frontal el negro y rellenamos la selecci&oacute;n.<br>
+                  </p>
+                </li>
+                <li>
+                  <p>Quitamos la selecci&oacute;n para observar el efecto producido.</p>
+                </li>
+              </ol>
+              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  <td><img src="images/tem05_18.jpg" width="306" height="110"></td>
+                </tr>
+              </table>
+              <p align="left">La copia del canal &quot;alfa 1&quot; se guarda para poder tener acceso a un canal alfa del texto y poder realizar otro efecto de sombra. Tambi&eacute;n podemos rellenar con otro color para conseguir un efecto distinto. Por ejemplo... </p>
+              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  <td><img src="images/tem05_19.jpg" width="306" height="110"> </td>
+                </tr>
+              </table>
+              <p>Prueba otras posibilidades.</p>
+              <p><span class="titulosunidad2">2. Canales de color para conseguir efectos sorprendentes</span>            </p>              
+              
+            <p>Vamos a utilizar los canales de color de una forma muy sencilla 
+              para conseguir un efecto muy curioso sobre una fotograf&iacute;a. 
+              Consigue la siguiente foto por el procedimiento habitual.</p>
+              <table width="100" align="center">
+                <tr>
+                  <td><a href="javascript:;" onClick="MM_openBrWindow('images/sauce.jpg','','','619','418','false')"><img src="images/sauce_peque.jpg" width="250" height="164" border="0"></a></td>
+                </tr>
+              </table>
+              <p>&nbsp; </p>
+              <ol>
+                <li>
+                  <p>Abrimos la imagen &quot;sauce.jpg&quot;.<br>
+                  </p>
+                </li>
+                <li>
+                  <p>Accedemos a <strong>Men&uacute; --&gt; Filtros --&gt; Colores --&gt; Descomponer</strong>, seleccionamos &quot;RGB&quot; y desmarcamos &quot;Descomponer en capas&quot;. De esta forma la imagen se descompone en los tres canales de color y GIMP abre cada canal como una imagen nueva. <br>
+                  </p>
+                </li>
+                <li>
+                  <p>Ahora tenemos en tres <strong>Ventanas imagen </strong>cada una de ellas con uno de los canales de color. Vamos a trabajar con: &quot;sauce-rojo.jpg&quot; y &quot;sauce-azul.jpg&quot;.<br>
+                  </p>
+                </li>
+                <li>
+                  <p>En &quot;sauce-azul.jpg&quot; vamos a <strong>Men&uacute; --&gt; Filtros --&gt; Art&iacute;sticos --&gt; Aplicar lienzo</strong> y ponemos  9 como valor en &quot;Superior derecho&quot; y &quot;Profundidad&quot;, aceptamos <br>
+                  </p>
+                </li>
+                <li>
+                  <p>En &quot;sauce-rojo.jpg&quot; vamos a <strong>Men&uacute; --&gt; Filtros --&gt; Art&iacute;sticos --&gt; Pintura al &oacute;leo </strong> y como valor de &quot;Tama&ntilde;o de m&aacute;scara&quot; ponemos  12,  aceptamos. <br>
+                  </p>
+                </li>
+                <li>
+                  <p>Hemos aplicado dos filtros a dos canales de color. Ahora vamos a componer estos canales en una sola imagen.<br>
+                  </p>
+                </li>
+                <li>
+                  <p>En cualquiera de las im&aacute;genes accedemos a <strong>Men&uacute; --&gt; Filtros --&gt; Colores --&gt; Componer</strong> seleccionando como Canal Rojo la imagen &quot;sauce-rojo.jpg&quot;; como Verde &quot;sauce-verde.jpg&quot; y como Azul &quot;sauce-azul.jpg&quot;. Aceptamos. Este es el resultado:</p>
+                </li>
+              </ol>
+              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  <td><img src="images/tem05_20.jpg" width="600" height="394"></td>
+                </tr>
+              </table>
+              <p>Prueba otras posibilidades.</p>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" height="32">
+                <tr valign="bottom">
+                  <td width="100%" height="21" colspan="3">
+                    <hr noshade color="#C5E3EC"  size="1">
+                  </td>
+                </tr>
+                <tr valign="bottom">
+                  <td width="935" height="21"><p class="titulosunidad2">Canales &gt; Pr&aacute;ctica guiada 5</td>
+                  <td width=22 align="right" height="21"><a href="hoja0506.htm" target="right"><img src="../images/atras2.jpg" width="20" height="21" border="0"></a></td>
+                  <td width=21 align="right" height="21"><a href="hoja0508.htm" target="right"><img src="../images/adelante2.jpg" width="20" height="21" border="0"></a></td>
+                </tr>
+          </table></td>
+        </tr>
+      </table>
+        <p align="justify">   
+  </tr>
+</table>
+</body>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem05/txt_507.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:15 GMT -->
+</html>

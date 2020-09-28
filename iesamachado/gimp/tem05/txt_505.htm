@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem05/txt_505.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:15 GMT -->
+<head>
+<title>Documento sin t&iacute;tulo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../css/defecto.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+.Estilo1 {
+	color: #FF0000;
+	font-weight: bold;
+	font-size: 16px;
+}
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features, myWidth, myHeight, isCenter) { //v3.0
+  if(window.screen)if(isCenter)if(isCenter=="true"){
+    var myLeft = (screen.width-myWidth)/2;
+    var myTop = (screen.height-myHeight)/2;
+    features+=(features!='')?',':'';
+    features+=',left='+myLeft+',top='+myTop;
+  }
+  window.open(theURL,winName,features+((features!='')?',':'')+'width='+myWidth+',height='+myHeight);
+}
+//-->
+</script>
+</head>
+
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="5" class="textos">
+  <tr>
+    <td valign="top"><table width="96%"  border="0" align="center" cellpadding="0" cellspacing="0" class="textos">
+        <tr>
+          <td valign="top">  <span class="titulosunidadr">Creaci&oacute;n y edici&oacute;n de una m&aacute;scara en un canal alfa</span>
+            <p>Al crear el canal alfa hemos utilizado como color de frente el blanco, pero en algunas zonas de la imagen nos ha quedado demasiado oscuro, por lo que vamos a utilizar otro color para pintar sobre el canal. Con el canal &quot;Borde&quot; seleccionado elegimos una herramienta de pintura, por ejemplo el <strong>Pincel</strong>, y como color de primer plano seleccionamos un gris.</p>
+                
+            <p>Si pintamos con blanco sobre el canal lo que hacemos es a&ntilde;adir 
+              zonas completamente transparentes que nos permitir&aacute;n elegir 
+              posteriormente una m&aacute;scara, mientras que si lo hacemos con 
+              negro sustraemos del canal una determinada zona. El gris a&ntilde;ade 
+              zonas parciales de transparencia. Probemos a pintar con gris en 
+              una zona que est&eacute; completamente negra y con una brocha grande.</p>
+                
+            <p align="justify">En la miniatura que representa el &quot;<strong>canal 
+              alfa</strong>&quot; veremos que se ha dibujado con un color gris 
+              lo que posteriormente representar&aacute; una zona de transparencia 
+              parcial.</p>
+            <table border="0" align="center" cellspacing="0">
+                  <tr>
+                    <td><img src="images/tem05_09.gif" width="191" height="91"></td>
+                  </tr>
+            </table>
+                
+            <p>Deshagamos esta &uacute;ltima acci&oacute;n (<strong>Ctrl. + Z)</strong> 
+              y trabajemos con el &quot;<strong>canal alfa</strong>&quot; que 
+              ten&iacute;amos. Crea una selecci&oacute;n: men&uacute; contextual 
+              sobre el canal y elige &quot;<strong>Canal a selecci&oacute;n</strong>&quot;. 
+              Realizamos una selecci&oacute;n inversa y hacemos invisible el &quot;canal 
+              alfa&quot;.</p>
+                
+            <p>Hemos obtenido una m&aacute;scara, una selecci&oacute;n que nos 
+              enmascara todo aquello que nos interesa preservar, a la vez que 
+              nos permite manipular lo que se encuentra fuera de la m&aacute;scara. 
+              Para comprobar el efecto que tiene sobre nuestra imagen. Crea una 
+              capa nueva sin quitar la selecci&oacute;n que tenemos y aplica el 
+              filtro: <strong>Men&uacute; --&gt; Filtros --&gt; Renderizado --&gt; 
+              Nubes --&gt; Plasma </strong>y aceptamos los valores que figuran 
+              por defecto. Veremos c&oacute;mo la selecci&oacute;n se rellena 
+              con la imagen obtenida por el filtro, excepto las zonas protegidas 
+              por la m&aacute;scara.</p>
+                <table border="0" align="center" cellspacing="0">
+                  <tr>
+                    <td><img src="images/tem05_09.jpg" width="199" height="300"></td>
+                  </tr>
+                </table>
+                
+            <p>En las zonas en que hab&iacute;amos pintado con gris la opacidad 
+              no es del 100%, lo que permite una fusi&oacute;n entre la imagen 
+              generada por el filtro y la imagen de la estatua.</p>
+            <table width="100%">
+              <tr>
+                <td class="menuindice">Animaci&oacute;n: creaci&oacute;n de una 
+                  m&aacute;scara y selecci&oacute;n <a href="javascript:;" onClick="MM_openBrWindow('images/mascara.swf','','','800','600','false')"><img src="../tem01/images/gimpito.gif" width="38" height="31" border="0" align="middle"></a></td>
+              </tr>
+            </table>
+            <p class="titulosunidad2">1. Trabajar con m&aacute;scaras</p>
+                <p>Ya hemos aprendido a crear y trabajar con canales alfa, aunque en muchas ocasiones la imagen que necesita enmascaramiento debe recibir un tratamiento diferente: podemos partir de una selecci&oacute;n si la zona a preservar es muy definida; podemos duplicar uno de los canales de color RGB para tratar ese canal como &quot;canal alfa&quot;, si existen zonas muy claras o muy oscuras, y utilizar esa canal duplicado para editar la m&aacute;scara.</p>
+                <p>Una de las formas m&aacute;s f&aacute;ciles de crear una m&aacute;scara es utilizar la herramienta <strong>Tijeras inteligentes</strong>, para hacer una primera selecci&oacute;n, guardarla en un &quot;canal alfa&quot; y luego editar la m&aacute;scara con la herramienta <strong>Pincel </strong>utilizando la brocha adecuada.</p>
+                
+            <p align="left">Vamos a seguir ese procedimiento con las dos im&aacute;genes 
+              que tenemos a continuaci&oacute;n:</p>
+            <table width="100" align="center">
+              <tr>
+                <td><a href="javascript:;" onClick="MM_openBrWindow('images/fondo_gato.jpg','image30','','620','418','false')"><img src="images/fondo_gato_peque.jpg" width="250" height="166" border="0"></a></td>
+              </tr>
+            </table>
+            <br>
+            <table width="100" align="center">
+              <tr>
+                <td><a href="javascript:;" onClick="MM_openBrWindow('images/gato.jpg','image31','','620','413','false')"><img src="images/gato_peque.jpg" width="250" height="164" border="0"></a></td>
+              </tr>
+            </table>
+            <div align="center"></div>
+                <p>Gu&aacute;rdalas en tu ordenador y &aacute;brelas con GIMP. </p>
+                <p>Vamos a enmascarar la imagen del gato para despu&eacute;s colocarla sobre la otra imagen.</p>
+                <ol>
+                  <li>Seleccionamos la herramienta <strong>Tijeras inteligentes</strong> y difuminamos los bodes con un radio de 10 p&iacute;xeles. Contorneamos el gato, aunque no se de una manera muy precisa. Recuerda que para cerrar la selecci&oacute;n debemos unir el primer punto con el &uacute;ltimo y hacer clic en el interior de la zona seleccionada.<br>
+                    <br>
+                  </li>
+                  <li>Una vez creada la selecci&oacute;n vamos a guardarla: <strong> Men&uacute; --&gt; Seleccionar --&gt; Guardar en canal </strong>y a ponerle un nombre. Ahora tenemos un canal alfa con la selecci&oacute;n del gato. Abrimos la paleta <strong>Canales</strong>.<br>
+                    <br>
+                  </li>
+                  <li>Hacemos clic en el icono del ojo para que se vea la m&aacute;scara en la<strong> Ventana imagen</strong>. Si necesitamos que la parte negra tenga un menor o mayor porcentaje de opacidad, debemos ir a los <strong>Atributos del canal</strong>.<br>
+                    <br>
+                  </li>
+                  <li>Vamos a editar la m&aacute;scara y a&ntilde;adir los bigotes del gato y una zona de pelo que ha quedado fuera de la m&aacute;scara. Elegimos la herramienta <strong>Pincel </strong>con una brocha no muy gruesa, por ejemplo &quot;Circle Fuzzy 5x5&quot; y, teniendo el color blanco como color de frente, comenzamos a retocar nuestra m&aacute;scara. Para mayor precisi&oacute;n en nuestro retoque puede que necesitemos ampliar la imagen, recuerda que presionando la tecla &quot;+&quot; aumentamos el nivel de <strong>zoom</strong>.<br>
+                    <br>
+                  </li>
+                  <li>Una vez editada la m&aacute;scara transformamos el &quot;canal alfa&quot; en una selecci&oacute;n. Volvemos a la pesta&ntilde;a <strong>Capas </strong>y seleccionamos la &uacute;nica capa que tenemos en la imagen del gato.<br>
+                    <br>
+                  </li>
+                  <li>Hacemos clic con el bot&oacute;n derecho del rat&oacute;n y elegimos <strong>Editar --&gt; Copiar</strong>. <br>
+                    <br>
+                  </li>
+                  
+              <li>Abrimos la imagen que vamos a utilizar de fondo y pegamos la 
+                selecci&oacute;n copiada (<strong>Ctrl + V</strong>).</li>
+                </ol>
+                <table border="0" align="center" cellspacing="0">
+                  <tr>
+                    <td><img src="images/tem05_12.jpg" width="350" height="232"></td>
+                  </tr>
+                </table>
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" height="32">
+                  <tr valign="bottom">
+                    <td width="100%" height="21" colspan="3">
+                      <hr noshade color="#C5E3EC"  size="1">
+                    </td>
+                  </tr>
+                  <tr valign="bottom">
+                    <td width="935" height="21"><p class="titulosunidad2">Canales &gt; M&aacute;scara</td>
+                    <td width=22 align="right" height="21"><a href="hoja0504.htm" target="right"><img src="../images/atras2.jpg" width="20" height="21" border="0"></a></td>
+                    <td width=21 align="right" height="21"><a href="hoja0506.htm" target="right"><img border="0" src="../images/adelante2.jpg" width="20" height="21"></a></td>
+                  </tr>
+          </table></td>
+        </tr>
+      </table>
+        <p align="justify">   
+  </tr>
+</table>
+</body>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem05/txt_505.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:15 GMT -->
+</html>

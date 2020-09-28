@@ -1,0 +1,37 @@
+/* Código de colores para los enlaces */
+a:link {color:#696976; text-decoration:none; }
+a:visited {color:#696976;text-decoration:none; }
+a:hover { color:#9595CF; text-decoration:none; }
+a:active {color:#3777B7;text-decoration:none; }
+
+/* Propiedades del body */
+body {
+	background-color:  #FFFFFF;
+	scrollbar-face-color: #B7B2B2;
+	scrollbar-shadow-color: #D1D1D1;
+	scrollbar-highlight-color: #B7B2C1;
+	scrollbar-track-color: #D1D1D1;
+	scrollbar-arrow-color: #FFFFCE;
+	font-size: 80%;
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	background-attachment: fixed;
+	background-repeat:   repeat-y;
+	background-position: left top;
+	margin-top: 10px;
+	background-image: url(images/fnd_menu.jpg);
+}
+
+TD {
+	FONT-SIZE: 15px; FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif
+}
+TD B {
+	FONT-SIZE: 11px; FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif
+}
+
+/* Formatos */
+h1 { font-family:Tahoma; font-size:14pt; color:rgb(27,104,133); }
+h2 { font-family:Tahoma; font-size:12pt; color:rgb(0,128,128); }
+p { font-family:Tahoma; color:rgb(0,0,0); }
+p.namo-list { font-family:Tahoma; font-size:12pt; color:rgb(0,64,128); }
+p.namo-sublist { font-family:Tahoma; font-size:10pt; color:rgb(44,177,197); }
+ 

@@ -1,0 +1,125 @@
+
+/* Código de colores para los enlaces */
+/* Código de colores para los enlaces */
+
+
+/* Propiedades del body */
+body {
+	background-color:  #ffffff;
+	scrollbar-face-color:#ffffff;
+	scrollbar-arrow-color:#336699;
+	scrollbar-track-color:#ffffff;
+	scrollbar-shadow-color:#CCCCCC;
+	scrollbar-highlight-color:#CCCCCC;
+	scrollbar-3dlight-color:#CCCCCC;
+	margin-top: 0px;
+
+
+ 
+scrollbar-darkshadow-Color:#7CC5FF
+	font-size: 12px;
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	color: #000066;
+	font-size: 12px;
+	background-attachment: fixed;
+	background-repeat:  repeat-x;
+	background-position: left top;
+
+}
+
+.titulos {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+	
+}
+.titulos_body {
+	background-attachment: fixed;
+	background-image: url(../images/esquina1_titulo.jpg);
+	background-repeat:   no-repeat;
+	background-position: left top;
+}
+.titular {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: bold;
+	color: #CC9900;
+	text-decoration: none;
+}
+.titular2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	color: #003366;
+	text-decoration: none;
+	width: auto;
+}
+.textos {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+	text-align: justify;
+}
+.textos_tabla {
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+	text-align: center;
+}
+.titular3 {
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	color: #CC9900;
+	text-decoration: none;
+	width: auto;
+}
+.tit {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: bold;
+ 	color: #FFFFFF;
+	text-decoration: none;
+
+}
+.tit a:link{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.tit a:hover{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: bold;
+	color: #FFCC66;
+	text-decoration: none;
+}
+.tit a:{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.tit a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}

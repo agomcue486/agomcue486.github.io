@@ -1,0 +1,189 @@
+.textos {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	text-align: justify;
+}
+.textos a {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; line-height: normal; font-weight: bold; color: #3366CC; text-decoration: none; text-align: justify;}
+.textos a:link {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; line-height: normal; font-weight: bold; color: #3366CC; text-decoration: none; text-align: justify;}
+.textos a:hover {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; line-height: normal; font-weight: bold; color: #ff6633; text-decoration: none; text-align: justify;}
+
+.textosmini {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	text-align: justify;
+}
+
+
+.textosnojustificado {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+
+}
+
+
+
+.textoscolor {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #993300;
+	text-decoration: none;
+	text-align: justify;
+}
+
+
+
+
+
+
+
+.titular {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; color: #01005f; text-decoration: none}
+.titular a {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; line-height: normal; font-weight: normal; color: #01005f; text-decoration: none}
+.titular a:link {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; line-height: normal; font-weight: normal; color: #01005f; text-decoration: none}
+.titular a:hover {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; line-height: normal; font-weight: normal; color: #669933; text-decoration: none}
+
+
+
+.titulos {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #999999;
+	text-decoration: none;
+	font-weight: bold;
+	
+}
+.titulos a {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #999999; text-decoration: none ;font-weight: bold;}
+.titulos a:link {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #999999; text-decoration: none ;font-weight: bold;}
+.titulos a:active { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #999999;  text-decoration: none;font-weight: bold;}
+.titulos a:hover {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #6699FF; text-decoration: none;font-weight: bold;}
+.titulos a:visited {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: color: #999999; text-decoration: none;font-weight: bold;}
+
+.menu {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #990000; text-decoration: none}
+.menu a:active {  color: #6380BC; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; text-decoration: none}
+.menu a:hover {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #FF6600; text-decoration: none}
+.menu a:visited {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #6380bc; text-decoration: none}
+
+
+
+
+.titulosunidadr {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #CC3300;
+	text-decoration: none;
+	font-weight: bold;
+	letter-spacing: -1px;
+}
+.titulosunidadr a:active { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; color: #3D7333; text-decoration: none }
+.titulosunidadr a:link { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; color: #3D729C; text-decoration: none }
+.titulosunidadr a:hover { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; color: #0099cc; text-decoration: none }
+
+
+.titulosunidad2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #993333;
+	text-decoration: none;
+	font-weight: bold;
+
+}
+
+.titulosunidad2 a { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; color: #517E9F; text-decoration: none }
+.titulosunidad2 a:active { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; color: #517E9F; text-decoration: none }
+.titulosunidad2 a:link { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; color: #517E9F; text-decoration: none }
+.titulosunidad2 a:hover { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; color: #0099cc; text-decoration: none }
+
+
+.indice {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #004579;
+	text-decoration: none;
+	font-weight: bold;
+	letter-spacing: -1px;
+}
+
+.indice a { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; color: #004579; text-decoration: none }
+.indice a:active { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; color: #004579; text-decoration: none }
+.indice a:link { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; color: #004579; text-decoration: none }
+.indice a:hover { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; color: #0099cc; text-decoration: none }
+
+
+
+
+
+
+
+body { 
+scrollbar-face-color:#ff6633;
+ 
+scrollbar-arrow-color:#FFFFFF;
+ 
+scrollbar-track-color:#FFFFFF;
+ 
+scrollbar-shadow-color:#ff6633;
+ 
+scrollbar-highlight-color:#ff6633;
+ 
+scrollbar-3dlight-color:#ff6633;
+ 
+scrollbar-darkshadow-Color:#ff6633;
+}
+
+.menuindice {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #003366;
+	text-decoration: none;
+	font-weight: bold;
+	letter-spacing: -1px;
+}
+.menuindice a{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #003366;
+	text-decoration: none;
+	font-weight: bold;
+	letter-spacing: -1px;
+}
+.menuindice a:active{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #003366;
+	text-decoration: none;
+	font-weight: bold;
+	letter-spacing: -1px;
+}
+.menuindice a:link{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #003366;
+	text-decoration: none;
+	font-weight: bold;
+	letter-spacing: -1px;
+}
+.menuindice a:hover{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FF6600;
+	text-decoration: none;
+	font-weight: bold;
+	letter-spacing: -1px;
+}.titulosunidadverde {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #6F98B6;
+	text-decoration: none;
+	font-weight: bold;
+	letter-spacing: -1px;
+}

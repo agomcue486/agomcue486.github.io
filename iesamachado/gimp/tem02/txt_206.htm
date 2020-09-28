@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem02/txt_206.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:02 GMT -->
+<head>
+<title>Documento sin t&iacute;tulo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../css/defecto.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+-->
+</style></head>
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="5" class="textos">
+  <tr>
+    <td valign="top"><table width="96%"  border="0" align="center" cellpadding="0" cellspacing="0" class="textos">
+        <tr>
+          <td valign="top"><p class="titulosunidadr">Capas flotantes </p>
+            <span class="titulosunidad2">1. Utilizar capas flotantes</span>            <p>La <strong>capa flotante</strong> es un tipo especial de capa, que se crea cuando la selecci&oacute;n de una capa o parte de ella es movida, transformada o pegada.</p>
+            <p>S&oacute;lo podemos tener activa una capa flotante y, antes de 
+              continuar trabajando con nuestra imagen, debemos decidir qu&eacute; 
+              hacer con ella: bien convertirla en una nueva capa en la parte superior 
+              de la pila de capas o bien &quot;adherirla&quot; a la capa superior 
+              haciendo que forme parte de ella en una sola capa. Si hacemos esto 
+              &uacute;ltimo, los p&iacute;xeles de la capa flotante sustituir&aacute;n 
+              a los de la capa sobre la que se adhieren, con lo que perdemos la 
+              posibilidad de seguir trabajando con los p&iacute;xeles sustituidos.</p>
+            <p>Vamos a realizar un nuevo ejercicio para comprender la creaci&oacute;n y funcionamiento de las capas flotantes.</p>
+            <ol>
+              <li>Pulsamos <strong>Ctrl+N</strong> para abrir una ventana nueva 
+                usando el tama&ntilde;o de 256x256 p&iacute;xeles y las caracter&iacute;sticas 
+                predeterminadas. La nueva imagen tiene una sola capa llamada &quot;Fondo&quot;. 
+              </li>
+              <li> Duplicamos esa capa teni&eacute;ndola seleccionada y pulsando 
+                el bot&oacute;n correspondiente <img src="../tem01/images/herram/ca_dupli.gif" width="42" height="27"> 
+                o haciendo clic con el bot&oacute;n derecho del rat&oacute;n y 
+                eligiendo <strong>Duplicar Capa</strong>. Llamamos a esta segunda 
+                capa &quot;Duplicada&quot;. <br>
+              </li>
+              <li> Creamos una nueva capa. Para ello hacemos clic con el bot&oacute;n 
+                derecho del rat&oacute;n sobre la paleta de capas y elegimos <strong>Capa 
+                nueva...</strong>, le damos un tama&ntilde;o de 50x50 p&iacute;xeles 
+                con el nombre &quot;Peque&ntilde;a&quot;. Despu&eacute;s pulsamos 
+                <strong>Aceptar</strong>. </li>
+              <li> Ahora seleccionamos la capa &quot;Duplicada&quot; y con la 
+                herramienta <strong>Rellenar con un color</strong> <img src="../tem01/images/herram/her_relleno.gif" width="33" height="36"> 
+                seleccionada hacemos clic en la <strong>Ventana Imagen</strong>. 
+                Observa c&oacute;mo se rellena toda la imagen del color que tengamos 
+                seleccionado en la paleta de color como color de primer plano. 
+              </li>
+              <li> Elegimos la herramienta <strong>selecci&oacute;n rectangular 
+                </strong><img src="../tem01/images/herram/her_cuadra.gif" width="33" height="33"> 
+                y, en la <strong>Ventana Imagen</strong>, hacemos clic en la parte 
+                superior izquierda y arrastramos hacia la parte inferior derecha. 
+                Hemos creado una selecci&oacute;n rectangular delimitada por una 
+                l&iacute;nea discontinua (llamada de &quot;hormigas en marcha&quot;), 
+                tal y como observamos en la figura.<br>
+                <br>
+                <table border="0" align="center" cellspacing="0">
+                  <tr> 
+                    <td><img src="images/tem02_42.gif" width="254" height="253"></td>
+                  </tr>
+                </table>
+                <br>
+              </li>
+              <li> 
+                <div align="left"> Si colocas el puntero del rat&oacute;n en el 
+                  interior de este cuadrado observar&aacute;s que el puntero cambia 
+                  de forma apareciendo el icono de la herramienta <strong>Mover</strong>. Pincha 
+                  y arrastra esta selecci&oacute;n hacia la esquina superior izquierda. 
+                  Han ocurrido dos cosas: hemos arrastrado s&oacute;lo un trozo 
+                  de la capa y, adem&aacute;s, se ha creado una capa nueva llamada<strong> 
+                  Selecci&oacute;n flotante </strong>y que puedes observar en 
+                  la <strong>Ventana de Capas</strong>. <br>
+                  <br>
+                  Si hacemos clic con el bot&oacute;n derecho sobre la capa flotante 
+                  llamada &quot;Selecci&oacute;n flotante (capa flotante)&quot; 
+                  y seleccionamos <strong>Capa nueva...</strong> se transforma 
+                  autom&aacute;ticamente en una capa nueva llamada &quot;Capa 
+                  flotante&quot; (podemos cambiar el nombre posteriormente). En 
+                  el centro de la capa &quot;Duplicada&quot; ha quedado un rect&aacute;ngulo 
+                  vac&iacute;o que se corresponde con la selecci&oacute;n que 
+                  se ha movido a la nueva capa.<br>
+                  <br>
+                  <table border="0" align="center" cellspacing="0">
+                    <tr> 
+                      <td><img src="images/tem02_43.gif" width="216" height="248" align="middle"></td>
+                      <td><img src="images/tem02_44.gif" width="245" height="184" align="middle"><br></td>
+                    </tr>
+                  </table>
+                  <br>
+                </div>
+              </li>
+              <li>
+<div align="left"> 
+                  <div align="left"> 
+                    <div align="left">Guarda esta imagen como &quot;<strong>flotantes.xcf</strong>&quot;.</div>
+                  </div>
+                </div>
+              </li>
+            </ol>
+            <p class="titulosunidad2">2. Copiar capas de una imagen a otra </p>
+            <p>Podemos hacer tantas selecciones como queramos y convertirlas en capas nuevas, y tambi&eacute;n pegar, como una nueva capa (a trav&eacute;s de capas flotantes), selecciones realizadas en otras <strong>Ventana Imagen</strong>:</p>
+            <ol>
+              <li>En la <strong>Caja de Herramientas</strong> seleccionamos <strong>Exts --&gt; Script-Fu --&gt; Logos --&gt; Contorno en 3D</strong>. Modificamos &uacute;nicamente el tama&ntilde;o de la tipograf&iacute;a e introducimos un valor de 40. Pulsamos <strong>Aceptar</strong>.<br>
+                  <br>
+    Obtenemos esta imagen formada por las capas que se indican:<br>
+    <br>
+    <table width="75%" border="0" align="center" cellspacing="2" class="table2">
+      <tr>
+        <td><div align="right"><img src="images/tem02_46.gif" width="200" height="141"></div></td>
+        <td><div align="center"><img src="images/tem02_47.gif" width="249" height="216"></div></td>
+      </tr>
+    </table>
+    <br>
+                Ahora llevaremos la capa &quot;Pattern&quot; a la imagen en la 
+                que est&aacute;bamos trabajando las capas flotantes. <br>
+    <br>
+              </li>
+              <li> En la <strong>Ventana Capas</strong> seleccionamos la capa 
+                &quot;Pattern&quot;, luego en la <strong>Ventana imagen</strong>, 
+                hacemos clic con el bot&oacute;n derecho del rat&oacute;n, elegimos 
+                <strong>Seleccionar --&gt; Todos</strong>, despu&eacute;s hacemos 
+                una copia (<strong>Ctrl + C</strong>) o <strong>Editar --&gt; 
+                Copiar</strong>. <br>
+                  <br>
+                Ahora en la <strong>Ventana imagen </strong>de nuestro trabajo 
+                con capas flotantes, vamos a <strong>Editar--&gt; Pegar</strong>. 
+                Observa que se ha creado una nueva capa flotante. Si hacemos clic 
+                con el bot&oacute;n derecho del rat&oacute;n sobre la capa flotante 
+                y elegimos <strong>Capa nueva...</strong>, pasa a denominarse 
+                &quot;Capa pegada&quot; y obtendremos la siguiente imagen:<br>
+                    <br>
+                    <table border="0" align="center" cellspacing="0">
+                      <tr>
+                        <td><img src="images/tem02_50.gif" width="243" height="272"></td>
+                      </tr>
+                    </table>
+              </li>
+              <li>Otra forma de obtener este mismo resultado, es hacer clic sobre 
+                la capa llamada &quot;Pattern&quot; en la imagen creada con Script-Fu 
+                y arrastrarla a la <strong>Ventana imagen</strong> de &quot;flotantes.xcf&quot;. 
+                Autom&aacute;ticamente se crea en la imagen &quot;flotantes.xcf&quot; 
+                una nueva capa denominada &quot;Copia de Pattern&quot;.<br>
+                  <br>
+                  <table width="75%" border="0" class="table2">
+                    <tr>
+                      <td><div align="right"><img src="images/tem02_51.gif" width="223" height="253"></div></td>
+                      <td><div align="center"><img src="images/tem02_52.gif" width="216" height="248"></div></td>
+                    </tr>
+                  </table>
+                  <br>
+              </li>
+              <li> Para terminar este ejercicio, movemos la &quot;Capa pegada&quot; para situarla tal y como se muestra en la figura. Tambi&eacute;n rellenamos de color rojo la capa &quot;Peque&ntilde;a&quot;.</li>
+            </ol>
+            <table border="0" align="center" cellspacing="0">
+              <tr>
+                <td><img src="images/tem02_54.jpg" width="256" height="256"></td>
+              </tr>
+            </table>
+            <table border="0" cellpadding="0" cellspacing="0" width=100% height="63">
+              <tr valign="bottom">
+                <td width="978" height="21" colspan="3">
+                  <p><br>
+                </p></td>
+              </tr>
+              <tr valign="bottom">
+                <td width="100%" height="21" colspan="3">
+                  <hr width="100%"  size="1" noshade color="#C5E3EC">
+                </td>
+              </tr>
+              <tr valign="bottom">
+                <td width="978" height="21"><p class="titulosunidad2">Las capas &gt; Capas flotantes</td>
+                <td width=22 align="right" height="21"><a href="hoja0205.htm" target="right"><img border="0" src="../images/atras2.jpg" width="20" height="21"></a></td>
+                <td width=21 align="right" height="21"><a href="hoja0207.htm" target="right"><img border="0" src="../images/adelante2.jpg" width="20" height="21"></a></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+        <p align="justify">   
+  </tr>
+</table>
+</body>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem02/txt_206.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:03 GMT -->
+</html>

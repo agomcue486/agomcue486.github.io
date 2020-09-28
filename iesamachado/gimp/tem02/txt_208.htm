@@ -1,0 +1,268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem02/txt_208.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:03 GMT -->
+<head>
+<title>Documento sin t&iacute;tulo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../css/defecto.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+.Estilo1 {font-weight: normal; color: #000000; text-decoration: none; text-align: justify; font-size: 11px;}
+-->
+</style></head>
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="5" class="textos">
+  <tr>
+    <td valign="top"><table width="96%"  border="0" align="center" cellpadding="0" cellspacing="0" class="textos">
+        <tr>
+          <td valign="top"><p class="titulosunidadr">Combinar capas</p>
+            <p>Hasta el momento hemos visto que las capas son como l&aacute;minas 
+              de acetato que se superponen, donde las capas superiores dejan ver 
+              lo que hay en las inferiores a trav&eacute;s de sus zonas transparentes. 
+              Pero no nos quedemos ah&iacute;. Una capa puede combinarse visualmente 
+              con las que est&aacute;n debajo de ella atendiendo a diferentes 
+              modos de combinaci&oacute;n y a las caracter&iacute;sticas de los 
+              p&iacute;xeles de cada capa. </p>
+            <p>Para comprender los modos de combinaci&oacute;n de las capas vamos 
+              a realizar un ejercicio partiendo de una imagen preparada. Puedes 
+              obtenerla haciendo clic con el bot&oacute;n derecho del rat&oacute;n 
+              sobre el siguiente enlace <a href="images/capas.xcf">CAPAS</a> y 
+              seleccionando <strong>Guardar destino como</strong>...</p>
+            <h4 class="titulosunidad2">1. Modos de combinaci&oacute;n</h4>
+            <p>Abrimos con GIMP el archivo que acabamos de obtener &quot;<strong>Capas.xcf</strong>&quot;. 
+              Para aplicar un efecto del modo de combinaci&oacute;n de una capa, 
+              primero debemos tenerla seleccionada. El modo de combinaci&oacute;n 
+              de las capas se ajusta en la zona de la <strong>Ventana Capas </strong>marcada 
+              en la siguiente figura.<br>
+            </p>
+            <table border="0" align="center" cellspacing="0">
+              <tr>
+                <td><img src="images/tem02_58.gif" width="250" height="336"></td>
+              </tr>
+            </table>
+            <p> <br>
+              Utilicemos distintos modos de combinaci&oacute;n de capas para ir 
+              comprobando su funcionamiento. En la siguiente tabla se muestran 
+              las posibilidades de cada modo cuando se aplican sobre la capa llamada &quot;Capas&quot;, situada encima de la denominada 
+              &quot;C&iacute;rculo&quot;.</p>
+            <table width="96%" border="0" align="center" cellpadding="6" cellspacing="0" class="textos" style='border:1px solid black'>
+              <tr bgcolor="#6666CC">
+                <td width="12%"><p align="center"><strong>Modo</strong></p></td>
+                <td width="33%"><p align="center"><strong>Descripci&oacute;n</strong></p></td>
+                <td width="28%"><p align="center"><strong>Modo normal</strong></p></td>
+                <td width="27%"><p align="center"><strong>Modificado</strong></p></td>
+              </tr>
+              <tr bgcolor="#C9C9C9">
+                <td><p><strong>Normal</strong></p></td>
+                <td><p>Los p&iacute;xeles de la capa superior reemplazan a los p&iacute;xeles de las capas inferiores.</p></td>
+                <td><p align="center"><img src="images/tem02_59.jpg" width="200" height="128"></p></td>
+                <td><p align="center"><img src="images/tem02_59.jpg" width="200" height="128"></p></td>
+              </tr>
+              <tr bgcolor="#AAAAAA">
+                <td><p><strong>Disolver</strong></p></td>
+                <td><p>A&ntilde;ade agujeros de forma aleaoria en la capa activa en las zonas de baja opacidad (bordes).</p></td>
+                <td><p align="center"><img src="images/tem02_59.jpg" width="200" height="128"></p></td>
+                <td><p align="center"><img src="images/tem02_60.jpg" width="200" height="128"></p></td>
+              </tr>
+              <tr bgcolor="#C9C9C9">
+                <td><p><strong>Multiplicar</strong></p></td>
+                <td><p>La capa activa oscurece la composici&oacute;n. Cuanto m&aacute;s claros son los p&iacute;xeles menos oscurecen. Cuando debajo hay blanco no se produce ning&uacute;n efecto.</p></td>
+                <td><p align="center"><img src="images/tem02_59.jpg" width="200" height="128"></p></td>
+                <td><p align="center"><img src="images/tem02_61.jpg" width="200" height="128"></p></td>
+              </tr>
+              <tr bgcolor="#AAAAAA">
+                <td><p><strong>Dividir</strong></p></td>
+                <td><p>La capa activa da luminosidad a toda la combinaci&oacute;n de capas con colores complementarios.</p></td>
+                <td><p align="center"><img src="images/tem02_59.jpg" width="200" height="128"></p></td>
+                <td><p align="center"><img src="images/tem02_62.jpg" width="200" height="128"></p></td>
+              </tr>
+              <tr bgcolor="#C9C9C9">
+                <td><p><strong>Pantalla</strong></p></td>
+                <td><p>La capa activa da luminosidad a la composici&oacute;n. Cuanto m&aacute;s oscuro es el p&iacute;xel, menos efecto tiene.</p></td>
+                <td><p align="center"><img src="images/tem02_59.jpg" width="200" height="128"></p></td>
+                <td><p align="center"><img src="images/tem02_63.jpg" width="200" height="128"></p></td>
+              </tr>
+              <tr bgcolor="#AAAAAA">
+                <td><p><strong>Solapar</strong></p></td>
+                <td><p>Los p&iacute;xeles claros aclaran la composici&oacute;n y los oscuros la oscurecen.</p></td>
+                <td><p align="center"><img src="images/tem02_59.jpg" width="200" height="128"></p></td>
+                <td><p align="center"><img src="images/tem02_64.jpg" width="200" height="128"></p></td>
+              </tr>
+              <tr bgcolor="#C9C9C9">
+                <td><p><strong>Diferencia</strong></p></td>
+                <td><p>Entre los valores absolutos de los p&iacute;xeles compuestos (todas las capas) y el p&iacute;xel de la capa activa. Se observan las diferencias atendiendo a los p&iacute;xeles que hay debajo de la capa activa.</p></td>
+                <td><p align="center"><img src="images/tem02_59.jpg" width="200" height="128"></p></td>
+                <td><p align="center"><img src="images/tem02_65.jpg" width="200" height="128"></p></td>
+              </tr>
+              <tr bgcolor="#AAAAAA">
+                <td><p><strong>Suma</strong></p></td>
+                <td><p>Se suma el p&iacute;xel compuesto con el p&iacute;xel de la capa activa, el valor m&aacute;ximo que puede obtenerse es 255 (color blanco).</p></td>
+                <td><p align="center"><img src="images/tem02_59.jpg" width="200" height="128"></p></td>
+                <td><p align="center"><img src="images/tem02_66.jpg" width="200" height="128"></p></td>
+              </tr>
+              <tr bgcolor="#C9C9C9">
+                <td><p><strong>Sustraer</strong></p></td>
+                <td><p>Al p&iacute;xel compuesto se le quita el p&iacute;xel de la capa activa, con un valor m&iacute;nimo de 0 (negro).</p></td>
+                <td><p align="center"><img src="images/tem02_59.jpg" width="200" height="128"></p></td>
+                <td><p align="center"><img src="images/tem02_67.jpg" width="200" height="128"></p></td>
+              </tr>
+              <tr bgcolor="#AAAAAA">
+                <td><p><strong>Oscurecer s&oacute;lo</strong></p></td>
+                <td><p>Los p&iacute;xeles de la capa activa que son m&aacute;s oscuros que la composici&oacute;n de los p&iacute;xeles de todas las capas sustituyen a los &uacute;ltimos.</p></td>
+                <td><p align="center"><img src="images/tem02_59.jpg" width="200" height="128"></p></td>
+                <td><p align="center"><img src="images/tem02_68.jpg" width="200" height="128"></p></td>
+              </tr>
+              <tr bgcolor="#C9C9C9">
+                <td><p><strong>Clarear s&oacute;lo</strong></p></td>
+                <td><p>Lo mismo que en el anterior caso pero atendiendo a p&iacute;xeles m&aacute;s claros. </p></td>
+                <td><p align="center"><img src="images/tem02_59.jpg" width="200" height="128"></p></td>
+                <td><p align="center"><img src="images/tem02_69.jpg" width="200" height="128"></p></td>
+              </tr>
+              <tr bgcolor="#AAAAAA">
+                <td><p><strong>Tono</strong></p></td>
+                <td><p>Cambio del color visible del p&iacute;xel atendiendo a su tono. Sustituye el tono de los p&iacute;xeles de la composici&oacute;n por el tono del de la capa activa.</p></td>
+                <td><p align="center"><img src="images/tem02_59.jpg" width="200" height="128"></p></td>
+                <td><p align="center"><img src="images/tem02_70.jpg" width="200" height="128"></p>
+                    <p align="center"><img src="images/tem02_71.jpg" width="200" height="128"><font size="1"><br>
+        La capa &quot;C&iacute;rculo&quot; est&aacute; en modo normal</font></p></td>
+              </tr>
+              <tr bgcolor="#C9C9C9">
+                <td><p><strong>Saturaci&oacute;n</strong></p></td>
+                <td><p>Atendiendo a la saturaci&oacute;n del color. Color puro 
+                    o color diluido.</p></td>
+                <td><p align="center"><img src="images/tem02_59.jpg" width="200" height="128"></p></td>
+                <td><p align="center"><img src="images/tem02_72.jpg" width="200" height="128"></p></td>
+              </tr>
+              <tr bgcolor="#AAAAAA">
+                <td><p><strong>Color</strong></p></td>
+                <td><p>Los dos anteriores a la vez.</p></td>
+                <td><p align="center"><img src="images/tem02_59.jpg" width="200" height="128"></p></td>
+                <td><p align="center"><img src="images/tem02_73.jpg" width="200" height="128"></p></td>
+              </tr>
+              <tr bgcolor="#C9C9C9">
+                <td><p><strong>Valor</strong></p></td>
+                <td><p>Como Tono y Saturaci&oacute;n: el color visible del p&iacute;xel compuesto se aplica sobre el p&iacute;xel de la capa activa.</p></td>
+                <td><p align="center"><img src="images/tem02_59.jpg" width="200" height="128"></p></td>
+                <td><p align="center"><img src="images/tem02_74.jpg" width="200" height="128"></p></td>
+              </tr>
+            </table>
+            <p class="titular2">&nbsp;</p>
+            <p class="titulosunidad2">2. Practicando la combinaci&oacute;n</p>
+            <p>Comprobemos la potencia de los modos de combinaci&oacute;n de capas con un ejercicio sencillo.</p>
+            <ol>
+              <li> 
+                <p>Utilizando el archivo &quot;<strong>Capas.xcf</strong>&quot; 
+                  hagamos dos copias de la capa denominada &quot;Capas&quot;, 
+                  y cambiemos su nombre por &quot;Capas Copia1&quot; y &quot;Capas 
+                  Copia2&quot;.<strong><br>
+                  </strong></p>
+              </li>
+              <li> 
+                <p>Ocultemos la capa &quot;C&iacute;rculo&quot;, dado que no vamos 
+                  a trabajar con ella. Ahora realizaremos unas peque&ntilde;as 
+                  modificaciones en las capas &quot;Capas Copia1&quot; y &quot;Capas&quot;.<br>
+                </p>
+              </li>
+              <li> 
+                <p> Seleccionamos &quot;Capas&quot; y marcamos <strong>Mantener 
+                  transparencia </strong>(casilla que se encuentra a la derecha 
+                  de los modos de combinaci&oacute;n). </p>
+                <table width="100" border="0" align="center">
+                  <tr> 
+                    <td><img src="images/tem02_59.gif" width="246" height="76"></td>
+                  </tr>
+                </table>
+                <br>
+                Esta casilla hace que los p&iacute;xeles transparentes no puedan 
+                ser modificados. A continuaci&oacute;n, ocultemos (haciendo clic 
+                en el icono del ojo) todas las capas menos la activa. Ahora en 
+                el selector de color de primer plano de la <strong>Caja de Herramientas</strong>, 
+                introducimos el siguiente valor hexadecimal<strong> 5066e5</strong>. 
+              </li>
+              <li>Seleccionamos la herramienta <strong>Pincel </strong><img src="../tem01/images/herram/her_pincel.gif" width="34" height="36"> 
+                y pintamos sobre las letras que tenemos en &quot;Capas&quot;. 
+                Observaremos que solamente se cambia el color de la palabra &quot;Capas&quot; 
+                obteniendo un color ligeramente m&aacute;s claro. <br>
+              </li>
+              <li>Desactivemos <strong>Mantener transparencia</strong>. Ahora 
+                vamos a poner &quot;borrosas&quot; las letras utilizando un filtro. 
+                Hacemos clic con el bot&oacute;n derecho del rat&oacute;n sobre 
+                la imagen y seleccionamos <strong>Filtros --&gt; Desenfoque --&gt; 
+                Desenfoque Gaussiano</strong>. Y aceptamos los valores que aparecen 
+                por defecto.<br>
+              </li>
+              <li>Hacemos visible la capa &quot;Fondo&quot; y movemos la capa 
+                &quot;Capas&quot; hacia abajo y a la derecha, para ello elegimos 
+                la herramienta <strong>Mover</strong> y, tras hacer clic en la 
+                imagen, presionamos dos veces en nuestro teclado la tecla flecha 
+                abajo y otras dos veces la tecla flecha derecha.<br>
+                <br>
+                <table border="0" align="center" cellspacing="0">
+                  <tr> 
+                    <td><img src="images/tem02_60.gif" width="180" height="160"></td>
+                  </tr>
+                </table>
+                <br>
+              </li>
+              <li> Ahora dejamos visibles las capas &quot;Capas Copia1&quot; y 
+                &quot;Fondo&quot;, seleccionamos la primera y fijamos <strong>Mantener 
+                transparencia</strong>. A continuaci&oacute;n pintamos con el 
+                <strong>Pincel</strong> de color <strong>2c4df4</strong>. <br>
+                <br>
+                Desactivamos <strong>Mantener transparencia</strong>. Y al igual 
+                que en el caso anterior aplicamos un filtro, en este caso <strong>Filtros</strong> 
+                --&gt; <strong>Desenfoque</strong> --&gt; <strong>Desenfoque de 
+                movimiento</strong>, elegimos el desenfoque lineal y como par&aacute;metros 
+                ponemos un 5 en longitud y 30 en &aacute;ngulo. <br>
+                <br>
+                Luego movemos la capa cuatro p&iacute;xeles hacia abajo y otros 
+                tantos a la derecha.
+<p>&nbsp; </p>
+              </li>
+              <li>
+                <p> Hacemos visibles las tres capas del texto y activamos la denominada 
+                  &quot;Capas Copia2&quot;. Elegimos como modo de combinaci&oacute;n 
+                  <strong>Sustraer</strong> para obtener el siguiente resultado</p>
+              </li>
+            </ol>
+            <table border="0" align="center" cellspacing="0">
+              <tr>
+                <td><img src="images/tem02_76.jpg" width="200" height="128"></td>
+              </tr>
+            </table>
+            <p>Podemos probar con las distintas opciones de combinaci&oacute;n 
+              de capas para conseguir diferentes resultados.</p>
+            <table border="0" cellpadding="0" cellspacing="0" width=100% height="63">
+              <tr valign="bottom">
+                <td width="978" height="21" colspan="3">
+                  <p><br>
+                </p></td>
+              </tr>
+              <tr valign="bottom">
+                <td width="100%" height="21" colspan="3">
+                  <hr width="100%"  size="1" noshade color="#C5E3EC">
+                </td>
+              </tr>
+              <tr valign="bottom">
+                <td width="978" height="21"><p class="titulosunidad2">Las capas &gt; Combinar capas</td>
+                <td width=22 align="right" height="21"><a href="hoja0207.htm" target="right"><img border="0" src="../images/atras2.jpg" width="20" height="21"></a></td>
+                <td width=21 align="right" height="21"><a href="hoja0209.htm" target="right"><img border="0" src="../images/adelante2.jpg" width="20" height="21"></a></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+        <p align="justify">   
+  </tr>
+</table>
+</body>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem02/txt_208.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:03 GMT -->
+</html>

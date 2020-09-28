@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem05/txt_502.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:15 GMT -->
+<head>
+<title>Documento sin t&iacute;tulo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../css/defecto.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+function MM_openBrWindow(theURL,winName,features, myWidth, myHeight, isCenter) { //v3.0
+  if(window.screen)if(isCenter)if(isCenter=="true"){
+    var myLeft = (screen.width-myWidth)/2;
+    var myTop = (screen.height-myHeight)/2;
+    features+=(features!='')?',':'';
+    features+=',left='+myLeft+',top='+myTop;
+  }
+  window.open(theURL,winName,features+((features!='')?',':'')+'width='+myWidth+',height='+myHeight);
+}
+//-->
+</script>
+</head>
+
+
+<body>
+<table width="100%"  border="0" cellpadding="0" cellspacing="5" class="textos">
+  <tr>
+    <td valign="top"><table width="96%"  border="0" align="center" cellpadding="0" cellspacing="0" class="textos">
+        <tr>
+          <td valign="top">  <span class="titulosunidadr">Representando valores de color</span>            <p>El modo RGB es aditivo y se compone de tres canales: Rojo, Verde y Azul. A trav&eacute;s de cada uno de estos canales se proyecta una luz del color del canal que al unirse nos muestran en la pantalla la imagen a todo color. </p>
+              <p>En cada canal nos encontramos una imagen compuesta de blancos, negros y 254 tonalidades de gris. Un p&iacute;xel negro del canal Rojo indica que no deja pasar la luz roja, no tendr&aacute; color rojo. Por el contrario un p&iacute;xel blanco dejar&aacute; pasar el total de la luz roja; el resto de tonalidades de gris dejar&aacute; pasar la cantidad que corresponda a cada tonalidad. Lo mismo sucede en los otros canales.</p>
+              <p>Los canales de una imagen en color son como una colecci&oacute;n de valores de luminosidad, de cada uno de los colores que forman los canales. Es importante conocer el funcionamiento de los canales a la hora de corregir colores.</p>
+              
+            <p>Vamos a trabajar con la siguiente imagen. Puedes obtenerla a mayor 
+              tama&ntilde;o haciendo clic sobre la imagen:</p>
+            <table width="100" align="center">
+              <tr>
+                <td><a href="javascript:;" onClick="MM_openBrWindow('images/flor.jpg','image28','','600','398','false')"><img src="images/flor_peque.jpg" width="250" height="166" border="0"></a></td>
+              </tr>
+            </table>
+            <p>En blanco y negro podemos comparar mejor los diferentes 
+              canales de color RGB. </p>
+              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  <td><img src="images/flor_b_n.jpg" width="400" height="266"></td>
+                </tr>
+              </table>
+              <div align="center">Imagen pasada a Escala de grises <br>
+              </div>
+              <p align="center" class="textos">Y ahora veamos las im&aacute;genes que muestran cada uno de los canales RGB.</p>
+              <div align="center">
+                <table width="100" border="0" cellpadding="0">
+                  <tr>
+                    <td><img src="images/flor_b_n-R.jpg" width="400" height="266"></td>
+                  </tr>
+                  <tr>
+                    <td><img src="images/flor_b_n-G.jpg" width="400" height="266"></td>
+                  </tr>
+                  <tr>
+                    <td><img src="images/flor_b_n-B.jpg" width="400" height="266"></td>
+                  </tr>
+                </table>
+              </div>
+              <p>Observemos en la que corresponde al <strong>Canal Rojo</strong> como el bote de color rojo es pr&aacute;cticamente blanco. En el <strong>Canal Verde </strong>hay zonas que tienen la misma claridad que en el Rojo, pero ya observamos que hay zonas m&aacute;s apagadas porque tienen mayor&iacute;a de color rojo, aunque aparece algo de verde debido a que la mezcla de rojo y verde nos produce el amarillo. Si observamos la imagen del <strong>Canal Azul </strong>vemos que toda la zona que es de color rojo ahora zona es de color negro, es decir, no recibir&aacute; nada de azul.</p>
+              <p>Comprobamos de esta forma que las distintas tonalidades de gris que aparecen en cada uno de los canales, representan distintas cantidades del color del canal. Manejando los diferentes canales podemos manipular las tonalidades de color y modificar la imagen en su totalidad.</p>
+              <p>Ahora apliquemos esto a otra imagen: </p>
+              <table width="100" align="center">
+                <tr>
+                  <td><a href="javascript:;" onClick="MM_openBrWindow('images/hojas_rosa.jpg','image28','','420','286','false')"><img src="images/hojas_rosa_peque.jpg" width="250" height="166" border="0"></a></td>
+                </tr>
+              </table>              
+              <p>Conociendo los colores representados en cada canal podemos obtener una modificaci&oacute;n del color de la imagen general. Supongamos que queremos destacar las hojas de la imagen y aumentar su verdor. Puedes descomponer esta imagen en sus tres canales de color: Men&uacute; <strong>Filtros --&gt; Colores --&gt; Descomponer</strong> y podr&aacute;s observar los canales Rojo y Verde (donde los tonos de gris son m&aacute;s claros). Si queremos que esas hojas tiendan hacia un color m&aacute;s amarillo deberemos aumentar el color rojo, hacer m&aacute;s claros los grises del <strong>Canal Rojo</strong>. Si s&oacute;lo queremos aumentar el color verde, aumentar la intensidad del tono verde de las hojas, debemos rebajar la cantidad de rojo que pasa por el <strong>Canal Rojo</strong> y aumentar el color verde, hacer m&aacute;s claros los grises del <strong>Canal Verde</strong>.</p>
+              
+              <p>Para poder hacer lo que hemos comentado tenemos una herramienta 
+              muy &uacute;til en GIMP. Accedemos a Men&uacute;<strong> --&gt; 
+              Herramientas --&gt; Herramientas de color --&gt; Balance de color</strong>.</p>
+              
+            <p align="left">Esta herramienta nos permite aumentar o disminuir 
+              la cantidad de color de cada uno de los canales.</p>
+              <table border="0" align="center" cellspacing="0">
+                <tr>
+                  
+                <td><img src="images/tem05_05.gif" width="315" height="320"></td>
+                </tr>
+              </table>
+              <p>Pongamos en el <strong>Canal Rojo</strong> un valor de -40 y en el <strong>Canal Verde</strong> un valor de 20. Veremos c&oacute;mo aumenta el verdor de las hojas. Hagamos varias pruebas para conocer el funcionamiento de esta herramienta, que modifica las tonalidades de gris que tiene cada uno de los canales.</p>
+              <p>Esta herramienta tiene tres rangos para modificar: las sombras, los tonos medios y los puntos de luz. Elegiremos uno u otro dependiendo de los tonos que queramos modificar. </p>
+              <p>Otra forma de modificar los colores que tenemos en una imagen en color consiste en manipular los grises de cada uno de los canales. Disponemos de un filtro en GIMP que nos permite descomponer una imagen en capas, cada una en que se descompone la imagen corresponder&aacute; a cada uno de los canales de color RGB. Podemos modificar independientemente esas capas que est&aacute;n formadas por una imagen con 256 niveles de gris y volverlas a componer con otro filtro.</p>
+              <p>Accedemos a <strong>Men&uacute; --&gt; Filtros --&gt; Colores --&gt; Descomponer...</strong>, seleccionamos RGB, comprobamos que est&aacute; marcada la opci&oacute;n &quot;Descomponer en capas&quot; y aceptamos. Obtenemos una nueva imagen en &quot;Modo escala de grises&quot; que se compone de tres capas, cada una de ellas tiene el contenido de cada uno de los canales de color de la imagen primitiva.</p>
+              <p>Modifiquemos el contraste de cada una de las capas que tiene esta nueva imagen. Seleccionando cada una de las capas y acudiendo a <strong>Men&uacute; --&gt; Herramientas --&gt; Herramientas de color --&gt; Brillo y contraste</strong>, modificamos el contraste de la <strong>Capa azul </strong>en -60; el brillo de la <strong>Capa verde </strong>en 70 y el contraste de la <strong>Capa roja </strong>en 60.</p>
+              <p>En la <strong>Ventana Imagen </strong>de esta imagen en &quot;Modo escala de grises&quot; vayamos a <strong>Men&uacute; --&gt; Filtros --&gt; Colores --&gt; Componer</strong> y seleccionemos en cada desplegable la capa que vamos a utilizar para cada canal: como Rojo la capa rojo; como Verde la capa verde y como Azul la capa azul. Hacemos clic en <strong>Aceptar </strong>y obtenemos la siguiente imagen.</p>
+              <div align="center">
+                <table border="0" align="center" cellpadding="0" cellspacing="5" bgcolor="#D4D4D4" class="textoscolor" style='border:1px solid brown'>
+                  <tr>
+                    <td><div align="center">Imagen inicial</div></td>
+                    <td><div align="center">Imagen modificada</div></td>
+                  </tr>
+                  <tr>
+                    <td><img src="images/hojas_rosa_peque.jpg" width="250" height="166"></td>
+                    <td><img src="images/tem05_14.jpg" width="250" height="167"></td>
+                  </tr>
+                </table>
+              </div>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" height="32">
+                <tr valign="bottom">
+                  <td width="100%" height="21" colspan="3">
+                    <hr width="100%"  size="1" noshade color="#C5E3EC">
+                  </td>
+                </tr>
+                <tr valign="bottom">
+                  <td width="935" height="21"><p class="titulosunidad2">Canales &gt; Los canales b&aacute;sicos</td>
+                  <td width=22 align="right" height="21"><a href="hoja0501.htm" target="right"><img src="../images/atras2.jpg" width="20" height="21" border="0"></a></td>
+                  <td width=21 align="right" height="21"><a href="hoja0503.htm" target="right"><img border="0" src="../images/adelante2.jpg" width="20" height="21"></a></td>
+                </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td valign="top">&nbsp;</td>
+        </tr>
+      </table>
+  </tr>
+</table>
+</body>
+
+<!-- Mirrored from www.jldominguez.org/gimp/tem05/txt_502.htm by HTTrack Website Copier/3.x [XR&CO'2004], Wed, 14 Sep 2005 11:31:15 GMT -->
+</html>
