@@ -1,0 +1,42 @@
+h1 {
+    background-color: brown;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 10px 10px 20px 1px black;
+    border-radius: 15px;
+}
+
+h2 {
+    border-bottom: 5px double brown;
+}
+
+details div {
+    background-color: burlywood;
+    border: 5px solid brown;
+    padding: 10px;
+    box-shadow: 5px 5px 10px 1px black;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+body {
+    background-color: antiquewhite;
+    margin: 0 20%;
+    margin-bottom: 100px;
+}
+
+img {
+    display: block;
+    margin: 10px auto;
+    border: 2px solid black;
+    box-shadow: 5px 5px 10px 1px black;
+}
+
+pre {
+    border: 1px solid black;
+    background-color: white;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
