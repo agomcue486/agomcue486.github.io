@@ -121,16 +121,19 @@
         }
 
         $(document).ready(function() {
-            var myDBInstance = openDatabase('dbSibeeshPassion', '1.0', 'This is a client side database', 2 * 1024 * 1024);
+            var myDBInstance = openDatabase('dbSibeeshPassion', '1.0', 'Esto es una base de datos del navegador.', 2 * 1024 * 1024);
 
             if (!myDBInstance) {
-                alert('Oops, your database was not created');
+                alert('Ups, la base de datos no se ha podido crear.');
             }
             else {
                 var version = myDBInstance.version;
                 $("#version").text(version);
                 listTables(myDBInstance);
             }
+
+            executeSql(myDBInstance, "create table if not exists [Personas] (id integer not null primary key autoincrement, nombre varchar, apellidos varchar, telefono integer);");
+            listTables(myDBInstance);
 
             $("button#insertSelect").click(function() {
                 $("#query").val('select * from [Personas];');
@@ -159,7 +162,7 @@
 </head>
 <body>
     <div>
-        <h1>Inserta una sentencia SQL</h1>
+        <h1>Inserta una sentencia SQL (versión <span id="version"></span>)</h1>
         <p>Haciendo clic en estos botones podrás insertar algunos ejemplos de sentencias SQL.</p>
         <button id="insertSelect">Inserta un <strong><em>select</em></strong>.</button>
         <button id="insertInsert">Inserta un <strong><em>insert into</em></strong>.</button>
