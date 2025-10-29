@@ -93,7 +93,7 @@ sudo snap install --classic certbot;
 <p>Configura Nginx como proxy inverso. Crea un archivo en <code>/etc/nginx/sites-available/apache_proxy</code> el cual tiene que tener como propietario a <code>root</code> y los permisos tienen que estar establecidos en <code>644:</code>-rw-r–r–`:</p>
 <pre><code class="language-nginx">server {
     listen 80;
-    server_name tudominio.com;
+    server_name iesamachado.ddns.net;
 
     location / {
         proxy_pass http://localhost:8080;
