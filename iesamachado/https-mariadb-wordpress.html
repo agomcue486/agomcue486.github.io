@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ampliación - aplicaciones web con docker y https</title>
+	<style>
+		/* Basic styles for readability */
+		body {
+			font-family: sans-serif;
+			max-width: 800px;
+			margin: 2em auto;
+			padding: 0 1em;
+			line-height: 1.6;
+		}
+		img { max-width: 100%; height: auto; }
+		pre { background-color: #f4f4f4; padding: 1em; overflow-x: auto; }
+		code { font-family: monospace; }
+	</style>
+</head>
+<body>
+	<h1>📦 Ampliando: aplicaciones web con una base de datos mariadb</h1>
+<h2>Introducción</h2>
+<p><code>nextcloud</code> es genial, porque podemos utilizarlo para pruebas con una base de datos como <code>sqlite</code> sin tener que configurar una base de datos aparte, como mariadb.</p>
+<h2>Vamos a usar <code>mariadb</code></h2>
+<p>Ya que estamos usando contenedores, ¿por qué no vamos a usar una mariadb? <a href="https://iesgn.github.io/curso_docker_2021/sesion1/configuracion.html">Aquí tienes un enlace de cómo configurar una mariadb mediante docker</a>. La base de datos mariadb necesita de una variable de entorno donde se especifique la contraseña del usuario root. A su vez, podemos ver en la documentación oficial en docker, <a href="https://hub.docker.com/_/mariadb">el resto de variables de entorno que se pueden especificar</a>.</p>
+<p>En primer lugar tenemos que crear una red de docker. <a href="https://iesgn.github.io/curso_docker_2021/sesion4/">Es muy interesante leer esta guía de cómo se usan las redes en docker</a>.</p>
+<pre><code class="language-bash">docker network create red-ejemplo
+</code></pre>
+<p>La ventaja de tener una red en docker personalizada, es que automáticamente se crea un DNS donde los contenedores que pertenecen a la misma se pueden nombrar utilizando el nombre del contenedor.</p>
+<p>Con la siguiente orden podemos ejecutar un contenedor de <code>mariadb</code>:</p>
+<pre><code class="language-bash">docker run -d --name mariadb \
+   --network red-ejemplo \
+   -e MYSQL_DATABASE=base_de_datos \
+   -e MYSQL_USER=usuario \
+   -e MYSQL_PASSWORD=contrasenia_de_usuario \
+   -e MYSQL_ROOT_PASSWORD=contrasenia_de_root \
+   mariadb
+</code></pre>
+<h2>Primer experimento: mariadb funciona</h2>
+<p>Vamos a crear un contenedor de mariadb de la siguiente forma, más básica todavía que la anterior:</p>
+<pre><code class="language-bash">docker network create red-ejemplo;
+docker run -d --name mariadb-ejemplo \
+   --network red-ejemplo \
+   -e MYSQL_ROOT_PASSWORD=root \
+   mariadb;
+</code></pre>
+<p>Vamos a crear un segundo contenedor de ubuntu de la siguiente forma.</p>
+<pre><code class="language-bash">docker run -it \
+   --name ubuntu-ejemplo \
+   --network red-ejemplo \
+   ubuntu bash
+</code></pre>
+<p>Y ahora ejecutamos las siguientes órdenes para poder hacer un ping:</p>
+<pre><code class="language-bash">apt update; 
+apt install iputils-ping -y;
+</code></pre>
+<p>Y ahora deberíamos de ser capaces de ver esta salida:</p>
+<pre><code class="language-bash">root@b6ee8681b7f5:/# ping mariadb-ejemplo
+PING mariadb-ejemplo (172.19.0.2) 56(84) bytes of data.
+64 bytes from mariadb-ejemplo.red-ejemplo (172.19.0.2): icmp_seq=1 ttl=64 time=0.061 ms
+64 bytes from mariadb-ejemplo.red-ejemplo (172.19.0.2): icmp_seq=2 ttl=64 time=0.047 ms
+</code></pre>
+<p>Continuamos instalando el cliente de mariadb.</p>
+<pre><code class="language-bash">apt mariadb-client -y;
+</code></pre>
+<p>Y mira qué maravilla: nos podemos conectar a nuestra base de datos y ejecutar cualquier cosa.</p>
+<pre><code class="language-bash">root@b6ee8681b7f5:/# mysql -u root -proot -h mariadb-ejemplo
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 3
+Server version: 12.0.2-MariaDB-ubu2404 mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]&gt;
+</code></pre>
+<h2>Segundo experimento: mariadb funciona con wordpress</h2>
+<p>En primer lugar creamos una red de docker:</p>
+<pre><code class="language-bash">docker network create red-wordpress
+</code></pre>
+<p>Siguiendo la documentación de la imagen <a href="https://hub.docker.com/_/mariadb">mariadb</a> y la imagen <a href="https://hub.docker.com/_/wordpress">wordpress</a> podemos ejecutar los siguientes comandos para crear los dos contenedores.</p>
+<pre><code class="language-bash">docker run -d --name servidor-mariadb \
+      --network red-wordpress \
+      -e MYSQL_DATABASE=base_datos_wordpress \
+      -e MYSQL_USER=user_wp \
+      -e MYSQL_PASSWORD=pass_wp \
+      -e MYSQL_ROOT_PASSWORD=root \
+      mariadb;
+             
+docker run -d --name servidor-wordpress \
+      --network red-wordpress \
+      -p 8080:80 \
+      wordpress;
+</code></pre>
+<p>Prueba que realmente wordpress está funcionando. Tenemos que terminar de configurarlo. La información que necesitamos la puedes encontrar en la configuración del contenedor de mariadb.</p>
+<ul>
+<li><a href="http://iesamachado.ddns.net">http://iesamachado.ddns.net</a></li>
+<li><a href="https://iesamachado.ddns.net">https://iesamachado.ddns.net</a></li>
+</ul>
+<p>Ahora vamos a borrar los anteriores contenedores, que los vamos a crear de nuevo:</p>
+<pre><code class="language-bash">docker rm -f servidor-mariadb servidor-wordpress;
+</code></pre>
+<p>Lo vamos a hacer de la siguiente forma. El contenedor mariadb es igual, pero el de wordpress, contiene la información deo fichero <code>wp-config.php</code> ya directamente en variables de entorno.</p>
+<pre><code class="language-bash">docker run -d --name servidor-mariadb \
+      --network red-wordpress \
+      -e MYSQL_DATABASE=base_datos_wordpress \
+      -e MYSQL_USER=user_wp \
+      -e MYSQL_PASSWORD=pass_wp \
+      -e MYSQL_ROOT_PASSWORD=root \
+      mariadb;
+             
+docker run -d --name servidor-wordpress \
+      --network red-wordpress \
+      -e WORDPRESS_DB_HOST=servidor-mariadb \
+      -e WORDPRESS_DB_USER=user_wp \
+      -e WORDPRESS_DB_PASSWORD=pass_wp \
+      -e WORDPRESS_DB_NAME=base_datos_wordpress \
+      -p 8080:80 \
+      wordpress;
+</code></pre>
+<p>Fíjate que:</p>
+<ul>
+<li>Tenemos una red que une ambos contenedores: <code>red-wordpress</code>.</li>
+<li>Coincide la base de datos en los contenedores de mariadb y wordpress.</li>
+<li>Coincide el usuario que se crea en mariadb y wordpress.</li>
+<li>Coincide la contraseña del usuario que se crea en mariadb y wordpress.</li>
+<li>El puerto de wordpress es el 8080, que es el que utiliza el proxy inverso nginx y así, podemos tener una conexión HTTPS a nuestra ip elástica.</li>
+</ul>
+<p>Prueba de nuevo que realmente wordpress está funcionando.</p>
+<ul>
+<li><a href="http://iesamachado.ddns.net">http://iesamachado.ddns.net</a></li>
+<li><a href="https://iesamachado.ddns.net">https://iesamachado.ddns.net</a></li>
+</ul>
+
+</body>
+</html>

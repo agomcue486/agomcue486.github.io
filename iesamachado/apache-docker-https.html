@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Servidor apache en docker con https en aws</title>
+	<style>
+		/* Basic styles for readability */
+		body {
+			font-family: sans-serif;
+			max-width: 800px;
+			margin: 2em auto;
+			padding: 0 1em;
+			line-height: 1.6;
+		}
+		img { max-width: 100%; height: auto; }
+		pre { background-color: #f4f4f4; padding: 1em; overflow-x: auto; }
+		code { font-family: monospace; }
+	</style>
+</head>
+<body>
+	<h1>🧪 Práctica: Despliegue de Apache en Docker con HTTPS mediante Nginx como proxy inverso en AWS</h1>
+<h2>🎯 Objetivos</h2>
+<ul>
+<li>Desplegar un servidor Apache en una instancia EC2 de AWS usando Docker.</li>
+<li>Añadir un proxy inverso con Nginx que gestione HTTPS mediante Let’s Encrypt.</li>
+<li>Verificar el acceso seguro al servidor web desde el navegador.</li>
+</ul>
+<h2>📋 Requisitos previos</h2>
+<ul>
+<li>Cuenta activa en AWS.</li>
+<li>Conocimientos básicos de Docker y Apache.</li>
+<li>Clave SSH para acceder a instancias EC2.</li>
+<li>Puertos 80 y 443 abiertos en el grupo de seguridad de AWS.</li>
+<li>Un dominio registrado y apuntando a la IP pública de la instancia. Por ejemplo, lo puedes obtener en <a href="https://noip.com">noip.com</a></li>
+</ul>
+<hr>
+<h2>🛠 Parte 1: Preparación del entorno en AWS</h2>
+<ol>
+<li>
+<p>Accede a <a href="https://console.aws.amazon.com/ec2">AWS EC2</a>.</p>
+</li>
+<li>
+<p>Lanza una instancia <strong>Ubuntu Server</strong> con al menos <strong>1 GB de RAM</strong>.</p>
+</li>
+<li>
+<p>Asocia tu clave SSH y configura el grupo de seguridad para permitir tráfico HTTP (80) y HTTPS (443).</p>
+</li>
+<li>
+<p>Crea una ip elástica y asóciala con la instancia que acabas de crear.</p>
+</li>
+<li>
+<p>Conéctate por SSH a la instancia:</p>
+<pre><code class="language-bash">ssh -i tu_clave.pem ubuntu@&lt;IP_Pública&gt;
+</code></pre>
+</li>
+<li>
+<p>Que no se te olvide asociar tu ip elástica en el dominio que hayas creado, como puedes ver en la siguiente imagen:
+<img src="noip-iesamachado.ddns.net.png" alt="noip">. En nuestro caso hemos registrado <code>iesamachado.ddns.net</code>.</p>
+</li>
+</ol>
+<hr>
+<h2>🐳 Parte 2: Despliegue de Apache en Docker</h2>
+<ol>
+<li>
+<p>Instala Docker:</p>
+<pre><code class="language-bash">sudo apt update;
+sudo apt install docker.io -y;
+sudo systemctl enable docker;
+sudo systemctl start docker;
+</code></pre>
+</li>
+<li>
+<p>Ejecuta el contenedor Apache:</p>
+<pre><code class="language-bash">docker run -d --name apache -p 8080:80 httpd
+</code></pre>
+<blockquote>
+<p>Apache se expone en el puerto 8080 localmente. El proxy Nginx se encargará de redirigir el tráfico HTTPS hacia él.</p>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h2>🔐 Parte 3: Configuración del proxy inverso con Nginx y Let’s Encrypt</h2>
+<ol>
+<li>
+<p>Instala Nginx y Certbot:</p>
+<pre><code class="language-bash">sudo apt install nginx -y;
+sudo snap install core; sudo snap refresh core;
+sudo snap install --classic certbot;
+</code></pre>
+</li>
+<li>
+<p>Configura Nginx como proxy inverso. Crea un archivo en <code>/etc/nginx/sites-available/apache_proxy</code> el cual tiene que tener como propietario a <code>root</code> y los permisos tienen que estar establecidos en <code>644:</code>-rw-r–r–`:</p>
+<pre><code class="language-nginx">server {
+    listen 80;
+    server_name tudominio.com;
+
+    location / {
+        proxy_pass http://localhost:8080;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+</code></pre>
+</li>
+<li>
+<p>Borra la configuración por defecto y activa la nueva configuración:</p>
+<pre><code class="language-bash">sudo rm /etc/nginx/sites-enabled/default
+sudo ln -s /etc/nginx/sites-available/apache_proxy /etc/nginx/sites-enabled/;
+sudo nginx -t;
+sudo systemctl restart nginx;
+</code></pre>
+</li>
+<li>
+<p>Solicita el certificado con Certbot. Date cuenta que en lugar de <code>iesamachado.ddns.net</code> puedes usar el DNS público de la ip elástica:</p>
+<pre><code class="language-bash">sudo certbot --nginx -d iesamachado.ddns.net
+</code></pre>
+<blockquote>
+<p>Certbot modificará automáticamente la configuración de Nginx para añadir HTTPS.</p>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h2>🚀 Parte 4: Verificación</h2>
+<p>Accede desde el navegador a:</p>
+<ul>
+<li><a href="http://iesamachado.ddns.net">http://iesamachado.ddns.net</a></li>
+<li><a href="https://iesamachado.ddns.net">https://iesamachado.ddns.net</a></li>
+</ul>
+<p>Verifica que el certificado sea válido y que la conexión esté cifrada.</p>
+<hr>
+<h2>📦 Ampliando: nextcloud</h2>
+<p>Una vez que hemos hecho esto, fíjate: el proxy inverso es el encargado de gestionar la parte de la seguridad y el contenedor apache ya funciona con http, por lo que no tenemos que tocar esta instancia.</p>
+<p>Podemos tener cualquier docker funcionando en el puerto 8080 y voilà, ya estará configurado por HTTPS.</p>
+<p>¿Por qué no instalamos algo que tenga más chicha? Por ejemplo: <code>nextcloud</code>, una aplicación web similar a Google Drive de código libre. Vamos allá.</p>
+<ul>
+<li>
+<p>Para el contenedor Apache</p>
+<pre><code class="language-bash">docker stop apache
+</code></pre>
+</li>
+<li>
+<p>Ejecuta esta orden para tener un contenedor nextcloud funcionando en el puerto 8080 como tenías antes apache:</p>
+<pre><code class="language-bash">docker run -d -p 8080:80  --name nextcloud nextcloud
+</code></pre>
+</li>
+</ul>
+<p>Accede desde el navegador a:</p>
+<ul>
+<li><a href="http://iesamachado.ddns.net">http://iesamachado.ddns.net</a></li>
+<li><a href="https://iesamachado.ddns.net">https://iesamachado.ddns.net</a></li>
+</ul>
+<p>Verifica que el certificado sigue siendo válido y que ahora: tenemos un servicio <code>nextcloud</code>.</p>
+<p>Ya está hecho.</p>
+<hr>
+
+</body>
+</html>
