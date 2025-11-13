@@ -40,3 +40,8 @@ pre {
     margin-left: 10px;
     margin-right: 10px;
 }
+
+a {
+    font-weight: bold;
+    font-size: 200%;
+}
