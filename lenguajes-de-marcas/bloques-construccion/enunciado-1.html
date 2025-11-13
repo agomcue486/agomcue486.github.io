@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloques de construcción</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <h1>Bloques de construcción</h1>
+
+    <h2>Ejercicio traducido de <a href="http://www.typographicwebdesign.com/setting-text/exercise-building-blocks-float-margin-padding/">aquí</a>.</h2>
+
+    <p>
+        El diseño de una página web a menudo requiere varias columnas de texto e imágenes. Esto significa crear y
+        diseñar múltiples divs... y hacer que los divs vayan donde los deesemos.
+    </p>
+    <p>
+        En esta lección, usaremos las propiedades <code>float</code>, <code>margin</code> y <code>padding</code> para
+        crear una
+        pirámide de bloques de construcción de juguetes.
+    </p>
+    <p>
+        Después, usaremos tres clases para cambiar el color de los bloques.
+    </p>
+
+    <h2>Resumen</h2>
+
+    <ol>
+        <li>Empezamos con la plantilla de HTML y CSS.</li>
+        <li>Salimos de una única columna. Instrucciones para explorar <code>float</code> y <code>margin</code>.</li>
+        <li>Crea la pirámide final de bloques.</li>
+        <li>Crea y usa tres clases para agregar color a los bloques.</li>
+    </ol>
+
+    <p>El resultado final debe ser similar a lo siguiente:</p>
+
+    <img src="imagenes/bb.14-e1506314515183.png" alt="resultado final">
+
+    <h2>Plantilla HTML y CSS</h2>
+        <p>
+            Utilizamos los archivos HTML y CSS de la plantilla que puedes descargar <a href="https://drive.google.com/uc?export=download&id=15KzTaJrJkxvLr7Ste9_SbXweVmu6RcOf">haciendo clic aquí</a>.
+        </p>
+        <p>Tenemos algunas propiedades nuevas, como las esquinas redondeadas (propiedad <code>border-radius</code>). Debemos
+            dedicar algún tiempo a examinar la plantilla.</p>
+    <h2>Vemos la página en el navegador</h2>
+
+    <details>
+    <summary>Al abrir la plantilla deberíamos ver una columna de seis bloques de construcción marcados desde la A a la F.</summary>
+    <img src="imagenes/bb-01.png" alt="bloques de construcción en una única columna">
+    </details>
+
+
+
+
+
+    <p>Los seis bloques están hechos con seis divs. Y de forma predeterminada, los divs son elementos de bloque: crean
+        un
+        salto (una nueva línea) para cada uno. Aparecen como una sola columna de elementos.
+    </p>
+
+    <h2>Salimos de solo una columna</h2>
+    <p>La gracia de los elementos <code>float</code> es que no siempre queremos una sola columna de elementos. Por
+        ejemplo, en este ejercicio, vamos a crear una pirámide
+        de bloques de construcción.</p>
+
+    <h3>Usamos la propiedad <code>float</code></h3>
+    <details>
+        <summary>
+            Para hacer que los divs estén uno al lado del otro en una fila, usamos la propiedad <code>float</code>.
+        </summary>
+        <div>
+            <p>Podemos decirle a un elemento que flote en la izquierda o en la derecha.</p>
+
+            <p>En el archivo CSS, agregamos la línea <code>float: left</code>; a la clase <code>.b</code> que está
+                asociada
+                con el <code>div</code> que contiene la letra <em>B</em> (la sintaxis nueva está en negrita):</p>
+
+            <pre>
+                .b {
+                    <strong>float: left;</strong>
+                }        
+            </pre>
+
+
+            <h4>Vemos la página</h4>
+            <p>Esto no parece que esté bien. En lugar del bloque B flotando junto al bloque A, el bloque C ahora cubre
+                el bloque B (nota: en algunos navegadores, el bloque B cubre el bloque A).
+            </p>
+            <p>Aunque parece incorrecto, es la forma en que funciona la propiedad <code>float</code>. La relación de los
+                elementos
+                que están flotando con el resto es extraña: los elementos que no son flotantes, se colocan con
+                independencia de
+                los que sí
+                flotan, apareciendo cosas extrañas.
+            </p>
+
+            <img src="imagenes/bb-02-e1506314105931.png" alt="bloques de construcción de forma extraña">
+
+            <p>El bloque C se pinta encima del bloque B. ¿Por qué? Los elementos que no son flotantes no reconocen los
+                elementos
+                que sí flotan y las
+                cosas se vuelven inestables.</p>
+        </div>
+    </details>
+
+    <h3>Hacemos que sean <code>float: left</code> los seis bloques</h3>
+
+    <details>
+
+        <summary>En nuestro archivo CSS, añadimos <code>float: left;</code> a los seis divs.</summary>
+        <div>
+            <p>Todos los divs, del <code>.a</code> al <code>.f</code> tienen la misma sintaxis (la sintaxis nueva está
+                en
+                negrita):</p>
+            <pre>
+                .a {
+                    <strong>float: left;</strong>
+                }
+            </pre>
+
+
+            <h4>Vemos la página</h4>
+            <p>Esto tiene mejor pinta, pero todavía queda, ya que el bloque F no está al lado del bloque E y el fondo
+                blanco ha desaparecido.</p>
+
+            <p>Nuevamente, esto es incorrecto, pero es la forma en que funciona la propiedad <code>float</code>. Si los
+                elementos que van contiguos
+                no caben en una línea, pasan a la siguiente.</p>
+
+            <p>Y, dado que los elementos sin que no son <code>float</code> no reconocen a los elementos que sí lo son,
+                el div de la clase <code>main_container</code> no reconoce los
+                elementos <code>floats</code> dentro de él. Esto causa un problema porque el div de la clase
+                <code>main_container</code> está actualmente configurado en altura
+                automática (es lo que sucede de forma predeterminada, si no se especifica una altura, un elemento tiene
+                altura automática).
+            </p>
+
+            <p>Altura automática significa que main_container solo se abrirá hasta la altura de lo que contenga ... y
+                dado que los
+                bloques están flotando, main_container no los reconoce. No sabe que están ahí.</p>
+
+            <img src="imagenes/bb-03-e1506314253661.png" alt="todos los elementos en una única fila">
+
+
+
+            <p>El div <code>main_container</code> solo se abre a la altura de lo que contenga... y dado que los bloques
+                están flotando, el
+                div <code>main_container</code> no sabe que están allí.</p>
+        </div>
+    </details>
+    <h3>Añadimos <code>overflow: hidden</code> al div <code>main_container</code></h3>
+
+    <details>
+        <summary>Para que recuperemos el fondo blanco, debemos forzar al div <code>main_container</code> a reconocer los
+            elementos floats que tiene dentro.</summary>
+        <div>
+
+
+            <p>Para hacer esto, agregamos la línea <code>overflow: auto;</code> al div <code>.main_container</code> (la
+                sintaxis nueva está en negrita):
+            </p>
+            <pre>
+                .main_container {
+                    width: 600px;
+                    margin-top: 20px;
+                    margin-right: automático;
+                    margin-left: automático;
+                    background-color: .ffffff;
+                    <strong>overflow: auto;</strong>
+                }
+            </pre>
+
+            <p>Esto le dice al <code>main_container</code> que mire más detenidamente lo que hay dentro. Reconocerá los
+                elementos floats y se
+                abrirá para incluirlos.</p>
+
+            <h4>Vemos la página</h4>
+            <p>Si ahora vemos la página así, todo está funcionando correctamente.</p>
+            <img src="imagenes/bb-04-e1506314271983.png" alt="ya se ve el fondo blanco">
+
+
+            <p>Todos los bloques de construcción ahora son <code>float: left</code>, y el div
+                <code>main_container</code> con el fondo blanco ha regresado.
+            </p>
+        </div>
+    </details>
+
+    <h2>Experimentamos con la propiedad <code>float</code></h2>
+
+    <h3>Vamos a hacer ahora <code>float: right</code> los seis bloques</h3>
+
+    <details>
+        <summary>¿Qué sucede si ponemos flotantes los seis bloques en la derecha?</summary>
+        <div>
+            <p>Vamos a cambiar el estilo de los seis divs, del <code>.a</code> al <code>.f</code> con la misma sintaxis
+                nuevamente. Cambiamos el <code>float: left;</code> por <code>float: right;</code> (la sintaxis nueva
+                está en negrita):</p>
+
+            <pre>            .a{
+            float:izquierda derecho ;
+            }</pre>
+
+
+            <h4>Vemos la página</h4>
+            <p>¡Los bloques han cambiado de lugar! El bloque A flota a la derecha, el bloque B flota a la derecha junto
+                al bloque A, y así sucesivamente. Y nuestro amigo el bloque F todavía no cabe en la primera fila, así
+                que pasa a la siguiente.</p>
+
+            <img src="imagenes/bb-05-e1506314287232.png" alt="los bloque se han cambiado de sitio a la derecha">
+            <p>¡Los bloques han cambiado de lugar!</p>
+        </div>
+    </details>
+
+    <h3>Usamos los dos <code>float: left</code> y <code>float: right;</code></h3>
+
+    <details>
+
+        <summary>¿Qué sucede si ponemos A, B, C flotando a la izquierda y D, E, F a la derecha?</summary>
+
+        <div>
+            <p>Dale a los divs .a .b y .c la misma sintaxis: <code>float: left</code>.</p>
+
+            <pre>
+        .a {
+            flotar: izquierda ;
+        }
+    </pre>
+
+
+            <p>Dale a los divs <code>.d</code>, <code>.e</code> y <code>.f</code> la misma sintaxis:
+                <code>float: right</code>.
+            </p>
+
+            <pre>
+
+    .d {
+        float: right ;
+    }
+    </pre>
+
+            <h4>Vemos la página</h4>
+            <p>Los bloques A, B y C están nuevamente en el lado izquierdo del main_container. Mientras que los bloques
+                D, E y F
+                continúan flotando hacia la derecha. El bloque F pobre todavía no cabe en la primera fila, así que pasa
+                a la
+                siguiente. Date cuenta que hay un pequeño hueco que separa los divs que están a la izquierda de los que
+                están a la derecha.</p>
+
+            <img src="imagenes/bb-06-e1506314300342.png"
+                alt="hay un pequeño hueco que separa los div flotando a la izquierda y a la derecha">
+
+            <p>A, B, C tienen el estilo <code>float: left</code>, y D, E, F tienen el estilo <code>float: right</code>.
+            </p>
+        </div>
+    </details>
+
+    <h2>Creamos varias filas</h2>
+    <p>A veces, una sola fila de elementos no es mejor que una sola columna de elementos.</p>
+    <h3>Usamos <code>clear: left;</code></h3>
+
+
+    <details>
+        <summary>Si nuestros elementos están flotando a la izquierda, usamos <code>clear: left</code> para enviarlos a
+            la siguiente fila.</summary>
+
+        <div>
+            <p>Si nuestros elementos están flotando a la izquierda, la propiedad <code>clear: left;</code>, le dice a un
+                elemento que no puede cruzarse con ningún otro elemento que flote a la izquierda que se haya definido
+                antes en
+                la misma página web.
+                Por tanto, el elemento que tiene la propiedad <code>clear: left</code> se desplaza un poco para abajo
+                ocupando
+                una nueva fila.
+                Como ya hemos visto, los elementos que no son float no reconocen a los que sí lo son. Por tanto, gracias
+                a esta
+                nueva propiedad, un elemento
+                que no esté flotando ya sí los reconoce.
+            </p>
+
+            <p>Y sin embargo, en este ejercicio se da la siguiente paradoja. Un elemento puede tener la propiedad
+                <code>clear: left; </code> para no cruzarse con ningún otro elemento
+                <code>float: left</code> anterior. Pero él mismo, puede volver a ser <code>float: left;</code>.
+            </p>
+
+            <p>
+                Vamos a crear la estructura que definimos a continuación, aunque no sea el objetivo de este ejercicio,
+                donde
+                Tenemos
+                dos bloques de construcción en cada fila.
+            </p>
+
+            <ul>
+                <li>AB</li>
+                <li>CD</li>
+                <li>EF</li>
+            </ul>
+
+            <p>
+                Por tanto, para realizar esta última estructura tenemos que:</p>
+
+            <ol>
+                <li>al primer elemento de una nueva fila ponle el atributo <code>clear: left;</code>.</li>
+                <li>ese mismo primer elemento de la fila, que también tenga <code>float: left;</code>.</li>
+                <li>el resto de elementos de la misma fila solo tiene <code>float: left;</code>.</li>
+            </ol>
+
+
+            <p>Eso significa que, en esta prueba de dos bloques por fila, necesitamos un <code>clear: left;</code> en
+                los divs
+                <code>.c</code> y <code>.e</code>, que son los primeros elementos de las nuevas filas. No lo ponemos en
+                <code>.a</code> porque es el primer elemento de una nueva fila al ser, precisamente, el primero.
+            </p>
+
+            <p>
+
+                A continuación mostramos la sintaxis de <code>.a</code>, <code>.b</code> y <code>.c</code>. Intenta si
+                puede
+                hacer <code>.d</code>, <code>.e</code> y <code>.f</code>.
+            </p>
+
+            <pre>
+                .a{
+                    float: left;
+                }
+
+                .b{
+                    float: left;
+                }
+
+                .c{
+                    clear: left;
+                    float: left;
+                }
+
+            </pre>
+
+
+            <h4>Vemos la página</h4>
+            Si hemos hecho el <code>clear:left;</code> y <code>float: left</code> correctamente, nuestra página debería
+            verse así. Si no es así,
+            inténtelo de nuevo.
+
+            <img src="imagenes/bb-07-e1506314314138.png" alt="dos columnas por fila">
+
+        </div>
+    </details>
+
+    <h3> Iniciamos la pirámide</h3>
+
+    <details>
+        <summary>Usamos <code>clear: left</code> y <code>float: left</code> para crear las tres filas las cuales
+            aumentan de tamaño en la pirámide.</summary>
+
+
+        <div>
+            <p>Nuestro próximo diseño debe parecerse a lo siguiente.</p>
+            <ul>
+                <li>A</li>
+                <li>BC</li>
+                <li>DEF</li>
+            </ul>
+
+            <p>El truco consiste en dar al primer elemento de cada nueva fila un<code> clear: left;</code> y luego poner
+                un <code>float:
+            left;</code>. Recomiendamos identificar qué bloques necesitan tanto un el clear como el float. Los
+                demás solo necesitarán un float.</p>
+
+            <h4>Vemos la página</h4>
+
+            <p>
+                Si lo hemos hecho correctamente, la página debería verse así:
+            </p>
+
+            <img src="imagenes/bb-08-e1506314327503.png" alt="pirámide a la izquierda">
+
+        </div>
+    </details>
+
+
+    <h2> Movemos los bloques a su posición </h2>
+
+
+    <code>En una pirámide, cada fila está centrada en la fila que está debajo.</code>
+
+    <h3> Utilizamos la propiedad <code>margin</code> para mover los bloques</h3>
+
+    <details>
+
+        <summary>Todos los elementos tienen margin y padding.</summary>
+        <div>
+            <p><em>margin</em> es el espacio fuera de un elemento. Es el espacio entre dos elementos.</p>
+            <p><em>padding</em> es el espacio dentro de
+                un elemento. Es el espacio entre el borde de un elemento y el contenido dentro de él.</p>
+
+            <p>Si nos ayuda a recordar cuál es cuál, pensemos en un sobre acolchado para enviar algo frágil. El padding
+                está en el
+                interior del sobre.</p>
+
+            <p>Para mover el bloque A hacia el centro del main_container, agregamos un poco de margin a la izquierda:
+            </p>
+            <pre>
+                .a{
+                    float: left;
+                    <strong>margin-left: 150px;</strong>
+                }
+            </pre>
+
+            <p>Y para que el bloque se sienta un poco más como un bloque de construcción, agregamos un pequeño margin
+                inferior:</p>
+
+            <pre>.a{
+                float: left;
+                    margin-left: 150px;
+                    <strong>margin-bottom: 2px;</strong>
+                }</pre>
+
+
+    <h4>Vemos la página</h4>
+    <p>La propiedad <code>margin-left: 150px</code> agregó espacio fuera de <code>.a</code>, y movió el bloque A más de 150px.</p>
+    <p>La propiedad <code>margin-lbottom: 2px</code> agregó algo de espacio entre el bloque A y el elemento debajo de él.</p>
+    <p>Si hemos realizado los márgenes correctamente, nuestra página
+    debería verse así. Si no es así, sigue intentándolo.</p>
+
+    <img src="imagenes/bb-09-e1506314361692.png" alt="Primer elemento de la primera fila en su posición">
+
+
+</div>
+</details>
+
+
+    <h3> Utilizmos <code>margin</code> para poner todos los bloques en posición </h3>
+
+<details>
+    <summary>Ponemos los diferentes bloques en su sitio</summary>
+    
+    <div>
+        <p> Puede que sea necesario algo de matemáticas y probar un poquito.
+    Usando solo margin-left y margin-bottom en .a, .b, .c, .d, .e y .f, copie el diseño a continuación.</p>
+
+    
+
+    <h4>Vemos la página</h4>
+    <p>Si hemos realizado los márgenes correctamente, nuestra página debería verse así. Si no es así, inténtelo de nuevo.</p>
+
+    <img src="imagenes/bb-10-e1506314379225.png" alt="la pirámide sin colores">
+</div>
+</details>
+    <h2>Agregamos espacio sobre la pirámide</h2>
+    
+    
+    <p>La pirámide parece apretada en main_container. Podemos agregar espacio encima con margin o padding.</p>
+
+    <h3>Usamos padding para agregar espacio</h3>
+    
+    
+    
+    <details>
+        <summary>Cómo saber cuándo usar el margin y cuándo usar el padding.</summary>
+        <div>
+<p>La respuesta es insatisfactoria: "depende".</p>
+
+<p>Hemos utilizado <code>margin</code> al mover los bloques de construcción, ya que necesitamos añadir espacio fuera de los bloques. Si usamos <code>padding-left</code> en el bloque A sucedería algo como lo siguiente:
+</p>
+
+<img src="imagenes/bb-11-e1506314397512.png" alt="usamos padding-left dentro del bloque A">
+
+<p>En este caso, la decisión es clara. Cuando usamos <code>margin: left</code> para mover el bloque A fue la mejor decisión.
+    Padding-left no hace lo que se necesitaba.
+</p>
+
+<p>   Pero al agregar espacio sobre el bloque A, la decisión no está clara. Podemos utilizar <code>margin-top</code> en el bloque
+    A. O podemos usar <code>padding-top</code> en <code>main_container</code>. De cualquier manera, obtenemos los mismos resultados.</p>
+
+<p>Como no hemos usado padding en este ejercicio, añadimos este espacio agregando <code>padding-top</code> al div <code>main_container</code> así
+    (la sintaxis nueva está en negrita):</p>
+
+    <pre>#main_container {
+    ancho: 600px;
+    margin superior: 20px;
+    margin derecho: automático;
+    margin: left: automático;
+    color de fondo: .ffffff;
+    desbordamiento: oculto;
+    <strong>padding-top:40px;</strong>
+    }</pre>
+
+    <h4>Vemos la página</h4>
+    <p>Si hemos hecho el padding correctamente la página debería parecerse a lo siguiente.</p>
+
+    <img src="imagenes/bb-12-e1506314414135.png" alt="pirámide terminada sin colores">
+
+        </div>
+
+    </details>
+
+    <h2> Añadimos color a los bloques</h2>
+    
+    <p>Para hacer que los bloques sean como juguetes, vamos a añadir color a las letras y a los bordes.</p>
+
+    <h3>Usamos una clase para añadir el color</h3>
+    
+    <details>
+
+        <summary>
+            Lo mejor de una clase personalizada es que la podemos reutilizar.
+        </summary>
+        <div>
+<p>Si definimos correctamente una clase personalizada, podemos reutilizar para modificar varios elementos en una página. Por ejemplo,
+    si hacemos una clase llamada "azul" e indicamos la propiedad "border-color: blue;", podemos usar la misma clase tanto en la letra como en el borde.
+</p>
+
+<p>En el fichero CSS tenemos que poner lo siguiente.</p>
+
+
+<pre>
+    .azul{
+        color:dodgerblue;
+        border-color:dodgerblue;
+        }
+</pre>
+
+
+<p>
+    Usamos la clase en el código HTML para hacer que tanto el bloque A como el D sean azules. Y la clase la usamos en dos lugares
+    en cada bloque: para la clase que ya está en el div y para el encabezado h2.
+</p>
+
+<p>
+    Debemos poner especial atención a la sintaxis. Démonos cuenta que podemos añadir más de una clase a un elemento separando los nombres
+    de las clases que asociamos a un elemento HTML mediante un espacio: (la sintaxis nueva está en negrita)
+</p>
+<pre>
+    &lt;div id="a" class="border <strong>azul</strong>"&gt;
+    &lt;h2 <strong>class="azul"</strong>&gt;a&lt;/h2&gt;
+    &lt;/div&gt;
+</pre>
+
+
+<h4>Vemos la página</h4>
+
+<p>Si has aplicado la clase "azul" correctamente nuestra página debería parecerse a la imagen de abajo.</p>
+
+<p>La clase "azul" se ha añadido a las letras A y D y a los bordes que las contienen. ¿Por qué esto ha funcionado? ¿Por qué no añadimosotro borde en las letras? La clase no especifica ni un grosor ni un estilo para el borde; solo qué color usar. Sin grosor ni estilo especificados, un borde no se añade a las letras.</p>
+
+<img src="imagenes/bb.13-e1506314497733.png" alt="el color azul se añade a la pirámide"> 
+
+
+        </div>
+
+
+
+    </details>
+    
+
+    <h3>¡Usamos más clases y más colores!</h3>
+
+    <details>
+        <summary>Vamos a hacer que los bloques B y F sean rojos y que los bloques C y E sean verdes.</summary>
+        <div>
+            <p>Seguimos el mismo proceso que acabamos de usar para los bloques A y D. Cuando terminemos de poner tanto el rojo como el verde, revisa tu página. Debería ser similar a lo siguiente. Puedes usar otros colores si quieres.</p>
+            <img src="imagenes/bb.14-e1506314515183.png" alt="Pirámide terminada">
+        </div>
+    </details>
+
+</body>
+
+</html>

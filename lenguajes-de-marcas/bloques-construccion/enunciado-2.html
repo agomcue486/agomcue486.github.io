@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio - Bloques de Construcción</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            background-color: #ba6647;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h1.color {
+            color: #ba6647;
+        }
+
+        .main {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+        }
+
+
+        pre {
+            border: 1px solid #EEE;
+            color: #333;
+            font-family: Consolas, Monaco, Lucida Console, monospace;
+            font-size: 0.9rem;
+            line-height: 1.71429;
+            margin: 1.71429rem 0;
+            overflow: auto;
+            padding: 1.71429rem;
+            background-color: #eee;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1 class="color">Ejercicio » Bloques de Construcción (float, margin, padding)</h1>
+        <hr/>
+        <p>Este ejercicio ha sido traducido automáticamente de esta página <a href="http://www.typographicwebdesign.com/setting-text/exercise-building-blocks-float-margin-padding/" target="_blank">Building blocks</a>.</p>
+        <hr/>
+    
+        <p>A menudo, un diseño de página web requiere múltiples columnas de texto e imágenes. Esto
+            significa crear y diseñar múltiples divs… y lograr que los divs vayan donde quieres que
+            vayan.</p>
+        <p>En esta lección, usarás float, margin y padding para crear una pirámide de bloques de
+            juguete. Luego usarás tres clases para cambiar el color de los bloques.</p>
+        <h2>Descripción General de la Tarea</h2>
+        <ol>
+            <li>Usa los archivos HTML y CSS que he comenzado para ti.</li>
+            <li>Sigue las instrucciones para explorar float y margin.</li>
+            <li>Crea la pirámide final de bloques.</li>
+            <li>Crea y usa tres clases para agregar color a los bloques.</li>
+        </ol>
+        <div>
+            <a href="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb.14-e1506314515183.png">
+                <img src="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb.14-e1506314515183.png"
+                        alt="Bloques de construcción con colores" width="500" height="340">
+                </a>
+            <p>Tu obra final se verá algo así.</p>
+        </div>
+        <h2>Comenzando</h2>
+        <h3>Usa los Archivos HTML y CSS Proporcionados</h3>
+        <p>He hecho la configuración inicial en los <a
+                href="https://drive.google.com/uc?export=download&id=15KzTaJrJkxvLr7Ste9_SbXweVmu6RcOf">archivos
+                HTML y CSS de building_blocks</a>. Aquí hay algunos elementos nuevos, como esquinas
+            redondeadas. Dedica tiempo a leer mi sintaxis para ver cómo he configurado las cosas (puedes
+            aprender mucho leyendo archivos de otras personas).</p>
+        <h3>Ve la Página en Tu Navegador</h3>
+        <p>Deberías ver una columna de seis bloques de construcción, marcados de A a F.</p>
+        <p><a href="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb-01.png"><img
+                    src="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb-01.png"
+                    alt="Columna de seis bloques de construcción" width="500" height="556"></a></p>
+        <p>Los seis bloques se hacen con seis divs. Y por defecto, los divs son elementos de
+            bloque—crean un salto (una nueva línea) para cada uno. Se muestran como una sola columna de
+            elementos.</p>
+        <h2>Sal de la Columna Única</h2>
+        <p>No siempre quieres una sola columna de elementos. Por ejemplo, en este ejercicio,
+            eventualmente crearás una pirámide de bloques de construcción.</p>
+        <h3>Usa la Propiedad Float</h3>
+        <span tabindex="0"
+            title="Para hacer que los divs vivan lado a lado en una fila, usa la propiedad float.">Para
+            hacer que los divs vivan lado a lado en una fila, usa la propiedad float.</span>
+        <div>
+            <p>Puedes decirle a un elemento que flote <em>izquierda</em> o <em>derecha</em>.</p>
+            <p>En tu archivo CSS, añade la línea <em>float:left;</em> al div #b (nueva sintaxis en
+                negrita):</p>
+            <pre>  #b{
+    <strong>    float:left;</strong>
+    }
+    </pre>
+            <h3>Ve Tu Página</h3>
+            <p>Esto no se ve bien. En lugar de que el bloque B flote hacia el bloque A, ahora el bloque
+                C está cubriendo el bloque B (nota: en algunos navegadores, el bloque B está cubriendo
+                el bloque A).</p>
+            <p>Esto se ve mal, pero es la forma en que funciona la propiedad float. Todos los elementos
+                lado a lado deben ser flotados. De lo contrario, <em>los elementos sin float no
+                    reconocerán elementos con float</em>, y las cosas se volverán extrañas.</p>
+            <div><a href="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb-02.png"><img
+                        src="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb-02-e1506314105931.png"
+                        alt="Bloque C cubriendo bloque B" width="500" height="494"></a>
+                <p>El bloque C está cubriendo el
+                    bloque B. ¿Por qué? Los elementos sin float no reconocen elementos con float, y las
+                    cosas se vuelven extrañas.</p>
+            </div>
+        </div>
+        <h3>Float:left en los Seis Bloques</h3>
+        <span tabindex="0" title="En tu archivo CSS, añade <em>float:left;</em> a los seis divs.">En tu
+            archivo CSS,
+            añade <em>float:left;</em> a los seis divs.</span>
+        <div>
+            <p>Todos los divs, #a al #f tendrán la misma sintaxis (nueva sintaxis en negrita):</p>
+            <pre>  #a{
+    <strong>    float:left;</strong>
+    }
+    </pre>
+            <h3>Ve Tu Página</h3>
+            <p>Esto se ve mejor. Excepto que el bloque F no está junto al bloque E, y el fondo blanco ha
+                desaparecido.</p>
+            <p>De nuevo, esto se ve mal, pero es la forma en que funciona la propiedad float. Si los
+                elementos lado a lado no caben todos en el espacio proporcionado, algunos se desplazarán
+                a la siguiente línea.</p>
+            <p>Y, como los elementos sin float no reconocen elementos sin float… el main_container no
+                reconoce los elementos flotados dentro de él. Esto causa un problema porque
+                main_container está actualmente configurado para una altura automática (por defecto, si
+                no especificas una altura, un elemento tiene una altura automática).</p>
+            <p>Altura automática significa que main_container solo se abrirá hasta la altura de lo que
+                contenga… y como los bloques están flotados, main_container no los reconoce. No sabe que
+                están allí.</p>
+            <div><a href="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb-03.png"><img
+                        src="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb-03-e1506314253661.png"
+                        alt="Main container cerrado" width="500" height="428"></a>
+                <p>El #main_container solo se
+                    abrirá hasta la altura de lo que contenga… y como los bloques están flotados,
+                    #main_container no sabe que están allí.</p>
+            </div>
+        </div>
+        <h3>Añade overflow:hidden al main_container</h3>
+        <span tabindex="0"
+            title="Para recuperar el fondo blanco, necesitas forzar que main_container reconozca los elementos flotados dentro de él.">Para
+            recuperar el fondo blanco, necesitas forzar que main_container reconozca los elementos
+            flotados dentro de él.</span>
+        <div>
+            <p>Para hacer esto, añade la línea <em>overflow:hidden;</em> a tu #main_container (nueva
+                sintaxis en negrita):</p>
+            <pre>#main_container{
+    width:600px;
+    margin-top:20px;
+    margin-right:auto;
+    margin-left:auto;
+    background-color:#ffffff;
+    <strong>   overflow:hidden;</strong>
+    }
+    </pre>
+            <p>Esto le dice a main_container que mire más cuidadosamente qué hay dentro de él.
+                Reconocerá los elementos flotados y se abrirá nuevamente para incluirlos.</p>
+            <h3>Ve Tu Página</h3>
+            <p>Si tu página se ve así, todo está funcionando correctamente.</p>
+            <div><a href="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb-04.png"><img
+                        src="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb-04-e1506314271983.png"
+                        alt="Bloques flotados correctamente" width="500" height="260"></a>
+                <p>Todos los bloques de
+                    construcción ahora tienen float:left, y el main_container blanco ha vuelto.</p>
+            </div>
+        </div>
+        <h2>Experimenta con la Propiedad Float</h2>
+        <h3>Float:right; en los Seis Bloques</h3>
+        <span tabindex="0" title="¿Qué sucede si flotas los seis bloques hacia la derecha?">¿Qué sucede
+            si flotas los
+            seis bloques hacia la derecha?</span>
+        <div>
+            <p>Añade sintaxis nueva a los seis divs, #a al #f. Cambia float:left; por float:right;&nbsp;
+                (nueva sintaxis en negrita):</p>
+            <pre>  #a{
+    float:<del>left</del> <strong>right</strong>;<del></del>
+    }
+    </pre>
+            <h3>Ve Tu Página</h3>
+            <p>¡Los bloques han cambiado de lugar! El bloque A flota hacia la derecha, el bloque B flota
+                hacia la derecha junto al bloque A, y así sucesivamente. Y nuestro amigo el bloque F aún
+                no cabe en la primera fila, así que se desplaza a la siguiente.</p>
+            <div><a href="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb-05.png"><img
+                        src="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb-05-e1506314287232.png"
+                        alt="Bloques flotados a la derecha" width="500" height="245"></a>
+                <p>¡Los bloques han cambiado de
+                    lugar!</p>
+            </div>
+        </div>
+        <h3>Usa Tanto float:left; Como float:right;</h3>
+        <span tabindex="0"
+            title="¿Qué sucede si flotas A, B, C hacia la izquierda y D, E, F hacia la derecha?">¿Qué
+            sucede si flotas A, B, C hacia la izquierda y D, E, F hacia la derecha?</span>
+        <div>
+            <p>Añade a los divs #a #b y #c la misma sintaxis: float:left.</p>
+            <pre>  #a{
+    float:<strong>left</strong>;<del></del>
+    }
+    </pre>
+            <p>Añade a los divs #d #e y #f la misma sintaxis: float:right.</p>
+            <pre>  #d{
+    float:<strong>right</strong>;<del></del>
+    }
+    </pre>
+            <h3>Ve Tu Página</h3>
+            <p>Los bloques A, B y C están de vuelta en el lado izquierdo del main_container. Mientras
+                que los bloques D, E y F continúan flotando hacia la derecha. El pobre bloque F aún no
+                cabe en la primera fila, así que se desplaza a la siguiente.</p>
+            <div><a href="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb-06.png"><img
+                        src="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb-06-e1506314300342.png"
+                        alt="Bloques flotados mixtos" width="500" height="238"></a>
+                <p>A, B, C están diseñados para
+                    float:left, y D, E, F están diseñados para float:right.</p>
+            </div>
+        </div>
+        <h2>Crea Múltiples Filas</h2>
+        <p>A veces, una sola fila de elementos no es mejor que una sola columna de elementos.</p>
+        <h3>Usa clear:left;</h3>
+        <span tabindex="0"
+            title="If your elements are floated left, &lt;em&gt;clear:left;&lt;/em&gt; tells an element to go to the next row.">If
+            your elements are floated left, <em>clear:left;</em> tells an element to go to the next
+            row.</span>
+        <div>
+            <p>Pero una vez que el elemento está en la siguiente fila, necesita flotar nuevamente para
+                que la siguiente fila funcione. ¿Por qué? Como se mostró anteriormente en este
+                ejercicio, <em>los elementos sin float no reconocen elementos con float</em>… y acabas
+                de eliminar la relación float:left; entre dos elementos.</p>
+            <p>El truco es este:</p>
+            <ol>
+                <li>da al primer elemento de una nueva fila un clear:left;</li>
+                <li>luego colócale un float:left; encima.</li>
+            </ol>
+            <p>Para este siguiente diseño, crea tres filas.<br>
+                AB<br>
+                CD<br>
+                EF</p>
+            <p>Eso significa que necesitarás un clear:left; en #c y #e (el primer elemento de la nueva
+                fila).</p>
+            <p>A continuación se encuentra la sintaxis para #a, #b y #c. Mira si puedes hacer #d, #e y
+                #f.</p>
+            <pre>#a{
+    float:left;
+    }
+
+    #b{
+    float:left;
+    }
+
+    #c{
+    clear:left;
+    float:left;
+    }
+    </pre>
+            <h3>Ve Tu Página</h3>
+            <p>Si has hecho el clear:float; y float:left; correctamente, tu página debería verse así. Si
+                no, inténtalo de nuevo.</p>
+            <p><a href="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb-07.png"><img
+                        src="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb-07-e1506314314138.png"
+                        alt="Tres filas de bloques" width="500" height="308"></a></p>
+        </div>
+        <h3>Comienza la Pirámide</h3>
+        <span tabindex="0"
+            title="Usa <em>clear:left;</em> y <em>float:left;</em> para crear tres filas de tamaño creciente.">Usa
+            <em>clear:left;</em> y <em>float:left;</em> para crear tres filas de tamaño
+            creciente.</span>
+        <div>
+            <p>Tu siguiente diseño debería verse así:<br>
+                A<br>
+                BC<br>
+                DEF</p>
+            <p>Como el truco es dar al primer elemento de una nueva fila un clear:left; luego colocarle
+                un float:left;, te recomiendo que comiences identificando qué bloques necesitan tanto un
+                clear como un float. Los otros solo necesitarán un float.</p>
+            <h3>Ve Tu Página</h3>
+            <p>Si has hecho el clear:float; y float:left; correctamente, tu página debería verse así. Si
+                no, inténtalo de nuevo.</p>
+            <p><a href="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb-08.png"><img
+                        src="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb-08-e1506314327503.png"
+                        alt="Pirámide de bloques" width="500" height="306"></a></p>
+        </div>
+        <h2>Mueve los Bloques a Su Posición</h2>
+        <p>En una pirámide, cada fila está centrada en la fila de abajo.</p>
+        <h3>Usa Margin para Mover los Bloques</h3>
+        <span tabindex="0" title="Todos los elementos tienen margin y padding.">Todos los elementos
+            tienen margin y
+            padding.</span>
+        <div>
+            <p><em>Margin</em> es el espacio fuera de un elemento. Es el espacio entre dos elementos.
+                <em>Padding</em> es el espacio dentro de un elemento. Es el espacio entre el borde de un
+                elemento y el contenido dentro de él.
+            </p>
+            <p>Si te ayuda a recordar cuál es cuál, piensa en un sobre acolchado para enviar algo
+                frágil. El padding está en el <em>interior</em> del sobre.</p>
+            <p>Para mover el bloque A hacia el centro del main_container, añade algo de margin-left a
+                él:</p>
+            <pre>  #a{
+    float:left;
+    <strong>    margin-left: 150px;</strong>
+    }
+    </pre>
+            <p>Y para hacer que el bloque se parezca más a un bloque de construcción, añade un poco de
+                bottom-margin a él:</p>
+            <pre>  #a{
+    float:left;
+    margin-left: 150px;
+    <strong>    margin-bottom: 2px;</strong>
+    }
+    </pre>
+            <h3>Ve Tu Página</h3>
+            <p>Margin-left: 150px; añadió espacio fuera de #a y movió el bloque A 150px. Margin-bottom:
+                2px; añadió espacio entre el bloque A y el elemento de abajo. Si has hecho los margins
+                correctamente, tu página debería verse algo así. Si no, inténtalo de nuevo.</p>
+            <div style="width: 510px"><a
+                    href="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb-09.png"><img
+                        loading="lazy" decoding="async" aria-describedby="caption-attachment-1507"
+                        src="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb-09-e1506314361692.png"
+                        alt="" width="500" height="307"></a>
+                <p>Margin-left: 150px; mueve el
+                    bloque A 150px. Margin-bottom: 2px; añade espacio entre el bloque A y el elemento de
+                    abajo.</p>
+            </div>
+        </div>
+        <h3>Usa Margin para Poner Todos los Bloques en Posición</h3>
+        <span tabindex="0" title="Puede tomar algo de prueba y error.">Puede tomar algo de prueba y
+            error.</span>
+        <div>
+            <p>Usando solo margin-left y margin-bottom en #a, #b, #c, #d, #e y #f, copia el diseño de
+                abajo.</p>
+            <h3>Ve Tu Página</h3>
+            <p>Si has hecho los margins correctamente, tu página debería verse algo así. Si no,
+                inténtalo de nuevo.</p>
+            <p><a href="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb-10.png"><img
+                        loading="lazy" decoding="async"
+                        src="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb-10-e1506314379225.png"
+                        alt="" width="500" height="312"></a></p>
+        </div>
+        <h2>Añade Espacio Encima de la Pirámide</h2>
+        <p>La pirámide se ve apretada en el main_container. Puedes añadir espacio encima de ella con
+            margin o padding.</p>
+        <h3>Usa Padding para Añadir Espacio</h3>
+        <span tabindex="0" title="A menudo me preguntan cuándo usar margin y cuándo usar padding.">A
+            menudo me
+            preguntan cuándo usar margin y cuándo usar padding.</span>
+        <div>
+            <p><em>La respuesta insatisfactoria es, "depende."<br>
+                </em></p>
+            <p>Usaste margin cuando movías los bloques de construcción, porque necesitabas añadir
+                espacio fuera de los bloques. Si usaras padding-left en el bloque A, se vería algo así:
+            </p>
+            <p><a href="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb-11.png"><img
+                        loading="lazy" decoding="async"
+                        src="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb-11-e1506314397512.png"
+                        alt="" width="500" height="307"></a></p>
+            <p>En este caso, la decisión es clara. Usar margin-left para mover el bloque A fue la mejor
+                decisión. Padding-left no haría lo que se necesitaba.</p>
+            <p>Pero cuando añades espacio encima del bloque A, la decisión no es clara. Puedes usar un
+                margin-top en el bloque A. O puedes usar un padding-top en el main_container. De
+                cualquier forma, obtendrías los mismos resultados independientemente de tu decisión.</p>
+            <p>Como no has usado padding aún en este ejercicio, añade el espacio añadiendo padding-top
+                al main_container como se muestra a continuación (nueva sintaxis en negrita):</p>
+            <pre>  #main_container{
+    width:600px;
+    margin-top:20px;
+    margin-right:auto;
+    margin-left:auto;
+    background-color:#ffffff;
+    overflow:hidden;
+    <strong>    padding-top:40px;</strong>
+    }
+    </pre>
+            <h3>Ve Tu Página</h3>
+            <p>Si has hecho el padding correctamente, tu página debería verse algo así. Si no, inténtalo
+                de nuevo.</p>
+            <p><a href="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb-12.png"><img
+                        loading="lazy" decoding="async"
+                        src="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb-12-e1506314414135.png"
+                        alt="" width="500" height="339"></a></p>
+        </div>
+        <h2>Añade Color a los Bloques</h2>
+        <p>Para hacer que los bloques se parezcan más a bloques de juguete, vas a añadir color a las
+            letras y bordes. Lo harás usando clases.</p>
+        <h3>Usa una Clase para Añadir Color</h3>
+        <span tabindex="0" title="Lo mejor de una clase es que puedes usarla una y otra vez.">Lo mejor
+            de una clase es
+            que puedes usarla una y otra vez.</span>
+        <div>
+            <p>Y, si la defines correctamente, puedes usarla para modificar diferentes elementos en la
+                página. Por ejemplo, si haces una clase llamada "azul" y le dices que tenga el color
+                azul y el border-color azul, puedes usar la misma clase tanto en la letra como en el
+                borde.</p>
+            <p>En el CSS, crea la siguiente clase:</p>
+            <pre>  .blue{
+    color:dodgerblue;
+    border-color:dodgerblue;
+    }
+    </pre>
+            <p>Usa la clase en el HTML para hacer que tanto el bloque A como el bloque D sean azules.
+                Añade la clase en dos lugares en cada bloque: a la clase ya existente en el div, y a la
+                h2.</p>
+            <p>Presta particular atención a la sintaxis. Observa que puedes añadir más de una clase a un
+                elemento separando los nombres de clase con un espacio. La nueva sintaxis está en
+                negrita:</p>
+            <pre>&lt;div&gt;
+    &lt;h2 <strong>class="blue"</strong>&gt;a&lt;/h2&gt;
+    &lt;/div&gt;</pre>
+            <h3>Ve Tu Página</h3>
+            <p>Si has hecho y aplicado la clase "blue" correctamente, tu página debería verse algo así a
+                la imagen de abajo. Si no, inténtalo de nuevo.</p>
+            <p>La clase "blue" fue añadida a las letras A y D y al borde en los divs que contienen las
+                letras. ¿Por qué funcionó esto? <em>¿Por qué no añadió otro borde a las letras?</em> La
+                clase no especifica un peso o estilo para el borde, solo qué color usar. Sin un peso y
+                estilo especificados, no se añadirá un borde a las letras.</p>
+            <p>&nbsp;</p>
+            <p><a href="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb.13.png"><img
+                        loading="lazy" decoding="async"
+                        src="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb.13-e1506314497733.png"
+                        alt="" width="500" height="343"></a></p>
+        </div>
+        <h3>¡Usa Más Clases para Añadir Más Colores!</h3>
+        <span tabindex="0"
+            title="Haz que los bloques B y F sean rojos, y los bloques C y E sean verdes.">Haz que los
+            bloques B y F sean rojos, y los bloques C y E sean verdes.</span>
+        <div>
+            <p>Sigue el mismo proceso que usaste para hacer que los bloques A y D sean azules. Cuando
+                termines, ve tu página. Debería verse similar a la de abajo (está bien si tus colores
+                son diferentes de los míos).</p>
+            <p><a href="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb.14.png"><img
+                        loading="lazy" decoding="async"
+                        src="http://www.typographicwebdesign.com/v03/wp-content/uploads/2017/09/bb.14-e1506314515183.png"
+                        alt="" width="500" height="340"></a></p>
+        </div>
+        <h3>Valida Tus Archivos</h3>
+        <p>Una vez que tengas tu pirámide funcionando, valida tus archivos. Usa <a
+                href="http://Validator.w3.org" target="_blank" rel="noopener">validator.w3.org</a> para
+            tu HTML, y <a href="http://jigsaw.w3.org/css-validator" target="_blank"
+                rel="noopener">jigsaw.w3.org/css-validator</a> para tu CSS.</p>
+        <div>
+            <h2>Consejos Rápidos</h2>
+            <div>
+                <h5>Floats…</h5>
+                <ul>
+                    <li>Can be left or right. Use float:left or float:right.</li>
+                    <li>Can be cleared with clear:left or clear:right. Use on the first element in a
+                        row. Follow it with a float:left for float:right so the element will work with
+                        others in the row.</li>
+                    <li>Need to be consistent. All elements in a row must float or it won’t work.
+                        Floated elements don’t recognize non-floated elements.</li>
+                    <li>Will make an auto height container close up. Because the container won’t
+                        recognize floated elements inside of it. (Fix by adding overflow:hidden; to the
+                        container you want to force open).</li>
+                    <li>If you want to learn more about floats, Chris Coyner provides a simple, yet
+                        thorough explanation at <a href="http://css-tricks.com/all-about-floats/"
+                            target="_blank" rel="noopener"> All About Floats</a>.</li>
+                </ul>
+                <h5>Margin and Padding…</h5>
+                <ul>
+                    <li>Is space. Margin is the space outside an element (and thus between two
+                        elements). Padding is the space inside an element (and thus between the border
+                        and content in the element).</li>
+                    <li>Can be used interchangeably at times. Which one you should use depends on what
+                        you need the element to do.</li>
+                </ul>
+                <h5>Classes…</h5>
+                <ul>
+                    <li>Can be used over and over.</li>
+                    <li>Can be used to modify an ID.</li>
+                    <li>If defined properly, can be used to modify different kinds of elements.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
