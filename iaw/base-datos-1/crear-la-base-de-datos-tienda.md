@@ -75,6 +75,9 @@ INSERT INTO pedido_producto (pedido_id, producto_id, cantidad) VALUES
 
 -- Finalmente le damos permisos al usuario `usuario` sobre esta base de datos recién creada.
 GRANT ALL PRIVILEGES ON `tienda`.* TO 'usuario'@'localhost';
+
+-- Guardamos los cambios realizados
+FLUSH PRIVILEGES;
 ```
 
 Y ahora ya solos nos queda ejecutar lo siguiente:
