@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Flexbox Playground</title>
+
+<style>
+  body {
+    font-family: sans-serif;
+    padding: 20px;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  .panel {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .panel label {
+    font-weight: bold;
+  }
+
+  .flex-container {
+    display: flex;
+    border: 3px solid black;
+    padding: 20px;
+    height: 200px;
+    gap: 10px;
+    transition: all 0.2s ease;
+    background: rgba(0,0,0,0.05);
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+</style>
+</head>
+<body>
+
+<h2>Flexbox Playground: align-items, justify-content y flex-direction</h2>
+
+<div class="panel">
+  <div>
+    <label for="direction">flex-direction</label><br>
+    <select id="direction">
+      <option value="row">row</option>
+      <option value="row-reverse">row-reverse</option>
+      <option value="column">column</option>
+      <option value="column-reverse">column-reverse</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="justify">justify-content</label><br>
+    <select id="justify">
+      <option value="flex-start">flex-start</option>
+      <option value="flex-end">flex-end</option>
+      <option value="center">center</option>
+      <option value="space-between">space-between</option>
+      <option value="space-around">space-around</option>
+      <option value="space-evenly">space-evenly</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="align">align-items</label><br>
+    <select id="align">
+      <option value="stretch">stretch</option>
+      <option value="flex-start">flex-start</option>
+      <option value="flex-end">flex-end</option>
+      <option value="center">center</option>
+      <option value="baseline">baseline</option>
+    </select>
+  </div>
+</div>
+
+<div id="contenedor" class="flex-container">
+  <button>Smile</button>
+  <button>Laugh</button>
+  <button>Wink</button>
+  <button>Shrug</button>
+  <button>Blush</button>
+</div>
+
+<script>
+  const contenedor = document.getElementById("contenedor");
+
+  document.getElementById("direction").addEventListener("change", e => {
+    contenedor.style.flexDirection = e.target.value;
+  });
+
+  document.getElementById("justify").addEventListener("change", e => {
+    contenedor.style.justifyContent = e.target.value;
+  });
+
+  document.getElementById("align").addEventListener("change", e => {
+    contenedor.style.alignItems = e.target.value;
+  });
+</script>
+
+</body>
+</html>
