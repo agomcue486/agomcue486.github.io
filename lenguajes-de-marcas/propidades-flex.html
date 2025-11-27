@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Flexbox Interactivo Completo</title>
+
+<style>
+  body {
+    font-family: sans-serif;
+    padding: 20px;
+  }
+
+  .controls {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .control {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .control input[type="number"] {
+    width: 80px;
+  }
+
+  .summary {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+
+  .container {
+    display: flex;
+    border: 4px solid black;
+    height: 150px;
+    padding: 10px;
+    gap: 10px;
+    overflow: visible;
+    transition: width 0.2s ease;
+    width: 600px;
+  }
+
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    border: 2px dashed rgba(0,0,0,0.4);
+    box-sizing: border-box;
+  }
+
+  /* Colores con transparencia */
+  .a { background: rgba(255, 0, 0, 0.4); }
+  .b { background: rgba(0, 128, 255, 0.4); }
+  .c { background: rgba(0, 200, 0, 0.4); }
+
+  button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+</style>
+</head>
+<body>
+
+<h2>Flexbox interactivo: grow, shrink, basis y ancho del contenedor</h2>
+
+<div class="summary">
+  Suma total de flex-basis: <span id="sumaBasis">750px</span>
+</div>
+
+<div class="controls">
+
+  <!-- CONTENEDOR -->
+  <div class="control">
+    <h3>Contenedor</h3>
+
+    <label>Ancho: <span id="containerWidthVal">600px</span></label>
+    <input type="range" id="containerWidth" min="200" max="1200" value="600">
+    <input type="number" id="containerWidthNum" min="200" max="1200" value="600">
+  </div>
+
+  <!-- CAJA A -->
+  <div class="control">
+    <h3>Caja A</h3>
+
+    <label>flex-grow: <span id="growAVal">1</span></label>
+    <input type="range" id="growA" min="0" max="5" value="1">
+
+    <label>flex-shrink: <span id="shrinkAVal">1</span></label>
+    <input type="range" id="shrinkA" min="0" max="5" value="1">
+
+    <label>flex-basis: <span id="basisAVal">250px</span></label>
+    <input type="range" id="basisA" min="50" max="500" value="250">
+    <input type="number" id="basisANum" min="50" max="500" value="250">
+  </div>
+
+  <!-- CAJA B -->
+  <div class="control">
+    <h3>Caja B</h3>
+
+    <label>flex-grow: <span id="growBVal">1</span></label>
+    <input type="range" id="growB" min="0" max="5" value="1">
+
+    <label>flex-shrink: <span id="shrinkBVal">1</span></label>
+    <input type="range" id="shrinkB" min="0" max="5" value="1">
+
+    <label>flex-basis: <span id="basisBVal">250px</span></label>
+    <input type="range" id="basisB" min="50" max="500" value="250">
+    <input type="number" id="basisBNum" min="50" max="500" value="250">
+  </div>
+
+  <!-- CAJA C -->
+  <div class="control">
+    <h3>Caja C</h3>
+
+    <label>flex-grow: <span id="growCVal">1</span></label>
+    <input type="range" id="growC" min="0" max="5" value="1">
+
+    <label>flex-shrink: <span id="shrinkCVal">1</span></label>
+    <input type="range" id="shrinkC" min="0" max="5" value="1">
+
+    <label>flex-basis: <span id="basisCVal">250px</span></label>
+    <input type="range" id="basisC" min="50" max="500" value="250">
+    <input type="number" id="basisCNum" min="50" max="500" value="250">
+  </div>
+
+</div>
+
+<button id="igualarBasis">Igualar flex-basis de A, B y C</button>
+
+<div id="container" class="container">
+  <div id="A" class="box a">A</div>
+  <div id="B" class="box b">B</div>
+  <div id="C" class="box c">C</div>
+</div>
+
+<script>
+  // Contenedor
+  const container = document.getElementById("container");
+  const containerWidthRange = document.getElementById("containerWidth");
+  const containerWidthNum = document.getElementById("containerWidthNum");
+  const containerWidthVal = document.getElementById("containerWidthVal");
+
+  // Cajas
+  const A = document.getElementById("A");
+  const B = document.getElementById("B");
+  const C = document.getElementById("C");
+
+  // Mostrar suma de flex-basis
+  const sumaBasisSpan = document.getElementById("sumaBasis");
+
+  function actualizarSuma() {
+    const a = parseInt(document.getElementById("basisA").value);
+    const b = parseInt(document.getElementById("basisB").value);
+    const c = parseInt(document.getElementById("basisC").value);
+    const total = a + b + c;
+    sumaBasisSpan.textContent = total + "px";
+  }
+
+  // Función genérica para flex-grow y flex-shrink
+  function conectarControl(idRange, idSpan, elemento, propiedad) {
+    const range = document.getElementById(idRange);
+    const span = document.getElementById(idSpan);
+
+    range.addEventListener("input", e => {
+      elemento.style[propiedad] = e.target.value;
+      span.textContent = e.target.value;
+    });
+  }
+
+  // Función para flex-basis (range + number)
+  function conectarBasis(idRange, idNum, idSpan, elemento) {
+    const range = document.getElementById(idRange);
+    const num = document.getElementById(idNum);
+    const span = document.getElementById(idSpan);
+
+    function actualizar(valor) {
+      const px = valor + "px";
+      elemento.style.flexBasis = px;
+      span.textContent = px;
+      range.value = valor;
+      num.value = valor;
+      actualizarSuma();
+    }
+
+    range.addEventListener("input", e => actualizar(e.target.value));
+    num.addEventListener("input", e => actualizar(e.target.value));
+  }
+
+  // Control del ancho del contenedor (range + number)
+  function conectarAnchoContenedor() {
+    function actualizar(valor) {
+      const px = valor + "px";
+      container.style.width = px;
+      containerWidthVal.textContent = px;
+      containerWidthRange.value = valor;
+      containerWidthNum.value = valor;
+    }
+
+    containerWidthRange.addEventListener("input", e => actualizar(e.target.value));
+    containerWidthNum.addEventListener("input", e => actualizar(e.target.value));
+  }
+
+  conectarAnchoContenedor();
+
+  // Conectar controles de A
+  conectarControl("growA", "growAVal", A, "flexGrow");
+  conectarControl("shrinkA", "shrinkAVal", A, "flexShrink");
+  conectarBasis("basisA", "basisANum", "basisAVal", A);
+
+  // Conectar controles de B
+  conectarControl("growB", "growBVal", B, "flexGrow");
+  conectarControl("shrinkB", "shrinkBVal", B, "flexShrink");
+  conectarBasis("basisB", "basisBNum", "basisBVal", B);
+
+  // Conectar controles de C
+  conectarControl("growC", "growCVal", C, "flexGrow");
+  conectarControl("shrinkC", "shrinkCVal", C, "flexShrink");
+  conectarBasis("basisC", "basisCNum", "basisCVal", C);
+
+  // Botón para igualar todos los flex-basis
+  document.getElementById("igualarBasis").addEventListener("click", () => {
+    const valor = 250;
+    ["basisA", "basisB", "basisC"].forEach((id, i) => {
+      const numId = id + "Num";
+      const spanId = id + "Val";
+      const elemento = [A, B, C][i];
+      const px = valor + "px";
+
+      elemento.style.flexBasis = px;
+      document.getElementById(id).value = valor;
+      document.getElementById(numId).value = valor;
+      document.getElementById(spanId).textContent = px;
+    });
+    actualizarSuma();
+  });
+
+  // Inicializar suma
+  actualizarSuma();
+</script>
+
+</body>
+</html>
