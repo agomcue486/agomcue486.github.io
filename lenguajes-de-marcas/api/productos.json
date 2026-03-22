@@ -1,0 +1,92 @@
+[
+  {
+    "nombre": "Auriculares Inalámbricos Pro",
+    "precio": 89.99,
+    "oferta": 20,
+    "imagen": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=600"
+  },
+  {
+    "nombre": "Reloj Inteligente Sport",
+    "precio": 120.00,
+    "oferta": 15,
+    "imagen": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=600"
+  },
+  {
+    "nombre": "Cámara Réflex Digital",
+    "precio": 549.00,
+    "oferta": 0,
+    "imagen": "https://images.unsplash.com/photo-1526170315870-3f9b65e55839?auto=format&fit=crop&q=80&w=600"
+  },
+  {
+    "nombre": "Mochila Ergonómica",
+    "precio": 45.50,
+    "oferta": 10,
+    "imagen": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=600"
+  },
+  {
+    "nombre": "Zapatillas de Running",
+    "precio": 110.00,
+    "oferta": 30,
+    "imagen": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=600"
+  },
+  {
+    "nombre": "Altavoz Bluetooth Portátil",
+    "precio": 35.99,
+    "oferta": 5,
+    "imagen": "https://images.unsplash.com/photo-1608156639585-34a0a59ee6b9?auto=format&fit=crop&q=80&w=600"
+  },
+  {
+    "nombre": "Gafas de Sol Clásicas",
+    "precio": 75.00,
+    "oferta": 50,
+    "imagen": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&q=80&w=600"
+  },
+  {
+    "nombre": "Teclado Mecánico RGB",
+    "precio": 130.00,
+    "oferta": 25,
+    "imagen": "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?auto=format&fit=crop&q=80&w=600"
+  },
+  {
+    "nombre": "Botella de Agua Térmica",
+    "precio": 22.00,
+    "oferta": 0,
+    "imagen": "https://images.unsplash.com/photo-1602143393494-17088457245e?auto=format&fit=crop&q=80&w=600"
+  },
+  {
+    "nombre": "Lámpara de Escritorio LED",
+    "precio": 40.00,
+    "oferta": 12,
+    "imagen": "https://images.unsplash.com/photo-1534073828943-f801091bb18c?auto=format&fit=crop&q=80&w=600"
+  },
+  {
+    "nombre": "Ratón Gaming Óptico",
+    "precio": 65.00,
+    "oferta": 40,
+    "imagen": "https://images.unsplash.com/photo-1527814732934-94a85e483935?auto=format&fit=crop&q=80&w=600"
+  },
+  {
+    "nombre": "Cafetera de Cápsulas",
+    "precio": 149.99,
+    "oferta": 18,
+    "imagen": "https://images.unsplash.com/photo-1520970014086-2208d157c9e2?auto=format&fit=crop&q=80&w=600"
+  },
+  {
+    "nombre": "Drone con Cámara 4K",
+    "precio": 890.00,
+    "oferta": 10,
+    "imagen": "https://images.unsplash.com/photo-1507582020474-9a35b7d455d9?auto=format&fit=crop&q=80&w=600"
+  },
+  {
+    "nombre": "Silla de Oficina Ergonómica",
+    "precio": 210.00,
+    "oferta": 0,
+    "imagen": "https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?auto=format&fit=crop&q=80&w=600"
+  },
+  {
+    "nombre": "Tablet de 10 Pulgadas",
+    "precio": 299.00,
+    "oferta": 35,
+    "imagen": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&q=80&w=600"
+  }
+]

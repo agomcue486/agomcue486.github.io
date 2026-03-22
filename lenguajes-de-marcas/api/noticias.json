@@ -1,0 +1,77 @@
+[
+  {
+    "titulo": "Descubrimiento en Marte",
+    "resumen": "Nuevas muestras de roca sugieren la presencia de agua líquida en el pasado remoto del planeta rojo.",
+    "imagen": "https://picsum.photos/seed/mars1/800/600"
+  },
+  {
+    "titulo": "IA en la Medicina",
+    "resumen": "Algoritmos logran detectar enfermedades oculares con una precisión del 99% en etapas tempranas.",
+    "imagen": "https://picsum.photos/seed/med2/800/600"
+  },
+  {
+    "titulo": "Baterías de Grafeno",
+    "resumen": "Una nueva patente promete cargar teléfonos móviles en menos de 5 minutos de forma segura.",
+    "imagen": "https://picsum.photos/seed/tech3/800/600"
+  },
+  {
+    "titulo": "Reforestación con Drones",
+    "resumen": "Miles de semillas son plantadas diariamente en zonas de difícil acceso mediante tecnología autónoma.",
+    "imagen": "https://picsum.photos/seed/nature4/800/600"
+  },
+  {
+    "titulo": "El Futuro del Teletrabajo",
+    "resumen": "Estudios demuestran que la productividad aumentó un 15% en empresas con modelos híbridos.",
+    "imagen": "https://picsum.photos/seed/work5/800/600"
+  },
+  {
+    "titulo": "Océanos Limpios",
+    "resumen": "Nueva barrera flotante logra recolectar 10 toneladas de plástico en el Pacífico en solo un mes.",
+    "imagen": "https://picsum.photos/seed/ocean6/800/600"
+  },
+  {
+    "titulo": "Ciberseguridad 2026",
+    "resumen": "Expertos advierten sobre el aumento de ataques mediante suplantación de identidad por voz.",
+    "imagen": "https://picsum.photos/seed/cyber7/800/600"
+  },
+  {
+    "titulo": "Arquitectura Sustentable",
+    "resumen": "Diseñan edificios capaces de absorber CO2 mediante fachadas recubiertas de microalgas.",
+    "imagen": "https://picsum.photos/seed/arch8/800/600"
+  },
+  {
+    "titulo": "Nueva York Sumergida",
+    "resumen": "Debaten la construcción de diques masivos para proteger la costa del aumento del nivel del mar.",
+    "imagen": "https://picsum.photos/seed/city9/800/600"
+  },
+  {
+    "titulo": "El Retorno de los Vinilos",
+    "resumen": "Las ventas de discos físicos superan a las descargas digitales por tercer año consecutivo.",
+    "imagen": "https://picsum.photos/seed/music10/800/600"
+  },
+  {
+    "titulo": "Transporte Hyperloop",
+    "resumen": "Inician las pruebas de pasajeros en la primera línea comercial que conecta dos ciudades europeas.",
+    "imagen": "https://picsum.photos/seed/train11/800/600"
+  },
+  {
+    "titulo": "Agricultura Vertical",
+    "resumen": "Granjas en rascacielos ya producen el 20% de las hortalizas consumidas en Tokio.",
+    "imagen": "https://picsum.photos/seed/food12/800/600"
+  },
+  {
+    "titulo": "Telescopio James Webb",
+    "resumen": "Captan la imagen más nítida hasta la fecha de una galaxia formada poco después del Big Bang.",
+    "imagen": "https://picsum.photos/seed/space13/800/600"
+  },
+  {
+    "titulo": "Moda Circular",
+    "resumen": "Grandes marcas adoptan el modelo de alquiler de ropa para reducir el desperdicio textil.",
+    "imagen": "https://picsum.photos/seed/fashion14/800/600"
+  },
+  {
+    "titulo": "Deportes y Datos",
+    "resumen": "El análisis predictivo cambia las estrategias de fichajes en las ligas de fútbol europeas.",
+    "imagen": "https://picsum.photos/seed/sports15/800/600"
+  }
+]
